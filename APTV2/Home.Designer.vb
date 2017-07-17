@@ -25,16 +25,27 @@ Partial Class Home
         Me.CalculatorControl1 = New Syncfusion.Windows.Forms.Tools.CalculatorControl()
         Me.tabControlPanel = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.pnlPhone = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.pnlRecovery = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.lblVariant = New System.Windows.Forms.Label()
+        Me.lblModel = New System.Windows.Forms.Label()
+        Me.lblManufacturer = New System.Windows.Forms.Label()
+        Me.picPhone = New System.Windows.Forms.PictureBox()
         Me.pnlBootloader = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.pnlRecovery = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlRoot = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlXposed = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlGapps = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmbModel = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
+        Me.pnlPhone.SuspendLayout()
+        CType(Me.picPhone, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CalculatorControl1
@@ -49,6 +60,7 @@ Partial Class Home
         Me.CalculatorControl1.Location = New System.Drawing.Point(0, 0)
         Me.CalculatorControl1.MetroColor = System.Drawing.SystemColors.Control
         Me.CalculatorControl1.Name = "CalculatorControl1"
+        Me.CalculatorControl1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.CalculatorControl1.Size = New System.Drawing.Size(75, 23)
         Me.CalculatorControl1.TabIndex = 0
         Me.CalculatorControl1.Text = "CalculatorControl1"
@@ -90,6 +102,14 @@ Partial Class Home
         '
         'pnlPhone
         '
+        Me.pnlPhone.Controls.Add(Me.cmbModel)
+        Me.pnlPhone.Controls.Add(Me.Label1)
+        Me.pnlPhone.Controls.Add(Me.Label2)
+        Me.pnlPhone.Controls.Add(Me.Label3)
+        Me.pnlPhone.Controls.Add(Me.lblVariant)
+        Me.pnlPhone.Controls.Add(Me.lblModel)
+        Me.pnlPhone.Controls.Add(Me.lblManufacturer)
+        Me.pnlPhone.Controls.Add(Me.picPhone)
         Me.pnlPhone.Image = Nothing
         Me.pnlPhone.ImageSize = New System.Drawing.Size(16, 16)
         Me.pnlPhone.Location = New System.Drawing.Point(1, 31)
@@ -100,38 +120,73 @@ Partial Class Home
         Me.pnlPhone.Text = "Phone"
         Me.pnlPhone.ThemesEnabled = False
         '
-        'pnlRecovery
+        'lblVariant
         '
-        Me.pnlRecovery.Image = Nothing
-        Me.pnlRecovery.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlRecovery.Location = New System.Drawing.Point(1, 25)
-        Me.pnlRecovery.Name = "pnlRecovery"
-        Me.pnlRecovery.ShowCloseButton = True
-        Me.pnlRecovery.Size = New System.Drawing.Size(737, 406)
-        Me.pnlRecovery.TabIndex = 2
-        Me.pnlRecovery.Text = "Recovery"
-        Me.pnlRecovery.ThemesEnabled = False
+        Me.lblVariant.AutoSize = True
+        Me.lblVariant.Location = New System.Drawing.Point(489, 225)
+        Me.lblVariant.Name = "lblVariant"
+        Me.lblVariant.Size = New System.Drawing.Size(41, 18)
+        Me.lblVariant.TabIndex = 5
+        Me.lblVariant.Text = "Label1"
+        '
+        'lblModel
+        '
+        Me.lblModel.AutoSize = True
+        Me.lblModel.Location = New System.Drawing.Point(489, 186)
+        Me.lblModel.Name = "lblModel"
+        Me.lblModel.Size = New System.Drawing.Size(40, 18)
+        Me.lblModel.TabIndex = 4
+        Me.lblModel.Text = "Model"
+        '
+        'lblManufacturer
+        '
+        Me.lblManufacturer.AutoSize = True
+        Me.lblManufacturer.Location = New System.Drawing.Point(489, 147)
+        Me.lblManufacturer.Name = "lblManufacturer"
+        Me.lblManufacturer.Size = New System.Drawing.Size(41, 18)
+        Me.lblManufacturer.TabIndex = 3
+        Me.lblManufacturer.Text = "Label1"
+        '
+        'picPhone
+        '
+        Me.picPhone.Location = New System.Drawing.Point(32, 33)
+        Me.picPhone.Name = "picPhone"
+        Me.picPhone.Size = New System.Drawing.Size(201, 330)
+        Me.picPhone.TabIndex = 2
+        Me.picPhone.TabStop = False
         '
         'pnlBootloader
         '
         Me.pnlBootloader.Image = Nothing
         Me.pnlBootloader.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlBootloader.Location = New System.Drawing.Point(1, 25)
+        Me.pnlBootloader.Location = New System.Drawing.Point(1, 31)
         Me.pnlBootloader.Name = "pnlBootloader"
         Me.pnlBootloader.ShowCloseButton = True
-        Me.pnlBootloader.Size = New System.Drawing.Size(737, 406)
+        Me.pnlBootloader.Size = New System.Drawing.Size(737, 400)
         Me.pnlBootloader.TabIndex = 3
         Me.pnlBootloader.Text = "Bootloader"
         Me.pnlBootloader.ThemesEnabled = False
+        '
+        'pnlRecovery
+        '
+        Me.pnlRecovery.Image = Nothing
+        Me.pnlRecovery.ImageSize = New System.Drawing.Size(16, 16)
+        Me.pnlRecovery.Location = New System.Drawing.Point(1, 31)
+        Me.pnlRecovery.Name = "pnlRecovery"
+        Me.pnlRecovery.ShowCloseButton = True
+        Me.pnlRecovery.Size = New System.Drawing.Size(737, 400)
+        Me.pnlRecovery.TabIndex = 2
+        Me.pnlRecovery.Text = "Recovery"
+        Me.pnlRecovery.ThemesEnabled = False
         '
         'pnlRoot
         '
         Me.pnlRoot.Image = Nothing
         Me.pnlRoot.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlRoot.Location = New System.Drawing.Point(1, 25)
+        Me.pnlRoot.Location = New System.Drawing.Point(1, 31)
         Me.pnlRoot.Name = "pnlRoot"
         Me.pnlRoot.ShowCloseButton = True
-        Me.pnlRoot.Size = New System.Drawing.Size(737, 406)
+        Me.pnlRoot.Size = New System.Drawing.Size(737, 400)
         Me.pnlRoot.TabIndex = 4
         Me.pnlRoot.Text = "Root"
         Me.pnlRoot.ThemesEnabled = False
@@ -140,10 +195,10 @@ Partial Class Home
         '
         Me.pnlXposed.Image = Nothing
         Me.pnlXposed.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlXposed.Location = New System.Drawing.Point(1, 25)
+        Me.pnlXposed.Location = New System.Drawing.Point(1, 31)
         Me.pnlXposed.Name = "pnlXposed"
         Me.pnlXposed.ShowCloseButton = True
-        Me.pnlXposed.Size = New System.Drawing.Size(737, 406)
+        Me.pnlXposed.Size = New System.Drawing.Size(737, 400)
         Me.pnlXposed.TabIndex = 5
         Me.pnlXposed.Text = "Xposed"
         Me.pnlXposed.ThemesEnabled = False
@@ -152,10 +207,10 @@ Partial Class Home
         '
         Me.pnlGapps.Image = Nothing
         Me.pnlGapps.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlGapps.Location = New System.Drawing.Point(1, 25)
+        Me.pnlGapps.Location = New System.Drawing.Point(1, 31)
         Me.pnlGapps.Name = "pnlGapps"
         Me.pnlGapps.ShowCloseButton = True
-        Me.pnlGapps.Size = New System.Drawing.Size(737, 406)
+        Me.pnlGapps.Size = New System.Drawing.Size(737, 400)
         Me.pnlGapps.TabIndex = 6
         Me.pnlGapps.Text = "Gapps"
         Me.pnlGapps.ThemesEnabled = False
@@ -164,10 +219,10 @@ Partial Class Home
         '
         Me.pnlUnbrick.Image = Nothing
         Me.pnlUnbrick.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlUnbrick.Location = New System.Drawing.Point(1, 25)
+        Me.pnlUnbrick.Location = New System.Drawing.Point(1, 31)
         Me.pnlUnbrick.Name = "pnlUnbrick"
         Me.pnlUnbrick.ShowCloseButton = True
-        Me.pnlUnbrick.Size = New System.Drawing.Size(737, 406)
+        Me.pnlUnbrick.Size = New System.Drawing.Size(737, 400)
         Me.pnlUnbrick.TabIndex = 8
         Me.pnlUnbrick.Text = "Unbrick"
         Me.pnlUnbrick.ThemesEnabled = False
@@ -176,10 +231,10 @@ Partial Class Home
         '
         Me.pnlAbout.Image = Nothing
         Me.pnlAbout.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlAbout.Location = New System.Drawing.Point(1, 25)
+        Me.pnlAbout.Location = New System.Drawing.Point(1, 31)
         Me.pnlAbout.Name = "pnlAbout"
         Me.pnlAbout.ShowCloseButton = True
-        Me.pnlAbout.Size = New System.Drawing.Size(737, 406)
+        Me.pnlAbout.Size = New System.Drawing.Size(737, 400)
         Me.pnlAbout.TabIndex = 9
         Me.pnlAbout.Text = "About"
         Me.pnlAbout.ThemesEnabled = False
@@ -188,13 +243,54 @@ Partial Class Home
         '
         Me.pnlBackup.Image = Nothing
         Me.pnlBackup.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlBackup.Location = New System.Drawing.Point(1, 25)
+        Me.pnlBackup.Location = New System.Drawing.Point(1, 31)
         Me.pnlBackup.Name = "pnlBackup"
         Me.pnlBackup.ShowCloseButton = True
-        Me.pnlBackup.Size = New System.Drawing.Size(737, 406)
+        Me.pnlBackup.Size = New System.Drawing.Size(737, 400)
         Me.pnlBackup.TabIndex = 10
         Me.pnlBackup.Text = "Backup"
         Me.pnlBackup.ThemesEnabled = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(396, 225)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(44, 18)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Variant"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(396, 186)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(40, 18)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Model"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(396, 147)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(76, 18)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Manufacturer"
+        '
+        'cmbModel
+        '
+        Me.cmbModel.BackColor = System.Drawing.Color.LightGray
+        Me.cmbModel.BeforeTouchSize = New System.Drawing.Size(321, 26)
+        Me.cmbModel.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat
+        Me.cmbModel.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbModel.Location = New System.Drawing.Point(300, 68)
+        Me.cmbModel.Name = "cmbModel"
+        Me.cmbModel.ReadOnly = True
+        Me.cmbModel.Size = New System.Drawing.Size(321, 26)
+        Me.cmbModel.Sorted = True
+        Me.cmbModel.Style = Syncfusion.Windows.Forms.VisualStyle.Metro
+        Me.cmbModel.TabIndex = 10
         '
         'Home
         '
@@ -204,9 +300,13 @@ Partial Class Home
         Me.Controls.Add(Me.tabControlPanel)
         Me.Controls.Add(Me.CalculatorControl1)
         Me.Name = "Home"
-        Me.Text = "APT22"
+        Me.Text = "APTV2"
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabControlPanel.ResumeLayout(False)
+        Me.pnlPhone.ResumeLayout(False)
+        Me.pnlPhone.PerformLayout()
+        CType(Me.picPhone, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -222,4 +322,12 @@ Partial Class Home
     Friend WithEvents pnlUnbrick As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents pnlAbout As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents pnlBackup As Syncfusion.Windows.Forms.Tools.TabPageAdv
+    Friend WithEvents picPhone As PictureBox
+    Friend WithEvents lblManufacturer As Label
+    Friend WithEvents lblModel As Label
+    Friend WithEvents lblVariant As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents cmbModel As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
 End Class
