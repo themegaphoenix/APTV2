@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Home
     Inherits Syncfusion.Windows.Forms.MetroForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,14 @@ Partial Class Home
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.CalculatorControl1 = New Syncfusion.Windows.Forms.Tools.CalculatorControl()
         Me.tabControlPanel = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.pnlPhone = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.lblVariant = New System.Windows.Forms.Label()
         Me.lblModel = New System.Windows.Forms.Label()
         Me.lblManufacturer = New System.Windows.Forms.Label()
@@ -37,9 +40,6 @@ Partial Class Home
         Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.cmbModel = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
@@ -119,6 +119,33 @@ Partial Class Home
         Me.pnlPhone.TabIndex = 1
         Me.pnlPhone.Text = "Phone"
         Me.pnlPhone.ThemesEnabled = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(396, 225)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(44, 18)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Variant"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(396, 186)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(40, 18)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Model"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(396, 147)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(76, 18)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Manufacturer"
         '
         'lblVariant
         '
@@ -251,46 +278,14 @@ Partial Class Home
         Me.pnlBackup.Text = "Backup"
         Me.pnlBackup.ThemesEnabled = False
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(396, 225)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 18)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Variant"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(396, 186)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 18)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Model"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(396, 147)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 18)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Manufacturer"
-        '
         'cmbModel
         '
-        Me.cmbModel.BackColor = System.Drawing.Color.LightGray
-        Me.cmbModel.BeforeTouchSize = New System.Drawing.Size(321, 26)
-        Me.cmbModel.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat
+        Me.cmbModel.BeforeTouchSize = New System.Drawing.Size(263, 26)
         Me.cmbModel.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbModel.Location = New System.Drawing.Point(300, 68)
+        Me.cmbModel.Location = New System.Drawing.Point(319, 57)
         Me.cmbModel.Name = "cmbModel"
-        Me.cmbModel.ReadOnly = True
-        Me.cmbModel.Size = New System.Drawing.Size(321, 26)
-        Me.cmbModel.Sorted = True
-        Me.cmbModel.Style = Syncfusion.Windows.Forms.VisualStyle.Metro
-        Me.cmbModel.TabIndex = 10
+        Me.cmbModel.Size = New System.Drawing.Size(263, 26)
+        Me.cmbModel.TabIndex = 9
         '
         'Home
         '
