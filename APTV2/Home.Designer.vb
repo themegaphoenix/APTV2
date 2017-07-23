@@ -25,6 +25,7 @@ Partial Class Home
         Me.CalculatorControl1 = New Syncfusion.Windows.Forms.Tools.CalculatorControl()
         Me.tabControlPanel = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.pnlPhone = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.cmbModel = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -40,12 +41,11 @@ Partial Class Home
         Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.cmbModel = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
-        CType(Me.picPhone, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picPhone, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CalculatorControl1
@@ -119,6 +119,16 @@ Partial Class Home
         Me.pnlPhone.TabIndex = 1
         Me.pnlPhone.Text = "Phone"
         Me.pnlPhone.ThemesEnabled = False
+        '
+        'cmbModel
+        '
+        Me.cmbModel.BeforeTouchSize = New System.Drawing.Size(282, 26)
+        Me.cmbModel.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbModel.Location = New System.Drawing.Point(330, 83)
+        Me.cmbModel.Name = "cmbModel"
+        Me.cmbModel.Size = New System.Drawing.Size(282, 26)
+        Me.cmbModel.TabIndex = 9
+        Me.cmbModel.Text = "Select a Model"
         '
         'Label1
         '
@@ -278,15 +288,6 @@ Partial Class Home
         Me.pnlBackup.Text = "Backup"
         Me.pnlBackup.ThemesEnabled = False
         '
-        'cmbModel
-        '
-        Me.cmbModel.BeforeTouchSize = New System.Drawing.Size(263, 26)
-        Me.cmbModel.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbModel.Location = New System.Drawing.Point(319, 57)
-        Me.cmbModel.Name = "cmbModel"
-        Me.cmbModel.Size = New System.Drawing.Size(263, 26)
-        Me.cmbModel.TabIndex = 9
-        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -300,8 +301,8 @@ Partial Class Home
         Me.tabControlPanel.ResumeLayout(False)
         Me.pnlPhone.ResumeLayout(False)
         Me.pnlPhone.PerformLayout()
-        CType(Me.picPhone, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picPhone, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

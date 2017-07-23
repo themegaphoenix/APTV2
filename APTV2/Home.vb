@@ -36,7 +36,7 @@ Public Class Home
                     If (document.Name = "variant") Then
 
                         stringToAdd += " " + document.ReadInnerXml.ToString()
-                        Console.WriteLine(stringToAdd)
+                        'Console.WriteLine(stringToAdd)
                         cmbModel.Items.Add(stringToAdd)
 
                     End If
@@ -50,9 +50,12 @@ Public Class Home
         cmbModel.SelectedItem = My.Settings.LastChosenModel
     End Sub
 
-    Private Sub cmbModel_SelectedValueChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub cmbModel_SelectedValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbModel.SelectedValueChanged
 
         My.Settings.LastChosenModel = cmbModel.SelectedItem.ToString()
+        'Console.WriteLine(cmbModel.SelectedItem.ToString())
+
+
         My.Settings.Save()
 
     End Sub
@@ -110,7 +113,9 @@ Public Class Home
 
     End Sub
 
-    Private Sub ComboBoxAdv1_Click(sender As Object, e As EventArgs) Handles cmbModel.Click
+    Private Sub ComboBoxAdv1_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+
 End Class
