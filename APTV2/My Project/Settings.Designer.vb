@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("HuaweiHonor.xml")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("phones\HuaweiHonor.xml")>  _
         Public Property xmlDocumentName() As String
             Get
                 Return CType(Me("xmlDocumentName"),String)

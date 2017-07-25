@@ -41,6 +41,7 @@ Partial Class Home
         Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -83,6 +84,7 @@ Partial Class Home
         Me.tabControlPanel.Controls.Add(Me.pnlUnbrick)
         Me.tabControlPanel.Controls.Add(Me.pnlAbout)
         Me.tabControlPanel.Controls.Add(Me.pnlBackup)
+        Me.tabControlPanel.Controls.Add(Me.pnlSettings)
         Me.tabControlPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tabControlPanel.FocusOnTabClick = False
         Me.tabControlPanel.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -288,6 +290,18 @@ Partial Class Home
         Me.pnlBackup.Text = "Backup"
         Me.pnlBackup.ThemesEnabled = False
         '
+        'pnlSettings
+        '
+        Me.pnlSettings.Image = Nothing
+        Me.pnlSettings.ImageSize = New System.Drawing.Size(16, 16)
+        Me.pnlSettings.Location = New System.Drawing.Point(1, 31)
+        Me.pnlSettings.Name = "pnlSettings"
+        Me.pnlSettings.ShowCloseButton = True
+        Me.pnlSettings.Size = New System.Drawing.Size(737, 400)
+        Me.pnlSettings.TabIndex = 11
+        Me.pnlSettings.Text = "Settings"
+        Me.pnlSettings.ThemesEnabled = False
+        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -326,4 +340,5 @@ Partial Class Home
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents cmbModel As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
+    Friend WithEvents pnlSettings As Syncfusion.Windows.Forms.Tools.TabPageAdv
 End Class

@@ -32,8 +32,16 @@ Public Class Home
             cmbModel.Items.Add(manufacturer & " " & model & " " & variantXml)
         Next
 
-        cmbModel.SelectedItem = My.Settings.LastChosenModel
-        reloadInfo()
+        Try
+            If cmbModel.FindString(My.Settings.LastChosenModel) Then
+                cmbModel.SelectedItem = My.Settings.LastChosenModel
+            End If
+
+            reloadInfo()
+        Catch ex As Exception
+
+        End Try
+
 
     End Sub
 
