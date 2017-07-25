@@ -1,121 +1,74 @@
 ﻿Imports Syncfusion.Windows.Forms
 Imports System.Xml
 
-
 Public Class Home
     Inherits MetroForm
 
+    'Public variables
+    Dim strManufacturer As String = ""
+
+    Dim strModel As String = ""
+    Dim strVariant As String = ""
+
+    'document needs to be open during the whole program, otherwise it would be opening and closing
+    Dim xmlDoc As New XmlDocument()
+
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'read xml file and load in to the dropbox
-
         readXML()
 
     End Sub
 
     Sub readXML()
 
-        Using document As XmlReader = XmlReader.Create("HuaweiHonor.xml")
-            Dim stringToAdd As String = ""
-            While document.Read()
-                Dim type = document.NodeType
+        xmlDoc.Load(My.Settings.xmlDocumentName)
+        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
+        Dim manufacturer As String = "", model As String = "", variantXml As String = ""
 
-                If (Type = XmlNodeType.Element) Then
+        For Each node As XmlNode In nodes
+            manufacturer = node.SelectSingleNode("manufacturer").InnerText
+            model = node.SelectSingleNode("model").InnerText
+            variantXml = node.SelectSingleNode("variant").InnerText
+            cmbModel.Items.Add(manufacturer & " " & model & " " & variantXml)
+        Next
 
-                    If (document.Name = "manufacturer") Then
-
-                        stringToAdd = document.ReadInnerXml.ToString()
-
-                    End If
-
-                    If (document.Name = "model") Then
-
-                        stringToAdd += " " + document.ReadInnerXml.ToString()
-
-                    End If
-
-                    If (document.Name = "variant") Then
-
-                        stringToAdd += " " + document.ReadInnerXml.ToString()
-                        'Console.WriteLine(stringToAdd)
-                        cmbModel.Items.Add(stringToAdd)
-
-                    End If
-
-
-                End If
-
-            End While
-
-        End Using
         cmbModel.SelectedItem = My.Settings.LastChosenModel
+        reloadInfo()
+
     End Sub
 
     Private Sub cmbModel_SelectedValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbModel.SelectedValueChanged
-
+        'save the changes so the next time is open, it loads the last selected model
         My.Settings.LastChosenModel = cmbModel.SelectedItem.ToString()
         'Console.WriteLine(cmbModel.SelectedItem.ToString())
-
-
         My.Settings.Save()
+        'reload the correct information
+        reloadInfo()
 
     End Sub
 
+    Private Sub reloadInfo()
+        'get the selection information
+        Dim strPhone As String = cmbModel.SelectedItem
+        Dim strPhoneSplit As String() = strPhone.Split(New Char() {" "c})
+        'Console.WriteLine(strPhoneSplit(1))
 
-    Private Sub TabControlAdv1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tabControlPanel.SelectedIndexChanged
+        'change the variables
+        strManufacturer = strPhoneSplit(0)
+        strModel = strPhoneSplit(1)
+        strVariant = strPhoneSplit(2)
 
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles picPhone.Click
-
-    End Sub
-
-    Private Sub pnlPhone_Click(sender As Object, e As EventArgs) Handles pnlPhone.Click
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblModel.Click
-
-    End Sub
-
-    Private Sub lblManufacturer_Click(sender As Object, e As EventArgs) Handles lblManufacturer.Click
-
-    End Sub
-
-    Private Sub lblVariant_Click(sender As Object, e As EventArgs) Handles lblVariant.Click
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        'load the correct information into the labels
+        xmlDoc.Load(My.Settings.xmlDocumentName)
+        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
+        For Each node As XmlNode In nodes
+            If strVariant = node.SelectSingleNode("variant").InnerText Then
+                lblManufacturer.Text = node.SelectSingleNode("manufacturer").InnerText
+                lblModel.Text = node.SelectSingleNode("model").InnerText
+                lblVariant.Text = node.SelectSingleNode("variant").InnerText
+            End If
+        Next
 
     End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub ComboDropDown1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub ComboBoxAdv2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub ComboBoxAdv1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
 
 End Class

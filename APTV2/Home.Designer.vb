@@ -128,7 +128,7 @@ Partial Class Home
         Me.cmbModel.Name = "cmbModel"
         Me.cmbModel.Size = New System.Drawing.Size(282, 26)
         Me.cmbModel.TabIndex = 9
-        Me.cmbModel.Text = "Select a Model"
+        Me.cmbModel.Text = "Select a Phone"
         '
         'Label1
         '

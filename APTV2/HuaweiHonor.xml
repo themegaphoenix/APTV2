@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Huawei>
+<root>
   <phone>
     <manufacturer>Huawei</manufacturer>
-    <model>Honor 7</model>
+    <model>Honor7</model>
     <variant>PLK-L01</variant>
   </phone>
-<phone>
+  <phone>
     <manufacturer>Huawei</manufacturer>
-    <model>Honor 7</model>
+    <model>Honor7</model>
     <variant>PLK-L02</variant>
   </phone>
-<phone>
+  <phone>
     <manufacturer>Huawei</manufacturer>
-    <model>Honor 7</model>
+    <model>Honor7</model>
     <variant>PLK-L03</variant>
   </phone>
-</Huawei>
+</root>

@@ -5,5 +5,8 @@
     <Setting Name="LastChosenModel" Type="System.String" Scope="User">
       <Value Profile="(Default)">Huawei Honor 7 PLK-L01</Value>
     </Setting>
+    <Setting Name="xmlDocumentName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HuaweiHonor.xml</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

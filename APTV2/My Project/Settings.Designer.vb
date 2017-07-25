@@ -65,6 +65,18 @@ Namespace My
                 Me("LastChosenModel") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("HuaweiHonor.xml")>  _
+        Public Property xmlDocumentName() As String
+            Get
+                Return CType(Me("xmlDocumentName"),String)
+            End Get
+            Set
+                Me("xmlDocumentName") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
