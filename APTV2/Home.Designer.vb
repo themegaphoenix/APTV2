@@ -72,6 +72,7 @@ Partial Class Home
         Me.tabControlPanel.ActiveTabForeColor = System.Drawing.Color.Empty
         Me.tabControlPanel.BackColor = System.Drawing.Color.White
         Me.tabControlPanel.BeforeTouchSize = New System.Drawing.Size(740, 433)
+        Me.tabControlPanel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tabControlPanel.CloseButtonForeColor = System.Drawing.Color.Empty
         Me.tabControlPanel.CloseButtonHoverForeColor = System.Drawing.Color.Empty
         Me.tabControlPanel.CloseButtonPressedForeColor = System.Drawing.Color.Empty
@@ -114,10 +115,10 @@ Partial Class Home
         Me.pnlPhone.Controls.Add(Me.picPhone)
         Me.pnlPhone.Image = Nothing
         Me.pnlPhone.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlPhone.Location = New System.Drawing.Point(1, 31)
+        Me.pnlPhone.Location = New System.Drawing.Point(0, 30)
         Me.pnlPhone.Name = "pnlPhone"
         Me.pnlPhone.ShowCloseButton = True
-        Me.pnlPhone.Size = New System.Drawing.Size(737, 400)
+        Me.pnlPhone.Size = New System.Drawing.Size(740, 403)
         Me.pnlPhone.TabIndex = 1
         Me.pnlPhone.Text = "Phone"
         Me.pnlPhone.ThemesEnabled = False

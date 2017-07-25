@@ -20,23 +20,28 @@ Public Class Home
     End Sub
 
     Sub readXML()
+        Try
+            xmlDoc.Load(My.Settings.xmlDocumentName)
+            Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
+            Dim manufacturer As String = "", model As String = "", variantXml As String = ""
 
-        xmlDoc.Load(My.Settings.xmlDocumentName)
-        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
-        Dim manufacturer As String = "", model As String = "", variantXml As String = ""
+            For Each node As XmlNode In nodes
+                manufacturer = node.SelectSingleNode("manufacturer").InnerText
+                model = node.SelectSingleNode("model").InnerText
+                variantXml = node.SelectSingleNode("variant").InnerText
+                cmbModel.Items.Add(manufacturer & " " & model & " " & variantXml)
+            Next
+        Catch ex As Exception
+            MessageBox.Show("File not found or file corrupt")
+        End Try
 
-        For Each node As XmlNode In nodes
-            manufacturer = node.SelectSingleNode("manufacturer").InnerText
-            model = node.SelectSingleNode("model").InnerText
-            variantXml = node.SelectSingleNode("variant").InnerText
-            cmbModel.Items.Add(manufacturer & " " & model & " " & variantXml)
-        Next
 
         Try
-            If cmbModel.FindString(My.Settings.LastChosenModel) Then
-                cmbModel.SelectedItem = My.Settings.LastChosenModel
-            End If
-
+            'choses the first item, and then selects the last item if there is
+            cmbModel.SelectedIndex = 0
+            'the exception that will throw when it does not find the last
+            'chosen model will Not break the program
+            cmbModel.SelectedItem = My.Settings.LastChosenModel
             reloadInfo()
         Catch ex As Exception
 
