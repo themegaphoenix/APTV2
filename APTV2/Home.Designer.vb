@@ -188,9 +188,10 @@ Partial Class Home
         '
         'picPhone
         '
-        Me.picPhone.Location = New System.Drawing.Point(32, 33)
+        Me.picPhone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.picPhone.Location = New System.Drawing.Point(65, 33)
         Me.picPhone.Name = "picPhone"
-        Me.picPhone.Size = New System.Drawing.Size(201, 330)
+        Me.picPhone.Size = New System.Drawing.Size(175, 330)
         Me.picPhone.TabIndex = 2
         Me.picPhone.TabStop = False
         '

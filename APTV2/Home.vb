@@ -74,6 +74,13 @@ Public Class Home
                 lblManufacturer.Text = node.SelectSingleNode("manufacturer").InnerText
                 lblModel.Text = node.SelectSingleNode("model").InnerText
                 lblVariant.Text = node.SelectSingleNode("variant").InnerText
+                'Console.WriteLine(strPicture)
+                Try
+                    Dim strPicture As String = "phones/pictures/" & node.SelectSingleNode("picture").InnerText
+                    picPhone.BackgroundImage = Image.FromFile(strPicture)
+
+                Catch ex As Exception
+                End Try
             End If
         Next
 
