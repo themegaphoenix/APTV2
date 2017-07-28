@@ -34,6 +34,11 @@ Partial Class Home
         Me.lblManufacturer = New System.Windows.Forms.Label()
         Me.picPhone = New System.Windows.Forms.PictureBox()
         Me.pnlBootloader = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.txtBoxBootloader = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtBoxUnlockKey = New System.Windows.Forms.TextBox()
+        Me.btnLockBootloader = New System.Windows.Forms.Button()
+        Me.btnUnlockBootloader = New System.Windows.Forms.Button()
         Me.pnlRecovery = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlRoot = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlXposed = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
@@ -47,6 +52,7 @@ Partial Class Home
         Me.pnlPhone.SuspendLayout()
         CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picPhone, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlBootloader.SuspendLayout()
         Me.SuspendLayout()
         '
         'CalculatorControl1
@@ -198,24 +204,73 @@ Partial Class Home
         '
         'pnlBootloader
         '
+        Me.pnlBootloader.Controls.Add(Me.txtBoxBootloader)
+        Me.pnlBootloader.Controls.Add(Me.Label4)
+        Me.pnlBootloader.Controls.Add(Me.txtBoxUnlockKey)
+        Me.pnlBootloader.Controls.Add(Me.btnLockBootloader)
+        Me.pnlBootloader.Controls.Add(Me.btnUnlockBootloader)
         Me.pnlBootloader.Image = Nothing
         Me.pnlBootloader.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlBootloader.Location = New System.Drawing.Point(1, 31)
+        Me.pnlBootloader.Location = New System.Drawing.Point(0, 30)
         Me.pnlBootloader.Name = "pnlBootloader"
         Me.pnlBootloader.ShowCloseButton = True
-        Me.pnlBootloader.Size = New System.Drawing.Size(737, 400)
+        Me.pnlBootloader.Size = New System.Drawing.Size(740, 403)
         Me.pnlBootloader.TabIndex = 3
         Me.pnlBootloader.Text = "Bootloader"
         Me.pnlBootloader.ThemesEnabled = False
+        '
+        'txtBoxBootloader
+        '
+        Me.txtBoxBootloader.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtBoxBootloader.Location = New System.Drawing.Point(372, 27)
+        Me.txtBoxBootloader.Multiline = True
+        Me.txtBoxBootloader.Name = "txtBoxBootloader"
+        Me.txtBoxBootloader.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtBoxBootloader.Size = New System.Drawing.Size(336, 364)
+        Me.txtBoxBootloader.TabIndex = 7
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(23, 84)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(129, 18)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Enter Unlock / Lock Key"
+        '
+        'txtBoxUnlockKey
+        '
+        Me.txtBoxUnlockKey.Location = New System.Drawing.Point(169, 77)
+        Me.txtBoxUnlockKey.Name = "txtBoxUnlockKey"
+        Me.txtBoxUnlockKey.Size = New System.Drawing.Size(176, 25)
+        Me.txtBoxUnlockKey.TabIndex = 2
+        '
+        'btnLockBootloader
+        '
+        Me.btnLockBootloader.Location = New System.Drawing.Point(169, 144)
+        Me.btnLockBootloader.Name = "btnLockBootloader"
+        Me.btnLockBootloader.Size = New System.Drawing.Size(143, 108)
+        Me.btnLockBootloader.TabIndex = 1
+        Me.btnLockBootloader.Text = "Lock Bootloader"
+        Me.btnLockBootloader.UseVisualStyleBackColor = True
+        '
+        'btnUnlockBootloader
+        '
+        Me.btnUnlockBootloader.Location = New System.Drawing.Point(12, 144)
+        Me.btnUnlockBootloader.Name = "btnUnlockBootloader"
+        Me.btnUnlockBootloader.Size = New System.Drawing.Size(143, 108)
+        Me.btnUnlockBootloader.TabIndex = 0
+        Me.btnUnlockBootloader.Text = "Unlock Bootloader"
+        Me.btnUnlockBootloader.UseVisualStyleBackColor = True
         '
         'pnlRecovery
         '
         Me.pnlRecovery.Image = Nothing
         Me.pnlRecovery.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlRecovery.Location = New System.Drawing.Point(1, 31)
+        Me.pnlRecovery.Location = New System.Drawing.Point(0, 30)
         Me.pnlRecovery.Name = "pnlRecovery"
         Me.pnlRecovery.ShowCloseButton = True
-        Me.pnlRecovery.Size = New System.Drawing.Size(737, 400)
+        Me.pnlRecovery.Size = New System.Drawing.Size(740, 403)
         Me.pnlRecovery.TabIndex = 2
         Me.pnlRecovery.Text = "Recovery"
         Me.pnlRecovery.ThemesEnabled = False
@@ -224,10 +279,10 @@ Partial Class Home
         '
         Me.pnlRoot.Image = Nothing
         Me.pnlRoot.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlRoot.Location = New System.Drawing.Point(1, 31)
+        Me.pnlRoot.Location = New System.Drawing.Point(0, 30)
         Me.pnlRoot.Name = "pnlRoot"
         Me.pnlRoot.ShowCloseButton = True
-        Me.pnlRoot.Size = New System.Drawing.Size(737, 400)
+        Me.pnlRoot.Size = New System.Drawing.Size(740, 403)
         Me.pnlRoot.TabIndex = 4
         Me.pnlRoot.Text = "Root"
         Me.pnlRoot.ThemesEnabled = False
@@ -236,10 +291,10 @@ Partial Class Home
         '
         Me.pnlXposed.Image = Nothing
         Me.pnlXposed.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlXposed.Location = New System.Drawing.Point(1, 31)
+        Me.pnlXposed.Location = New System.Drawing.Point(0, 30)
         Me.pnlXposed.Name = "pnlXposed"
         Me.pnlXposed.ShowCloseButton = True
-        Me.pnlXposed.Size = New System.Drawing.Size(737, 400)
+        Me.pnlXposed.Size = New System.Drawing.Size(740, 403)
         Me.pnlXposed.TabIndex = 5
         Me.pnlXposed.Text = "Xposed"
         Me.pnlXposed.ThemesEnabled = False
@@ -248,10 +303,10 @@ Partial Class Home
         '
         Me.pnlGapps.Image = Nothing
         Me.pnlGapps.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlGapps.Location = New System.Drawing.Point(1, 31)
+        Me.pnlGapps.Location = New System.Drawing.Point(0, 30)
         Me.pnlGapps.Name = "pnlGapps"
         Me.pnlGapps.ShowCloseButton = True
-        Me.pnlGapps.Size = New System.Drawing.Size(737, 400)
+        Me.pnlGapps.Size = New System.Drawing.Size(740, 403)
         Me.pnlGapps.TabIndex = 6
         Me.pnlGapps.Text = "Gapps"
         Me.pnlGapps.ThemesEnabled = False
@@ -260,10 +315,10 @@ Partial Class Home
         '
         Me.pnlUnbrick.Image = Nothing
         Me.pnlUnbrick.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlUnbrick.Location = New System.Drawing.Point(1, 31)
+        Me.pnlUnbrick.Location = New System.Drawing.Point(0, 30)
         Me.pnlUnbrick.Name = "pnlUnbrick"
         Me.pnlUnbrick.ShowCloseButton = True
-        Me.pnlUnbrick.Size = New System.Drawing.Size(737, 400)
+        Me.pnlUnbrick.Size = New System.Drawing.Size(740, 403)
         Me.pnlUnbrick.TabIndex = 8
         Me.pnlUnbrick.Text = "Unbrick"
         Me.pnlUnbrick.ThemesEnabled = False
@@ -272,10 +327,10 @@ Partial Class Home
         '
         Me.pnlAbout.Image = Nothing
         Me.pnlAbout.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlAbout.Location = New System.Drawing.Point(1, 31)
+        Me.pnlAbout.Location = New System.Drawing.Point(0, 30)
         Me.pnlAbout.Name = "pnlAbout"
         Me.pnlAbout.ShowCloseButton = True
-        Me.pnlAbout.Size = New System.Drawing.Size(737, 400)
+        Me.pnlAbout.Size = New System.Drawing.Size(740, 403)
         Me.pnlAbout.TabIndex = 9
         Me.pnlAbout.Text = "About"
         Me.pnlAbout.ThemesEnabled = False
@@ -284,10 +339,10 @@ Partial Class Home
         '
         Me.pnlBackup.Image = Nothing
         Me.pnlBackup.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlBackup.Location = New System.Drawing.Point(1, 31)
+        Me.pnlBackup.Location = New System.Drawing.Point(0, 30)
         Me.pnlBackup.Name = "pnlBackup"
         Me.pnlBackup.ShowCloseButton = True
-        Me.pnlBackup.Size = New System.Drawing.Size(737, 400)
+        Me.pnlBackup.Size = New System.Drawing.Size(740, 403)
         Me.pnlBackup.TabIndex = 10
         Me.pnlBackup.Text = "Backup"
         Me.pnlBackup.ThemesEnabled = False
@@ -296,10 +351,10 @@ Partial Class Home
         '
         Me.pnlSettings.Image = Nothing
         Me.pnlSettings.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlSettings.Location = New System.Drawing.Point(1, 31)
+        Me.pnlSettings.Location = New System.Drawing.Point(0, 30)
         Me.pnlSettings.Name = "pnlSettings"
         Me.pnlSettings.ShowCloseButton = True
-        Me.pnlSettings.Size = New System.Drawing.Size(737, 400)
+        Me.pnlSettings.Size = New System.Drawing.Size(740, 403)
         Me.pnlSettings.TabIndex = 11
         Me.pnlSettings.Text = "Settings"
         Me.pnlSettings.ThemesEnabled = False
@@ -319,6 +374,8 @@ Partial Class Home
         Me.pnlPhone.PerformLayout()
         CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picPhone, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlBootloader.ResumeLayout(False)
+        Me.pnlBootloader.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -343,4 +400,9 @@ Partial Class Home
     Friend WithEvents Label3 As Label
     Friend WithEvents cmbModel As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents pnlSettings As Syncfusion.Windows.Forms.Tools.TabPageAdv
+    Friend WithEvents txtBoxUnlockKey As TextBox
+    Friend WithEvents btnLockBootloader As Button
+    Friend WithEvents btnUnlockBootloader As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtBoxBootloader As TextBox
 End Class
