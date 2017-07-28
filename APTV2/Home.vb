@@ -211,4 +211,14 @@ Public Class Home
         processStartInfo.CreateNoWindow = True
         Return processStartInfo
     End Function
+
+    Private Sub UpdateTextBox(ByVal a As String)
+        If Me.InvokeRequired Then
+            Dim args() As String = {a}
+            Me.Invoke(New Action(Of String)(AddressOf UpdateTextBox), args)
+            Return
+        End If
+        LabelToOutput.AppendText(a & Environment.NewLine)
+
+    End Sub
 End Class
