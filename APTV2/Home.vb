@@ -18,6 +18,7 @@ Public Class Home
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'read xml file and load in to the dropbox
         readXML()
+        reloadInfo()
 
     End Sub
 
@@ -43,9 +44,8 @@ Public Class Home
             'the exception that will throw when it does not find the last
             'chosen model will Not break the program
             cmbModel.SelectedItem = My.Settings.LastChosenModel
-            reloadInfo()
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString)
         End Try
 
     End Sub
@@ -94,31 +94,35 @@ Public Class Home
         Dim unlockKey As String = txtBoxUnlockKey.Text
         Dim proceed As Boolean
 
-            If unlockKey = "" Then
-                Dim result As DialogResult = MessageBox.Show("You have not entered a unlock key." + vbLf +
-                                                              "Some devices might not require it." + vbLf +
-                                                              "Continue?",
-                                                              "Proceed",
-                                                              MessageBoxButtons.YesNo,
-                                                              MessageBoxIcon.Question)
-                If result = DialogResult.Yes Then
-                    proceed = True
-                Else
-                    proceed = False
-                End If
+        If unlockKey = "" Then
+            Dim result As DialogResult = MessageBox.Show("You have not entered a unlock key." + vbLf +
+                                                          "Some devices might not require it." + vbLf +
+                                                          "Continue?",
+                                                          "Proceed",
+                                                          MessageBoxButtons.YesNo,
+                                                          MessageBoxIcon.Question)
+            If result = DialogResult.Yes Then
+                proceed = True
+            Else
+                proceed = False
             End If
+        End If
 
         If proceed Then
-            Dim executable As String() = {"fastboot"}
-            Dim arguments As String() = {"oem unlock " + unlockKey}
-            Dim description As String() = {"Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)"}
-            'Dim executable As String() = {"adb"}
+            Dim commands(3, 3) As String
+            commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
+                {"fastboot", "oem unlock" + unlockKey, "Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)"},
+                {"fastboot", "reboot", "Rebooting device"}
+            }
+            'Dim executable As String() = {"adb", "fastboot", "fastboot"}
+            'Dim arguments As String() = {"reboot bootloader", "oem unlock " + unlockKey, "reboot"}
+            'Dim description As String() = {"Rebooting to bootloader", "Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)", "Rebooting device"}
+            ''Dim executable As String() = {"adb"}
             'Dim arguments As String() = {"help"}
             'Console.WriteLine(arguments(0))
             LabelToOutput = txtBoxBootloader
-            Task.Run(Sub() runComands(executable, arguments, description))
+            Task.Run(Sub() runComands(commands))
         End If
-
 
     End Sub
 
@@ -141,31 +145,35 @@ Public Class Home
         End If
 
         If proceed Then
-            Dim executable As String() = {"fastboot"}
-            Dim arguments As String() = {"oem relock " + unlockKey}
-            Dim description As String() = {"Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)"}
-            'Dim executable As String() = {"adb"}
-            'Dim arguments As String() = {"help"}
-            'Console.WriteLine(arguments(0))
+            Dim commands(3, 3) As String
+            commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
+                {"fastboot", "oem relock" + unlockKey, "RElocking bootloader: (make sure device is plugged, otherwise it will not output anything)"},
+                {"fastboot", "reboot", "Rebooting device"}
+            }
+            'Dim executable As String() = {"fastboot"}
+            'Dim arguments As String() = {"oem relock " + unlockKey}
+            'Dim description As String() = {"Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)"}
+            ''Dim executable As String() = {"adb"}
+            ''Dim arguments As String() = {"help"}
+            ''Console.WriteLine(arguments(0))
             LabelToOutput = txtBoxBootloader
-            Task.Run(Sub() runComands(executable, arguments, description))
+            Task.Run(Sub() runComands(commands))
         End If
 
     End Sub
 
-    'runs the adb commands and outputs in the chosen label
-    Private Sub runComands(ByVal executable As String(), ByVal arguments As String(), ByVal description As String())
-        'Try
-        For i As Integer = 0 To (arguments.Length - 1)
+    'runs the adb commands
+    Private Sub runComands(ByVal commands(,) As String)
+        For i As Integer = 0 To (commands.Length - 1)
             Dim process = New Process()
-            process.StartInfo = createStartInfo(executable(i), arguments(i))
+            process.StartInfo = createStartInfo(commands(i, 0), commands(i, 1))
             process.EnableRaisingEvents = True
             AddHandler process.Exited, Sub(ByVal sendera As Object, ByVal ea As System.EventArgs)
                                            'Console.WriteLine(process.ExitTime)
                                            'Console.WriteLine(". Processing done.")
                                            ' output line n when output is ready (= all lines are present)
                                            'Console.WriteLine(lines(1))
-                                           UpdateTextBox(Environment.NewLine & process.ExitTime & Environment.NewLine & ".ProcessingDone")
+                                           'UpdateTextBox(Environment.NewLine & process.ExitTime & Environment.NewLine & ".ProcessingDone")
                                        End Sub
             ' catch standard output
             AddHandler process.OutputDataReceived, Sub(ByVal senderb As Object, ByVal eb As System.Diagnostics.DataReceivedEventArgs)
@@ -181,24 +189,23 @@ Public Class Home
                                                       Dim a As String = String.Format("! {0}", ec.Data)
                                                       Console.WriteLine(a)
                                                       UpdateTextBox(a)
+
                                                   End Sub
             ' start process
-            UpdateTextBox(description(i))
+            UpdateTextBox(commands(i, 2))
             Dim result = process.Start()
             ' and wait for output
             process.BeginOutputReadLine()
             ' and wait for errors :-)
             process.BeginErrorReadLine()
             process.WaitForExit()
-            UpdateTextBox(Environment.NewLine & process.ExitTime & Environment.NewLine & ".ProcessingDone")
+            process.Close()
 
         Next
 
-        'Catch ex As Exception
-
-        'End Try
     End Sub
 
+    'the process information stuff
     Private Function createStartInfo(ByVal executable As String, ByVal arguments As String) As ProcessStartInfo
         Dim processStartInfo = New ProcessStartInfo(executable, arguments)
         processStartInfo.WorkingDirectory = Path.GetDirectoryName(executable)
@@ -212,6 +219,7 @@ Public Class Home
         Return processStartInfo
     End Function
 
+    'output the error and stuff to the chosen label
     Private Sub UpdateTextBox(ByVal a As String)
         If Me.InvokeRequired Then
             Dim args() As String = {a}
@@ -221,4 +229,5 @@ Public Class Home
         LabelToOutput.AppendText(a & Environment.NewLine)
 
     End Sub
+
 End Class
