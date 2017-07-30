@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Huawei Honor 7 PLK-L01")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Huawei Honor7 PLK-L01")>  _
         Public Property LastChosenModel() As String
             Get
                 Return CType(Me("LastChosenModel"),String)

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <phone>
+    <manufacturer>Huawei</manufacturer>
+    <model>Honor7</model>
+    <variant>PLK-L01</variant>
+    <picture>HuaweiHonor7.png</picture>
+    <twrp>
+      <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
+    </twrp>
+  </phone>
+  <phone>
+    <manufacturer>Huawei</manufacturer>
+    <model>Honor7</model>
+    <variant>PLK-L02</variant>
+    <picture>HuaweiHonor7.png</picture>
+    <twrp>
+      <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
+    </twrp>
+  </phone>
+  <phone>
+    <manufacturer>Huawei</manufacturer>
+    <model>Honor7</model>
+    <variant>PLK-L03</variant>
+    <picture>HuaweiHonor7.png</picture>
+    <twrp>
+      <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
+    </twrp>
+  </phone>
+</root>

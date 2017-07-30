@@ -47,12 +47,17 @@ Partial Class Home
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.btnFlashRecovery = New System.Windows.Forms.Button()
+        Me.cmbRecovery = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.txtBoxRecovery = New System.Windows.Forms.TextBox()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
         CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picPhone, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlBootloader.SuspendLayout()
+        Me.pnlRecovery.SuspendLayout()
+        CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CalculatorControl1
@@ -265,6 +270,9 @@ Partial Class Home
         '
         'pnlRecovery
         '
+        Me.pnlRecovery.Controls.Add(Me.txtBoxRecovery)
+        Me.pnlRecovery.Controls.Add(Me.cmbRecovery)
+        Me.pnlRecovery.Controls.Add(Me.btnFlashRecovery)
         Me.pnlRecovery.Image = Nothing
         Me.pnlRecovery.ImageSize = New System.Drawing.Size(16, 16)
         Me.pnlRecovery.Location = New System.Drawing.Point(0, 30)
@@ -359,6 +367,35 @@ Partial Class Home
         Me.pnlSettings.Text = "Settings"
         Me.pnlSettings.ThemesEnabled = False
         '
+        'btnFlashRecovery
+        '
+        Me.btnFlashRecovery.Location = New System.Drawing.Point(58, 193)
+        Me.btnFlashRecovery.Name = "btnFlashRecovery"
+        Me.btnFlashRecovery.Size = New System.Drawing.Size(172, 95)
+        Me.btnFlashRecovery.TabIndex = 0
+        Me.btnFlashRecovery.Text = "Flash Recovery"
+        Me.btnFlashRecovery.UseVisualStyleBackColor = True
+        '
+        'cmbRecovery
+        '
+        Me.cmbRecovery.BeforeTouchSize = New System.Drawing.Size(172, 26)
+        Me.cmbRecovery.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbRecovery.Location = New System.Drawing.Point(58, 91)
+        Me.cmbRecovery.Name = "cmbRecovery"
+        Me.cmbRecovery.Size = New System.Drawing.Size(172, 26)
+        Me.cmbRecovery.TabIndex = 10
+        Me.cmbRecovery.Text = "Select a Recovery Version"
+        '
+        'txtBoxRecovery
+        '
+        Me.txtBoxRecovery.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtBoxRecovery.Location = New System.Drawing.Point(392, 14)
+        Me.txtBoxRecovery.Multiline = True
+        Me.txtBoxRecovery.Name = "txtBoxRecovery"
+        Me.txtBoxRecovery.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtBoxRecovery.Size = New System.Drawing.Size(336, 364)
+        Me.txtBoxRecovery.TabIndex = 11
+        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -376,6 +413,9 @@ Partial Class Home
         CType(Me.picPhone, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlBootloader.ResumeLayout(False)
         Me.pnlBootloader.PerformLayout()
+        Me.pnlRecovery.ResumeLayout(False)
+        Me.pnlRecovery.PerformLayout()
+        CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -405,4 +445,7 @@ Partial Class Home
     Friend WithEvents btnUnlockBootloader As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents txtBoxBootloader As TextBox
+    Friend WithEvents cmbRecovery As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
+    Friend WithEvents btnFlashRecovery As Button
+    Friend WithEvents txtBoxRecovery As TextBox
 End Class

@@ -1,9 +1,12 @@
 ﻿Imports Syncfusion.Windows.Forms
 Imports System.Xml
 Imports System.IO
+Imports System.Net
 
 Public Class Home
     Inherits MetroForm
+
+#Region "Variables"
 
     'Public variables
     Dim strManufacturer As String = ""
@@ -15,12 +18,15 @@ Public Class Home
     'document needs to be open during the whole program, otherwise it would be opening and closing
     Dim xmlDoc As New XmlDocument()
 
+#End Region
+
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'read xml file and load in to the dropbox
         readXML()
-        reloadInfo()
 
     End Sub
+
+#Region "Reloading data"
 
     Sub readXML()
         Try
@@ -39,21 +45,21 @@ Public Class Home
         End Try
 
         Try
-            'choses the first item, and then selects the last item if there is
-            cmbModel.SelectedIndex = 0
-            'the exception that will throw when it does not find the last
+
             'chosen model will Not break the program
+            'Console.WriteLine(My.Settings.LastChosenModel)
             cmbModel.SelectedItem = My.Settings.LastChosenModel
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
+        reloadInfo()
 
     End Sub
 
     Private Sub cmbModel_SelectedValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbModel.SelectedValueChanged
         'save the changes so the next time is open, it loads the last selected model
         My.Settings.LastChosenModel = cmbModel.SelectedItem.ToString()
-        'Console.WriteLine(cmbModel.SelectedItem.ToString())
+        'Console.WriteLine(My.Settings.LastChosenModel)
         My.Settings.Save()
         'reload the correct information
         reloadInfo()
@@ -76,19 +82,38 @@ Public Class Home
         Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
         For Each node As XmlNode In nodes
             If strVariant = node.SelectSingleNode("variant").InnerText Then
+
+                'update Labels in the homepage
                 lblManufacturer.Text = node.SelectSingleNode("manufacturer").InnerText
                 lblModel.Text = node.SelectSingleNode("model").InnerText
                 lblVariant.Text = node.SelectSingleNode("variant").InnerText
-                'Console.WriteLine(strPicture)
+
+                'update Picture
                 Try
                     Dim strPicture As String = "phones/pictures/" & node.SelectSingleNode("picture").InnerText
                     picPhone.BackgroundImage = Image.FromFile(strPicture)
                 Catch ex As Exception
+                    MessageBox.Show(ex.ToString)
                 End Try
+
+                'get recovery info
+                For Each nod As XmlNode In node.SelectNodes("twrp/version")
+                    Dim recoveryTWRP As String = nod.Attributes("id").Value
+                    Console.WriteLine(recoveryTWRP)
+                    If cmbRecovery.Items.Contains("TWRP " & recoveryTWRP) Then
+                    Else
+                        cmbRecovery.Items.Add("TWRP " & recoveryTWRP)
+                    End If
+                Next
+
             End If
         Next
 
     End Sub
+
+#End Region
+
+#Region "Bootloader"
 
     Private Sub btnUnlockBootloader_Click(sender As Object, e As EventArgs) Handles btnUnlockBootloader.Click
         Dim unlockKey As String = txtBoxUnlockKey.Text
@@ -114,12 +139,6 @@ Public Class Home
                 {"fastboot", "oem unlock" + unlockKey, "Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)"},
                 {"fastboot", "reboot", "Rebooting device"}
             }
-            'Dim executable As String() = {"adb", "fastboot", "fastboot"}
-            'Dim arguments As String() = {"reboot bootloader", "oem unlock " + unlockKey, "reboot"}
-            'Dim description As String() = {"Rebooting to bootloader", "Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)", "Rebooting device"}
-            ''Dim executable As String() = {"adb"}
-            'Dim arguments As String() = {"help"}
-            'Console.WriteLine(arguments(0))
             LabelToOutput = txtBoxBootloader
             Task.Run(Sub() runComands(commands))
         End If
@@ -161,6 +180,10 @@ Public Class Home
         End If
 
     End Sub
+
+#End Region
+
+#Region "ADB Commands"
 
     'runs the adb commands
     Private Sub runComands(ByVal commands(,) As String)
@@ -227,6 +250,44 @@ Public Class Home
             Return
         End If
         LabelToOutput.AppendText(a & Environment.NewLine)
+
+    End Sub
+
+#End Region
+
+    Private Sub btnFlashRecovery_Click(sender As Object, e As EventArgs) Handles btnFlashRecovery.Click
+        'gets the chosenRecovery Value
+        Dim strRecovery As String = cmbRecovery.SelectedItem
+        Dim strRecoverySplit As String() = strRecovery.Split(New Char() {" "c})
+        Console.WriteLine(strRecoverySplit(1))
+        Dim chosenRecovery As String = strRecoverySplit(1)
+        'loads the document and gets the current variant,
+        'which searches for the right version of the recovery and downloads it
+        xmlDoc.Load(My.Settings.xmlDocumentName)
+        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
+        For Each node As XmlNode In nodes
+            If strVariant = node.SelectSingleNode("variant").InnerText Then
+                For Each nod As XmlNode In node.SelectNodes("twrp/version")
+                    Dim id As String = nod.Attributes("id").Value
+                    If chosenRecovery = id Then
+                        Dim fileName As String = "downloads/twrp-" & id & ".img"
+                        Using myWebClient As New WebClient()
+                            myWebClient.DownloadFile(nod.InnerText, fileName)
+                            'run the right commands
+                            LabelToOutput = txtBoxRecovery
+                            Dim commands(3, 3) As String
+                            commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
+                                {"fastboot", "flash recovery" & fileName, "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
+                                {"fastboot", "reboot", "Rebooting device"}
+                            }
+
+                            Task.Run(Sub() runComands(commands))
+                        End Using
+                    End If
+                Next
+            End If
+        Next
+
 
     End Sub
 
