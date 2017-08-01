@@ -51,6 +51,11 @@ Partial Class Home
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.txtBoxRoot = New System.Windows.Forms.TextBox()
+        Me.progressBarRoot = New System.Windows.Forms.ProgressBar()
+        Me.cmbRoot = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.btnFlashMagisk = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -59,6 +64,8 @@ Partial Class Home
         Me.pnlBootloader.SuspendLayout()
         Me.pnlRecovery.SuspendLayout()
         CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlRoot.SuspendLayout()
+        CType(Me.cmbRoot, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CalculatorControl1
@@ -324,6 +331,11 @@ Partial Class Home
         '
         'pnlRoot
         '
+        Me.pnlRoot.Controls.Add(Me.Label5)
+        Me.pnlRoot.Controls.Add(Me.progressBarRoot)
+        Me.pnlRoot.Controls.Add(Me.cmbRoot)
+        Me.pnlRoot.Controls.Add(Me.btnFlashMagisk)
+        Me.pnlRoot.Controls.Add(Me.txtBoxRoot)
         Me.pnlRoot.Image = Nothing
         Me.pnlRoot.ImageSize = New System.Drawing.Size(16, 16)
         Me.pnlRoot.Location = New System.Drawing.Point(0, 30)
@@ -406,6 +418,52 @@ Partial Class Home
         Me.pnlSettings.Text = "Settings"
         Me.pnlSettings.ThemesEnabled = False
         '
+        'txtBoxRoot
+        '
+        Me.txtBoxRoot.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtBoxRoot.Location = New System.Drawing.Point(392, 17)
+        Me.txtBoxRoot.Multiline = True
+        Me.txtBoxRoot.Name = "txtBoxRoot"
+        Me.txtBoxRoot.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtBoxRoot.Size = New System.Drawing.Size(336, 364)
+        Me.txtBoxRoot.TabIndex = 12
+        '
+        'progressBarRoot
+        '
+        Me.progressBarRoot.Location = New System.Drawing.Point(98, 144)
+        Me.progressBarRoot.Name = "progressBarRoot"
+        Me.progressBarRoot.Size = New System.Drawing.Size(100, 23)
+        Me.progressBarRoot.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.progressBarRoot.TabIndex = 15
+        '
+        'cmbRoot
+        '
+        Me.cmbRoot.BeforeTouchSize = New System.Drawing.Size(172, 26)
+        Me.cmbRoot.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbRoot.Location = New System.Drawing.Point(70, 83)
+        Me.cmbRoot.Name = "cmbRoot"
+        Me.cmbRoot.Size = New System.Drawing.Size(172, 26)
+        Me.cmbRoot.TabIndex = 14
+        Me.cmbRoot.Text = "Select a Magisk Version"
+        '
+        'btnFlashMagisk
+        '
+        Me.btnFlashMagisk.Location = New System.Drawing.Point(70, 210)
+        Me.btnFlashMagisk.Name = "btnFlashMagisk"
+        Me.btnFlashMagisk.Size = New System.Drawing.Size(172, 95)
+        Me.btnFlashMagisk.TabIndex = 13
+        Me.btnFlashMagisk.Text = "Flash Magisk"
+        Me.btnFlashMagisk.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(86, 38)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(207, 18)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Magisk is a way to get systemless root"
+        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -426,6 +484,9 @@ Partial Class Home
         Me.pnlRecovery.ResumeLayout(False)
         Me.pnlRecovery.PerformLayout()
         CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlRoot.ResumeLayout(False)
+        Me.pnlRoot.PerformLayout()
+        CType(Me.cmbRoot, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -459,4 +520,9 @@ Partial Class Home
     Friend WithEvents btnFlashRecovery As Button
     Friend WithEvents txtBoxRecovery As TextBox
     Friend WithEvents progressBarRecovery As ProgressBar
+    Friend WithEvents Label5 As Label
+    Friend WithEvents progressBarRoot As ProgressBar
+    Friend WithEvents cmbRoot As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
+    Friend WithEvents btnFlashMagisk As Button
+    Friend WithEvents txtBoxRoot As TextBox
 End Class

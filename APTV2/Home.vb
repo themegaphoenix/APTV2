@@ -111,12 +111,21 @@ Public Class Home
                 For Each nod As XmlNode In node.SelectNodes("twrp/version")
                     Dim recoveryTWRP As String = nod.Attributes("id").Value
                     Console.WriteLine(recoveryTWRP)
-                    If cmbRecovery.Items.Contains("TWRP " & recoveryTWRP) Then
-                    Else
+                    If cmbRecovery.Items.Contains("TWRP " & recoveryTWRP) = False Then
                         cmbRecovery.Items.Add("TWRP " & recoveryTWRP)
+
                     End If
                 Next
 
+            End If
+        Next
+        Dim parentNode As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/magiskInstaller/version")
+
+        For Each node As XmlNode In parentNode
+
+            Dim version As String = node.Attributes("id").Value
+            If cmbRoot.Items.Contains("Magisk " & version) = False Then
+                cmbRoot.Items.Add("Magisk " & version)
             End If
         Next
 
@@ -193,13 +202,15 @@ Public Class Home
     End Sub
 
 #End Region
+
+#Region "Recovery"
+
     Private Async Sub btnFlashRecovery_ClickAsync(sender As Object, e As EventArgs) Handles btnFlashRecovery.Click
         'gets the chosenRecovery Value
         Dim strRecovery As String = cmbRecovery.SelectedItem
         Dim strRecoverySplit As String() = strRecovery.Split(New Char() {" "c})
         Console.WriteLine(strRecoverySplit(1))
         Dim chosenRecovery As String = strRecoverySplit(1)
-
 
         'loads the document and gets the current variant,
         'which searches for the right version of the recovery and downloads it
@@ -233,6 +244,8 @@ Public Class Home
         Next
 
     End Sub
+
+#End Region
 
 #Region "Download File"
 
@@ -356,6 +369,47 @@ Public Class Home
 
     End Sub
 
+#End Region
+
+#Region "Root"
+
+    Private Async Sub btnFlashMagisk_Click(sender As Object, e As EventArgs) Handles btnFlashMagisk.Click
+        'gets the chosenRecovery Value
+        Dim strRoot As String = cmbRoot.SelectedItem
+        Dim strRootSplit As String() = strRoot.Split(New Char() {" "c})
+        Console.WriteLine(strRootSplit(1))
+        Dim chosenRecovery As String = strRootSplit(1)
+
+        'loads the document and gets the current variant,
+        'which searches for the right version of the recovery and downloads it
+        xmlDoc.Load(My.Settings.xmlDocumentName)
+        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/magiskInstaller/version")
+        For Each node As XmlNode In nodes
+
+            Dim id As String = node.Attributes("id").Value
+            If chosenRecovery = id Then
+
+                Dim fileName As String = "downloads/magisk-" & id & ".zip"
+                'change the progress bar
+                progressBar = progressBarRoot
+
+                'downloads the file
+                'the file is checked it it exists first in the function
+                Await DownloadFileAsync(node.InnerText, fileName)
+
+                'run the right adb commands
+                'todo fix the commands
+                LabelToOutput = txtBoxRoot
+                Dim commands(3, 3) As String
+                commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
+                                        {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img", "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
+                                        {"fastboot", "reboot", "Rebooting device"}
+                                    }
+                Await Task.Run(Sub() runComands(commands))
+            End If
+        Next
+
+    End Sub
 #End Region
 
 End Class
