@@ -2,9 +2,17 @@
 Imports System.Xml
 Imports System.IO
 Imports System.Net
+Imports System.Threading
+
+Imports System.Diagnostics
+Imports System.ComponentModel
 
 Public Class Home
     Inherits MetroForm
+
+    'better interface
+    'add all features
+    'add more recoveries
 
 #Region "Variables"
 
@@ -14,11 +22,14 @@ Public Class Home
     Dim strModel As String = ""
     Dim strVariant As String = ""
     Dim LabelToOutput As TextBox
+    Dim progressBar As ProgressBar
 
     'document needs to be open during the whole program, otherwise it would be opening and closing
     Dim xmlDoc As New XmlDocument()
 
 #End Region
+
+    ' The stopwatch which we will be using to calculate the download speed
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'read xml file and load in to the dropbox
@@ -182,6 +193,98 @@ Public Class Home
     End Sub
 
 #End Region
+    Private Async Sub btnFlashRecovery_ClickAsync(sender As Object, e As EventArgs) Handles btnFlashRecovery.Click
+        'gets the chosenRecovery Value
+        Dim strRecovery As String = cmbRecovery.SelectedItem
+        Dim strRecoverySplit As String() = strRecovery.Split(New Char() {" "c})
+        Console.WriteLine(strRecoverySplit(1))
+        Dim chosenRecovery As String = strRecoverySplit(1)
+
+
+        'loads the document and gets the current variant,
+        'which searches for the right version of the recovery and downloads it
+        xmlDoc.Load(My.Settings.xmlDocumentName)
+        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
+        For Each node As XmlNode In nodes
+            If strVariant = node.SelectSingleNode("variant").InnerText Then
+                For Each nod As XmlNode In node.SelectNodes("twrp/version")
+                    Dim id As String = nod.Attributes("id").Value
+                    If chosenRecovery = id Then
+
+                        Dim fileName As String = "downloads/twrp-" & id & ".img"
+                        'change the progress bar
+                        progressBar = progressBarRecovery
+
+                        'downloads the file
+                        'the file is checked it it exists first in the function
+                        Await DownloadFileAsync(nod.InnerText, fileName)
+
+                        'run the right adb commands
+                        LabelToOutput = txtBoxRecovery
+                        Dim commands(3, 3) As String
+                        commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
+                                                {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img", "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
+                                                {"fastboot", "reboot", "Rebooting device"}
+                                            }
+                        Await Task.Run(Sub() runComands(commands))
+                    End If
+                Next
+            End If
+        Next
+
+    End Sub
+
+#Region "Download File"
+
+    Private Sub UpdateProgressBar(ByVal a As Integer)
+        If Me.InvokeRequired Then
+            Dim args() As String = {a}
+            Me.Invoke(New Action(Of String)(AddressOf UpdateProgressBar), args)
+            Return
+        End If
+        progressBar.Value = CInt(a)
+
+    End Sub
+
+    Public Async Function DownloadFileAsync(urlAddress As String, filename As String) As Task(Of Integer)
+        Using webClient = New WebClient()
+            'updates the information
+            AddHandler webClient.DownloadFileCompleted, AddressOf Completed
+            AddHandler webClient.DownloadProgressChanged, AddressOf ProgressChanged
+
+            Try
+                ' Start downloading the file if the file does not exist
+                If File.Exists(filename) = False Then
+                    Await webClient.DownloadFileTaskAsync(New Uri(urlAddress), filename)
+                End If
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End Using
+        Return 3
+
+    End Function
+
+    ' The event that will fire whenever the progress of the WebClient is changed
+    Private Sub ProgressChanged(sender As Object, e As DownloadProgressChangedEventArgs)
+
+        'Console.WriteLine(e.ProgressPercentage)
+        ' Update the progressbar percentage
+        UpdateProgressBar(e.ProgressPercentage)
+
+    End Sub
+
+    ' The event that will trigger when the WebClient is completed
+    Private Sub Completed(sender As Object, e As AsyncCompletedEventArgs)
+
+        If e.Cancelled = True Then
+            MessageBox.Show("Download has been canceled.")
+        Else
+            MessageBox.Show("Download completed!")
+        End If
+    End Sub
+
+#End Region
 
 #Region "ADB Commands"
 
@@ -254,41 +357,5 @@ Public Class Home
     End Sub
 
 #End Region
-
-    Private Sub btnFlashRecovery_Click(sender As Object, e As EventArgs) Handles btnFlashRecovery.Click
-        'gets the chosenRecovery Value
-        Dim strRecovery As String = cmbRecovery.SelectedItem
-        Dim strRecoverySplit As String() = strRecovery.Split(New Char() {" "c})
-        Console.WriteLine(strRecoverySplit(1))
-        Dim chosenRecovery As String = strRecoverySplit(1)
-        'loads the document and gets the current variant,
-        'which searches for the right version of the recovery and downloads it
-        xmlDoc.Load(My.Settings.xmlDocumentName)
-        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
-        For Each node As XmlNode In nodes
-            If strVariant = node.SelectSingleNode("variant").InnerText Then
-                For Each nod As XmlNode In node.SelectNodes("twrp/version")
-                    Dim id As String = nod.Attributes("id").Value
-                    If chosenRecovery = id Then
-                        Dim fileName As String = "downloads/twrp-" & id & ".img"
-                        Using myWebClient As New WebClient()
-                            myWebClient.DownloadFile(nod.InnerText, fileName)
-                            'run the right commands
-                            LabelToOutput = txtBoxRecovery
-                            Dim commands(3, 3) As String
-                            commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
-                                {"fastboot", "flash recovery" & fileName, "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
-                                {"fastboot", "reboot", "Rebooting device"}
-                            }
-
-                            Task.Run(Sub() runComands(commands))
-                        End Using
-                    End If
-                Next
-            End If
-        Next
-
-
-    End Sub
 
 End Class

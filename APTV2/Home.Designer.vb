@@ -40,6 +40,10 @@ Partial Class Home
         Me.btnLockBootloader = New System.Windows.Forms.Button()
         Me.btnUnlockBootloader = New System.Windows.Forms.Button()
         Me.pnlRecovery = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.progressBarRecovery = New System.Windows.Forms.ProgressBar()
+        Me.txtBoxRecovery = New System.Windows.Forms.TextBox()
+        Me.cmbRecovery = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.btnFlashRecovery = New System.Windows.Forms.Button()
         Me.pnlRoot = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlXposed = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlGapps = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
@@ -47,9 +51,6 @@ Partial Class Home
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.btnFlashRecovery = New System.Windows.Forms.Button()
-        Me.cmbRecovery = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
-        Me.txtBoxRecovery = New System.Windows.Forms.TextBox()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -270,6 +271,7 @@ Partial Class Home
         '
         'pnlRecovery
         '
+        Me.pnlRecovery.Controls.Add(Me.progressBarRecovery)
         Me.pnlRecovery.Controls.Add(Me.txtBoxRecovery)
         Me.pnlRecovery.Controls.Add(Me.cmbRecovery)
         Me.pnlRecovery.Controls.Add(Me.btnFlashRecovery)
@@ -282,6 +284,43 @@ Partial Class Home
         Me.pnlRecovery.TabIndex = 2
         Me.pnlRecovery.Text = "Recovery"
         Me.pnlRecovery.ThemesEnabled = False
+        '
+        'progressBarRecovery
+        '
+        Me.progressBarRecovery.Location = New System.Drawing.Point(65, 126)
+        Me.progressBarRecovery.Name = "progressBarRecovery"
+        Me.progressBarRecovery.Size = New System.Drawing.Size(100, 23)
+        Me.progressBarRecovery.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.progressBarRecovery.TabIndex = 12
+        '
+        'txtBoxRecovery
+        '
+        Me.txtBoxRecovery.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtBoxRecovery.Location = New System.Drawing.Point(392, 14)
+        Me.txtBoxRecovery.Multiline = True
+        Me.txtBoxRecovery.Name = "txtBoxRecovery"
+        Me.txtBoxRecovery.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtBoxRecovery.Size = New System.Drawing.Size(336, 364)
+        Me.txtBoxRecovery.TabIndex = 11
+        '
+        'cmbRecovery
+        '
+        Me.cmbRecovery.BeforeTouchSize = New System.Drawing.Size(172, 26)
+        Me.cmbRecovery.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbRecovery.Location = New System.Drawing.Point(37, 65)
+        Me.cmbRecovery.Name = "cmbRecovery"
+        Me.cmbRecovery.Size = New System.Drawing.Size(172, 26)
+        Me.cmbRecovery.TabIndex = 10
+        Me.cmbRecovery.Text = "Select a Recovery Version"
+        '
+        'btnFlashRecovery
+        '
+        Me.btnFlashRecovery.Location = New System.Drawing.Point(37, 192)
+        Me.btnFlashRecovery.Name = "btnFlashRecovery"
+        Me.btnFlashRecovery.Size = New System.Drawing.Size(172, 95)
+        Me.btnFlashRecovery.TabIndex = 0
+        Me.btnFlashRecovery.Text = "Flash Recovery"
+        Me.btnFlashRecovery.UseVisualStyleBackColor = True
         '
         'pnlRoot
         '
@@ -367,35 +406,6 @@ Partial Class Home
         Me.pnlSettings.Text = "Settings"
         Me.pnlSettings.ThemesEnabled = False
         '
-        'btnFlashRecovery
-        '
-        Me.btnFlashRecovery.Location = New System.Drawing.Point(58, 193)
-        Me.btnFlashRecovery.Name = "btnFlashRecovery"
-        Me.btnFlashRecovery.Size = New System.Drawing.Size(172, 95)
-        Me.btnFlashRecovery.TabIndex = 0
-        Me.btnFlashRecovery.Text = "Flash Recovery"
-        Me.btnFlashRecovery.UseVisualStyleBackColor = True
-        '
-        'cmbRecovery
-        '
-        Me.cmbRecovery.BeforeTouchSize = New System.Drawing.Size(172, 26)
-        Me.cmbRecovery.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbRecovery.Location = New System.Drawing.Point(58, 91)
-        Me.cmbRecovery.Name = "cmbRecovery"
-        Me.cmbRecovery.Size = New System.Drawing.Size(172, 26)
-        Me.cmbRecovery.TabIndex = 10
-        Me.cmbRecovery.Text = "Select a Recovery Version"
-        '
-        'txtBoxRecovery
-        '
-        Me.txtBoxRecovery.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.txtBoxRecovery.Location = New System.Drawing.Point(392, 14)
-        Me.txtBoxRecovery.Multiline = True
-        Me.txtBoxRecovery.Name = "txtBoxRecovery"
-        Me.txtBoxRecovery.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtBoxRecovery.Size = New System.Drawing.Size(336, 364)
-        Me.txtBoxRecovery.TabIndex = 11
-        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -448,4 +458,5 @@ Partial Class Home
     Friend WithEvents cmbRecovery As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents btnFlashRecovery As Button
     Friend WithEvents txtBoxRecovery As TextBox
+    Friend WithEvents progressBarRecovery As ProgressBar
 End Class
