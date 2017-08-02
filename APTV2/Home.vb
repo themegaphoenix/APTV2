@@ -10,9 +10,9 @@ Imports System.ComponentModel
 Public Class Home
     Inherits MetroForm
 
-    'better interface
-    'add all features
-    'add more recoveries
+    'todo better interface
+    'todo add all features
+    'todo add more recoveries
 
 #Region "Variables"
 
@@ -28,8 +28,6 @@ Public Class Home
     Dim xmlDoc As New XmlDocument()
 
 #End Region
-
-    ' The stopwatch which we will be using to calculate the download speed
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'read xml file and load in to the dropbox
@@ -108,6 +106,8 @@ Public Class Home
                 End Try
 
                 'get recovery info
+                cmbRecovery.Items.Clear()
+
                 For Each nod As XmlNode In node.SelectNodes("twrp/version")
                     Dim recoveryTWRP As String = nod.Attributes("id").Value
                     Console.WriteLine(recoveryTWRP)
@@ -119,13 +119,24 @@ Public Class Home
 
             End If
         Next
+
+        'root information
+        cmbRoot.Items.Clear()
         Dim parentNode As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/magiskInstaller/version")
-
         For Each node As XmlNode In parentNode
-
             Dim version As String = node.Attributes("id").Value
             If cmbRoot.Items.Contains("Magisk " & version) = False Then
                 cmbRoot.Items.Add("Magisk " & version)
+            End If
+        Next
+
+        'Gapps version
+        cmbGApps.Items.Clear()
+        Dim parentNode2 As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/Gapps/version")
+        For Each node As XmlNode In parentNode2
+            Dim version As String = node.Attributes("id").Value
+            If cmbGApps.Items.Contains("GAppsApp " & version) = False Then
+                cmbGApps.Items.Add("Gapps Application " & version)
             End If
         Next
 
@@ -312,7 +323,6 @@ Public Class Home
                                            'Console.WriteLine(". Processing done.")
                                            ' output line n when output is ready (= all lines are present)
                                            'Console.WriteLine(lines(1))
-                                           'UpdateTextBox(Environment.NewLine & process.ExitTime & Environment.NewLine & ".ProcessingDone")
                                        End Sub
             ' catch standard output
             AddHandler process.OutputDataReceived, Sub(ByVal senderb As Object, ByVal eb As System.Diagnostics.DataReceivedEventArgs)
@@ -338,6 +348,7 @@ Public Class Home
             ' and wait for errors :-)
             process.BeginErrorReadLine()
             process.WaitForExit()
+            UpdateTextBox(Environment.NewLine & process.ExitTime & Environment.NewLine & ".ProcessingDone")
             process.Close()
 
         Next
@@ -378,7 +389,7 @@ Public Class Home
         Dim strRoot As String = cmbRoot.SelectedItem
         Dim strRootSplit As String() = strRoot.Split(New Char() {" "c})
         Console.WriteLine(strRootSplit(1))
-        Dim chosenRecovery As String = strRootSplit(1)
+        Dim chosenRoot As String = strRootSplit(1)
 
         'loads the document and gets the current variant,
         'which searches for the right version of the recovery and downloads it
@@ -387,7 +398,7 @@ Public Class Home
         For Each node As XmlNode In nodes
 
             Dim id As String = node.Attributes("id").Value
-            If chosenRecovery = id Then
+            If chosenRoot = id Then
 
                 Dim fileName As String = "downloads/magisk-" & id & ".zip"
                 'change the progress bar
@@ -411,5 +422,41 @@ Public Class Home
 
     End Sub
 #End Region
+
+    Private Async Sub btnGappsInstall_Click(sender As Object, e As EventArgs) Handles btnGappsInstall.Click
+        'gets the chosenRecovery Value
+        Dim strGapps As String = cmbGApps.SelectedItem
+        Dim strGappsSplit As String() = strGapps.Split(New Char() {" "c})
+        Console.WriteLine(strGappsSplit(2))
+        Dim chosenGapps As String = strGappsSplit(2)
+
+        'loads the document and gets the current variant,
+        'which searches for the right version of the recovery and downloads it
+        xmlDoc.Load(My.Settings.xmlDocumentName)
+        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/Gapps/version")
+        For Each node As XmlNode In nodes
+
+            Dim id As String = node.Attributes("id").Value
+            If chosenGapps = id Then
+
+                Dim fileName As String = "downloads/gapps-" & id & ".apk"
+                'change the progress bar
+                progressBar = progressBarGApps
+
+                'downloads the file
+                'the file is checked it it exists first in the function
+                Await DownloadFileAsync(node.InnerText, fileName)
+
+                'run the right adb commands
+                'todo fix the commands
+                LabelToOutput = txtBoxGApps
+                Dim commands(3, 3) As String
+                commands = {{"adb", "devices", "Showing all devices"},
+                             {"adb", "install " & fileName, "Installing app on the device(make sure device is plugged in, otherwise it will not output anything)"}
+                                    }
+                Await Task.Run(Sub() runComands(commands))
+            End If
+        Next
+    End Sub
 
 End Class

@@ -45,17 +45,23 @@ Partial Class Home
         Me.cmbRecovery = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.btnFlashRecovery = New System.Windows.Forms.Button()
         Me.pnlRoot = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.progressBarRoot = New System.Windows.Forms.ProgressBar()
+        Me.cmbRoot = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.btnFlashMagisk = New System.Windows.Forms.Button()
+        Me.txtBoxRoot = New System.Windows.Forms.TextBox()
         Me.pnlXposed = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlGapps = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.txtBoxRoot = New System.Windows.Forms.TextBox()
-        Me.progressBarRoot = New System.Windows.Forms.ProgressBar()
-        Me.cmbRoot = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
-        Me.btnFlashMagisk = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.progressBarGApps = New System.Windows.Forms.ProgressBar()
+        Me.cmbGApps = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.btnGappsInstall = New System.Windows.Forms.Button()
+        Me.txtBoxGApps = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -66,6 +72,10 @@ Partial Class Home
         CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlRoot.SuspendLayout()
         CType(Me.cmbRoot, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlXposed.SuspendLayout()
+        Me.pnlGapps.SuspendLayout()
+        CType(Me.cmbGApps, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CalculatorControl1
@@ -346,8 +356,55 @@ Partial Class Home
         Me.pnlRoot.Text = "Root"
         Me.pnlRoot.ThemesEnabled = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(86, 38)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(207, 18)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Magisk is a way to get systemless root"
+        '
+        'progressBarRoot
+        '
+        Me.progressBarRoot.Location = New System.Drawing.Point(98, 144)
+        Me.progressBarRoot.Name = "progressBarRoot"
+        Me.progressBarRoot.Size = New System.Drawing.Size(100, 23)
+        Me.progressBarRoot.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.progressBarRoot.TabIndex = 15
+        '
+        'cmbRoot
+        '
+        Me.cmbRoot.BeforeTouchSize = New System.Drawing.Size(172, 26)
+        Me.cmbRoot.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbRoot.Location = New System.Drawing.Point(70, 83)
+        Me.cmbRoot.Name = "cmbRoot"
+        Me.cmbRoot.Size = New System.Drawing.Size(172, 26)
+        Me.cmbRoot.TabIndex = 14
+        Me.cmbRoot.Text = "Select a Magisk Version"
+        '
+        'btnFlashMagisk
+        '
+        Me.btnFlashMagisk.Location = New System.Drawing.Point(70, 210)
+        Me.btnFlashMagisk.Name = "btnFlashMagisk"
+        Me.btnFlashMagisk.Size = New System.Drawing.Size(172, 95)
+        Me.btnFlashMagisk.TabIndex = 13
+        Me.btnFlashMagisk.Text = "Flash Magisk"
+        Me.btnFlashMagisk.UseVisualStyleBackColor = True
+        '
+        'txtBoxRoot
+        '
+        Me.txtBoxRoot.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtBoxRoot.Location = New System.Drawing.Point(392, 17)
+        Me.txtBoxRoot.Multiline = True
+        Me.txtBoxRoot.Name = "txtBoxRoot"
+        Me.txtBoxRoot.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtBoxRoot.Size = New System.Drawing.Size(336, 364)
+        Me.txtBoxRoot.TabIndex = 12
+        '
         'pnlXposed
         '
+        Me.pnlXposed.Controls.Add(Me.Label6)
         Me.pnlXposed.Image = Nothing
         Me.pnlXposed.ImageSize = New System.Drawing.Size(16, 16)
         Me.pnlXposed.Location = New System.Drawing.Point(0, 30)
@@ -360,6 +417,11 @@ Partial Class Home
         '
         'pnlGapps
         '
+        Me.pnlGapps.Controls.Add(Me.PictureBox1)
+        Me.pnlGapps.Controls.Add(Me.progressBarGApps)
+        Me.pnlGapps.Controls.Add(Me.cmbGApps)
+        Me.pnlGapps.Controls.Add(Me.btnGappsInstall)
+        Me.pnlGapps.Controls.Add(Me.txtBoxGApps)
         Me.pnlGapps.Image = Nothing
         Me.pnlGapps.ImageSize = New System.Drawing.Size(16, 16)
         Me.pnlGapps.Location = New System.Drawing.Point(0, 30)
@@ -418,51 +480,62 @@ Partial Class Home
         Me.pnlSettings.Text = "Settings"
         Me.pnlSettings.ThemesEnabled = False
         '
-        'txtBoxRoot
+        'Label6
         '
-        Me.txtBoxRoot.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.txtBoxRoot.Location = New System.Drawing.Point(392, 17)
-        Me.txtBoxRoot.Multiline = True
-        Me.txtBoxRoot.Name = "txtBoxRoot"
-        Me.txtBoxRoot.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtBoxRoot.Size = New System.Drawing.Size(336, 364)
-        Me.txtBoxRoot.TabIndex = 12
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Roboto Condensed", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(223, 163)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(155, 35)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "Coming soon"
         '
-        'progressBarRoot
+        'progressBarGApps
         '
-        Me.progressBarRoot.Location = New System.Drawing.Point(98, 144)
-        Me.progressBarRoot.Name = "progressBarRoot"
-        Me.progressBarRoot.Size = New System.Drawing.Size(100, 23)
-        Me.progressBarRoot.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.progressBarRoot.TabIndex = 15
+        Me.progressBarGApps.Location = New System.Drawing.Point(41, 150)
+        Me.progressBarGApps.Name = "progressBarGApps"
+        Me.progressBarGApps.Size = New System.Drawing.Size(100, 23)
+        Me.progressBarGApps.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.progressBarGApps.TabIndex = 19
         '
-        'cmbRoot
+        'cmbGApps
         '
-        Me.cmbRoot.BeforeTouchSize = New System.Drawing.Size(172, 26)
-        Me.cmbRoot.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbRoot.Location = New System.Drawing.Point(70, 83)
-        Me.cmbRoot.Name = "cmbRoot"
-        Me.cmbRoot.Size = New System.Drawing.Size(172, 26)
-        Me.cmbRoot.TabIndex = 14
-        Me.cmbRoot.Text = "Select a Magisk Version"
+        Me.cmbGApps.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        Me.cmbGApps.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbGApps.Location = New System.Drawing.Point(41, 85)
+        Me.cmbGApps.Name = "cmbGApps"
+        Me.cmbGApps.Size = New System.Drawing.Size(208, 26)
+        Me.cmbGApps.TabIndex = 18
+        Me.cmbGApps.Text = "Select a  GApps application Version"
         '
-        'btnFlashMagisk
+        'btnGappsInstall
         '
-        Me.btnFlashMagisk.Location = New System.Drawing.Point(70, 210)
-        Me.btnFlashMagisk.Name = "btnFlashMagisk"
-        Me.btnFlashMagisk.Size = New System.Drawing.Size(172, 95)
-        Me.btnFlashMagisk.TabIndex = 13
-        Me.btnFlashMagisk.Text = "Flash Magisk"
-        Me.btnFlashMagisk.UseVisualStyleBackColor = True
+        Me.btnGappsInstall.Location = New System.Drawing.Point(41, 247)
+        Me.btnGappsInstall.Name = "btnGappsInstall"
+        Me.btnGappsInstall.Size = New System.Drawing.Size(172, 95)
+        Me.btnGappsInstall.TabIndex = 17
+        Me.btnGappsInstall.Text = "Install application"
+        Me.btnGappsInstall.UseVisualStyleBackColor = True
         '
-        'Label5
+        'txtBoxGApps
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(86, 38)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(207, 18)
-        Me.Label5.TabIndex = 16
-        Me.Label5.Text = "Magisk is a way to get systemless root"
+        Me.txtBoxGApps.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtBoxGApps.Location = New System.Drawing.Point(363, 19)
+        Me.txtBoxGApps.Multiline = True
+        Me.txtBoxGApps.Name = "txtBoxGApps"
+        Me.txtBoxGApps.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtBoxGApps.Size = New System.Drawing.Size(336, 364)
+        Me.txtBoxGApps.TabIndex = 16
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.APTV2.My.Resources.Resources.opengapps
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(175, 130)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 87)
+        Me.PictureBox1.TabIndex = 20
+        Me.PictureBox1.TabStop = False
         '
         'Home
         '
@@ -487,6 +560,12 @@ Partial Class Home
         Me.pnlRoot.ResumeLayout(False)
         Me.pnlRoot.PerformLayout()
         CType(Me.cmbRoot, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlXposed.ResumeLayout(False)
+        Me.pnlXposed.PerformLayout()
+        Me.pnlGapps.ResumeLayout(False)
+        Me.pnlGapps.PerformLayout()
+        CType(Me.cmbGApps, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -525,4 +604,10 @@ Partial Class Home
     Friend WithEvents cmbRoot As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents btnFlashMagisk As Button
     Friend WithEvents txtBoxRoot As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents progressBarGApps As ProgressBar
+    Friend WithEvents cmbGApps As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
+    Friend WithEvents btnGappsInstall As Button
+    Friend WithEvents txtBoxGApps As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
