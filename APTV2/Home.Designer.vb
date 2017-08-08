@@ -51,17 +51,24 @@ Partial Class Home
         Me.btnFlashMagisk = New System.Windows.Forms.Button()
         Me.txtBoxRoot = New System.Windows.Forms.TextBox()
         Me.pnlXposed = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.pnlGapps = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.pnlGapps = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.progressBarGApps = New System.Windows.Forms.ProgressBar()
         Me.cmbGApps = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.btnGappsInstall = New System.Windows.Forms.Button()
         Me.txtBoxGApps = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.TabControlUnbrick = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tabUnb1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.tabUnb2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.tabUnb3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.ComboBoxAdv1 = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.btnFlashUnbr = New System.Windows.Forms.Button()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -74,8 +81,13 @@ Partial Class Home
         CType(Me.cmbRoot, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlXposed.SuspendLayout()
         Me.pnlGapps.SuspendLayout()
-        CType(Me.cmbGApps, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbGApps, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlUnbrick.SuspendLayout()
+        CType(Me.TabControlUnbrick, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControlUnbrick.SuspendLayout()
+        Me.tabUnb1.SuspendLayout()
+        CType(Me.ComboBoxAdv1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CalculatorControl1
@@ -415,6 +427,16 @@ Partial Class Home
         Me.pnlXposed.Text = "Xposed"
         Me.pnlXposed.ThemesEnabled = False
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Roboto Condensed", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(223, 163)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(155, 35)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "Coming soon"
+        '
         'pnlGapps
         '
         Me.pnlGapps.Controls.Add(Me.PictureBox1)
@@ -432,8 +454,57 @@ Partial Class Home
         Me.pnlGapps.Text = "Gapps"
         Me.pnlGapps.ThemesEnabled = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.APTV2.My.Resources.Resources.opengapps
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(175, 130)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 87)
+        Me.PictureBox1.TabIndex = 20
+        Me.PictureBox1.TabStop = False
+        '
+        'progressBarGApps
+        '
+        Me.progressBarGApps.Location = New System.Drawing.Point(41, 150)
+        Me.progressBarGApps.Name = "progressBarGApps"
+        Me.progressBarGApps.Size = New System.Drawing.Size(100, 23)
+        Me.progressBarGApps.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.progressBarGApps.TabIndex = 19
+        '
+        'cmbGApps
+        '
+        Me.cmbGApps.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        Me.cmbGApps.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbGApps.Location = New System.Drawing.Point(41, 85)
+        Me.cmbGApps.Name = "cmbGApps"
+        Me.cmbGApps.Size = New System.Drawing.Size(208, 26)
+        Me.cmbGApps.TabIndex = 18
+        Me.cmbGApps.Text = "Select a  GApps application Version"
+        '
+        'btnGappsInstall
+        '
+        Me.btnGappsInstall.Location = New System.Drawing.Point(41, 247)
+        Me.btnGappsInstall.Name = "btnGappsInstall"
+        Me.btnGappsInstall.Size = New System.Drawing.Size(172, 95)
+        Me.btnGappsInstall.TabIndex = 17
+        Me.btnGappsInstall.Text = "Install application"
+        Me.btnGappsInstall.UseVisualStyleBackColor = True
+        '
+        'txtBoxGApps
+        '
+        Me.txtBoxGApps.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtBoxGApps.Location = New System.Drawing.Point(363, 19)
+        Me.txtBoxGApps.Multiline = True
+        Me.txtBoxGApps.Name = "txtBoxGApps"
+        Me.txtBoxGApps.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtBoxGApps.Size = New System.Drawing.Size(336, 364)
+        Me.txtBoxGApps.TabIndex = 16
+        '
         'pnlUnbrick
         '
+        Me.pnlUnbrick.Controls.Add(Me.TextBox1)
+        Me.pnlUnbrick.Controls.Add(Me.TabControlUnbrick)
         Me.pnlUnbrick.Image = Nothing
         Me.pnlUnbrick.ImageSize = New System.Drawing.Size(16, 16)
         Me.pnlUnbrick.Location = New System.Drawing.Point(0, 30)
@@ -480,62 +551,90 @@ Partial Class Home
         Me.pnlSettings.Text = "Settings"
         Me.pnlSettings.ThemesEnabled = False
         '
-        'Label6
+        'TabControlUnbrick
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Roboto Condensed", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(223, 163)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(155, 35)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "Coming soon"
+        Me.TabControlUnbrick.ActiveTabForeColor = System.Drawing.Color.Empty
+        Me.TabControlUnbrick.BeforeTouchSize = New System.Drawing.Size(364, 352)
+        Me.TabControlUnbrick.CloseButtonForeColor = System.Drawing.Color.Empty
+        Me.TabControlUnbrick.CloseButtonHoverForeColor = System.Drawing.Color.Empty
+        Me.TabControlUnbrick.CloseButtonPressedForeColor = System.Drawing.Color.Empty
+        Me.TabControlUnbrick.Controls.Add(Me.tabUnb1)
+        Me.TabControlUnbrick.Controls.Add(Me.tabUnb2)
+        Me.TabControlUnbrick.Controls.Add(Me.tabUnb3)
+        Me.TabControlUnbrick.InActiveTabForeColor = System.Drawing.Color.Empty
+        Me.TabControlUnbrick.Location = New System.Drawing.Point(12, 29)
+        Me.TabControlUnbrick.Name = "TabControlUnbrick"
+        Me.TabControlUnbrick.SeparatorColor = System.Drawing.SystemColors.ControlDark
+        Me.TabControlUnbrick.ShowSeparator = False
+        Me.TabControlUnbrick.Size = New System.Drawing.Size(364, 352)
+        Me.TabControlUnbrick.TabIndex = 0
         '
-        'progressBarGApps
+        'TextBox1
         '
-        Me.progressBarGApps.Location = New System.Drawing.Point(41, 150)
-        Me.progressBarGApps.Name = "progressBarGApps"
-        Me.progressBarGApps.Size = New System.Drawing.Size(100, 23)
-        Me.progressBarGApps.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.progressBarGApps.TabIndex = 19
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.TextBox1.Location = New System.Drawing.Point(404, 17)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.TextBox1.Size = New System.Drawing.Size(336, 364)
+        Me.TextBox1.TabIndex = 19
         '
-        'cmbGApps
+        'tabUnb1
         '
-        Me.cmbGApps.BeforeTouchSize = New System.Drawing.Size(208, 26)
-        Me.cmbGApps.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbGApps.Location = New System.Drawing.Point(41, 85)
-        Me.cmbGApps.Name = "cmbGApps"
-        Me.cmbGApps.Size = New System.Drawing.Size(208, 26)
-        Me.cmbGApps.TabIndex = 18
-        Me.cmbGApps.Text = "Select a  GApps application Version"
+        Me.tabUnb1.Controls.Add(Me.ComboBoxAdv1)
+        Me.tabUnb1.Controls.Add(Me.btnFlashUnbr)
+        Me.tabUnb1.Image = Nothing
+        Me.tabUnb1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.tabUnb1.Location = New System.Drawing.Point(1, 30)
+        Me.tabUnb1.Name = "tabUnb1"
+        Me.tabUnb1.ShowCloseButton = True
+        Me.tabUnb1.Size = New System.Drawing.Size(361, 320)
+        Me.tabUnb1.TabIndex = 1
+        Me.tabUnb1.Text = "Version Selector"
+        Me.tabUnb1.ThemesEnabled = False
         '
-        'btnGappsInstall
+        'tabUnb2
         '
-        Me.btnGappsInstall.Location = New System.Drawing.Point(41, 247)
-        Me.btnGappsInstall.Name = "btnGappsInstall"
-        Me.btnGappsInstall.Size = New System.Drawing.Size(172, 95)
-        Me.btnGappsInstall.TabIndex = 17
-        Me.btnGappsInstall.Text = "Install application"
-        Me.btnGappsInstall.UseVisualStyleBackColor = True
+        Me.tabUnb2.Image = Nothing
+        Me.tabUnb2.ImageSize = New System.Drawing.Size(16, 16)
+        Me.tabUnb2.Location = New System.Drawing.Point(1, 30)
+        Me.tabUnb2.Name = "tabUnb2"
+        Me.tabUnb2.ShowCloseButton = True
+        Me.tabUnb2.Size = New System.Drawing.Size(361, 320)
+        Me.tabUnb2.TabIndex = 2
+        Me.tabUnb2.Text = "Flash"
+        Me.tabUnb2.ThemesEnabled = False
         '
-        'txtBoxGApps
+        'tabUnb3
         '
-        Me.txtBoxGApps.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.txtBoxGApps.Location = New System.Drawing.Point(363, 19)
-        Me.txtBoxGApps.Multiline = True
-        Me.txtBoxGApps.Name = "txtBoxGApps"
-        Me.txtBoxGApps.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtBoxGApps.Size = New System.Drawing.Size(336, 364)
-        Me.txtBoxGApps.TabIndex = 16
+        Me.tabUnb3.Image = Nothing
+        Me.tabUnb3.ImageSize = New System.Drawing.Size(16, 16)
+        Me.tabUnb3.Location = New System.Drawing.Point(1, 30)
+        Me.tabUnb3.Name = "tabUnb3"
+        Me.tabUnb3.ShowCloseButton = True
+        Me.tabUnb3.Size = New System.Drawing.Size(361, 320)
+        Me.tabUnb3.TabIndex = 3
+        Me.tabUnb3.Text = "...."
+        Me.tabUnb3.ThemesEnabled = False
         '
-        'PictureBox1
+        'ComboBoxAdv1
         '
-        Me.PictureBox1.BackgroundImage = Global.APTV2.My.Resources.Resources.opengapps
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(175, 130)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(90, 87)
-        Me.PictureBox1.TabIndex = 20
-        Me.PictureBox1.TabStop = False
+        Me.ComboBoxAdv1.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        Me.ComboBoxAdv1.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBoxAdv1.Location = New System.Drawing.Point(27, 63)
+        Me.ComboBoxAdv1.Name = "ComboBoxAdv1"
+        Me.ComboBoxAdv1.Size = New System.Drawing.Size(208, 26)
+        Me.ComboBoxAdv1.TabIndex = 20
+        Me.ComboBoxAdv1.Text = "Select a  EMUI Version"
+        '
+        'btnFlashUnbr
+        '
+        Me.btnFlashUnbr.Location = New System.Drawing.Point(63, 154)
+        Me.btnFlashUnbr.Name = "btnFlashUnbr"
+        Me.btnFlashUnbr.Size = New System.Drawing.Size(172, 95)
+        Me.btnFlashUnbr.TabIndex = 19
+        Me.btnFlashUnbr.Text = "Flash"
+        Me.btnFlashUnbr.UseVisualStyleBackColor = True
         '
         'Home
         '
@@ -564,8 +663,14 @@ Partial Class Home
         Me.pnlXposed.PerformLayout()
         Me.pnlGapps.ResumeLayout(False)
         Me.pnlGapps.PerformLayout()
-        CType(Me.cmbGApps, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbGApps, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlUnbrick.ResumeLayout(False)
+        Me.pnlUnbrick.PerformLayout()
+        CType(Me.TabControlUnbrick, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControlUnbrick.ResumeLayout(False)
+        Me.tabUnb1.ResumeLayout(False)
+        CType(Me.ComboBoxAdv1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -610,4 +715,11 @@ Partial Class Home
     Friend WithEvents btnGappsInstall As Button
     Friend WithEvents txtBoxGApps As TextBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TabControlUnbrick As Syncfusion.Windows.Forms.Tools.TabControlAdv
+    Friend WithEvents tabUnb1 As Syncfusion.Windows.Forms.Tools.TabPageAdv
+    Friend WithEvents ComboBoxAdv1 As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
+    Friend WithEvents btnFlashUnbr As Button
+    Friend WithEvents tabUnb2 As Syncfusion.Windows.Forms.Tools.TabPageAdv
+    Friend WithEvents tabUnb3 As Syncfusion.Windows.Forms.Tools.TabPageAdv
 End Class

@@ -1,11 +1,8 @@
-﻿Imports Syncfusion.Windows.Forms
-Imports System.Xml
+﻿Imports System.ComponentModel
 Imports System.IO
 Imports System.Net
-Imports System.Threading
-
-Imports System.Diagnostics
-Imports System.ComponentModel
+Imports System.Xml
+Imports Syncfusion.Windows.Forms
 
 Public Class Home
     Inherits MetroForm
@@ -258,6 +255,84 @@ Public Class Home
 
 #End Region
 
+#Region "Root"
+
+    Private Async Sub btnFlashMagisk_Click(sender As Object, e As EventArgs) Handles btnFlashMagisk.Click
+        'gets the chosenRecovery Value
+        Dim strRoot As String = cmbRoot.SelectedItem
+        Dim strRootSplit As String() = strRoot.Split(New Char() {" "c})
+        Console.WriteLine(strRootSplit(1))
+        Dim chosenRoot As String = strRootSplit(1)
+
+
+
+        Dim url As String = getInfoXML("/root/magiskInstaller/version", chosenRoot)
+        'Console.WriteLine(url)
+        If url <> "0" Then
+            Dim fileName As String = "downloads/magisk-" & chosenRoot & ".zip"
+            'change the progress bar
+            progressBar = progressBarRoot
+
+            'downloads the file
+            'the file is checked it it exists first in the function
+            Await DownloadFileAsync(url, fileName)
+
+            'run the right adb commands
+            'todo fix the commands
+            LabelToOutput = txtBoxRoot
+            Dim commands(3, 3) As String
+            commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
+                                        {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img", "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
+                                        {"fastboot", "reboot", "Rebooting device"}}
+
+            Await Task.Run(Sub() runComands(commands))
+        End If
+    End Sub
+
+#End Region
+
+#Region "Gapps"
+
+    Private Async Sub btnGappsInstall_Click(sender As Object, e As EventArgs) Handles btnGappsInstall.Click
+        'gets the chosenRecovery Value
+        Dim strGapps As String = cmbGApps.SelectedItem
+        Dim strGappsSplit As String() = strGapps.Split(New Char() {" "c})
+        'Console.WriteLine(strGappsSplit(2))
+        Dim chosenGapps As String = strGappsSplit(2)
+
+
+        Dim url As String = getInfoXML("/root/Gapps/version", chosenGapps)
+        'Console.WriteLine(url)
+        If url <> "0" Then
+            Dim fileName As String = "downloads/gapps-" & chosenGapps & ".apk"
+            'change the progress bar
+            progressBar = progressBarGApps
+
+            'downloads the file
+            'the file is checked it it exists first in the function
+            Await DownloadFileAsync(url, fileName)
+
+            'run the right adb commands
+
+            'todo fix the commands
+            LabelToOutput = txtBoxGApps
+            Dim commands(3, 3) As String
+            commands = {{"adb", "devices", "Showing all devices"},
+                         {"adb", "install " & fileName, "Installing app on the device(make sure device is plugged in, otherwise it will not output anything)"}
+                                }
+            Await Task.Run(Sub() runComands(commands))
+        End If
+    End Sub
+
+#End Region
+
+#Region "Unbrick"
+
+    Private Sub btnFlashUnbr_Click(sender As Object, e As EventArgs) Handles btnFlashUnbr.Click
+
+    End Sub
+#End Region
+
 #Region "Download File"
 
     Private Sub UpdateProgressBar(ByVal a As Integer)
@@ -307,7 +382,6 @@ Public Class Home
             MessageBox.Show("Download completed!")
         End If
     End Sub
-
 #End Region
 
 #Region "ADB Commands"
@@ -382,81 +456,22 @@ Public Class Home
 
 #End Region
 
-#Region "Root"
-
-    Private Async Sub btnFlashMagisk_Click(sender As Object, e As EventArgs) Handles btnFlashMagisk.Click
-        'gets the chosenRecovery Value
-        Dim strRoot As String = cmbRoot.SelectedItem
-        Dim strRootSplit As String() = strRoot.Split(New Char() {" "c})
-        Console.WriteLine(strRootSplit(1))
-        Dim chosenRoot As String = strRootSplit(1)
-
-        'loads the document and gets the current variant,
-        'which searches for the right version of the recovery and downloads it
+#Region "Get Info from the XML File"
+    Private Function getInfoXML(ByVal parentNodes As String, ByVal valueToFind As String) As String
         xmlDoc.Load(My.Settings.xmlDocumentName)
-        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/magiskInstaller/version")
+        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes(parentNodes)
         For Each node As XmlNode In nodes
 
             Dim id As String = node.Attributes("id").Value
-            If chosenRoot = id Then
+            If valueToFind = id Then
 
-                Dim fileName As String = "downloads/magisk-" & id & ".zip"
-                'change the progress bar
-                progressBar = progressBarRoot
-
-                'downloads the file
-                'the file is checked it it exists first in the function
-                Await DownloadFileAsync(node.InnerText, fileName)
-
-                'run the right adb commands
-                'todo fix the commands
-                LabelToOutput = txtBoxRoot
-                Dim commands(3, 3) As String
-                commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
-                                        {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img", "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
-                                        {"fastboot", "reboot", "Rebooting device"}
-                                    }
-                Await Task.Run(Sub() runComands(commands))
+                Return node.InnerText
+                Exit Function
             End If
         Next
+        MessageBox.Show("Not Found")
+        Return 0
+    End Function
 
-    End Sub
 #End Region
-
-    Private Async Sub btnGappsInstall_Click(sender As Object, e As EventArgs) Handles btnGappsInstall.Click
-        'gets the chosenRecovery Value
-        Dim strGapps As String = cmbGApps.SelectedItem
-        Dim strGappsSplit As String() = strGapps.Split(New Char() {" "c})
-        Console.WriteLine(strGappsSplit(2))
-        Dim chosenGapps As String = strGappsSplit(2)
-
-        'loads the document and gets the current variant,
-        'which searches for the right version of the recovery and downloads it
-        xmlDoc.Load(My.Settings.xmlDocumentName)
-        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/Gapps/version")
-        For Each node As XmlNode In nodes
-
-            Dim id As String = node.Attributes("id").Value
-            If chosenGapps = id Then
-
-                Dim fileName As String = "downloads/gapps-" & id & ".apk"
-                'change the progress bar
-                progressBar = progressBarGApps
-
-                'downloads the file
-                'the file is checked it it exists first in the function
-                Await DownloadFileAsync(node.InnerText, fileName)
-
-                'run the right adb commands
-                'todo fix the commands
-                LabelToOutput = txtBoxGApps
-                Dim commands(3, 3) As String
-                commands = {{"adb", "devices", "Showing all devices"},
-                             {"adb", "install " & fileName, "Installing app on the device(make sure device is plugged in, otherwise it will not output anything)"}
-                                    }
-                Await Task.Run(Sub() runComands(commands))
-            End If
-        Next
-    End Sub
-
 End Class
