@@ -34,11 +34,15 @@ Partial Class Home
         Me.lblManufacturer = New System.Windows.Forms.Label()
         Me.picPhone = New System.Windows.Forms.PictureBox()
         Me.pnlBootloader = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.txtBoxBootloader = New System.Windows.Forms.TextBox()
+        Me.TabControlAdv1 = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
+        Me.TabPageAdv1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtBoxUnlockKey = New System.Windows.Forms.TextBox()
         Me.btnLockBootloader = New System.Windows.Forms.Button()
         Me.btnUnlockBootloader = New System.Windows.Forms.Button()
+        Me.TabPageAdv2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.TabPageAdv3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.txtBoxBootloader = New System.Windows.Forms.TextBox()
         Me.pnlRecovery = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.progressBarRecovery = New System.Windows.Forms.ProgressBar()
         Me.txtBoxRecovery = New System.Windows.Forms.TextBox()
@@ -59,22 +63,25 @@ Partial Class Home
         Me.btnGappsInstall = New System.Windows.Forms.Button()
         Me.txtBoxGApps = New System.Windows.Forms.TextBox()
         Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TabControlUnbrick = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
+        Me.tabUnb1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.ComboBoxAdv1 = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.btnFlashUnbr = New System.Windows.Forms.Button()
+        Me.tabUnb2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.tabUnb3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.TabControlUnbrick = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.tabUnb1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.tabUnb2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.tabUnb3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.ComboBoxAdv1 = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
-        Me.btnFlashUnbr = New System.Windows.Forms.Button()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
         CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picPhone, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlBootloader.SuspendLayout()
+        CType(Me.TabControlAdv1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControlAdv1.SuspendLayout()
+        Me.TabPageAdv1.SuspendLayout()
         Me.pnlRecovery.SuspendLayout()
         CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlRoot.SuspendLayout()
@@ -239,11 +246,8 @@ Partial Class Home
         '
         'pnlBootloader
         '
+        Me.pnlBootloader.Controls.Add(Me.TabControlAdv1)
         Me.pnlBootloader.Controls.Add(Me.txtBoxBootloader)
-        Me.pnlBootloader.Controls.Add(Me.Label4)
-        Me.pnlBootloader.Controls.Add(Me.txtBoxUnlockKey)
-        Me.pnlBootloader.Controls.Add(Me.btnLockBootloader)
-        Me.pnlBootloader.Controls.Add(Me.btnUnlockBootloader)
         Me.pnlBootloader.Image = Nothing
         Me.pnlBootloader.ImageSize = New System.Drawing.Size(16, 16)
         Me.pnlBootloader.Location = New System.Drawing.Point(0, 30)
@@ -254,6 +258,98 @@ Partial Class Home
         Me.pnlBootloader.Text = "Bootloader"
         Me.pnlBootloader.ThemesEnabled = False
         '
+        'TabControlAdv1
+        '
+        Me.TabControlAdv1.ActiveTabForeColor = System.Drawing.Color.Empty
+        Me.TabControlAdv1.BeforeTouchSize = New System.Drawing.Size(364, 352)
+        Me.TabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty
+        Me.TabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Empty
+        Me.TabControlAdv1.CloseButtonPressedForeColor = System.Drawing.Color.Empty
+        Me.TabControlAdv1.Controls.Add(Me.TabPageAdv1)
+        Me.TabControlAdv1.Controls.Add(Me.TabPageAdv2)
+        Me.TabControlAdv1.Controls.Add(Me.TabPageAdv3)
+        Me.TabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Empty
+        Me.TabControlAdv1.Location = New System.Drawing.Point(2, 27)
+        Me.TabControlAdv1.Name = "TabControlAdv1"
+        Me.TabControlAdv1.SeparatorColor = System.Drawing.SystemColors.ControlDark
+        Me.TabControlAdv1.ShowSeparator = False
+        Me.TabControlAdv1.Size = New System.Drawing.Size(364, 352)
+        Me.TabControlAdv1.TabIndex = 8
+        '
+        'TabPageAdv1
+        '
+        Me.TabPageAdv1.Controls.Add(Me.Label4)
+        Me.TabPageAdv1.Controls.Add(Me.txtBoxUnlockKey)
+        Me.TabPageAdv1.Controls.Add(Me.btnLockBootloader)
+        Me.TabPageAdv1.Controls.Add(Me.btnUnlockBootloader)
+        Me.TabPageAdv1.Image = Nothing
+        Me.TabPageAdv1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.TabPageAdv1.Location = New System.Drawing.Point(1, 30)
+        Me.TabPageAdv1.Name = "TabPageAdv1"
+        Me.TabPageAdv1.ShowCloseButton = True
+        Me.TabPageAdv1.Size = New System.Drawing.Size(361, 320)
+        Me.TabPageAdv1.TabIndex = 1
+        Me.TabPageAdv1.Text = "Version Selector"
+        Me.TabPageAdv1.ThemesEnabled = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(25, 80)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(129, 18)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Enter Unlock / Lock Key"
+        '
+        'txtBoxUnlockKey
+        '
+        Me.txtBoxUnlockKey.Location = New System.Drawing.Point(171, 73)
+        Me.txtBoxUnlockKey.Name = "txtBoxUnlockKey"
+        Me.txtBoxUnlockKey.Size = New System.Drawing.Size(176, 25)
+        Me.txtBoxUnlockKey.TabIndex = 8
+        '
+        'btnLockBootloader
+        '
+        Me.btnLockBootloader.Location = New System.Drawing.Point(171, 140)
+        Me.btnLockBootloader.Name = "btnLockBootloader"
+        Me.btnLockBootloader.Size = New System.Drawing.Size(143, 108)
+        Me.btnLockBootloader.TabIndex = 7
+        Me.btnLockBootloader.Text = "Lock Bootloader"
+        Me.btnLockBootloader.UseVisualStyleBackColor = True
+        '
+        'btnUnlockBootloader
+        '
+        Me.btnUnlockBootloader.Location = New System.Drawing.Point(14, 140)
+        Me.btnUnlockBootloader.Name = "btnUnlockBootloader"
+        Me.btnUnlockBootloader.Size = New System.Drawing.Size(143, 108)
+        Me.btnUnlockBootloader.TabIndex = 6
+        Me.btnUnlockBootloader.Text = "Unlock Bootloader"
+        Me.btnUnlockBootloader.UseVisualStyleBackColor = True
+        '
+        'TabPageAdv2
+        '
+        Me.TabPageAdv2.Image = Nothing
+        Me.TabPageAdv2.ImageSize = New System.Drawing.Size(16, 16)
+        Me.TabPageAdv2.Location = New System.Drawing.Point(1, 30)
+        Me.TabPageAdv2.Name = "TabPageAdv2"
+        Me.TabPageAdv2.ShowCloseButton = True
+        Me.TabPageAdv2.Size = New System.Drawing.Size(361, 320)
+        Me.TabPageAdv2.TabIndex = 2
+        Me.TabPageAdv2.Text = "Flash"
+        Me.TabPageAdv2.ThemesEnabled = False
+        '
+        'TabPageAdv3
+        '
+        Me.TabPageAdv3.Image = Nothing
+        Me.TabPageAdv3.ImageSize = New System.Drawing.Size(16, 16)
+        Me.TabPageAdv3.Location = New System.Drawing.Point(1, 30)
+        Me.TabPageAdv3.Name = "TabPageAdv3"
+        Me.TabPageAdv3.ShowCloseButton = True
+        Me.TabPageAdv3.Size = New System.Drawing.Size(361, 320)
+        Me.TabPageAdv3.TabIndex = 3
+        Me.TabPageAdv3.Text = "...."
+        Me.TabPageAdv3.ThemesEnabled = False
+        '
         'txtBoxBootloader
         '
         Me.txtBoxBootloader.BackColor = System.Drawing.SystemColors.HotTrack
@@ -263,40 +359,6 @@ Partial Class Home
         Me.txtBoxBootloader.ScrollBars = System.Windows.Forms.ScrollBars.Both
         Me.txtBoxBootloader.Size = New System.Drawing.Size(336, 364)
         Me.txtBoxBootloader.TabIndex = 7
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(23, 84)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(129, 18)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Enter Unlock / Lock Key"
-        '
-        'txtBoxUnlockKey
-        '
-        Me.txtBoxUnlockKey.Location = New System.Drawing.Point(169, 77)
-        Me.txtBoxUnlockKey.Name = "txtBoxUnlockKey"
-        Me.txtBoxUnlockKey.Size = New System.Drawing.Size(176, 25)
-        Me.txtBoxUnlockKey.TabIndex = 2
-        '
-        'btnLockBootloader
-        '
-        Me.btnLockBootloader.Location = New System.Drawing.Point(169, 144)
-        Me.btnLockBootloader.Name = "btnLockBootloader"
-        Me.btnLockBootloader.Size = New System.Drawing.Size(143, 108)
-        Me.btnLockBootloader.TabIndex = 1
-        Me.btnLockBootloader.Text = "Lock Bootloader"
-        Me.btnLockBootloader.UseVisualStyleBackColor = True
-        '
-        'btnUnlockBootloader
-        '
-        Me.btnUnlockBootloader.Location = New System.Drawing.Point(12, 144)
-        Me.btnUnlockBootloader.Name = "btnUnlockBootloader"
-        Me.btnUnlockBootloader.Size = New System.Drawing.Size(143, 108)
-        Me.btnUnlockBootloader.TabIndex = 0
-        Me.btnUnlockBootloader.Text = "Unlock Bootloader"
-        Me.btnUnlockBootloader.UseVisualStyleBackColor = True
         '
         'pnlRecovery
         '
@@ -515,6 +577,91 @@ Partial Class Home
         Me.pnlUnbrick.Text = "Unbrick"
         Me.pnlUnbrick.ThemesEnabled = False
         '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.TextBox1.Location = New System.Drawing.Point(404, 17)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.TextBox1.Size = New System.Drawing.Size(336, 364)
+        Me.TextBox1.TabIndex = 19
+        '
+        'TabControlUnbrick
+        '
+        Me.TabControlUnbrick.ActiveTabForeColor = System.Drawing.Color.Empty
+        Me.TabControlUnbrick.BeforeTouchSize = New System.Drawing.Size(364, 352)
+        Me.TabControlUnbrick.CloseButtonForeColor = System.Drawing.Color.Empty
+        Me.TabControlUnbrick.CloseButtonHoverForeColor = System.Drawing.Color.Empty
+        Me.TabControlUnbrick.CloseButtonPressedForeColor = System.Drawing.Color.Empty
+        Me.TabControlUnbrick.Controls.Add(Me.tabUnb1)
+        Me.TabControlUnbrick.Controls.Add(Me.tabUnb2)
+        Me.TabControlUnbrick.Controls.Add(Me.tabUnb3)
+        Me.TabControlUnbrick.InActiveTabForeColor = System.Drawing.Color.Empty
+        Me.TabControlUnbrick.Location = New System.Drawing.Point(12, 29)
+        Me.TabControlUnbrick.Name = "TabControlUnbrick"
+        Me.TabControlUnbrick.SeparatorColor = System.Drawing.SystemColors.ControlDark
+        Me.TabControlUnbrick.ShowSeparator = False
+        Me.TabControlUnbrick.Size = New System.Drawing.Size(364, 352)
+        Me.TabControlUnbrick.TabIndex = 0
+        '
+        'tabUnb1
+        '
+        Me.tabUnb1.Controls.Add(Me.ComboBoxAdv1)
+        Me.tabUnb1.Controls.Add(Me.btnFlashUnbr)
+        Me.tabUnb1.Image = Nothing
+        Me.tabUnb1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.tabUnb1.Location = New System.Drawing.Point(1, 0)
+        Me.tabUnb1.Name = "tabUnb1"
+        Me.tabUnb1.ShowCloseButton = True
+        Me.tabUnb1.Size = New System.Drawing.Size(361, 350)
+        Me.tabUnb1.TabIndex = 1
+        Me.tabUnb1.Text = "Version Selector"
+        Me.tabUnb1.ThemesEnabled = False
+        '
+        'ComboBoxAdv1
+        '
+        Me.ComboBoxAdv1.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        Me.ComboBoxAdv1.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBoxAdv1.Location = New System.Drawing.Point(27, 63)
+        Me.ComboBoxAdv1.Name = "ComboBoxAdv1"
+        Me.ComboBoxAdv1.Size = New System.Drawing.Size(208, 26)
+        Me.ComboBoxAdv1.TabIndex = 20
+        Me.ComboBoxAdv1.Text = "Select a  EMUI Version"
+        '
+        'btnFlashUnbr
+        '
+        Me.btnFlashUnbr.Location = New System.Drawing.Point(63, 154)
+        Me.btnFlashUnbr.Name = "btnFlashUnbr"
+        Me.btnFlashUnbr.Size = New System.Drawing.Size(172, 95)
+        Me.btnFlashUnbr.TabIndex = 19
+        Me.btnFlashUnbr.Text = "Flash"
+        Me.btnFlashUnbr.UseVisualStyleBackColor = True
+        '
+        'tabUnb2
+        '
+        Me.tabUnb2.Image = Nothing
+        Me.tabUnb2.ImageSize = New System.Drawing.Size(16, 16)
+        Me.tabUnb2.Location = New System.Drawing.Point(1, 0)
+        Me.tabUnb2.Name = "tabUnb2"
+        Me.tabUnb2.ShowCloseButton = True
+        Me.tabUnb2.Size = New System.Drawing.Size(361, 350)
+        Me.tabUnb2.TabIndex = 2
+        Me.tabUnb2.Text = "Flash"
+        Me.tabUnb2.ThemesEnabled = False
+        '
+        'tabUnb3
+        '
+        Me.tabUnb3.Image = Nothing
+        Me.tabUnb3.ImageSize = New System.Drawing.Size(16, 16)
+        Me.tabUnb3.Location = New System.Drawing.Point(1, 0)
+        Me.tabUnb3.Name = "tabUnb3"
+        Me.tabUnb3.ShowCloseButton = True
+        Me.tabUnb3.Size = New System.Drawing.Size(361, 350)
+        Me.tabUnb3.TabIndex = 3
+        Me.tabUnb3.Text = "...."
+        Me.tabUnb3.ThemesEnabled = False
+        '
         'pnlAbout
         '
         Me.pnlAbout.Image = Nothing
@@ -551,91 +698,6 @@ Partial Class Home
         Me.pnlSettings.Text = "Settings"
         Me.pnlSettings.ThemesEnabled = False
         '
-        'TabControlUnbrick
-        '
-        Me.TabControlUnbrick.ActiveTabForeColor = System.Drawing.Color.Empty
-        Me.TabControlUnbrick.BeforeTouchSize = New System.Drawing.Size(364, 352)
-        Me.TabControlUnbrick.CloseButtonForeColor = System.Drawing.Color.Empty
-        Me.TabControlUnbrick.CloseButtonHoverForeColor = System.Drawing.Color.Empty
-        Me.TabControlUnbrick.CloseButtonPressedForeColor = System.Drawing.Color.Empty
-        Me.TabControlUnbrick.Controls.Add(Me.tabUnb1)
-        Me.TabControlUnbrick.Controls.Add(Me.tabUnb2)
-        Me.TabControlUnbrick.Controls.Add(Me.tabUnb3)
-        Me.TabControlUnbrick.InActiveTabForeColor = System.Drawing.Color.Empty
-        Me.TabControlUnbrick.Location = New System.Drawing.Point(12, 29)
-        Me.TabControlUnbrick.Name = "TabControlUnbrick"
-        Me.TabControlUnbrick.SeparatorColor = System.Drawing.SystemColors.ControlDark
-        Me.TabControlUnbrick.ShowSeparator = False
-        Me.TabControlUnbrick.Size = New System.Drawing.Size(364, 352)
-        Me.TabControlUnbrick.TabIndex = 0
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.TextBox1.Location = New System.Drawing.Point(404, 17)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox1.Size = New System.Drawing.Size(336, 364)
-        Me.TextBox1.TabIndex = 19
-        '
-        'tabUnb1
-        '
-        Me.tabUnb1.Controls.Add(Me.ComboBoxAdv1)
-        Me.tabUnb1.Controls.Add(Me.btnFlashUnbr)
-        Me.tabUnb1.Image = Nothing
-        Me.tabUnb1.ImageSize = New System.Drawing.Size(16, 16)
-        Me.tabUnb1.Location = New System.Drawing.Point(1, 30)
-        Me.tabUnb1.Name = "tabUnb1"
-        Me.tabUnb1.ShowCloseButton = True
-        Me.tabUnb1.Size = New System.Drawing.Size(361, 320)
-        Me.tabUnb1.TabIndex = 1
-        Me.tabUnb1.Text = "Version Selector"
-        Me.tabUnb1.ThemesEnabled = False
-        '
-        'tabUnb2
-        '
-        Me.tabUnb2.Image = Nothing
-        Me.tabUnb2.ImageSize = New System.Drawing.Size(16, 16)
-        Me.tabUnb2.Location = New System.Drawing.Point(1, 30)
-        Me.tabUnb2.Name = "tabUnb2"
-        Me.tabUnb2.ShowCloseButton = True
-        Me.tabUnb2.Size = New System.Drawing.Size(361, 320)
-        Me.tabUnb2.TabIndex = 2
-        Me.tabUnb2.Text = "Flash"
-        Me.tabUnb2.ThemesEnabled = False
-        '
-        'tabUnb3
-        '
-        Me.tabUnb3.Image = Nothing
-        Me.tabUnb3.ImageSize = New System.Drawing.Size(16, 16)
-        Me.tabUnb3.Location = New System.Drawing.Point(1, 30)
-        Me.tabUnb3.Name = "tabUnb3"
-        Me.tabUnb3.ShowCloseButton = True
-        Me.tabUnb3.Size = New System.Drawing.Size(361, 320)
-        Me.tabUnb3.TabIndex = 3
-        Me.tabUnb3.Text = "...."
-        Me.tabUnb3.ThemesEnabled = False
-        '
-        'ComboBoxAdv1
-        '
-        Me.ComboBoxAdv1.BeforeTouchSize = New System.Drawing.Size(208, 26)
-        Me.ComboBoxAdv1.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBoxAdv1.Location = New System.Drawing.Point(27, 63)
-        Me.ComboBoxAdv1.Name = "ComboBoxAdv1"
-        Me.ComboBoxAdv1.Size = New System.Drawing.Size(208, 26)
-        Me.ComboBoxAdv1.TabIndex = 20
-        Me.ComboBoxAdv1.Text = "Select a  EMUI Version"
-        '
-        'btnFlashUnbr
-        '
-        Me.btnFlashUnbr.Location = New System.Drawing.Point(63, 154)
-        Me.btnFlashUnbr.Name = "btnFlashUnbr"
-        Me.btnFlashUnbr.Size = New System.Drawing.Size(172, 95)
-        Me.btnFlashUnbr.TabIndex = 19
-        Me.btnFlashUnbr.Text = "Flash"
-        Me.btnFlashUnbr.UseVisualStyleBackColor = True
-        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -653,6 +715,10 @@ Partial Class Home
         CType(Me.picPhone, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlBootloader.ResumeLayout(False)
         Me.pnlBootloader.PerformLayout()
+        CType(Me.TabControlAdv1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControlAdv1.ResumeLayout(False)
+        Me.TabPageAdv1.ResumeLayout(False)
+        Me.TabPageAdv1.PerformLayout()
         Me.pnlRecovery.ResumeLayout(False)
         Me.pnlRecovery.PerformLayout()
         CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).EndInit()
@@ -695,10 +761,6 @@ Partial Class Home
     Friend WithEvents Label3 As Label
     Friend WithEvents cmbModel As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents pnlSettings As Syncfusion.Windows.Forms.Tools.TabPageAdv
-    Friend WithEvents txtBoxUnlockKey As TextBox
-    Friend WithEvents btnLockBootloader As Button
-    Friend WithEvents btnUnlockBootloader As Button
-    Friend WithEvents Label4 As Label
     Friend WithEvents txtBoxBootloader As TextBox
     Friend WithEvents cmbRecovery As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents btnFlashRecovery As Button
@@ -722,4 +784,12 @@ Partial Class Home
     Friend WithEvents btnFlashUnbr As Button
     Friend WithEvents tabUnb2 As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents tabUnb3 As Syncfusion.Windows.Forms.Tools.TabPageAdv
+    Friend WithEvents TabControlAdv1 As Syncfusion.Windows.Forms.Tools.TabControlAdv
+    Friend WithEvents TabPageAdv1 As Syncfusion.Windows.Forms.Tools.TabPageAdv
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtBoxUnlockKey As TextBox
+    Friend WithEvents btnLockBootloader As Button
+    Friend WithEvents btnUnlockBootloader As Button
+    Friend WithEvents TabPageAdv2 As Syncfusion.Windows.Forms.Tools.TabPageAdv
+    Friend WithEvents TabPageAdv3 As Syncfusion.Windows.Forms.Tools.TabPageAdv
 End Class

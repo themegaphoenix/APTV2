@@ -107,7 +107,6 @@ Public Class Home
 
                 For Each nod As XmlNode In node.SelectNodes("twrp/version")
                     Dim recoveryTWRP As String = nod.Attributes("id").Value
-                    Console.WriteLine(recoveryTWRP)
                     If cmbRecovery.Items.Contains("TWRP " & recoveryTWRP) = False Then
                         cmbRecovery.Items.Add("TWRP " & recoveryTWRP)
 
@@ -117,25 +116,10 @@ Public Class Home
             End If
         Next
 
-        'root information
-        cmbRoot.Items.Clear()
-        Dim parentNode As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/magiskInstaller/version")
-        For Each node As XmlNode In parentNode
-            Dim version As String = node.Attributes("id").Value
-            If cmbRoot.Items.Contains("Magisk " & version) = False Then
-                cmbRoot.Items.Add("Magisk " & version)
-            End If
-        Next
+        'populate dropdown stuff
+        addToComboBoxesXML("/root/Gapps/version", "Gapps Application ", cmbGApps)
+        addToComboBoxesXML("/root/magiskInstaller/version", "Magisk ", cmbRoot)
 
-        'Gapps version
-        cmbGApps.Items.Clear()
-        Dim parentNode2 As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/Gapps/version")
-        For Each node As XmlNode In parentNode2
-            Dim version As String = node.Attributes("id").Value
-            If cmbGApps.Items.Contains("GAppsApp " & version) = False Then
-                cmbGApps.Items.Add("Gapps Application " & version)
-            End If
-        Next
 
     End Sub
 
@@ -266,7 +250,7 @@ Public Class Home
 
 
 
-        Dim url As String = getInfoXML("/root/magiskInstaller/version", chosenRoot)
+        Dim url As String = getInfoXMLInner("/root/magiskInstaller/version", chosenRoot)
         'Console.WriteLine(url)
         If url <> "0" Then
             Dim fileName As String = "downloads/magisk-" & chosenRoot & ".zip"
@@ -301,7 +285,7 @@ Public Class Home
         Dim chosenGapps As String = strGappsSplit(2)
 
 
-        Dim url As String = getInfoXML("/root/Gapps/version", chosenGapps)
+        Dim url As String = getInfoXMLInner("/root/Gapps/version", chosenGapps)
         'Console.WriteLine(url)
         If url <> "0" Then
             Dim fileName As String = "downloads/gapps-" & chosenGapps & ".apk"
@@ -457,7 +441,7 @@ Public Class Home
 #End Region
 
 #Region "Get Info from the XML File"
-    Private Function getInfoXML(ByVal parentNodes As String, ByVal valueToFind As String) As String
+    Private Function getInfoXMLInner(ByVal parentNodes As String, ByVal valueToFind As String) As String
         xmlDoc.Load(My.Settings.xmlDocumentName)
         Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes(parentNodes)
         For Each node As XmlNode In nodes
@@ -473,5 +457,20 @@ Public Class Home
         Return 0
     End Function
 
+    Private Sub addToComboBoxesXML(ByVal nodes As String, ByVal prefix As String, ByRef dropdown As Tools.ComboBoxAdv)
+        'clear all the items
+        dropdown.Items.Clear()
+        'scan tourhgt all the items and add them if they are not already present
+        Dim parentNode2 As XmlNodeList = xmlDoc.DocumentElement.SelectNodes(nodes)
+        For Each node As XmlNode In parentNode2
+            Dim version As String = node.Attributes("id").Value
+            If dropdown.Items.Contains(prefix & version) = False Then
+                dropdown.Items.Add(prefix & version)
+            End If
+        Next
+    End Sub
+
+
 #End Region
+
 End Class
