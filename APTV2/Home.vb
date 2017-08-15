@@ -1,8 +1,12 @@
 ﻿Imports System.ComponentModel
+Imports System.Globalization
 Imports System.IO
 Imports System.Net
+Imports System.Threading
 Imports System.Xml
+Imports APTV2.My.Resources
 Imports Syncfusion.Windows.Forms
+Imports Syncfusion.Windows.Forms.Tools
 
 Public Class Home
     Inherits MetroForm
@@ -22,23 +26,22 @@ Public Class Home
     Dim progressBar As ProgressBar
 
     'document needs to be open during the whole program, otherwise it would be opening and closing
-    Dim xmlDoc As New XmlDocument()
+    ReadOnly xmlDoc As New XmlDocument()
 
 #End Region
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'read xml file and load in to the dropbox
-        readXML()
-
+        ReadXml()
     End Sub
 
 #Region "Reloading data"
 
-    Sub readXML()
+    Sub ReadXml()
         Try
             xmlDoc.Load(My.Settings.xmlDocumentName)
             Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
-            Dim manufacturer As String = "", model As String = "", variantXml As String = ""
+            Dim manufacturer = "", model = "", variantXml = ""
 
             For Each node As XmlNode In nodes
                 manufacturer = node.SelectSingleNode("manufacturer").InnerText
@@ -47,7 +50,7 @@ Public Class Home
                 cmbModel.Items.Add(manufacturer & " " & model & " " & variantXml)
             Next
         Catch ex As Exception
-            MessageBox.Show("File not found or file corrupt")
+            MessageBox.Show(Strings.Home_readXML_File_not_found_or_file_corrupt)
         End Try
 
         Try
@@ -58,21 +61,19 @@ Public Class Home
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
-        reloadInfo()
-
+        ReloadInfo()
     End Sub
 
-    Private Sub cmbModel_SelectedValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbModel.SelectedValueChanged
+    Private Sub cmbModel_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbModel.SelectedValueChanged
         'save the changes so the next time is open, it loads the last selected model
         My.Settings.LastChosenModel = cmbModel.SelectedItem.ToString()
         'Console.WriteLine(My.Settings.LastChosenModel)
         My.Settings.Save()
         'reload the correct information
-        reloadInfo()
-
+        ReloadInfo()
     End Sub
 
-    Private Sub reloadInfo()
+    Private Sub ReloadInfo()
         'get the selection information
         Dim strPhone As String = cmbModel.SelectedItem
         Dim strPhoneSplit As String() = strPhone.Split(New Char() {" "c})
@@ -106,9 +107,9 @@ Public Class Home
                 cmbRecovery.Items.Clear()
 
                 For Each nod As XmlNode In node.SelectNodes("twrp/version")
-                    Dim recoveryTWRP As String = nod.Attributes("id").Value
-                    If cmbRecovery.Items.Contains("TWRP " & recoveryTWRP) = False Then
-                        cmbRecovery.Items.Add("TWRP " & recoveryTWRP)
+                    Dim recoveryTwrp As String = nod.Attributes("id").Value
+                    If cmbRecovery.Items.Contains("TWRP " & recoveryTwrp) = False Then
+                        cmbRecovery.Items.Add("TWRP " & recoveryTwrp)
 
                     End If
                 Next
@@ -117,10 +118,8 @@ Public Class Home
         Next
 
         'populate dropdown stuff
-        addToComboBoxesXML("/root/Gapps/version", "Gapps Application ", cmbGApps)
-        addToComboBoxesXML("/root/magiskInstaller/version", "Magisk ", cmbRoot)
-
-
+        AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
+        AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
     End Sub
 
 #End Region
@@ -130,14 +129,12 @@ Public Class Home
     Private Sub btnUnlockBootloader_Click(sender As Object, e As EventArgs) Handles btnUnlockBootloader.Click
         Dim unlockKey As String = txtBoxUnlockKey.Text
         Dim proceed As Boolean
-
+        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-Fr")
         If unlockKey = "" Then
-            Dim result As DialogResult = MessageBox.Show("You have not entered a unlock key." + vbLf +
-                                                          "Some devices might not require it." + vbLf +
-                                                          "Continue?",
-                                                          "Proceed",
-                                                          MessageBoxButtons.YesNo,
-                                                          MessageBoxIcon.Question)
+            Dim result As DialogResult = MessageBox.Show(Strings.Home_btnUnlockBootloader_Click_,
+                                                         Strings.Home_btnUnlockBootloader_Click_Proceed,
+                                                         MessageBoxButtons.YesNo,
+                                                         MessageBoxIcon.Question)
             If result = DialogResult.Yes Then
                 proceed = True
             Else
@@ -147,14 +144,13 @@ Public Class Home
 
         If proceed Then
             Dim commands(3, 3) As String
-            commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
-                {"fastboot", "oem unlock" + unlockKey, "Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)"},
-                {"fastboot", "reboot", "Rebooting device"}
-            }
+            commands = {{"adb", "reboot bootloader", Strings.Home_btnUnlockBootloader_Click_Rebooting_to_bootloader},
+                        {"fastboot", "oem unlock" + unlockKey, Strings.Home_btnUnlockBootloader_Click_Unlocking_bootloader},
+                        {"fastboot", "reboot", Strings.Home_btnUnlockBootloader_Click_Rebooting_device}
+                       }
             LabelToOutput = txtBoxBootloader
-            Task.Run(Sub() runComands(commands))
+            Task.Run(Sub() RunComands(commands))
         End If
-
     End Sub
 
     Private Sub btnLockBootloader_Click(sender As Object, e As EventArgs) Handles btnLockBootloader.Click
@@ -162,12 +158,10 @@ Public Class Home
         Dim proceed As Boolean
 
         If unlockKey = "" Then
-            Dim result As DialogResult = MessageBox.Show("You have not entered a unlock key." + vbLf +
-                                                              "Some devices might not require it." + vbLf +
-                                                              "Continue?",
-                                                              "Proceed",
-                                                              MessageBoxButtons.YesNo,
-                                                              MessageBoxIcon.Question)
+            Dim result As DialogResult = MessageBox.Show(Strings.Home_btnLockBootloader_Click_,
+                                                         Strings.Home_btnUnlockBootloader_Click_Proceed,
+                                                         MessageBoxButtons.YesNo,
+                                                         MessageBoxIcon.Question)
             If result = DialogResult.Yes Then
                 proceed = True
             Else
@@ -177,20 +171,14 @@ Public Class Home
 
         If proceed Then
             Dim commands(3, 3) As String
-            commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
-                {"fastboot", "oem relock" + unlockKey, "RElocking bootloader: (make sure device is plugged, otherwise it will not output anything)"},
-                {"fastboot", "reboot", "Rebooting device"}
-            }
-            'Dim executable As String() = {"fastboot"}
-            'Dim arguments As String() = {"oem relock " + unlockKey}
-            'Dim description As String() = {"Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)"}
-            ''Dim executable As String() = {"adb"}
-            ''Dim arguments As String() = {"help"}
-            ''Console.WriteLine(arguments(0))
+            commands = {{"adb", "reboot bootloader", Strings.Home_btnLockBootloader_Click_Rebooting_to_bootloader},
+                        {"fastboot", "oem relock" + unlockKey,
+                         Strings.Home_btnLockBootloader_Click_Relocking_bootloader___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_},
+                        {"fastboot", "reboot", "Rebooting device"}
+                       }
             LabelToOutput = txtBoxBootloader
-            Task.Run(Sub() runComands(commands))
+            Task.Run(Sub() RunComands(commands))
         End If
-
     End Sub
 
 #End Region
@@ -225,16 +213,16 @@ Public Class Home
                         'run the right adb commands
                         LabelToOutput = txtBoxRecovery
                         Dim commands(3, 3) As String
-                        commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
-                                                {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img", "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
-                                                {"fastboot", "reboot", "Rebooting device"}
-                                            }
-                        Await Task.Run(Sub() runComands(commands))
+                        commands = {{"adb", "reboot bootloader", Strings.Home_btnLockBootloader_Click_Rebooting_to_bootloader},
+                                    {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img",
+                                     "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
+                                    {"fastboot", "reboot", "Rebooting device"}
+                                   }
+                        Await Task.Run(Sub() RunComands(commands))
                     End If
                 Next
             End If
         Next
-
     End Sub
 
 #End Region
@@ -248,9 +236,7 @@ Public Class Home
         Console.WriteLine(strRootSplit(1))
         Dim chosenRoot As String = strRootSplit(1)
 
-
-
-        Dim url As String = getInfoXMLInner("/root/magiskInstaller/version", chosenRoot)
+        Dim url As String = GetInfoXmlInner("/root/magiskInstaller/version", chosenRoot)
         'Console.WriteLine(url)
         If url <> "0" Then
             Dim fileName As String = "downloads/magisk-" & chosenRoot & ".zip"
@@ -265,11 +251,12 @@ Public Class Home
             'todo fix the commands
             LabelToOutput = txtBoxRoot
             Dim commands(3, 3) As String
-            commands = {{"adb", "reboot bootloader", "Rebooting to bootloader"},
-                                        {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img", "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
-                                        {"fastboot", "reboot", "Rebooting device"}}
+            commands = {{"adb", "reboot bootloader", Strings.Home_btnLockBootloader_Click_Rebooting_to_bootloader},
+                        {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img",
+                         "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
+                        {"fastboot", "reboot", "Rebooting device"}}
 
-            Await Task.Run(Sub() runComands(commands))
+            Await Task.Run(Sub() RunComands(commands))
         End If
     End Sub
 
@@ -284,8 +271,7 @@ Public Class Home
         'Console.WriteLine(strGappsSplit(2))
         Dim chosenGapps As String = strGappsSplit(2)
 
-
-        Dim url As String = getInfoXMLInner("/root/Gapps/version", chosenGapps)
+        Dim url As String = GetInfoXmlInner("/root/Gapps/version", chosenGapps)
         'Console.WriteLine(url)
         If url <> "0" Then
             Dim fileName As String = "downloads/gapps-" & chosenGapps & ".apk"
@@ -302,9 +288,10 @@ Public Class Home
             LabelToOutput = txtBoxGApps
             Dim commands(3, 3) As String
             commands = {{"adb", "devices", "Showing all devices"},
-                         {"adb", "install " & fileName, "Installing app on the device(make sure device is plugged in, otherwise it will not output anything)"}
-                                }
-            Await Task.Run(Sub() runComands(commands))
+                        {"adb", "install " & fileName,
+                         Strings.Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
+                       }
+            Await Task.Run(Sub() RunComands(commands))
         End If
     End Sub
 
@@ -313,20 +300,19 @@ Public Class Home
 #Region "Unbrick"
 
     Private Sub btnFlashUnbr_Click(sender As Object, e As EventArgs) Handles btnFlashUnbr.Click
-
     End Sub
+
 #End Region
 
 #Region "Download File"
 
-    Private Sub UpdateProgressBar(ByVal a As Integer)
+    Private Sub UpdateProgressBar(a As Integer)
         If Me.InvokeRequired Then
             Dim args() As String = {a}
             Me.Invoke(New Action(Of String)(AddressOf UpdateProgressBar), args)
             Return
         End If
         progressBar.Value = CInt(a)
-
     End Sub
 
     Public Async Function DownloadFileAsync(urlAddress As String, filename As String) As Task(Of Integer)
@@ -345,7 +331,6 @@ Public Class Home
             End Try
         End Using
         Return 3
-
     End Function
 
     ' The event that will fire whenever the progress of the WebClient is changed
@@ -354,36 +339,36 @@ Public Class Home
         'Console.WriteLine(e.ProgressPercentage)
         ' Update the progressbar percentage
         UpdateProgressBar(e.ProgressPercentage)
-
     End Sub
 
     ' The event that will trigger when the WebClient is completed
     Private Sub Completed(sender As Object, e As AsyncCompletedEventArgs)
 
         If e.Cancelled = True Then
-            MessageBox.Show("Download has been canceled.")
+            MessageBox.Show(Strings.Home_Completed_Download_has_been_canceled_)
         Else
-            MessageBox.Show("Download completed!")
+            MessageBox.Show(Strings.Home_Completed_Download_completed_)
         End If
     End Sub
+
 #End Region
 
 #Region "ADB Commands"
 
     'runs the adb commands
-    Private Sub runComands(ByVal commands(,) As String)
-        For i As Integer = 0 To (commands.Length - 1)
+    Private Sub RunComands(commands(,) As String)
+        For i = 0 To (commands.Length - 1)
             Dim process = New Process()
             process.StartInfo = createStartInfo(commands(i, 0), commands(i, 1))
             process.EnableRaisingEvents = True
-            AddHandler process.Exited, Sub(ByVal sendera As Object, ByVal ea As System.EventArgs)
+            AddHandler process.Exited, Sub(sendera As Object, ea As EventArgs)
                                            'Console.WriteLine(process.ExitTime)
                                            'Console.WriteLine(". Processing done.")
                                            ' output line n when output is ready (= all lines are present)
                                            'Console.WriteLine(lines(1))
                                        End Sub
             ' catch standard output
-            AddHandler process.OutputDataReceived, Sub(ByVal senderb As Object, ByVal eb As System.Diagnostics.DataReceivedEventArgs)
+            AddHandler process.OutputDataReceived, Sub(senderb As Object, eb As DataReceivedEventArgs)
                                                        If (Not String.IsNullOrEmpty(eb.Data)) Then
                                                            Dim b As String = String.Format("{0}> {1}", DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss"), eb.Data)
                                                            Console.WriteLine(b)
@@ -392,15 +377,14 @@ Public Class Home
                                                        End If
                                                    End Sub
             ' catch errors
-            AddHandler process.ErrorDataReceived, Sub(ByVal senderc As Object, ByVal ec As System.Diagnostics.DataReceivedEventArgs)
+            AddHandler process.ErrorDataReceived, Sub(senderc As Object, ec As DataReceivedEventArgs)
                                                       Dim a As String = String.Format("! {0}", ec.Data)
                                                       Console.WriteLine(a)
                                                       UpdateTextBox(a)
-
                                                   End Sub
             ' start process
             UpdateTextBox(commands(i, 2))
-            Dim result = process.Start()
+            process.Start()
             ' and wait for output
             process.BeginOutputReadLine()
             ' and wait for errors :-)
@@ -410,11 +394,10 @@ Public Class Home
             process.Close()
 
         Next
-
     End Sub
 
     'the process information stuff
-    Private Function createStartInfo(ByVal executable As String, ByVal arguments As String) As ProcessStartInfo
+    Private Function createStartInfo(executable As String, arguments As String) As ProcessStartInfo
         Dim processStartInfo = New ProcessStartInfo(executable, arguments)
         processStartInfo.WorkingDirectory = Path.GetDirectoryName(executable)
         ' we want to read standard output
@@ -428,20 +411,20 @@ Public Class Home
     End Function
 
     'output the error and stuff to the chosen label
-    Private Sub UpdateTextBox(ByVal a As String)
+    Private Sub UpdateTextBox(a As String)
         If Me.InvokeRequired Then
             Dim args() As String = {a}
             Me.Invoke(New Action(Of String)(AddressOf UpdateTextBox), args)
             Return
         End If
         LabelToOutput.AppendText(a & Environment.NewLine)
-
     End Sub
 
 #End Region
 
 #Region "Get Info from the XML File"
-    Private Function getInfoXMLInner(ByVal parentNodes As String, ByVal valueToFind As String) As String
+
+    Private Function GetInfoXmlInner(parentNodes As String, valueToFind As String) As String
         xmlDoc.Load(My.Settings.xmlDocumentName)
         Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes(parentNodes)
         For Each node As XmlNode In nodes
@@ -453,14 +436,14 @@ Public Class Home
                 Exit Function
             End If
         Next
-        MessageBox.Show("Not Found")
+        MessageBox.Show(Strings.Home_getInfoXMLInner_Not_Found)
         Return 0
     End Function
 
-    Private Sub addToComboBoxesXML(ByVal nodes As String, ByVal prefix As String, ByRef dropdown As Tools.ComboBoxAdv)
+    Private Sub AddToComboBoxesXml(nodes As String, prefix As String, ByRef dropdown As ComboBoxAdv)
         'clear all the items
         dropdown.Items.Clear()
-        'scan tourhgt all the items and add them if they are not already present
+        'scan through all the items and add them if they are not already present
         Dim parentNode2 As XmlNodeList = xmlDoc.DocumentElement.SelectNodes(nodes)
         For Each node As XmlNode In parentNode2
             Dim version As String = node.Attributes("id").Value
@@ -469,7 +452,6 @@ Public Class Home
             End If
         Next
     End Sub
-
 
 #End Region
 

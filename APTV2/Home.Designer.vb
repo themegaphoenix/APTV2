@@ -22,6 +22,7 @@ Partial Class Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.CalculatorControl1 = New Syncfusion.Windows.Forms.Tools.CalculatorControl()
         Me.tabControlPanel = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.pnlPhone = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
@@ -99,24 +100,16 @@ Partial Class Home
         '
         'CalculatorControl1
         '
-        Me.CalculatorControl1.AccessibleDescription = "Calculator control"
-        Me.CalculatorControl1.AccessibleName = "Calculator Control"
+        resources.ApplyResources(Me.CalculatorControl1, "CalculatorControl1")
         Me.CalculatorControl1.BeforeTouchSize = New System.Drawing.Size(75, 23)
-        Me.CalculatorControl1.Culture = New System.Globalization.CultureInfo("en-GB")
         Me.CalculatorControl1.DoubleValue = 0R
-        Me.CalculatorControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CalculatorControl1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.CalculatorControl1.Location = New System.Drawing.Point(0, 0)
         Me.CalculatorControl1.MetroColor = System.Drawing.SystemColors.Control
         Me.CalculatorControl1.Name = "CalculatorControl1"
-        Me.CalculatorControl1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CalculatorControl1.Size = New System.Drawing.Size(75, 23)
-        Me.CalculatorControl1.TabIndex = 0
-        Me.CalculatorControl1.Text = "CalculatorControl1"
         '
         'tabControlPanel
         '
-        Me.tabControlPanel.ActiveTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        resources.ApplyResources(Me.tabControlPanel, "tabControlPanel")
         Me.tabControlPanel.ActiveTabForeColor = System.Drawing.Color.Empty
         Me.tabControlPanel.BackColor = System.Drawing.Color.White
         Me.tabControlPanel.BeforeTouchSize = New System.Drawing.Size(740, 433)
@@ -134,20 +127,12 @@ Partial Class Home
         Me.tabControlPanel.Controls.Add(Me.pnlAbout)
         Me.tabControlPanel.Controls.Add(Me.pnlBackup)
         Me.tabControlPanel.Controls.Add(Me.pnlSettings)
-        Me.tabControlPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tabControlPanel.FocusOnTabClick = False
-        Me.tabControlPanel.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tabControlPanel.InactiveTabColor = System.Drawing.Color.White
         Me.tabControlPanel.InActiveTabForeColor = System.Drawing.Color.Empty
-        Me.tabControlPanel.ItemSize = New System.Drawing.Size(79, 22)
-        Me.tabControlPanel.Location = New System.Drawing.Point(0, 0)
-        Me.tabControlPanel.Multiline = True
         Me.tabControlPanel.Name = "tabControlPanel"
-        Me.tabControlPanel.Padding = New System.Drawing.Point(10, 5)
         Me.tabControlPanel.SeparatorColor = System.Drawing.SystemColors.ControlDark
         Me.tabControlPanel.ShowSeparator = False
-        Me.tabControlPanel.Size = New System.Drawing.Size(740, 433)
-        Me.tabControlPanel.TabIndex = 1
         Me.tabControlPanel.TabPanelBackColor = System.Drawing.Color.White
         Me.tabControlPanel.TabStyle = GetType(Syncfusion.Windows.Forms.Tools.TabRendererMetro)
         '
@@ -163,85 +148,51 @@ Partial Class Home
         Me.pnlPhone.Controls.Add(Me.picPhone)
         Me.pnlPhone.Image = Nothing
         Me.pnlPhone.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlPhone.Location = New System.Drawing.Point(0, 30)
+        resources.ApplyResources(Me.pnlPhone, "pnlPhone")
         Me.pnlPhone.Name = "pnlPhone"
         Me.pnlPhone.ShowCloseButton = True
-        Me.pnlPhone.Size = New System.Drawing.Size(740, 403)
-        Me.pnlPhone.TabIndex = 1
-        Me.pnlPhone.Text = "Phone"
         Me.pnlPhone.ThemesEnabled = False
         '
         'cmbModel
         '
         Me.cmbModel.BeforeTouchSize = New System.Drawing.Size(282, 26)
-        Me.cmbModel.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbModel.Location = New System.Drawing.Point(330, 83)
+        resources.ApplyResources(Me.cmbModel, "cmbModel")
         Me.cmbModel.Name = "cmbModel"
-        Me.cmbModel.Size = New System.Drawing.Size(282, 26)
-        Me.cmbModel.TabIndex = 9
-        Me.cmbModel.Text = "Select a Phone"
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(396, 225)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 18)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Variant"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(396, 186)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 18)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Model"
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(396, 147)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 18)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Manufacturer"
         '
         'lblVariant
         '
-        Me.lblVariant.AutoSize = True
-        Me.lblVariant.Location = New System.Drawing.Point(489, 225)
+        resources.ApplyResources(Me.lblVariant, "lblVariant")
         Me.lblVariant.Name = "lblVariant"
-        Me.lblVariant.Size = New System.Drawing.Size(41, 18)
-        Me.lblVariant.TabIndex = 5
-        Me.lblVariant.Text = "Label1"
         '
         'lblModel
         '
-        Me.lblModel.AutoSize = True
-        Me.lblModel.Location = New System.Drawing.Point(489, 186)
+        resources.ApplyResources(Me.lblModel, "lblModel")
         Me.lblModel.Name = "lblModel"
-        Me.lblModel.Size = New System.Drawing.Size(40, 18)
-        Me.lblModel.TabIndex = 4
-        Me.lblModel.Text = "Model"
         '
         'lblManufacturer
         '
-        Me.lblManufacturer.AutoSize = True
-        Me.lblManufacturer.Location = New System.Drawing.Point(489, 147)
+        resources.ApplyResources(Me.lblManufacturer, "lblManufacturer")
         Me.lblManufacturer.Name = "lblManufacturer"
-        Me.lblManufacturer.Size = New System.Drawing.Size(41, 18)
-        Me.lblManufacturer.TabIndex = 3
-        Me.lblManufacturer.Text = "Label1"
         '
         'picPhone
         '
-        Me.picPhone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.picPhone.Location = New System.Drawing.Point(65, 33)
+        resources.ApplyResources(Me.picPhone, "picPhone")
         Me.picPhone.Name = "picPhone"
-        Me.picPhone.Size = New System.Drawing.Size(175, 330)
-        Me.picPhone.TabIndex = 2
         Me.picPhone.TabStop = False
         '
         'pnlBootloader
@@ -250,12 +201,9 @@ Partial Class Home
         Me.pnlBootloader.Controls.Add(Me.txtBoxBootloader)
         Me.pnlBootloader.Image = Nothing
         Me.pnlBootloader.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlBootloader.Location = New System.Drawing.Point(0, 30)
+        resources.ApplyResources(Me.pnlBootloader, "pnlBootloader")
         Me.pnlBootloader.Name = "pnlBootloader"
         Me.pnlBootloader.ShowCloseButton = True
-        Me.pnlBootloader.Size = New System.Drawing.Size(740, 403)
-        Me.pnlBootloader.TabIndex = 3
-        Me.pnlBootloader.Text = "Bootloader"
         Me.pnlBootloader.ThemesEnabled = False
         '
         'TabControlAdv1
@@ -269,12 +217,10 @@ Partial Class Home
         Me.TabControlAdv1.Controls.Add(Me.TabPageAdv2)
         Me.TabControlAdv1.Controls.Add(Me.TabPageAdv3)
         Me.TabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Empty
-        Me.TabControlAdv1.Location = New System.Drawing.Point(2, 27)
+        resources.ApplyResources(Me.TabControlAdv1, "TabControlAdv1")
         Me.TabControlAdv1.Name = "TabControlAdv1"
         Me.TabControlAdv1.SeparatorColor = System.Drawing.SystemColors.ControlDark
         Me.TabControlAdv1.ShowSeparator = False
-        Me.TabControlAdv1.Size = New System.Drawing.Size(364, 352)
-        Me.TabControlAdv1.TabIndex = 8
         '
         'TabPageAdv1
         '
@@ -284,81 +230,56 @@ Partial Class Home
         Me.TabPageAdv1.Controls.Add(Me.btnUnlockBootloader)
         Me.TabPageAdv1.Image = Nothing
         Me.TabPageAdv1.ImageSize = New System.Drawing.Size(16, 16)
-        Me.TabPageAdv1.Location = New System.Drawing.Point(1, 30)
+        resources.ApplyResources(Me.TabPageAdv1, "TabPageAdv1")
         Me.TabPageAdv1.Name = "TabPageAdv1"
         Me.TabPageAdv1.ShowCloseButton = True
-        Me.TabPageAdv1.Size = New System.Drawing.Size(361, 320)
-        Me.TabPageAdv1.TabIndex = 1
-        Me.TabPageAdv1.Text = "Version Selector"
         Me.TabPageAdv1.ThemesEnabled = False
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(25, 80)
+        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(129, 18)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Enter Unlock / Lock Key"
         '
         'txtBoxUnlockKey
         '
-        Me.txtBoxUnlockKey.Location = New System.Drawing.Point(171, 73)
+        resources.ApplyResources(Me.txtBoxUnlockKey, "txtBoxUnlockKey")
         Me.txtBoxUnlockKey.Name = "txtBoxUnlockKey"
-        Me.txtBoxUnlockKey.Size = New System.Drawing.Size(176, 25)
-        Me.txtBoxUnlockKey.TabIndex = 8
         '
         'btnLockBootloader
         '
-        Me.btnLockBootloader.Location = New System.Drawing.Point(171, 140)
+        resources.ApplyResources(Me.btnLockBootloader, "btnLockBootloader")
         Me.btnLockBootloader.Name = "btnLockBootloader"
-        Me.btnLockBootloader.Size = New System.Drawing.Size(143, 108)
-        Me.btnLockBootloader.TabIndex = 7
-        Me.btnLockBootloader.Text = "Lock Bootloader"
         Me.btnLockBootloader.UseVisualStyleBackColor = True
         '
         'btnUnlockBootloader
         '
-        Me.btnUnlockBootloader.Location = New System.Drawing.Point(14, 140)
+        resources.ApplyResources(Me.btnUnlockBootloader, "btnUnlockBootloader")
         Me.btnUnlockBootloader.Name = "btnUnlockBootloader"
-        Me.btnUnlockBootloader.Size = New System.Drawing.Size(143, 108)
-        Me.btnUnlockBootloader.TabIndex = 6
-        Me.btnUnlockBootloader.Text = "Unlock Bootloader"
         Me.btnUnlockBootloader.UseVisualStyleBackColor = True
         '
         'TabPageAdv2
         '
         Me.TabPageAdv2.Image = Nothing
         Me.TabPageAdv2.ImageSize = New System.Drawing.Size(16, 16)
-        Me.TabPageAdv2.Location = New System.Drawing.Point(1, 30)
+        resources.ApplyResources(Me.TabPageAdv2, "TabPageAdv2")
         Me.TabPageAdv2.Name = "TabPageAdv2"
         Me.TabPageAdv2.ShowCloseButton = True
-        Me.TabPageAdv2.Size = New System.Drawing.Size(361, 320)
-        Me.TabPageAdv2.TabIndex = 2
-        Me.TabPageAdv2.Text = "Flash"
         Me.TabPageAdv2.ThemesEnabled = False
         '
         'TabPageAdv3
         '
         Me.TabPageAdv3.Image = Nothing
         Me.TabPageAdv3.ImageSize = New System.Drawing.Size(16, 16)
-        Me.TabPageAdv3.Location = New System.Drawing.Point(1, 30)
+        resources.ApplyResources(Me.TabPageAdv3, "TabPageAdv3")
         Me.TabPageAdv3.Name = "TabPageAdv3"
         Me.TabPageAdv3.ShowCloseButton = True
-        Me.TabPageAdv3.Size = New System.Drawing.Size(361, 320)
-        Me.TabPageAdv3.TabIndex = 3
-        Me.TabPageAdv3.Text = "...."
         Me.TabPageAdv3.ThemesEnabled = False
         '
         'txtBoxBootloader
         '
         Me.txtBoxBootloader.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.txtBoxBootloader.Location = New System.Drawing.Point(372, 27)
-        Me.txtBoxBootloader.Multiline = True
+        resources.ApplyResources(Me.txtBoxBootloader, "txtBoxBootloader")
         Me.txtBoxBootloader.Name = "txtBoxBootloader"
-        Me.txtBoxBootloader.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtBoxBootloader.Size = New System.Drawing.Size(336, 364)
-        Me.txtBoxBootloader.TabIndex = 7
         '
         'pnlRecovery
         '
@@ -368,49 +289,33 @@ Partial Class Home
         Me.pnlRecovery.Controls.Add(Me.btnFlashRecovery)
         Me.pnlRecovery.Image = Nothing
         Me.pnlRecovery.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlRecovery.Location = New System.Drawing.Point(0, 30)
+        resources.ApplyResources(Me.pnlRecovery, "pnlRecovery")
         Me.pnlRecovery.Name = "pnlRecovery"
         Me.pnlRecovery.ShowCloseButton = True
-        Me.pnlRecovery.Size = New System.Drawing.Size(740, 403)
-        Me.pnlRecovery.TabIndex = 2
-        Me.pnlRecovery.Text = "Recovery"
         Me.pnlRecovery.ThemesEnabled = False
         '
         'progressBarRecovery
         '
-        Me.progressBarRecovery.Location = New System.Drawing.Point(65, 126)
+        resources.ApplyResources(Me.progressBarRecovery, "progressBarRecovery")
         Me.progressBarRecovery.Name = "progressBarRecovery"
-        Me.progressBarRecovery.Size = New System.Drawing.Size(100, 23)
         Me.progressBarRecovery.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.progressBarRecovery.TabIndex = 12
         '
         'txtBoxRecovery
         '
         Me.txtBoxRecovery.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.txtBoxRecovery.Location = New System.Drawing.Point(392, 14)
-        Me.txtBoxRecovery.Multiline = True
+        resources.ApplyResources(Me.txtBoxRecovery, "txtBoxRecovery")
         Me.txtBoxRecovery.Name = "txtBoxRecovery"
-        Me.txtBoxRecovery.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtBoxRecovery.Size = New System.Drawing.Size(336, 364)
-        Me.txtBoxRecovery.TabIndex = 11
         '
         'cmbRecovery
         '
         Me.cmbRecovery.BeforeTouchSize = New System.Drawing.Size(172, 26)
-        Me.cmbRecovery.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbRecovery.Location = New System.Drawing.Point(37, 65)
+        resources.ApplyResources(Me.cmbRecovery, "cmbRecovery")
         Me.cmbRecovery.Name = "cmbRecovery"
-        Me.cmbRecovery.Size = New System.Drawing.Size(172, 26)
-        Me.cmbRecovery.TabIndex = 10
-        Me.cmbRecovery.Text = "Select a Recovery Version"
         '
         'btnFlashRecovery
         '
-        Me.btnFlashRecovery.Location = New System.Drawing.Point(37, 192)
+        resources.ApplyResources(Me.btnFlashRecovery, "btnFlashRecovery")
         Me.btnFlashRecovery.Name = "btnFlashRecovery"
-        Me.btnFlashRecovery.Size = New System.Drawing.Size(172, 95)
-        Me.btnFlashRecovery.TabIndex = 0
-        Me.btnFlashRecovery.Text = "Flash Recovery"
         Me.btnFlashRecovery.UseVisualStyleBackColor = True
         '
         'pnlRoot
@@ -422,82 +327,54 @@ Partial Class Home
         Me.pnlRoot.Controls.Add(Me.txtBoxRoot)
         Me.pnlRoot.Image = Nothing
         Me.pnlRoot.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlRoot.Location = New System.Drawing.Point(0, 30)
+        resources.ApplyResources(Me.pnlRoot, "pnlRoot")
         Me.pnlRoot.Name = "pnlRoot"
         Me.pnlRoot.ShowCloseButton = True
-        Me.pnlRoot.Size = New System.Drawing.Size(740, 403)
-        Me.pnlRoot.TabIndex = 4
-        Me.pnlRoot.Text = "Root"
         Me.pnlRoot.ThemesEnabled = False
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(86, 38)
+        resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(207, 18)
-        Me.Label5.TabIndex = 16
-        Me.Label5.Text = "Magisk is a way to get systemless root"
         '
         'progressBarRoot
         '
-        Me.progressBarRoot.Location = New System.Drawing.Point(98, 144)
+        resources.ApplyResources(Me.progressBarRoot, "progressBarRoot")
         Me.progressBarRoot.Name = "progressBarRoot"
-        Me.progressBarRoot.Size = New System.Drawing.Size(100, 23)
         Me.progressBarRoot.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.progressBarRoot.TabIndex = 15
         '
         'cmbRoot
         '
         Me.cmbRoot.BeforeTouchSize = New System.Drawing.Size(172, 26)
-        Me.cmbRoot.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbRoot.Location = New System.Drawing.Point(70, 83)
+        resources.ApplyResources(Me.cmbRoot, "cmbRoot")
         Me.cmbRoot.Name = "cmbRoot"
-        Me.cmbRoot.Size = New System.Drawing.Size(172, 26)
-        Me.cmbRoot.TabIndex = 14
-        Me.cmbRoot.Text = "Select a Magisk Version"
         '
         'btnFlashMagisk
         '
-        Me.btnFlashMagisk.Location = New System.Drawing.Point(70, 210)
+        resources.ApplyResources(Me.btnFlashMagisk, "btnFlashMagisk")
         Me.btnFlashMagisk.Name = "btnFlashMagisk"
-        Me.btnFlashMagisk.Size = New System.Drawing.Size(172, 95)
-        Me.btnFlashMagisk.TabIndex = 13
-        Me.btnFlashMagisk.Text = "Flash Magisk"
         Me.btnFlashMagisk.UseVisualStyleBackColor = True
         '
         'txtBoxRoot
         '
         Me.txtBoxRoot.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.txtBoxRoot.Location = New System.Drawing.Point(392, 17)
-        Me.txtBoxRoot.Multiline = True
+        resources.ApplyResources(Me.txtBoxRoot, "txtBoxRoot")
         Me.txtBoxRoot.Name = "txtBoxRoot"
-        Me.txtBoxRoot.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtBoxRoot.Size = New System.Drawing.Size(336, 364)
-        Me.txtBoxRoot.TabIndex = 12
         '
         'pnlXposed
         '
         Me.pnlXposed.Controls.Add(Me.Label6)
         Me.pnlXposed.Image = Nothing
         Me.pnlXposed.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlXposed.Location = New System.Drawing.Point(0, 30)
+        resources.ApplyResources(Me.pnlXposed, "pnlXposed")
         Me.pnlXposed.Name = "pnlXposed"
         Me.pnlXposed.ShowCloseButton = True
-        Me.pnlXposed.Size = New System.Drawing.Size(740, 403)
-        Me.pnlXposed.TabIndex = 5
-        Me.pnlXposed.Text = "Xposed"
         Me.pnlXposed.ThemesEnabled = False
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Roboto Condensed", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(223, 163)
+        resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(155, 35)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "Coming soon"
         '
         'pnlGapps
         '
@@ -508,60 +385,41 @@ Partial Class Home
         Me.pnlGapps.Controls.Add(Me.txtBoxGApps)
         Me.pnlGapps.Image = Nothing
         Me.pnlGapps.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlGapps.Location = New System.Drawing.Point(0, 30)
+        resources.ApplyResources(Me.pnlGapps, "pnlGapps")
         Me.pnlGapps.Name = "pnlGapps"
         Me.pnlGapps.ShowCloseButton = True
-        Me.pnlGapps.Size = New System.Drawing.Size(740, 403)
-        Me.pnlGapps.TabIndex = 6
-        Me.pnlGapps.Text = "Gapps"
         Me.pnlGapps.ThemesEnabled = False
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.APTV2.My.Resources.Resources.opengapps
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(175, 130)
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(90, 87)
-        Me.PictureBox1.TabIndex = 20
         Me.PictureBox1.TabStop = False
         '
         'progressBarGApps
         '
-        Me.progressBarGApps.Location = New System.Drawing.Point(41, 150)
+        resources.ApplyResources(Me.progressBarGApps, "progressBarGApps")
         Me.progressBarGApps.Name = "progressBarGApps"
-        Me.progressBarGApps.Size = New System.Drawing.Size(100, 23)
         Me.progressBarGApps.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.progressBarGApps.TabIndex = 19
         '
         'cmbGApps
         '
         Me.cmbGApps.BeforeTouchSize = New System.Drawing.Size(208, 26)
-        Me.cmbGApps.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbGApps.Location = New System.Drawing.Point(41, 85)
+        resources.ApplyResources(Me.cmbGApps, "cmbGApps")
         Me.cmbGApps.Name = "cmbGApps"
-        Me.cmbGApps.Size = New System.Drawing.Size(208, 26)
-        Me.cmbGApps.TabIndex = 18
-        Me.cmbGApps.Text = "Select a  GApps application Version"
         '
         'btnGappsInstall
         '
-        Me.btnGappsInstall.Location = New System.Drawing.Point(41, 247)
+        resources.ApplyResources(Me.btnGappsInstall, "btnGappsInstall")
         Me.btnGappsInstall.Name = "btnGappsInstall"
-        Me.btnGappsInstall.Size = New System.Drawing.Size(172, 95)
-        Me.btnGappsInstall.TabIndex = 17
-        Me.btnGappsInstall.Text = "Install application"
         Me.btnGappsInstall.UseVisualStyleBackColor = True
         '
         'txtBoxGApps
         '
         Me.txtBoxGApps.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.txtBoxGApps.Location = New System.Drawing.Point(363, 19)
-        Me.txtBoxGApps.Multiline = True
+        resources.ApplyResources(Me.txtBoxGApps, "txtBoxGApps")
         Me.txtBoxGApps.Name = "txtBoxGApps"
-        Me.txtBoxGApps.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtBoxGApps.Size = New System.Drawing.Size(336, 364)
-        Me.txtBoxGApps.TabIndex = 16
         '
         'pnlUnbrick
         '
@@ -569,23 +427,16 @@ Partial Class Home
         Me.pnlUnbrick.Controls.Add(Me.TabControlUnbrick)
         Me.pnlUnbrick.Image = Nothing
         Me.pnlUnbrick.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlUnbrick.Location = New System.Drawing.Point(0, 30)
+        resources.ApplyResources(Me.pnlUnbrick, "pnlUnbrick")
         Me.pnlUnbrick.Name = "pnlUnbrick"
         Me.pnlUnbrick.ShowCloseButton = True
-        Me.pnlUnbrick.Size = New System.Drawing.Size(740, 403)
-        Me.pnlUnbrick.TabIndex = 8
-        Me.pnlUnbrick.Text = "Unbrick"
         Me.pnlUnbrick.ThemesEnabled = False
         '
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.TextBox1.Location = New System.Drawing.Point(404, 17)
-        Me.TextBox1.Multiline = True
+        resources.ApplyResources(Me.TextBox1, "TextBox1")
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox1.Size = New System.Drawing.Size(336, 364)
-        Me.TextBox1.TabIndex = 19
         '
         'TabControlUnbrick
         '
@@ -598,12 +449,10 @@ Partial Class Home
         Me.TabControlUnbrick.Controls.Add(Me.tabUnb2)
         Me.TabControlUnbrick.Controls.Add(Me.tabUnb3)
         Me.TabControlUnbrick.InActiveTabForeColor = System.Drawing.Color.Empty
-        Me.TabControlUnbrick.Location = New System.Drawing.Point(12, 29)
+        resources.ApplyResources(Me.TabControlUnbrick, "TabControlUnbrick")
         Me.TabControlUnbrick.Name = "TabControlUnbrick"
         Me.TabControlUnbrick.SeparatorColor = System.Drawing.SystemColors.ControlDark
         Me.TabControlUnbrick.ShowSeparator = False
-        Me.TabControlUnbrick.Size = New System.Drawing.Size(364, 352)
-        Me.TabControlUnbrick.TabIndex = 0
         '
         'tabUnb1
         '
@@ -611,102 +460,75 @@ Partial Class Home
         Me.tabUnb1.Controls.Add(Me.btnFlashUnbr)
         Me.tabUnb1.Image = Nothing
         Me.tabUnb1.ImageSize = New System.Drawing.Size(16, 16)
-        Me.tabUnb1.Location = New System.Drawing.Point(1, 0)
+        resources.ApplyResources(Me.tabUnb1, "tabUnb1")
         Me.tabUnb1.Name = "tabUnb1"
         Me.tabUnb1.ShowCloseButton = True
-        Me.tabUnb1.Size = New System.Drawing.Size(361, 350)
-        Me.tabUnb1.TabIndex = 1
-        Me.tabUnb1.Text = "Version Selector"
         Me.tabUnb1.ThemesEnabled = False
         '
         'ComboBoxAdv1
         '
         Me.ComboBoxAdv1.BeforeTouchSize = New System.Drawing.Size(208, 26)
-        Me.ComboBoxAdv1.Font = New System.Drawing.Font("Roboto Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBoxAdv1.Location = New System.Drawing.Point(27, 63)
+        resources.ApplyResources(Me.ComboBoxAdv1, "ComboBoxAdv1")
         Me.ComboBoxAdv1.Name = "ComboBoxAdv1"
-        Me.ComboBoxAdv1.Size = New System.Drawing.Size(208, 26)
-        Me.ComboBoxAdv1.TabIndex = 20
-        Me.ComboBoxAdv1.Text = "Select a  EMUI Version"
         '
         'btnFlashUnbr
         '
-        Me.btnFlashUnbr.Location = New System.Drawing.Point(63, 154)
+        resources.ApplyResources(Me.btnFlashUnbr, "btnFlashUnbr")
         Me.btnFlashUnbr.Name = "btnFlashUnbr"
-        Me.btnFlashUnbr.Size = New System.Drawing.Size(172, 95)
-        Me.btnFlashUnbr.TabIndex = 19
-        Me.btnFlashUnbr.Text = "Flash"
         Me.btnFlashUnbr.UseVisualStyleBackColor = True
         '
         'tabUnb2
         '
         Me.tabUnb2.Image = Nothing
         Me.tabUnb2.ImageSize = New System.Drawing.Size(16, 16)
-        Me.tabUnb2.Location = New System.Drawing.Point(1, 0)
+        resources.ApplyResources(Me.tabUnb2, "tabUnb2")
         Me.tabUnb2.Name = "tabUnb2"
         Me.tabUnb2.ShowCloseButton = True
-        Me.tabUnb2.Size = New System.Drawing.Size(361, 350)
-        Me.tabUnb2.TabIndex = 2
-        Me.tabUnb2.Text = "Flash"
         Me.tabUnb2.ThemesEnabled = False
         '
         'tabUnb3
         '
         Me.tabUnb3.Image = Nothing
         Me.tabUnb3.ImageSize = New System.Drawing.Size(16, 16)
-        Me.tabUnb3.Location = New System.Drawing.Point(1, 0)
+        resources.ApplyResources(Me.tabUnb3, "tabUnb3")
         Me.tabUnb3.Name = "tabUnb3"
         Me.tabUnb3.ShowCloseButton = True
-        Me.tabUnb3.Size = New System.Drawing.Size(361, 350)
-        Me.tabUnb3.TabIndex = 3
-        Me.tabUnb3.Text = "...."
         Me.tabUnb3.ThemesEnabled = False
         '
         'pnlAbout
         '
         Me.pnlAbout.Image = Nothing
         Me.pnlAbout.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlAbout.Location = New System.Drawing.Point(0, 30)
+        resources.ApplyResources(Me.pnlAbout, "pnlAbout")
         Me.pnlAbout.Name = "pnlAbout"
         Me.pnlAbout.ShowCloseButton = True
-        Me.pnlAbout.Size = New System.Drawing.Size(740, 403)
-        Me.pnlAbout.TabIndex = 9
-        Me.pnlAbout.Text = "About"
         Me.pnlAbout.ThemesEnabled = False
         '
         'pnlBackup
         '
         Me.pnlBackup.Image = Nothing
         Me.pnlBackup.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlBackup.Location = New System.Drawing.Point(0, 30)
+        resources.ApplyResources(Me.pnlBackup, "pnlBackup")
         Me.pnlBackup.Name = "pnlBackup"
         Me.pnlBackup.ShowCloseButton = True
-        Me.pnlBackup.Size = New System.Drawing.Size(740, 403)
-        Me.pnlBackup.TabIndex = 10
-        Me.pnlBackup.Text = "Backup"
         Me.pnlBackup.ThemesEnabled = False
         '
         'pnlSettings
         '
         Me.pnlSettings.Image = Nothing
         Me.pnlSettings.ImageSize = New System.Drawing.Size(16, 16)
-        Me.pnlSettings.Location = New System.Drawing.Point(0, 30)
+        resources.ApplyResources(Me.pnlSettings, "pnlSettings")
         Me.pnlSettings.Name = "pnlSettings"
         Me.pnlSettings.ShowCloseButton = True
-        Me.pnlSettings.Size = New System.Drawing.Size(740, 403)
-        Me.pnlSettings.TabIndex = 11
-        Me.pnlSettings.Text = "Settings"
         Me.pnlSettings.ThemesEnabled = False
         '
         'Home
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(740, 433)
         Me.Controls.Add(Me.tabControlPanel)
         Me.Controls.Add(Me.CalculatorControl1)
         Me.Name = "Home"
-        Me.Text = "APTV2"
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabControlPanel.ResumeLayout(False)
         Me.pnlPhone.ResumeLayout(False)
