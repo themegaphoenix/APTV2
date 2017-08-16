@@ -8,5 +8,8 @@
     <Setting Name="xmlDocumentName" Type="System.String" Scope="User">
       <Value Profile="(Default)">phones\HuaweiHonor.xml</Value>
     </Setting>
+    <Setting Name="phoneVariant" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PLK-L01</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

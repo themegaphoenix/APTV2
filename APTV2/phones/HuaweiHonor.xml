@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <root>
   <phone>
     <manufacturer>Huawei</manufacturer>
@@ -8,6 +9,14 @@
     <twrp>
       <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
     </twrp>
+    <unbrick>
+      <version id="b390-Full">
+        <boot>https://www.dropbox.com/s/np604t58nyp7cj8/BOOT.img?dl=1</boot>
+        <cust>https://www.dropbox.com/s/7bahk9lvjoe93ye/CUST.img?dl=1</cust>
+        <system>https://www.dropbox.com/s/wqzwd7a826tuuf2/SYSTEM.img?dl=1</system>
+        <recovery>https://www.dropbox.com/s/chcad8cca9e1d3x/RECOVERY.img?dl=1</recovery>
+      </version>
+    </unbrick>
   </phone>
   <phone>
     <manufacturer>Huawei</manufacturer>
@@ -17,6 +26,7 @@
     <twrp>
       <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
     </twrp>
+
   </phone>
   <phone>
     <manufacturer>Huawei</manufacturer>

@@ -1101,32 +1101,56 @@
   <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ComboBoxAdv1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9.75pt</value>
+  <data name="progressBarUnbrick.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="ComboBoxAdv1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 63</value>
+  <data name="progressBarUnbrick.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 105</value>
   </data>
-  <data name="ComboBoxAdv1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 26</value>
+  <data name="progressBarUnbrick.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
   </data>
-  <data name="ComboBoxAdv1.TabIndex" type="System.Int32, mscorlib">
+  <data name="progressBarUnbrick.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="ComboBoxAdv1.Text" xml:space="preserve">
-    <value>Select a  EMUI Version</value>
+  <data name="&gt;&gt;progressBarUnbrick.Name" xml:space="preserve">
+    <value>progressBarUnbrick</value>
   </data>
-  <data name="&gt;&gt;ComboBoxAdv1.Name" xml:space="preserve">
-    <value>ComboBoxAdv1</value>
+  <data name="&gt;&gt;progressBarUnbrick.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ComboBoxAdv1.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxAdv1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;progressBarUnbrick.Parent" xml:space="preserve">
     <value>tabUnb1</value>
   </data>
-  <data name="&gt;&gt;ComboBoxAdv1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;progressBarUnbrick.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="cmbBoxUnbrick.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9.75pt</value>
+  </data>
+  <data name="cmbBoxUnbrick.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 63</value>
+  </data>
+  <data name="cmbBoxUnbrick.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 26</value>
+  </data>
+  <data name="cmbBoxUnbrick.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="cmbBoxUnbrick.Text" xml:space="preserve">
+    <value>Select a  EMUI Version</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrick.Name" xml:space="preserve">
+    <value>cmbBoxUnbrick</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrick.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrick.Parent" xml:space="preserve">
+    <value>tabUnb1</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrick.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btnFlashUnbr.Location" type="System.Drawing.Point, System.Drawing">
     <value>63, 154</value>
@@ -1150,13 +1174,13 @@
     <value>tabUnb1</value>
   </data>
   <data name="&gt;&gt;btnFlashUnbr.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tabUnb1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 0</value>
+    <value>1, 30</value>
   </data>
   <data name="tabUnb1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 350</value>
+    <value>361, 320</value>
   </data>
   <data name="tabUnb1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1177,10 +1201,10 @@
     <value>1</value>
   </data>
   <data name="tabUnb2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 0</value>
+    <value>1, 30</value>
   </data>
   <data name="tabUnb2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 350</value>
+    <value>361, 320</value>
   </data>
   <data name="tabUnb2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1201,10 +1225,10 @@
     <value>2</value>
   </data>
   <data name="tabUnb3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 0</value>
+    <value>1, 30</value>
   </data>
   <data name="tabUnb3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 350</value>
+    <value>361, 320</value>
   </data>
   <data name="tabUnb3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>

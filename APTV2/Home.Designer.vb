@@ -66,13 +66,14 @@ Partial Class Home
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabControlUnbrick = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.tabUnb1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.ComboBoxAdv1 = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.cmbBoxUnbrick = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.btnFlashUnbr = New System.Windows.Forms.Button()
         Me.tabUnb2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.tabUnb3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.progressBarUnbrick = New System.Windows.Forms.ProgressBar()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -94,7 +95,7 @@ Partial Class Home
         CType(Me.TabControlUnbrick, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControlUnbrick.SuspendLayout()
         Me.tabUnb1.SuspendLayout()
-        CType(Me.ComboBoxAdv1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbBoxUnbrick, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabControlPanel
@@ -446,7 +447,8 @@ Partial Class Home
         '
         'tabUnb1
         '
-        Me.tabUnb1.Controls.Add(Me.ComboBoxAdv1)
+        Me.tabUnb1.Controls.Add(Me.progressBarUnbrick)
+        Me.tabUnb1.Controls.Add(Me.cmbBoxUnbrick)
         Me.tabUnb1.Controls.Add(Me.btnFlashUnbr)
         Me.tabUnb1.Image = Nothing
         Me.tabUnb1.ImageSize = New System.Drawing.Size(16, 16)
@@ -455,11 +457,11 @@ Partial Class Home
         Me.tabUnb1.ShowCloseButton = True
         Me.tabUnb1.ThemesEnabled = False
         '
-        'ComboBoxAdv1
+        'cmbBoxUnbrick
         '
-        Me.ComboBoxAdv1.BeforeTouchSize = New System.Drawing.Size(208, 26)
-        resources.ApplyResources(Me.ComboBoxAdv1, "ComboBoxAdv1")
-        Me.ComboBoxAdv1.Name = "ComboBoxAdv1"
+        Me.cmbBoxUnbrick.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        resources.ApplyResources(Me.cmbBoxUnbrick, "cmbBoxUnbrick")
+        Me.cmbBoxUnbrick.Name = "cmbBoxUnbrick"
         '
         'btnFlashUnbr
         '
@@ -485,6 +487,15 @@ Partial Class Home
         Me.tabUnb3.ShowCloseButton = True
         Me.tabUnb3.ThemesEnabled = False
         '
+        'pnlSettings
+        '
+        Me.pnlSettings.Image = Nothing
+        Me.pnlSettings.ImageSize = New System.Drawing.Size(16, 16)
+        resources.ApplyResources(Me.pnlSettings, "pnlSettings")
+        Me.pnlSettings.Name = "pnlSettings"
+        Me.pnlSettings.ShowCloseButton = True
+        Me.pnlSettings.ThemesEnabled = False
+        '
         'pnlAbout
         '
         Me.pnlAbout.Image = Nothing
@@ -503,14 +514,11 @@ Partial Class Home
         Me.pnlBackup.ShowCloseButton = True
         Me.pnlBackup.ThemesEnabled = False
         '
-        'pnlSettings
+        'progressBarUnbrick
         '
-        Me.pnlSettings.Image = Nothing
-        Me.pnlSettings.ImageSize = New System.Drawing.Size(16, 16)
-        resources.ApplyResources(Me.pnlSettings, "pnlSettings")
-        Me.pnlSettings.Name = "pnlSettings"
-        Me.pnlSettings.ShowCloseButton = True
-        Me.pnlSettings.ThemesEnabled = False
+        resources.ApplyResources(Me.progressBarUnbrick, "progressBarUnbrick")
+        Me.progressBarUnbrick.Name = "progressBarUnbrick"
+        Me.progressBarUnbrick.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         '
         'Home
         '
@@ -547,7 +555,7 @@ Partial Class Home
         CType(Me.TabControlUnbrick, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlUnbrick.ResumeLayout(False)
         Me.tabUnb1.ResumeLayout(False)
-        CType(Me.ComboBoxAdv1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbBoxUnbrick, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -589,7 +597,7 @@ Partial Class Home
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TabControlUnbrick As Syncfusion.Windows.Forms.Tools.TabControlAdv
     Friend WithEvents tabUnb1 As Syncfusion.Windows.Forms.Tools.TabPageAdv
-    Friend WithEvents ComboBoxAdv1 As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
+    Friend WithEvents cmbBoxUnbrick As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents btnFlashUnbr As Button
     Friend WithEvents tabUnb2 As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents tabUnb3 As Syncfusion.Windows.Forms.Tools.TabPageAdv
@@ -601,4 +609,5 @@ Partial Class Home
     Friend WithEvents btnUnlockBootloader As Button
     Friend WithEvents TabPageAdv2 As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents TabPageAdv3 As Syncfusion.Windows.Forms.Tools.TabPageAdv
+    Friend WithEvents progressBarUnbrick As ProgressBar
 End Class

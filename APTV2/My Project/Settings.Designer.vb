@@ -77,6 +77,18 @@ Namespace My
                 Me("xmlDocumentName") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("PLK-L01")>  _
+        Public Property phoneVariant() As String
+            Get
+                Return CType(Me("phoneVariant"),String)
+            End Get
+            Set
+                Me("phoneVariant") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

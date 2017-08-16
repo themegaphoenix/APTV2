@@ -76,7 +76,7 @@ Public Class Home
     Private Sub ReloadInfo()
         'get the selection information
         Dim strPhone As String = cmbModel.SelectedItem
-        Console.WriteLine(strPhone)
+        'Console.WriteLine(strPhone)
         Dim strPhoneSplit As String() = strPhone.Split(New Char() {" "c})
         'Console.WriteLine(strPhoneSplit(1))
 
@@ -84,37 +84,50 @@ Public Class Home
         strManufacturer = strPhoneSplit(0)
         strModel = strPhoneSplit(1)
         strVariant = strPhoneSplit(2)
-
+        My.Settings.phoneVariant = strVariant
         'load the correct information into the labels
         xmlDoc.Load(My.Settings.xmlDocumentName)
         Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
         For Each node As XmlNode In nodes
             If strVariant = node.SelectSingleNode("variant").InnerText Then
 
-                'update Labels in the homepage
-                lblManufacturer.Text = node.SelectSingleNode("manufacturer").InnerText
-                lblModel.Text = node.SelectSingleNode("model").InnerText
-                lblVariant.Text = node.SelectSingleNode("variant").InnerText
-
-                'update Picture
                 Try
+                    'update Labels in the homepage
+                    lblManufacturer.Text = node.SelectSingleNode("manufacturer").InnerText
+                    lblModel.Text = node.SelectSingleNode("model").InnerText
+                    lblVariant.Text = node.SelectSingleNode("variant").InnerText
+
+                    'update Picture
+
                     Dim strPicture As String = "phones/pictures/" & node.SelectSingleNode("picture").InnerText
                     picPhone.BackgroundImage = Image.FromFile(strPicture)
+
+                    'get recovery info
+                    cmbRecovery.Items.Clear()
+
+                    For Each nod As XmlNode In node.SelectNodes("twrp/version")
+                        Dim recoveryTwrp As String = nod.Attributes("id").Value
+                        If cmbRecovery.Items.Contains("TWRP " & recoveryTwrp) = False Then
+                            cmbRecovery.Items.Add("TWRP " & recoveryTwrp)
+
+                        End If
+                    Next
+                    cmbRecovery.SelectedIndex = 0
+
+
+                    cmbBoxUnbrick.Items.Clear()
+                    For Each noda As XmlNode In node.SelectNodes("unbrick/version")
+                        'Console.WriteLine(noda.ToString)
+                        Dim emuiVersion As String = noda.Attributes("id").Value
+                        If _cmbBoxUnbrick.Items.Contains("EMUI " & emuiVersion) = False Then
+                            cmbBoxUnbrick.Items.Add("EMUI " & emuiVersion)
+                        End If
+                    Next
+                    cmbBoxUnbrick.SelectedIndex = 0
                 Catch ex As Exception
                     MessageBox.Show(ex.ToString)
                 End Try
 
-                'get recovery info
-                cmbRecovery.Items.Clear()
-
-                For Each nod As XmlNode In node.SelectNodes("twrp/version")
-                    Dim recoveryTwrp As String = nod.Attributes("id").Value
-                    If cmbRecovery.Items.Contains("TWRP " & recoveryTwrp) = False Then
-                        cmbRecovery.Items.Add("TWRP " & recoveryTwrp)
-
-                    End If
-                    cmbRecovery.SelectedIndex = 0
-                Next
 
             End If
         Next
@@ -146,8 +159,9 @@ Public Class Home
 
         If proceed Then
             Dim commands(3, 3) As String
-            commands = {{"adb", "reboot bootloader", Strings.Home_btnUnlockBootloader_Click_Rebooting_to_bootloader},
-                        {"fastboot", "oem unlock" + unlockKey, Strings.Home_btnUnlockBootloader_Click_Unlocking_bootloader},
+            commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
+                        {"fastboot", "oem unlock" + unlockKey,
+                         Strings.Home_btnUnlockBootloader_Click_Unlocking_bootloader},
                         {"fastboot", "reboot", Strings.Home_btnUnlockBootloader_Click_Rebooting_device}
                        }
             LabelToOutput = txtBoxBootloader
@@ -173,9 +187,10 @@ Public Class Home
 
         If proceed Then
             Dim commands(3, 3) As String
-            commands = {{"adb", "reboot bootloader", Strings.Home_btnLockBootloader_Click_Rebooting_to_bootloader},
+            commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
                         {"fastboot", "oem relock" + unlockKey,
-                         Strings.Home_btnLockBootloader_Click_Relocking_bootloader___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_},
+                         Strings.
+                             Home_btnLockBootloader_Click_Relocking_bootloader___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_},
                         {"fastboot", "reboot", "Rebooting device"}
                        }
             LabelToOutput = txtBoxBootloader
@@ -238,7 +253,7 @@ Public Class Home
         Console.WriteLine(strRootSplit(1))
         Dim chosenRoot As String = strRootSplit(1)
 
-        Dim url As String = GetInfoXmlInner("/root/magiskInstaller/version", chosenRoot)
+        Dim url As String = GetInfoXmlInner("/root/magiskInstaller/version", chosenRoot, False, "", "")
         'Console.WriteLine(url)
         If url <> "0" Then
             Dim fileName As String = "downloads/magisk-" & chosenRoot & ".zip"
@@ -273,7 +288,7 @@ Public Class Home
         'Console.WriteLine(strGappsSplit(2))
         Dim chosenGapps As String = strGappsSplit(2)
 
-        Dim url As String = GetInfoXmlInner("/root/Gapps/version", chosenGapps)
+        Dim url As String = GetInfoXmlInner("/root/Gapps/version", chosenGapps, False, "", "")
         'Console.WriteLine(url)
         If url <> "0" Then
             Dim fileName As String = "downloads/gapps-" & chosenGapps & ".apk"
@@ -288,10 +303,11 @@ Public Class Home
 
             'todo fix the commands
             LabelToOutput = txtBoxGApps
-            Dim commands(3, 3) As String
+            Dim commands(2, 2) As String
             commands = {{"adb", "devices", "Showing all devices"},
                         {"adb", "install " & fileName,
-                         Strings.Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
+                         Strings.
+                             Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
                        }
             Await Task.Run(Sub() RunComands(commands))
         End If
@@ -301,7 +317,23 @@ Public Class Home
 
 #Region "Unbrick"
 
-    Private Sub btnFlashUnbr_Click(sender As Object, e As EventArgs) Handles btnFlashUnbr.Click
+    Private Async Sub btnFlashUnbr_Click(sender As Object, e As EventArgs) Handles btnFlashUnbr.Click
+        'gets the chosenRecovery Value
+        Dim chosenFlash As String = GetInfoCombox(cmbBoxUnbrick, 1)
+
+        Dim info(4, 2) As String
+        info = {{GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "boot"), "downloads/boot-" + chosenFlash + ".img"},
+                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "cust"), "downloads/cust-" + chosenFlash + ".img"},
+                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "system"), "downloads/system-" + chosenFlash + ".img"},
+                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "recovery"), "downloads/recovery-" + chosenFlash + ".img"}
+        }
+
+
+        progressBar = progressBarUnbrick
+        For i = 0 To (info.Length / 2 - 1)
+            Await DownloadFileAsync(info(i, 0), info(i, 1))
+        Next
+
     End Sub
 
 #End Region
@@ -317,7 +349,7 @@ Public Class Home
         progressBar.Value = CInt(a)
     End Sub
 
-    Public Async Function DownloadFileAsync(urlAddress As String, filename As String) As Task(Of Integer)
+    Private Async Function DownloadFileAsync(urlAddress As String, filename As String) As Task(Of Integer)
         Using webClient = New WebClient()
             'updates the information
             AddHandler webClient.DownloadFileCompleted, AddressOf Completed
@@ -359,7 +391,7 @@ Public Class Home
 
     'runs the adb commands
     Private Sub RunComands(commands(,) As String)
-        For i = 0 To (commands.Length - 1)
+        For i = 0 To (commands.Length / 3 - 1)
             Dim process = New Process()
             process.StartInfo = createStartInfo(commands(i, 0), commands(i, 1))
             process.EnableRaisingEvents = True
@@ -424,20 +456,47 @@ Public Class Home
 
 #End Region
 
-#Region "Get Info from the XML File"
+#Region "Get Info"
 
-    Private Function GetInfoXmlInner(parentNodes As String, valueToFind As String) As String
+    Private Function GetInfoXmlInner(grandParentNodes As String, valueToFind As String, phoneVariantNeeded As Boolean, parentNodes As String, childNodes As String) As String
+        'load the document
         xmlDoc.Load(My.Settings.xmlDocumentName)
-        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes(parentNodes)
-        For Each node As XmlNode In nodes
+        'select the right nodes
+        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes(grandParentNodes)
+        'if the info need is not dependent on the variant (outside the <phone> tags)
+        If phoneVariantNeeded = False Then
+            For Each node As XmlNode In nodes
+                'if it find the right value it returns the link
+                Dim id As String = node.Attributes("id").Value
+                If valueToFind = id Then
+                    Return node.InnerText
+                    Exit Function
+                End If
+            Next
+        Else
+            'it will find the right variant
+            Dim phoneVariant As String = My.Settings.phoneVariant
+            For Each node As XmlNode In nodes
 
-            Dim id As String = node.Attributes("id").Value
-            If valueToFind = id Then
+                If node.SelectSingleNode("variant").InnerText = phoneVariant Then
+                    'select the right node
+                    For Each nod As XmlNode In node.SelectNodes(parentNodes)
+                        Dim id As String = nod.Attributes("id").Value
+                        If valueToFind = id Then
+                            'if it needs to have more select multiple links
+                            If childNodes = "" Then
+                                Return nod.InnerText
+                                Exit Function
+                            Else
+                                Return nod.SelectSingleNode(childNodes).InnerText
+                            End If
+                        End If
+                    Next
+                End If
+            Next
+        End If
 
-                Return node.InnerText
-                Exit Function
-            End If
-        Next
+        'it will only get here if it hasn't found the link
         MessageBox.Show(Strings.Home_getInfoXMLInner_Not_Found)
         Return 0
     End Function
@@ -462,6 +521,11 @@ Public Class Home
         End Try
     End Sub
 
+    Private Function GetInfoCombox(comboBox As ComboBoxAdv, spaces As Integer) As String
+        Dim stringSelected As String = comboBox.SelectedItem
+        Dim stringSelectedSplit As String() = stringSelected.Split(New Char() {" "c})
+        Dim chosenString As String = stringSelectedSplit(spaces)
+        Return chosenString
+    End Function
 #End Region
-
 End Class

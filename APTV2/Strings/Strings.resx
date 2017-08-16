@@ -132,7 +132,7 @@
     <value>Download completed!</value>
   </data>
   <data name="Home_getInfoXMLInner_Not_Found" xml:space="preserve">
-    <value>File not found!</value>
+    <value>Link not found</value>
   </data>
   <data name="Home_btnUnlockBootloader_Click_Unlocking_bootloader" xml:space="preserve">
     <value>Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)</value>

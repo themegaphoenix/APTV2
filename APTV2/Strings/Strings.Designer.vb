@@ -152,7 +152,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to File not found!.
+        '''  Looks up a localized string similar to Link not found.
         '''</summary>
         Friend Shared ReadOnly Property Home_getInfoXMLInner_Not_Found() As String
             Get
