@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  A strongly-typed resource class, for looking up localized strings, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute()>  _
     Friend Class Strings
@@ -86,15 +86,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Rebooting to bootloader.
-        '''</summary>
-        Friend Shared ReadOnly Property Home_btnLockBootloader_Click_Rebooting_to_bootloader() As String
-            Get
-                Return ResourceManager.GetString("Home_btnLockBootloader_Click_Rebooting_to_bootloader", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to Relocking bootloader: (make sure device is plugged, otherwise it will not output anything).
         '''</summary>
         Friend Shared ReadOnly Property Home_btnLockBootloader_Click_Relocking_bootloader___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_() As String
@@ -134,15 +125,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Rebooting to bootloader.
-        '''</summary>
-        Friend Shared ReadOnly Property Home_btnUnlockBootloader_Click_Rebooting_to_bootloader() As String
-            Get
-                Return ResourceManager.GetString("Home_btnUnlockBootloader_Click_Rebooting_to_bootloader", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything).
         '''</summary>
         Friend Shared ReadOnly Property Home_btnUnlockBootloader_Click_Unlocking_bootloader() As String
@@ -170,7 +152,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Not Found.
+        '''  Looks up a localized string similar to File not found!.
         '''</summary>
         Friend Shared ReadOnly Property Home_getInfoXMLInner_Not_Found() As String
             Get
@@ -184,6 +166,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property Home_readXML_File_not_found_or_file_corrupt() As String
             Get
                 Return ResourceManager.GetString("Home_readXML_File_not_found_or_file_corrupt", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Rebooting to bootloader.
+        '''</summary>
+        Friend Shared ReadOnly Property Rebooting_to_bootloader() As String
+            Get
+                Return ResourceManager.GetString("Rebooting_to_bootloader", resourceCulture)
             End Get
         End Property
     End Class

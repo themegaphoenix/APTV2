@@ -117,48 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CalculatorControl1.AccessibleDescription" xml:space="preserve">
-    <value>Calculator control</value>
-  </data>
-  <data name="CalculatorControl1.AccessibleName" xml:space="preserve">
-    <value>Calculator Control</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CalculatorControl1.Culture" type="System.Globalization.CultureInfo, mscorlib">
-    <value>en-GB</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CalculatorControl1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="CalculatorControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CalculatorControl1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="CalculatorControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="CalculatorControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="CalculatorControl1.Text" xml:space="preserve">
-    <value>CalculatorControl1</value>
-  </data>
-  <data name="&gt;&gt;CalculatorControl1.Name" xml:space="preserve">
-    <value>CalculatorControl1</value>
-  </data>
-  <data name="&gt;&gt;CalculatorControl1.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.CalculatorControl, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;CalculatorControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CalculatorControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="tabControlPanel.ActiveTabFont" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
@@ -171,6 +130,7 @@
   <data name="cmbModel.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 26</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cmbModel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
@@ -181,7 +141,7 @@
     <value>cmbModel</value>
   </data>
   <data name="&gt;&gt;cmbModel.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;cmbModel.Parent" xml:space="preserve">
     <value>pnlPhone</value>
@@ -351,6 +311,7 @@
   <data name="&gt;&gt;lblManufacturer.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="picPhone.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
@@ -391,7 +352,7 @@
     <value>pnlPhone</value>
   </data>
   <data name="&gt;&gt;pnlPhone.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;pnlPhone.Parent" xml:space="preserve">
     <value>tabControlPanel</value>
@@ -511,7 +472,7 @@
     <value>TabPageAdv1</value>
   </data>
   <data name="&gt;&gt;TabPageAdv1.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;TabPageAdv1.Parent" xml:space="preserve">
     <value>TabControlAdv1</value>
@@ -535,7 +496,7 @@
     <value>TabPageAdv2</value>
   </data>
   <data name="&gt;&gt;TabPageAdv2.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;TabPageAdv2.Parent" xml:space="preserve">
     <value>TabControlAdv1</value>
@@ -559,7 +520,7 @@
     <value>TabPageAdv3</value>
   </data>
   <data name="&gt;&gt;TabPageAdv3.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;TabPageAdv3.Parent" xml:space="preserve">
     <value>TabControlAdv1</value>
@@ -580,7 +541,7 @@
     <value>TabControlAdv1</value>
   </data>
   <data name="&gt;&gt;TabControlAdv1.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;TabControlAdv1.Parent" xml:space="preserve">
     <value>pnlBootloader</value>
@@ -631,7 +592,7 @@
     <value>pnlBootloader</value>
   </data>
   <data name="&gt;&gt;pnlBootloader.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;pnlBootloader.Parent" xml:space="preserve">
     <value>tabControlPanel</value>
@@ -706,7 +667,7 @@
     <value>cmbRecovery</value>
   </data>
   <data name="&gt;&gt;cmbRecovery.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;cmbRecovery.Parent" xml:space="preserve">
     <value>pnlRecovery</value>
@@ -754,7 +715,7 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;pnlRecovery.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;pnlRecovery.Parent" xml:space="preserve">
     <value>tabControlPanel</value>
@@ -829,7 +790,7 @@
     <value>cmbRoot</value>
   </data>
   <data name="&gt;&gt;cmbRoot.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;cmbRoot.Parent" xml:space="preserve">
     <value>pnlRoot</value>
@@ -904,7 +865,7 @@
     <value>pnlRoot</value>
   </data>
   <data name="&gt;&gt;pnlRoot.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;pnlRoot.Parent" xml:space="preserve">
     <value>tabControlPanel</value>
@@ -958,7 +919,7 @@
     <value>pnlXposed</value>
   </data>
   <data name="&gt;&gt;pnlXposed.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;pnlXposed.Parent" xml:space="preserve">
     <value>tabControlPanel</value>
@@ -1030,7 +991,7 @@
     <value>cmbGApps</value>
   </data>
   <data name="&gt;&gt;cmbGApps.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;cmbGApps.Parent" xml:space="preserve">
     <value>pnlGapps</value>
@@ -1105,7 +1066,7 @@
     <value>pnlGapps</value>
   </data>
   <data name="&gt;&gt;pnlGapps.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;pnlGapps.Parent" xml:space="preserve">
     <value>tabControlPanel</value>
@@ -1159,7 +1120,7 @@
     <value>ComboBoxAdv1</value>
   </data>
   <data name="&gt;&gt;ComboBoxAdv1.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;ComboBoxAdv1.Parent" xml:space="preserve">
     <value>tabUnb1</value>
@@ -1207,7 +1168,7 @@
     <value>tabUnb1</value>
   </data>
   <data name="&gt;&gt;tabUnb1.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;tabUnb1.Parent" xml:space="preserve">
     <value>TabControlUnbrick</value>
@@ -1231,7 +1192,7 @@
     <value>tabUnb2</value>
   </data>
   <data name="&gt;&gt;tabUnb2.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;tabUnb2.Parent" xml:space="preserve">
     <value>TabControlUnbrick</value>
@@ -1255,7 +1216,7 @@
     <value>tabUnb3</value>
   </data>
   <data name="&gt;&gt;tabUnb3.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;tabUnb3.Parent" xml:space="preserve">
     <value>TabControlUnbrick</value>
@@ -1276,7 +1237,7 @@
     <value>TabControlUnbrick</value>
   </data>
   <data name="&gt;&gt;TabControlUnbrick.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;TabControlUnbrick.Parent" xml:space="preserve">
     <value>pnlUnbrick</value>
@@ -1300,61 +1261,13 @@
     <value>pnlUnbrick</value>
   </data>
   <data name="&gt;&gt;pnlUnbrick.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;pnlUnbrick.Parent" xml:space="preserve">
     <value>tabControlPanel</value>
   </data>
   <data name="&gt;&gt;pnlUnbrick.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="pnlAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="pnlAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 403</value>
-  </data>
-  <data name="pnlAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="pnlAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.Name" xml:space="preserve">
-    <value>pnlAbout</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="pnlBackup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="pnlBackup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 403</value>
-  </data>
-  <data name="pnlBackup.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="pnlBackup.Text" xml:space="preserve">
-    <value>Backup</value>
-  </data>
-  <data name="&gt;&gt;pnlBackup.Name" xml:space="preserve">
-    <value>pnlBackup</value>
-  </data>
-  <data name="&gt;&gt;pnlBackup.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;pnlBackup.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
-  </data>
-  <data name="&gt;&gt;pnlBackup.ZOrder" xml:space="preserve">
-    <value>9</value>
   </data>
   <data name="pnlSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 30</value>
@@ -1372,12 +1285,60 @@
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;pnlSettings.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;pnlSettings.Parent" xml:space="preserve">
     <value>tabControlPanel</value>
   </data>
   <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="pnlAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="pnlAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>740, 403</value>
+  </data>
+  <data name="pnlAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="pnlAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;pnlAbout.Name" xml:space="preserve">
+    <value>pnlAbout</value>
+  </data>
+  <data name="&gt;&gt;pnlAbout.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlAbout.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlAbout.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="pnlBackup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="pnlBackup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>740, 403</value>
+  </data>
+  <data name="pnlBackup.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="pnlBackup.Text" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="&gt;&gt;pnlBackup.Name" xml:space="preserve">
+    <value>pnlBackup</value>
+  </data>
+  <data name="&gt;&gt;pnlBackup.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlBackup.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlBackup.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="tabControlPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1408,7 +1369,7 @@
     <value>tabControlPanel</value>
   </data>
   <data name="&gt;&gt;tabControlPanel.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;tabControlPanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1432,6 +1393,6 @@
     <value>Home</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.MetroForm, Syncfusion.Shared.Base, Version=15.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+    <value>Syncfusion.Windows.Forms.MetroForm, Syncfusion.Shared.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
 </root>

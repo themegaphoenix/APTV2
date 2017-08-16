@@ -23,7 +23,6 @@ Partial Class Home
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
-        Me.CalculatorControl1 = New Syncfusion.Windows.Forms.Tools.CalculatorControl()
         Me.tabControlPanel = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.pnlPhone = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.cmbModel = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
@@ -98,15 +97,6 @@ Partial Class Home
         CType(Me.ComboBoxAdv1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'CalculatorControl1
-        '
-        resources.ApplyResources(Me.CalculatorControl1, "CalculatorControl1")
-        Me.CalculatorControl1.BeforeTouchSize = New System.Drawing.Size(75, 23)
-        Me.CalculatorControl1.DoubleValue = 0R
-        Me.CalculatorControl1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.CalculatorControl1.MetroColor = System.Drawing.SystemColors.Control
-        Me.CalculatorControl1.Name = "CalculatorControl1"
-        '
         'tabControlPanel
         '
         resources.ApplyResources(Me.tabControlPanel, "tabControlPanel")
@@ -124,9 +114,9 @@ Partial Class Home
         Me.tabControlPanel.Controls.Add(Me.pnlXposed)
         Me.tabControlPanel.Controls.Add(Me.pnlGapps)
         Me.tabControlPanel.Controls.Add(Me.pnlUnbrick)
+        Me.tabControlPanel.Controls.Add(Me.pnlSettings)
         Me.tabControlPanel.Controls.Add(Me.pnlAbout)
         Me.tabControlPanel.Controls.Add(Me.pnlBackup)
-        Me.tabControlPanel.Controls.Add(Me.pnlSettings)
         Me.tabControlPanel.FocusOnTabClick = False
         Me.tabControlPanel.InactiveTabColor = System.Drawing.Color.White
         Me.tabControlPanel.InActiveTabForeColor = System.Drawing.Color.Empty
@@ -527,7 +517,6 @@ Partial Class Home
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.tabControlPanel)
-        Me.Controls.Add(Me.CalculatorControl1)
         Me.Name = "Home"
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabControlPanel.ResumeLayout(False)
@@ -562,8 +551,6 @@ Partial Class Home
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents CalculatorControl1 As Syncfusion.Windows.Forms.Tools.CalculatorControl
     Friend WithEvents tabControlPanel As Syncfusion.Windows.Forms.Tools.TabControlAdv
     Friend WithEvents pnlPhone As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents pnlBootloader As Syncfusion.Windows.Forms.Tools.TabPageAdv

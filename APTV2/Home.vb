@@ -215,7 +215,7 @@ Public Class Home
                         'run the right adb commands
                         LabelToOutput = txtBoxRecovery
                         Dim commands(3, 3) As String
-                        commands = {{"adb", "reboot bootloader", Strings.Home_btnLockBootloader_Click_Rebooting_to_bootloader},
+                        commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
                                     {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img",
                                      "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
                                     {"fastboot", "reboot", "Rebooting device"}
@@ -253,7 +253,7 @@ Public Class Home
             'todo fix the commands
             LabelToOutput = txtBoxRoot
             Dim commands(3, 3) As String
-            commands = {{"adb", "reboot bootloader", Strings.Home_btnLockBootloader_Click_Rebooting_to_bootloader},
+            commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
                         {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img",
                          "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
                         {"fastboot", "reboot", "Rebooting device"}}

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,49 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Home_btnUnlockBootloader_Click_Proceed" xml:space="preserve">
-    <value>Proceed</value>
-    <comment>Proceed</comment>
+  <data name="cmbModel.Text" xml:space="preserve">
+    <value>Sélectionnez un numéro de téléphone</value>
   </data>
-  <data name="Home_readXML_File_not_found_or_file_corrupt" xml:space="preserve">
-    <value>File not found or file corrupt</value>
-    <comment>File not found XML</comment>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Variante</value>
   </data>
-  <data name="Home_Completed_Download_has_been_canceled_" xml:space="preserve">
-    <value>Download has been canceled.</value>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Modèle</value>
   </data>
-  <data name="Home_Completed_Download_completed_" xml:space="preserve">
-    <value>Download completed!</value>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Fabricant</value>
   </data>
-  <data name="Home_getInfoXMLInner_Not_Found" xml:space="preserve">
-    <value>File not found!</value>
+  <data name="lblVariant.Text" xml:space="preserve">
+    <value>Étiquette1</value>
   </data>
-  <data name="Home_btnUnlockBootloader_Click_Unlocking_bootloader" xml:space="preserve">
-    <value>Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)</value>
+  <data name="lblModel.Text" xml:space="preserve">
+    <value>Modèle</value>
   </data>
-  <data name="Rebooting_to_bootloader" xml:space="preserve">
-    <value>Rebooting to bootloader</value>
-    <comment>Reboot</comment>
+  <data name="lblManufacturer.Text" xml:space="preserve">
+    <value>Étiquette1</value>
   </data>
-  <data name="Home_btnUnlockBootloader_Click_Rebooting_device" xml:space="preserve">
-    <value>Rebooting device</value>
-    <comment>Reboot</comment>
+  <data name="pnlPhone.Text" xml:space="preserve">
+    <value>Téléphone</value>
   </data>
-  <data name="Home_btnUnlockBootloader_Click_" xml:space="preserve">
-    <value>You have not entered a unlock key.
-Some devices might not require it.
-Continue?</value>
-    <comment>Message when the unlock key field is empty</comment>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Entrez clé de verrouillage / déverrouillage !</value>
   </data>
-  <data name="Home_btnLockBootloader_Click_" xml:space="preserve">
-    <value>You have not entered a unlock key.
-Some devices might not require it.
-Continue?</value>
+  <data name="btnLockBootloader.Text" xml:space="preserve">
+    <value>Bootloader</value>
   </data>
-  <data name="Home_btnLockBootloader_Click_Relocking_bootloader___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_" xml:space="preserve">
-    <value>Relocking bootloader: (make sure device is plugged, otherwise it will not output anything)</value>
+  <data name="btnUnlockBootloader.Text" xml:space="preserve">
+    <value>Déverrouiller le Bootloader !</value>
   </data>
-  <data name="Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_" xml:space="preserve">
-    <value>Installing app on the device(make sure device is plugged in, otherwise it will not output anything)</value>
+  <data name="TabPageAdv1.Text" xml:space="preserve">
+    <value>Sélecteur de version !</value>
+  </data>
+  <data name="TabPageAdv2.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="TabPageAdv3.Text" xml:space="preserve">
+    <value>....!</value>
+  </data>
+  <data name="pnlBootloader.Text" xml:space="preserve">
+    <value>Bootloader</value>
+  </data>
+  <data name="cmbRecovery.Text" xml:space="preserve">
+    <value>Sélectionnez une Version de récupération !</value>
+  </data>
+  <data name="btnFlashRecovery.Text" xml:space="preserve">
+    <value>Flash Recovery !</value>
+  </data>
+  <data name="pnlRecovery.Text" xml:space="preserve">
+    <value>Recouvrement</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Magisk est un moyen d’obtenir la racine systemless !</value>
+  </data>
+  <data name="cmbRoot.Text" xml:space="preserve">
+    <value>Sélectionnez une Version de Magisk !</value>
+  </data>
+  <data name="btnFlashMagisk.Text" xml:space="preserve">
+    <value>Flash Magisk !</value>
+  </data>
+  <data name="pnlRoot.Text" xml:space="preserve">
+    <value>Racine</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Bientôt !</value>
+  </data>
+  <data name="pnlXposed.Text" xml:space="preserve">
+    <value>Xposed !</value>
+  </data>
+  <data name="cmbGApps.Text" xml:space="preserve">
+    <value>Sélectionnez une application de GApps Version !</value>
+  </data>
+  <data name="btnGappsInstall.Text" xml:space="preserve">
+    <value>Installer l'application</value>
+  </data>
+  <data name="pnlGapps.Text" xml:space="preserve">
+    <value>Gapps !</value>
+  </data>
+  <data name="ComboBoxAdv1.Text" xml:space="preserve">
+    <value>Sélectionnez une Version EMUI !</value>
+  </data>
+  <data name="btnFlashUnbr.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="tabUnb1.Text" xml:space="preserve">
+    <value>Sélecteur de version !</value>
+  </data>
+  <data name="tabUnb2.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="tabUnb3.Text" xml:space="preserve">
+    <value>....!</value>
+  </data>
+  <data name="pnlUnbrick.Text" xml:space="preserve">
+    <value>Débriquer !</value>
+  </data>
+  <data name="pnlAbout.Text" xml:space="preserve">
+    <value>À propos de</value>
+  </data>
+  <data name="pnlBackup.Text" xml:space="preserve">
+    <value>Sauvegarde</value>
+  </data>
+  <data name="pnlSettings.Text" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>APTV2 !</value>
   </data>
 </root>
