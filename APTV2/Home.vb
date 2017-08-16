@@ -76,6 +76,7 @@ Public Class Home
     Private Sub ReloadInfo()
         'get the selection information
         Dim strPhone As String = cmbModel.SelectedItem
+        Console.WriteLine(strPhone)
         Dim strPhoneSplit As String() = strPhone.Split(New Char() {" "c})
         'Console.WriteLine(strPhoneSplit(1))
 
@@ -112,6 +113,7 @@ Public Class Home
                         cmbRecovery.Items.Add("TWRP " & recoveryTwrp)
 
                     End If
+                    cmbRecovery.SelectedIndex = 0
                 Next
 
             End If
@@ -443,14 +445,21 @@ Public Class Home
     Private Sub AddToComboBoxesXml(nodes As String, prefix As String, ByRef dropdown As ComboBoxAdv)
         'clear all the items
         dropdown.Items.Clear()
-        'scan through all the items and add them if they are not already present
-        Dim parentNode2 As XmlNodeList = xmlDoc.DocumentElement.SelectNodes(nodes)
-        For Each node As XmlNode In parentNode2
-            Dim version As String = node.Attributes("id").Value
-            If dropdown.Items.Contains(prefix & version) = False Then
-                dropdown.Items.Add(prefix & version)
-            End If
-        Next
+        Try
+
+
+            'scan through all the items and add them if they are not already present
+            Dim parentNode2 As XmlNodeList = xmlDoc.DocumentElement.SelectNodes(nodes)
+            For Each node As XmlNode In parentNode2
+                Dim version As String = node.Attributes("id").Value
+                If dropdown.Items.Contains(prefix & version) = False Then
+                    dropdown.Items.Add(prefix & version)
+                End If
+            Next
+            dropdown.SelectedIndex = 0
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 #End Region

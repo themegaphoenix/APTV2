@@ -10,7 +10,7 @@
     </twrp>
   </phone>
   <phone>
-    <manufacturer>Huaweiaa</manufacturer>
+    <manufacturer>Huawei</manufacturer>
     <model>Honor7</model>
     <variant>PLK-L02</variant>
     <picture>HuaweiHonor7.png</picture>
@@ -27,4 +27,10 @@
       <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
     </twrp>
   </phone>
+  <Gapps>
+    <version id="v16">https://www.dropbox.com/s/r561jeeorgfie35/opengapps-app-v16.apk?dl=0</version>
+  </Gapps>
+  <magiskInstaller>
+    <version id="13.3">https://www.dropbox.com/s/lhc06kmlbhmcrce/Magisk-v13.3.zip?dl=0</version>
+  </magiskInstaller>
 </root>
