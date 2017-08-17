@@ -22,6 +22,7 @@ Partial Class Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.tabControlPanel = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.pnlPhone = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
@@ -63,9 +64,10 @@ Partial Class Home
         Me.btnGappsInstall = New System.Windows.Forms.Button()
         Me.txtBoxGApps = New System.Windows.Forms.TextBox()
         Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtBoxUnbrick = New System.Windows.Forms.TextBox()
         Me.TabControlUnbrick = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.tabUnb1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.progressBarUnbrick = New System.Windows.Forms.ProgressBar()
         Me.cmbBoxUnbrick = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.btnFlashUnbr = New System.Windows.Forms.Button()
         Me.tabUnb2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
@@ -73,7 +75,9 @@ Partial Class Home
         Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.progressBarUnbrick = New System.Windows.Forms.ProgressBar()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.FolderBrowserXMLFile = New Syncfusion.Windows.Forms.FolderBrowser(Me.components)
+        Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -96,6 +100,8 @@ Partial Class Home
         Me.TabControlUnbrick.SuspendLayout()
         Me.tabUnb1.SuspendLayout()
         CType(Me.cmbBoxUnbrick, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlSettings.SuspendLayout()
+        CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabControlPanel
@@ -414,7 +420,7 @@ Partial Class Home
         '
         'pnlUnbrick
         '
-        Me.pnlUnbrick.Controls.Add(Me.TextBox1)
+        Me.pnlUnbrick.Controls.Add(Me.txtBoxUnbrick)
         Me.pnlUnbrick.Controls.Add(Me.TabControlUnbrick)
         Me.pnlUnbrick.Image = Nothing
         Me.pnlUnbrick.ImageSize = New System.Drawing.Size(16, 16)
@@ -423,11 +429,11 @@ Partial Class Home
         Me.pnlUnbrick.ShowCloseButton = True
         Me.pnlUnbrick.ThemesEnabled = False
         '
-        'TextBox1
+        'txtBoxUnbrick
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.HotTrack
-        resources.ApplyResources(Me.TextBox1, "TextBox1")
-        Me.TextBox1.Name = "TextBox1"
+        Me.txtBoxUnbrick.BackColor = System.Drawing.SystemColors.HotTrack
+        resources.ApplyResources(Me.txtBoxUnbrick, "txtBoxUnbrick")
+        Me.txtBoxUnbrick.Name = "txtBoxUnbrick"
         '
         'TabControlUnbrick
         '
@@ -456,6 +462,12 @@ Partial Class Home
         Me.tabUnb1.Name = "tabUnb1"
         Me.tabUnb1.ShowCloseButton = True
         Me.tabUnb1.ThemesEnabled = False
+        '
+        'progressBarUnbrick
+        '
+        resources.ApplyResources(Me.progressBarUnbrick, "progressBarUnbrick")
+        Me.progressBarUnbrick.Name = "progressBarUnbrick"
+        Me.progressBarUnbrick.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         '
         'cmbBoxUnbrick
         '
@@ -489,6 +501,8 @@ Partial Class Home
         '
         'pnlSettings
         '
+        Me.pnlSettings.Controls.Add(Me.cmbBoxXMLFile)
+        Me.pnlSettings.Controls.Add(Me.Label7)
         Me.pnlSettings.Image = Nothing
         Me.pnlSettings.ImageSize = New System.Drawing.Size(16, 16)
         resources.ApplyResources(Me.pnlSettings, "pnlSettings")
@@ -514,11 +528,22 @@ Partial Class Home
         Me.pnlBackup.ShowCloseButton = True
         Me.pnlBackup.ThemesEnabled = False
         '
-        'progressBarUnbrick
+        'Label7
         '
-        resources.ApplyResources(Me.progressBarUnbrick, "progressBarUnbrick")
-        Me.progressBarUnbrick.Name = "progressBarUnbrick"
-        Me.progressBarUnbrick.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.Name = "Label7"
+        '
+        'FolderBrowserXMLFile
+        '
+        Me.FolderBrowserXMLFile.Style = CType((((Syncfusion.Windows.Forms.FolderBrowserStyles.RestrictToFilesystem Or Syncfusion.Windows.Forms.FolderBrowserStyles.BrowseForComputer) _
+            Or Syncfusion.Windows.Forms.FolderBrowserStyles.BrowseForPrinter) _
+            Or Syncfusion.Windows.Forms.FolderBrowserStyles.BrowseForEverything), Syncfusion.Windows.Forms.FolderBrowserStyles)
+        '
+        'cmbBoxXMLFile
+        '
+        Me.cmbBoxXMLFile.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        resources.ApplyResources(Me.cmbBoxXMLFile, "cmbBoxXMLFile")
+        Me.cmbBoxXMLFile.Name = "cmbBoxXMLFile"
         '
         'Home
         '
@@ -556,6 +581,9 @@ Partial Class Home
         Me.TabControlUnbrick.ResumeLayout(False)
         Me.tabUnb1.ResumeLayout(False)
         CType(Me.cmbBoxUnbrick, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlSettings.ResumeLayout(False)
+        Me.pnlSettings.PerformLayout()
+        CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -594,7 +622,7 @@ Partial Class Home
     Friend WithEvents btnGappsInstall As Button
     Friend WithEvents txtBoxGApps As TextBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtBoxUnbrick As TextBox
     Friend WithEvents TabControlUnbrick As Syncfusion.Windows.Forms.Tools.TabControlAdv
     Friend WithEvents tabUnb1 As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents cmbBoxUnbrick As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
@@ -610,4 +638,7 @@ Partial Class Home
     Friend WithEvents TabPageAdv2 As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents TabPageAdv3 As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents progressBarUnbrick As ProgressBar
+    Friend WithEvents Label7 As Label
+    Friend WithEvents FolderBrowserXMLFile As Syncfusion.Windows.Forms.FolderBrowser
+    Friend WithEvents cmbBoxXMLFile As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
 End Class

@@ -29,13 +29,16 @@ Public Class Home
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'read xml file and load in to the dropbox
-        ReadXml()
+        findTheFiles()
+
+
     End Sub
 
 #Region "Reloading data"
 
     Sub ReadXml()
         Try
+            cmbModel.Items.Clear()
             xmlDoc.Load(My.Settings.xmlDocumentName)
             Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
             Dim manufacturer = "", model = "", variantXml = ""
@@ -54,7 +57,11 @@ Public Class Home
 
             'chosen model will Not break the program
             'Console.WriteLine(My.Settings.LastChosenModel)
-            cmbModel.SelectedItem = My.Settings.LastChosenModel
+            If cmbModel.Items.Contains(My.Settings.LastChosenModel) Then
+                cmbModel.SelectedItem = My.Settings.LastChosenModel
+            Else
+                cmbModel.SelectedIndex = 0
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
@@ -290,22 +297,38 @@ Public Class Home
 #End Region
 
 #Region "Unbrick"
-
+    'todo finish the tasks
     Private Async Sub btnFlashUnbr_Click(sender As Object, e As EventArgs) Handles btnFlashUnbr.Click
-        'gets the chosenRecovery Value
-        Dim chosenFlash As String = GetInfoCombox(cmbBoxUnbrick, 1)
-
-        Dim info(4, 2) As String
-        info = {{GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "boot"), "downloads/boot-" + chosenFlash + ".img"},
-                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "cust"), "downloads/cust-" + chosenFlash + ".img"},
-                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "system"), "downloads/system-" + chosenFlash + ".img"},
-                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "recovery"), "downloads/recovery-" + chosenFlash + ".img"}
+        Try
+            'gets the chosenRecovery Value
+            Dim chosenFlash As String = GetInfoCombox(cmbBoxUnbrick, 1)
+            Dim info(4, 2) As String
+            info = {{GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "boot"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/boot-" + chosenFlash + ".img"},
+                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "cust"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/cust-" + chosenFlash + ".img"},
+                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "system"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/system-" + chosenFlash + ".img"},
+                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "recovery"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/recovery-" + chosenFlash + ".img"}
         }
 
-        progressBar = progressBarUnbrick
-        For i = 0 To (info.Length / 2 - 1)
-            Await DownloadFileAsync(info(i, 0), info(i, 1))
-        Next
+            progressBar = progressBarUnbrick
+            For i = 0 To (info.Length / 2 - 1)
+                Await DownloadFileAsync(info(i, 0), info(i, 1))
+            Next
+
+            LabelToOutput = txtBoxUnbrick
+            Dim commands(6, 3) As String
+            commands = {{"adb", "reboot fastboot", Strings.Home_btnFlashUnbr_Click_Rebooting_to_fastboot},
+                        {"fastboot", "flash boot" & info(0, 1), "Flashing boot"},
+                        {"fastboot", "flash cust " & info(1, 1), "Flashing cust"},
+                        {"fastboot", "flash system " & info(2, 1), "Flashing system"},
+                        {"fastboot", "flash recovery " & info(3, 1), "Flashing recovery"},
+                        {"fastboot", "reboot", "Rebooting"}
+                       }
+            Await Task.Run(Sub() RunComands(commands))
+
+
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 
@@ -329,8 +352,18 @@ Public Class Home
             AddHandler webClient.DownloadProgressChanged, AddressOf ProgressChanged
 
             Try
+
+                Dim stringSelectedSplit As String() = filename.Split(New Char() {"/"c})
+                Array.Resize(stringSelectedSplit, stringSelectedSplit.Length - 1)
+                'Dim chosenString As String = stringSelectedSplit(stringSelectedSplit.Length - 1)
+                Dim directory As String = String.Join("/", stringSelectedSplit)
+                Console.WriteLine(directory)
+
                 ' Start downloading the file if the file does not exist
                 If File.Exists(filename) = False Then
+                    If (Not System.IO.Directory.Exists(directory)) Then
+                        System.IO.Directory.CreateDirectory(directory)
+                    End If
                     Await webClient.DownloadFileTaskAsync(New Uri(urlAddress), filename)
                 End If
             Catch ex As Exception
@@ -342,8 +375,6 @@ Public Class Home
 
     ' The event that will fire whenever the progress of the WebClient is changed
     Private Sub ProgressChanged(sender As Object, e As DownloadProgressChangedEventArgs)
-
-        'Console.WriteLine(e.ProgressPercentage)
         ' Update the progressbar percentage
         UpdateProgressBar(e.ProgressPercentage)
     End Sub
@@ -499,6 +530,27 @@ Public Class Home
         Dim chosenString As String = stringSelectedSplit(spaces)
         Return chosenString
     End Function
+
+    Private Sub findTheFiles()
+        Dim fi As String() = Directory.GetFiles("phones/", "*.xml")
+        cmbBoxXMLFile.Items.Clear()
+        For Each a In fi
+            cmbBoxXMLFile.Items.Add(a)
+        Next
+        If cmbBoxXMLFile.Items.Contains(My.Settings.xmlDocumentName) Then
+            cmbBoxXMLFile.SelectedItem = My.Settings.xmlDocumentName
+        Else
+            cmbBoxXMLFile.SelectedIndex = 0
+        End If
+
+    End Sub
+
+    Private Sub cmbBoxXMLFile_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbBoxXMLFile.SelectedValueChanged
+        My.Settings.xmlDocumentName = cmbBoxXMLFile.SelectedItem.ToString
+        My.Settings.Save()
+        ReadXml()
+
+    End Sub
 
 #End Region
 

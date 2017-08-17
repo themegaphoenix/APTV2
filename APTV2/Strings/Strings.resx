@@ -162,4 +162,7 @@ Continue?</value>
   <data name="Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_" xml:space="preserve">
     <value>Installing app on the device(make sure device is plugged in, otherwise it will not output anything)</value>
   </data>
+  <data name="Home_btnFlashUnbr_Click_Rebooting_to_fastboot" xml:space="preserve">
+    <value>Rebooting to fastboot</value>
+  </data>
 </root>

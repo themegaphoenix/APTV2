@@ -1074,31 +1074,31 @@
   <data name="&gt;&gt;pnlGapps.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="TextBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtBoxUnbrick.Location" type="System.Drawing.Point, System.Drawing">
     <value>404, 17</value>
   </data>
-  <data name="TextBox1.Multiline" type="System.Boolean, mscorlib">
+  <data name="txtBoxUnbrick.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TextBox1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+  <data name="txtBoxUnbrick.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Both</value>
   </data>
-  <data name="TextBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtBoxUnbrick.Size" type="System.Drawing.Size, System.Drawing">
     <value>336, 364</value>
   </data>
-  <data name="TextBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtBoxUnbrick.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
-    <value>TextBox1</value>
+  <data name="&gt;&gt;txtBoxUnbrick.Name" xml:space="preserve">
+    <value>txtBoxUnbrick</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtBoxUnbrick.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtBoxUnbrick.Parent" xml:space="preserve">
     <value>pnlUnbrick</value>
   </data>
-  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtBoxUnbrick.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="progressBarUnbrick.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -1293,6 +1293,60 @@
   <data name="&gt;&gt;pnlUnbrick.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="cmbBoxXMLFile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9.75pt</value>
+  </data>
+  <data name="cmbBoxXMLFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 63</value>
+  </data>
+  <data name="cmbBoxXMLFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 26</value>
+  </data>
+  <data name="cmbBoxXMLFile.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="cmbBoxXMLFile.Text" xml:space="preserve">
+    <value>Select a  GApps application Version</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxXMLFile.Name" xml:space="preserve">
+    <value>cmbBoxXMLFile</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxXMLFile.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxXMLFile.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxXMLFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 63</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 18</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>File To Load</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="pnlSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 30</value>
   </data>
@@ -1401,6 +1455,9 @@
   <data name="&gt;&gt;tabControlPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="FolderBrowserXMLFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1412,6 +1469,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>APTV2</value>
+  </data>
+  <data name="&gt;&gt;FolderBrowserXMLFile.Name" xml:space="preserve">
+    <value>FolderBrowserXMLFile</value>
+  </data>
+  <data name="&gt;&gt;FolderBrowserXMLFile.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.FolderBrowser, Syncfusion.Shared.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Home</value>

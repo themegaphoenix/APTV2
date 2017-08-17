@@ -65,6 +65,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Rebooting to fastboot.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashUnbr_Click_Rebooting_to_fastboot() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashUnbr_Click_Rebooting_to_fastboot", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Installing app on the device(make sure device is plugged in, otherwise it will not output anything).
         '''</summary>
         Friend Shared ReadOnly Property Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_() As String

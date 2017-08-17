@@ -196,7 +196,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HuaweiHonor.xml" />
     <Content Include="phones\HuaweiHonor.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
