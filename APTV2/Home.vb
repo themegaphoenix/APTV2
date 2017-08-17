@@ -14,12 +14,12 @@ Public Class Home
     'todo better interface
     'todo add all features
     'todo add more recoveries
-    'todo change the info to get it from the respective function
 
 #Region "Variables"
 
     'Public variables
     Dim LabelToOutput As TextBox
+
     Dim progressBar As ProgressBar
 
     'document needs to be open during the whole program, otherwise it would be opening and closing
@@ -75,7 +75,6 @@ Public Class Home
 
         My.Settings.phoneVariant = GetInfoCombox(cmbModel, 2)
 
-
         'load the correct information into the labels
         xmlDoc.Load(My.Settings.xmlDocumentName)
         Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
@@ -105,7 +104,6 @@ Public Class Home
                     Next
                     cmbRecovery.SelectedIndex = 0
 
-
                     cmbBoxUnbrick.Items.Clear()
                     For Each noda As XmlNode In node.SelectNodes("unbrick/version")
                         'Console.WriteLine(noda.ToString)
@@ -118,7 +116,6 @@ Public Class Home
                 Catch ex As Exception
                     MessageBox.Show(ex.ToString)
                 End Try
-
 
             End If
         Next
@@ -266,8 +263,6 @@ Public Class Home
         'Console.WriteLine(strGappsSplit(2))
         Dim chosenGapps As String = GetInfoCombox(cmbGApps, 2)
 
-
-
         Dim url As String = GetInfoXmlInner("/root/Gapps/version", chosenGapps, False, "", "")
         'Console.WriteLine(url)
         If url <> "0" Then
@@ -306,7 +301,6 @@ Public Class Home
                 {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "system"), "downloads/system-" + chosenFlash + ".img"},
                 {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "recovery"), "downloads/recovery-" + chosenFlash + ".img"}
         }
-
 
         progressBar = progressBarUnbrick
         For i = 0 To (info.Length / 2 - 1)
@@ -485,7 +479,6 @@ Public Class Home
         dropdown.Items.Clear()
         Try
 
-
             'scan through all the items and add them if they are not already present
             Dim parentNode2 As XmlNodeList = xmlDoc.DocumentElement.SelectNodes(nodes)
             For Each node As XmlNode In parentNode2
@@ -506,5 +499,7 @@ Public Class Home
         Dim chosenString As String = stringSelectedSplit(spaces)
         Return chosenString
     End Function
+
 #End Region
+
 End Class
