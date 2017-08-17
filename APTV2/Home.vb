@@ -14,14 +14,11 @@ Public Class Home
     'todo better interface
     'todo add all features
     'todo add more recoveries
+    'todo change the info to get it from the respective function
 
 #Region "Variables"
 
     'Public variables
-    Dim strManufacturer As String = ""
-
-    Dim strModel As String = ""
-    Dim strVariant As String = ""
     Dim LabelToOutput As TextBox
     Dim progressBar As ProgressBar
 
@@ -75,21 +72,15 @@ Public Class Home
 
     Private Sub ReloadInfo()
         'get the selection information
-        Dim strPhone As String = cmbModel.SelectedItem
-        'Console.WriteLine(strPhone)
-        Dim strPhoneSplit As String() = strPhone.Split(New Char() {" "c})
-        'Console.WriteLine(strPhoneSplit(1))
 
-        'change the variables
-        strManufacturer = strPhoneSplit(0)
-        strModel = strPhoneSplit(1)
-        strVariant = strPhoneSplit(2)
-        My.Settings.phoneVariant = strVariant
+        My.Settings.phoneVariant = GetInfoCombox(cmbModel, 2)
+
+
         'load the correct information into the labels
         xmlDoc.Load(My.Settings.xmlDocumentName)
         Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
         For Each node As XmlNode In nodes
-            If strVariant = node.SelectSingleNode("variant").InnerText Then
+            If My.Settings.phoneVariant = node.SelectSingleNode("variant").InnerText Then
 
                 Try
                     'update Labels in the homepage
@@ -204,42 +195,29 @@ Public Class Home
 
     Private Async Sub btnFlashRecovery_ClickAsync(sender As Object, e As EventArgs) Handles btnFlashRecovery.Click
         'gets the chosenRecovery Value
-        Dim strRecovery As String = cmbRecovery.SelectedItem
-        Dim strRecoverySplit As String() = strRecovery.Split(New Char() {" "c})
-        Console.WriteLine(strRecoverySplit(1))
-        Dim chosenRecovery As String = strRecoverySplit(1)
+        Dim chosenRecovery As String = GetInfoCombox(cmbRecovery, 1)
 
         'loads the document and gets the current variant,
         'which searches for the right version of the recovery and downloads it
-        xmlDoc.Load(My.Settings.xmlDocumentName)
-        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
-        For Each node As XmlNode In nodes
-            If strVariant = node.SelectSingleNode("variant").InnerText Then
-                For Each nod As XmlNode In node.SelectNodes("twrp/version")
-                    Dim id As String = nod.Attributes("id").Value
-                    If chosenRecovery = id Then
 
-                        Dim fileName As String = "downloads/twrp-" & id & ".img"
-                        'change the progress bar
-                        progressBar = progressBarRecovery
+        Dim fileName As String = "downloads/twrp-" & chosenRecovery & ".img"
+        Dim url As String = GetInfoXmlInner("/root/phone", chosenRecovery, True, "twrp/version", "")
+        'change the progress bar
+        progressBar = progressBarRecovery
 
-                        'downloads the file
-                        'the file is checked it it exists first in the function
-                        Await DownloadFileAsync(nod.InnerText, fileName)
+        'downloads the file
+        'the file is checked it it exists first in the function
+        Await DownloadFileAsync(url, fileName)
 
-                        'run the right adb commands
-                        LabelToOutput = txtBoxRecovery
-                        Dim commands(3, 3) As String
-                        commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
-                                    {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img",
-                                     "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
-                                    {"fastboot", "reboot", "Rebooting device"}
-                                   }
-                        Await Task.Run(Sub() RunComands(commands))
-                    End If
-                Next
-            End If
-        Next
+        'run the right adb commands
+        LabelToOutput = txtBoxRecovery
+        Dim commands(3, 3) As String
+        commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
+                    {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img",
+                     "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
+                    {"fastboot", "reboot", "Rebooting device"}
+                   }
+        Await Task.Run(Sub() RunComands(commands))
     End Sub
 
 #End Region
@@ -248,10 +226,10 @@ Public Class Home
 
     Private Async Sub btnFlashMagisk_Click(sender As Object, e As EventArgs) Handles btnFlashMagisk.Click
         'gets the chosenRecovery Value
-        Dim strRoot As String = cmbRoot.SelectedItem
-        Dim strRootSplit As String() = strRoot.Split(New Char() {" "c})
-        Console.WriteLine(strRootSplit(1))
-        Dim chosenRoot As String = strRootSplit(1)
+        'Dim strRoot As String = cmbRoot.SelectedItem
+        'Dim strRootSplit As String() = strRoot.Split(New Char() {" "c})
+        'Console.WriteLine(strRootSplit(1))
+        Dim chosenRoot As String = GetInfoCombox(cmbRoot, 1)
 
         Dim url As String = GetInfoXmlInner("/root/magiskInstaller/version", chosenRoot, False, "", "")
         'Console.WriteLine(url)
@@ -283,10 +261,12 @@ Public Class Home
 
     Private Async Sub btnGappsInstall_Click(sender As Object, e As EventArgs) Handles btnGappsInstall.Click
         'gets the chosenRecovery Value
-        Dim strGapps As String = cmbGApps.SelectedItem
-        Dim strGappsSplit As String() = strGapps.Split(New Char() {" "c})
+        'Dim strGapps As String = cmbGApps.SelectedItem
+        'Dim strGappsSplit As String() = strGapps.Split(New Char() {" "c})
         'Console.WriteLine(strGappsSplit(2))
-        Dim chosenGapps As String = strGappsSplit(2)
+        Dim chosenGapps As String = GetInfoCombox(cmbGApps, 2)
+
+
 
         Dim url As String = GetInfoXmlInner("/root/Gapps/version", chosenGapps, False, "", "")
         'Console.WriteLine(url)
@@ -306,8 +286,7 @@ Public Class Home
             Dim commands(2, 2) As String
             commands = {{"adb", "devices", "Showing all devices"},
                         {"adb", "install " & fileName,
-                         Strings.
-                             Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
+                         Strings.Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
                        }
             Await Task.Run(Sub() RunComands(commands))
         End If
