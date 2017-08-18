@@ -73,11 +73,11 @@ Partial Class Home
         Me.tabUnb2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.tabUnb3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.FolderBrowserXMLFile = New Syncfusion.Windows.Forms.FolderBrowser(Me.components)
-        Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -510,6 +510,17 @@ Partial Class Home
         Me.pnlSettings.ShowCloseButton = True
         Me.pnlSettings.ThemesEnabled = False
         '
+        'cmbBoxXMLFile
+        '
+        Me.cmbBoxXMLFile.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        resources.ApplyResources(Me.cmbBoxXMLFile, "cmbBoxXMLFile")
+        Me.cmbBoxXMLFile.Name = "cmbBoxXMLFile"
+        '
+        'Label7
+        '
+        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.Name = "Label7"
+        '
         'pnlAbout
         '
         Me.pnlAbout.Image = Nothing
@@ -528,22 +539,11 @@ Partial Class Home
         Me.pnlBackup.ShowCloseButton = True
         Me.pnlBackup.ThemesEnabled = False
         '
-        'Label7
-        '
-        resources.ApplyResources(Me.Label7, "Label7")
-        Me.Label7.Name = "Label7"
-        '
         'FolderBrowserXMLFile
         '
         Me.FolderBrowserXMLFile.Style = CType((((Syncfusion.Windows.Forms.FolderBrowserStyles.RestrictToFilesystem Or Syncfusion.Windows.Forms.FolderBrowserStyles.BrowseForComputer) _
             Or Syncfusion.Windows.Forms.FolderBrowserStyles.BrowseForPrinter) _
             Or Syncfusion.Windows.Forms.FolderBrowserStyles.BrowseForEverything), Syncfusion.Windows.Forms.FolderBrowserStyles)
-        '
-        'cmbBoxXMLFile
-        '
-        Me.cmbBoxXMLFile.BeforeTouchSize = New System.Drawing.Size(208, 26)
-        resources.ApplyResources(Me.cmbBoxXMLFile, "cmbBoxXMLFile")
-        Me.cmbBoxXMLFile.Name = "cmbBoxXMLFile"
         '
         'Home
         '

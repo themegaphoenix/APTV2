@@ -29,17 +29,17 @@ Public Class Home
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'read xml file and load in to the dropbox
-        findTheFiles()
-
+        FindTheFiles()
 
     End Sub
 
 #Region "Reloading data"
 
-    Sub ReadXml()
+    Private Sub ReadXml()
         Try
             cmbModel.Items.Clear()
             xmlDoc.Load(My.Settings.xmlDocumentName)
+            Console.WriteLine(My.Settings.xmlDocumentName)
             Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
             Dim manufacturer = "", model = "", variantXml = ""
 
@@ -62,24 +62,26 @@ Public Class Home
             Else
                 cmbModel.SelectedIndex = 0
             End If
+            ReloadInfo()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
-        ReloadInfo()
     End Sub
 
     Private Sub cmbModel_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbModel.SelectedValueChanged
-        'save the changes so the next time is open, it loads the last selected model
-        My.Settings.LastChosenModel = cmbModel.SelectedItem.ToString()
-        'Console.WriteLine(My.Settings.LastChosenModel)
-        My.Settings.Save()
-        'reload the correct information
-        ReloadInfo()
+        If (Not cmbModel.Items.Count = 0) Then
+            'save the changes so the next time is open, it loads the last selected model
+            My.Settings.LastChosenModel = cmbModel.SelectedItem.ToString()
+            'Console.WriteLine(My.Settings.LastChosenModel)
+            My.Settings.Save()
+            'reload the correct information
+            ReloadInfo()
+        End If
+
     End Sub
 
     Private Sub ReloadInfo()
         'get the selection information
-
         My.Settings.phoneVariant = GetInfoCombox(cmbModel, 2)
 
         'load the correct information into the labels
@@ -95,21 +97,22 @@ Public Class Home
                     lblVariant.Text = node.SelectSingleNode("variant").InnerText
 
                     'update Picture
-
                     Dim strPicture As String = "phones/pictures/" & node.SelectSingleNode("picture").InnerText
                     picPhone.BackgroundImage = Image.FromFile(strPicture)
 
                     'get recovery info
                     cmbRecovery.Items.Clear()
-
                     For Each nod As XmlNode In node.SelectNodes("twrp/version")
                         Dim recoveryTwrp As String = nod.Attributes("id").Value
                         If cmbRecovery.Items.Contains("TWRP " & recoveryTwrp) = False Then
                             cmbRecovery.Items.Add("TWRP " & recoveryTwrp)
-
                         End If
                     Next
-                    cmbRecovery.SelectedIndex = 0
+                    Try
+                        cmbRecovery.SelectedIndex = 0
+                    Catch ex As Exception
+
+                    End Try
 
                     cmbBoxUnbrick.Items.Clear()
                     For Each noda As XmlNode In node.SelectNodes("unbrick/version")
@@ -119,7 +122,11 @@ Public Class Home
                             cmbBoxUnbrick.Items.Add("EMUI " & emuiVersion)
                         End If
                     Next
-                    cmbBoxUnbrick.SelectedIndex = 0
+                    Try
+                        cmbBoxUnbrick.SelectedIndex = 0
+                    Catch ex As Exception
+
+                    End Try
                 Catch ex As Exception
                     MessageBox.Show(ex.ToString)
                 End Try
@@ -297,6 +304,7 @@ Public Class Home
 #End Region
 
 #Region "Unbrick"
+
     'todo finish the tasks
     Private Async Sub btnFlashUnbr_Click(sender As Object, e As EventArgs) Handles btnFlashUnbr.Click
         Try
@@ -324,8 +332,6 @@ Public Class Home
                         {"fastboot", "reboot", "Rebooting"}
                        }
             Await Task.Run(Sub() RunComands(commands))
-
-
         Catch ex As Exception
 
         End Try
@@ -531,7 +537,7 @@ Public Class Home
         Return chosenString
     End Function
 
-    Private Sub findTheFiles()
+    Private Sub FindTheFiles()
         Dim fi As String() = Directory.GetFiles("phones/", "*.xml")
         cmbBoxXMLFile.Items.Clear()
         For Each a In fi
@@ -546,9 +552,11 @@ Public Class Home
     End Sub
 
     Private Sub cmbBoxXMLFile_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbBoxXMLFile.SelectedValueChanged
-        My.Settings.xmlDocumentName = cmbBoxXMLFile.SelectedItem.ToString
-        My.Settings.Save()
-        ReadXml()
+        If (Not cmbBoxXMLFile.Items.Count = 0) Then
+            My.Settings.xmlDocumentName = cmbBoxXMLFile.SelectedItem.ToString()
+            My.Settings.Save()
+            ReadXml()
+        End If
 
     End Sub
 
