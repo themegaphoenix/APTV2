@@ -33,113 +33,7 @@ Public Class Home
 
     End Sub
 
-#Region "Reloading data"
-
-    Private Sub ReadXml()
-        Try
-            cmbModel.Items.Clear()
-            xmlDoc.Load(My.Settings.xmlDocumentName)
-            Console.WriteLine(My.Settings.xmlDocumentName)
-            Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
-            Dim manufacturer = "", model = "", variantXml = ""
-
-            For Each node As XmlNode In nodes
-                manufacturer = node.SelectSingleNode("manufacturer").InnerText
-                model = node.SelectSingleNode("model").InnerText
-                variantXml = node.SelectSingleNode("variant").InnerText
-                cmbModel.Items.Add(manufacturer & " " & model & " " & variantXml)
-            Next
-        Catch ex As Exception
-            MessageBox.Show(Strings.Home_readXML_File_not_found_or_file_corrupt)
-        End Try
-
-        Try
-
-            'chosen model will Not break the program
-            'Console.WriteLine(My.Settings.LastChosenModel)
-            If cmbModel.Items.Contains(My.Settings.LastChosenModel) Then
-                cmbModel.SelectedItem = My.Settings.LastChosenModel
-            Else
-                cmbModel.SelectedIndex = 0
-            End If
-            ReloadInfo()
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString)
-        End Try
-    End Sub
-
-    Private Sub cmbModel_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbModel.SelectedValueChanged
-        If (Not cmbModel.Items.Count = 0) Then
-            'save the changes so the next time is open, it loads the last selected model
-            My.Settings.LastChosenModel = cmbModel.SelectedItem.ToString()
-            'Console.WriteLine(My.Settings.LastChosenModel)
-            My.Settings.Save()
-            'reload the correct information
-            ReloadInfo()
-        End If
-
-    End Sub
-
-    Private Sub ReloadInfo()
-        'get the selection information
-        My.Settings.phoneVariant = GetInfoCombox(cmbModel, 2)
-
-        'load the correct information into the labels
-        xmlDoc.Load(My.Settings.xmlDocumentName)
-        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
-        For Each node As XmlNode In nodes
-            If My.Settings.phoneVariant = node.SelectSingleNode("variant").InnerText Then
-
-                Try
-                    'update Labels in the homepage
-                    lblManufacturer.Text = node.SelectSingleNode("manufacturer").InnerText
-                    lblModel.Text = node.SelectSingleNode("model").InnerText
-                    lblVariant.Text = node.SelectSingleNode("variant").InnerText
-
-                    'update Picture
-                    Dim strPicture As String = "phones/pictures/" & node.SelectSingleNode("picture").InnerText
-                    picPhone.BackgroundImage = Image.FromFile(strPicture)
-
-                    'get recovery info
-                    cmbRecovery.Items.Clear()
-                    For Each nod As XmlNode In node.SelectNodes("twrp/version")
-                        Dim recoveryTwrp As String = nod.Attributes("id").Value
-                        If cmbRecovery.Items.Contains("TWRP " & recoveryTwrp) = False Then
-                            cmbRecovery.Items.Add("TWRP " & recoveryTwrp)
-                        End If
-                    Next
-                    Try
-                        cmbRecovery.SelectedIndex = 0
-                    Catch ex As Exception
-
-                    End Try
-
-                    cmbBoxUnbrick.Items.Clear()
-                    For Each noda As XmlNode In node.SelectNodes("unbrick/version")
-                        'Console.WriteLine(noda.ToString)
-                        Dim emuiVersion As String = noda.Attributes("id").Value
-                        If _cmbBoxUnbrick.Items.Contains("EMUI " & emuiVersion) = False Then
-                            cmbBoxUnbrick.Items.Add("EMUI " & emuiVersion)
-                        End If
-                    Next
-                    Try
-                        cmbBoxUnbrick.SelectedIndex = 0
-                    Catch ex As Exception
-
-                    End Try
-                Catch ex As Exception
-                    MessageBox.Show(ex.ToString)
-                End Try
-
-            End If
-        Next
-
-        'populate dropdown stuff
-        AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
-        AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
-    End Sub
-
-#End Region
+#Region "Options"
 
 #Region "Bootloader"
 
@@ -213,6 +107,7 @@ Public Class Home
 
         Dim fileName As String = "downloads/twrp-" & chosenRecovery & ".img"
         Dim url As String = GetInfoXmlInner("/root/phone", chosenRecovery, True, "twrp/version", "")
+
         'change the progress bar
         progressBar = progressBarRecovery
 
@@ -298,6 +193,8 @@ Public Class Home
                          Strings.Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
                        }
             Await Task.Run(Sub() RunComands(commands))
+
+            tabControlPanelGAPPS.SelectedIndex = 1
         End If
     End Sub
 
@@ -340,6 +237,10 @@ Public Class Home
 
 #End Region
 
+#End Region
+
+#Region "Data Handling and operations"
+
 #Region "Download File"
 
     Private Sub UpdateProgressBar(a As Integer)
@@ -363,7 +264,7 @@ Public Class Home
                 Array.Resize(stringSelectedSplit, stringSelectedSplit.Length - 1)
                 'Dim chosenString As String = stringSelectedSplit(stringSelectedSplit.Length - 1)
                 Dim directory As String = String.Join("/", stringSelectedSplit)
-                Console.WriteLine(directory)
+                'Console.WriteLine(directory)
 
                 ' Start downloading the file if the file does not exist
                 If File.Exists(filename) = False Then
@@ -415,7 +316,7 @@ Public Class Home
             AddHandler process.OutputDataReceived, Sub(senderb As Object, eb As DataReceivedEventArgs)
                                                        If (Not String.IsNullOrEmpty(eb.Data)) Then
                                                            Dim b As String = String.Format("{0}> {1}", DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss"), eb.Data)
-                                                           Console.WriteLine(b)
+                                                           'Console.WriteLine(b)
                                                            UpdateTextBox(b)
 
                                                        End If
@@ -423,7 +324,7 @@ Public Class Home
             ' catch errors
             AddHandler process.ErrorDataReceived, Sub(senderc As Object, ec As DataReceivedEventArgs)
                                                       Dim a As String = String.Format("! {0}", ec.Data)
-                                                      Console.WriteLine(a)
+                                                      'Console.WriteLine(a)
                                                       UpdateTextBox(a)
                                                   End Sub
             ' start process
@@ -559,6 +460,122 @@ Public Class Home
         End If
 
     End Sub
+
+#End Region
+
+#Region "Reloading data"
+
+    Private Sub ReadXml()
+        Try
+            cmbModel.Items.Clear()
+            xmlDoc.Load(My.Settings.xmlDocumentName)
+            'Console.WriteLine(My.Settings.xmlDocumentName)
+            Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
+            Dim manufacturer = "", model = "", variantXml = ""
+
+            For Each node As XmlNode In nodes
+                manufacturer = node.SelectSingleNode("manufacturer").InnerText
+                model = node.SelectSingleNode("model").InnerText
+                variantXml = node.SelectSingleNode("variant").InnerText
+                If (Not cmbModel.Items.Contains(manufacturer & " " & model & " " & variantXml)) Then
+                    cmbModel.Items.Add(manufacturer & " " & model & " " & variantXml)
+                End If
+            Next
+        Catch ex As Exception
+            MessageBox.Show(Strings.Home_readXML_File_not_found_or_file_corrupt)
+        End Try
+
+        Try
+
+            'chosen model will Not break the program
+            'Console.WriteLine(My.Settings.LastChosenModel)
+            If cmbModel.Items.Contains(My.Settings.LastChosenModel) Then
+                cmbModel.SelectedItem = My.Settings.LastChosenModel
+            Else
+                cmbModel.SelectedIndex = 0
+            End If
+            ReloadInfo()
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Sub
+
+    Private Sub cmbModel_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbModel.SelectedValueChanged
+        If (Not cmbModel.Items.Count = 0) Then
+            'save the changes so the next time is open, it loads the last selected model
+            My.Settings.LastChosenModel = cmbModel.SelectedItem.ToString()
+            'Console.WriteLine(My.Settings.LastChosenModel)
+            My.Settings.Save()
+            'reload the correct information
+            ReloadInfo()
+        End If
+
+    End Sub
+
+    Private Sub ReloadInfo()
+        'get the selection information
+        My.Settings.phoneVariant = GetInfoCombox(cmbModel, 2)
+
+        'load the correct information into the labels
+        xmlDoc.Load(My.Settings.xmlDocumentName)
+        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
+        For Each node As XmlNode In nodes
+            If My.Settings.phoneVariant = node.SelectSingleNode("variant").InnerText Then
+
+                Try
+                    'update Labels in the homepage
+                    lblManufacturer.Text = node.SelectSingleNode("manufacturer").InnerText
+                    lblModel.Text = node.SelectSingleNode("model").InnerText
+                    lblVariant.Text = node.SelectSingleNode("variant").InnerText
+                    lblProcessor.Text = node.SelectSingleNode("processor").InnerText
+                    lblRAM.Text = node.SelectSingleNode("RAM").InnerText
+                    lblStorage.Text = node.SelectSingleNode("storage").InnerText
+
+
+                    'update Picture
+                    Dim strPicture As String = "phones/pictures/" & node.SelectSingleNode("picture").InnerText
+                    picPhone.BackgroundImage = Image.FromFile(strPicture)
+
+                    'get recovery info
+                    cmbRecovery.Items.Clear()
+                    For Each nod As XmlNode In node.SelectNodes("twrp/version")
+                        Dim recoveryTwrp As String = nod.Attributes("id").Value
+                        If cmbRecovery.Items.Contains("TWRP " & recoveryTwrp) = False Then
+                            cmbRecovery.Items.Add("TWRP " & recoveryTwrp)
+                        End If
+                    Next
+                    Try
+                        cmbRecovery.SelectedIndex = 0
+                    Catch ex As Exception
+
+                    End Try
+
+                    cmbBoxUnbrick.Items.Clear()
+                    For Each noda As XmlNode In node.SelectNodes("unbrick/version")
+                        'Console.WriteLine(noda.ToString)
+                        Dim emuiVersion As String = noda.Attributes("id").Value
+                        If _cmbBoxUnbrick.Items.Contains("EMUI " & emuiVersion) = False Then
+                            cmbBoxUnbrick.Items.Add("EMUI " & emuiVersion)
+                        End If
+                    Next
+                    Try
+                        cmbBoxUnbrick.SelectedIndex = 0
+                    Catch ex As Exception
+
+                    End Try
+                Catch ex As Exception
+                    MessageBox.Show(ex.ToString)
+                End Try
+
+            End If
+        Next
+
+        'populate dropdown stuff
+        AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
+        AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
+    End Sub
+
+#End Region
 
 #End Region
 

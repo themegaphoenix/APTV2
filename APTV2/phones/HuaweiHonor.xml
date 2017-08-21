@@ -5,6 +5,9 @@
     <manufacturer>Huawei</manufacturer>
     <model>Honor7</model>
     <variant>PLK-L01</variant>
+    <processor>HiSilicon Kirin 935</processor>
+    <RAM>3GB</RAM>
+    <storage>16GB</storage>
     <picture>HuaweiHonor7.png</picture>
     <twrp>
       <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
@@ -22,24 +25,26 @@
     <manufacturer>Huawei</manufacturer>
     <model>Honor7</model>
     <variant>PLK-L02</variant>
+    <processor>HiSilicon Kirin 935</processor>
+    <RAM>3GB</RAM>
+    <storage>16GB</storage>
     <picture>HuaweiHonor7.png</picture>
     <twrp>
       <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
     </twrp>
-  </phone>
-  <phone>
-    <manufacturer>Huawei</manufacturer>
-    <model>Honor7</model>
-    <variant>PLK-L03</variant>
-    <picture>HuaweiHonor7.png</picture>
-    <twrp>
-      <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
-    </twrp>
+    <unbrick>
+      <version id="b390-Full">
+        <boot>https://www.dropbox.com/s/np604t58nyp7cj8/BOOT.img?dl=1</boot>
+        <cust>https://www.dropbox.com/s/7bahk9lvjoe93ye/CUST.img?dl=1</cust>
+        <system>https://www.dropbox.com/s/wqzwd7a826tuuf2/SYSTEM.img?dl=1</system>
+        <recovery>https://www.dropbox.com/s/chcad8cca9e1d3x/RECOVERY.img?dl=1</recovery>
+      </version>
+    </unbrick>
   </phone>
   <Gapps>
-    <version id="v16">https://www.dropbox.com/s/r561jeeorgfie35/opengapps-app-v16.apk?dl=0</version>
+    <version id="v16">https://www.dropbox.com/s/r561jeeorgfie35/opengapps-app-v16.apk?dl=1</version>
   </Gapps>
   <magiskInstaller>
-    <version id="13.3">https://www.dropbox.com/s/lhc06kmlbhmcrce/Magisk-v13.3.zip?dl=0</version>
+    <version id="13.3">https://www.dropbox.com/s/lhc06kmlbhmcrce/Magisk-v13.3.zip?dl=1</version>
   </magiskInstaller>
 </root>
