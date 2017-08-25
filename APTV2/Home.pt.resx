@@ -228,4 +228,58 @@
   <data name="$this.Text" xml:space="preserve">
     <value>APTV2!</value>
   </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Armazenamento</value>
+  </data>
+  <data name="lblStorage.Text" xml:space="preserve">
+    <value>Rótulo</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="lblRAM.Text" xml:space="preserve">
+    <value>Rótulo</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Processador</value>
+  </data>
+  <data name="lblProcessor.Text" xml:space="preserve">
+    <value>Rótulo</value>
+  </data>
+  <data name="TabPageAdv4.Text" xml:space="preserve">
+    <value>Seletor de versão!</value>
+  </data>
+  <data name="TabPageAdv5.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="TabPageAdv6.Text" xml:space="preserve">
+    <value>....!</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>1. a aplicação de OpenGAPPS (raiz necessário) o flash!</value>
+  </data>
+  <data name="TabPageAdv7.Text" xml:space="preserve">
+    <value>Seletor de versão!</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>2. Abra a aplicação de OpenGAPPS do lançador 3. Aceito os termos e conceda as permissões de 4. Selecione a versão que você quer 5. Baixar imprensa 6. Pressione instalar 7. Deixe o processo 8. de revestimento feito (você pode desinstalar o aplicativo, se você quiser)!</value>
+  </data>
+  <data name="TabPageAdv8.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="TabPageAdv9.Text" xml:space="preserve">
+    <value>....!</value>
+  </data>
+  <data name="cmbBoxUnbrick.Text" xml:space="preserve">
+    <value>Selecione uma versão EMUI!</value>
+  </data>
+  <data name="cmbBoxXMLFile.Text" xml:space="preserve">
+    <value>Selecione o arquivo para carregar as informações!</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Ficheiro CSS a carregar</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>Instruções</value>
+  </data>
 </root>

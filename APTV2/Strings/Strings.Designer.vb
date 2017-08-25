@@ -134,11 +134,30 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Root the device?.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnUnlockBootloader_Click_Root_the_device_() As String
+            Get
+                Return ResourceManager.GetString("Home_btnUnlockBootloader_Click_Root_the_device_", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything).
         '''</summary>
         Friend Shared ReadOnly Property Home_btnUnlockBootloader_Click_Unlocking_bootloader() As String
             Get
                 Return ResourceManager.GetString("Home_btnUnlockBootloader_Click_Unlocking_bootloader", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Would you like to flash a custom recovery like TWRP?.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnUnlockBootloader_Click_Would_you_like_to_flash_a_custom_recovery_like_TWRP_() As String
+            Get
+                Return ResourceManager.GetString("Home_btnUnlockBootloader_Click_Would_you_like_to_flash_a_custom_recovery_like_TWR"& _ 
+                        "P_", resourceCulture)
             End Get
         End Property
         
@@ -157,6 +176,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property Home_Completed_Download_has_been_canceled_() As String
             Get
                 Return ResourceManager.GetString("Home_Completed_Download_has_been_canceled_", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to  already exists..
+        '''</summary>
+        Friend Shared ReadOnly Property Home_DownloadFileAsync_File_already_exists() As String
+            Get
+                Return ResourceManager.GetString("Home_DownloadFileAsync_File_already_exists", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to  does not exist. Starting download..
+        '''</summary>
+        Friend Shared ReadOnly Property Home_DownloadFileAsync_File_does_not_exist__Starting_Download_() As String
+            Get
+                Return ResourceManager.GetString("Home_DownloadFileAsync_File_does_not_exist__Starting_Download_", resourceCulture)
             End Get
         End Property
         

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,64 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Home_btnUnlockBootloader_Click_Proceed" xml:space="preserve">
-    <value>Proceed</value>
-    <comment>Proceed</comment>
-  </data>
-  <data name="Home_readXML_File_not_found_or_file_corrupt" xml:space="preserve">
-    <value>File not found or file corrupt</value>
-    <comment>File not found XML</comment>
-  </data>
-  <data name="Home_Completed_Download_has_been_canceled_" xml:space="preserve">
-    <value>Download has been canceled.</value>
-  </data>
-  <data name="Home_Completed_Download_completed_" xml:space="preserve">
-    <value>Download completed!</value>
-  </data>
-  <data name="Home_getInfoXMLInner_Not_Found" xml:space="preserve">
-    <value>Link not found</value>
-  </data>
-  <data name="Home_btnUnlockBootloader_Click_Unlocking_bootloader" xml:space="preserve">
-    <value>Unlocking bootloader: (make sure device is plugged, otherwise it will not output anything)</value>
-  </data>
-  <data name="Rebooting_to_bootloader" xml:space="preserve">
-    <value>Rebooting to bootloader</value>
-    <comment>Reboot</comment>
-  </data>
-  <data name="Home_btnUnlockBootloader_Click_Rebooting_device" xml:space="preserve">
-    <value>Rebooting device</value>
-    <comment>Reboot</comment>
-  </data>
-  <data name="Home_btnUnlockBootloader_Click_" xml:space="preserve">
-    <value>You have not entered a unlock key.
-Some devices might not require it.
-Continue?</value>
-    <comment>Message when the unlock key field is empty</comment>
-  </data>
-  <data name="Home_btnLockBootloader_Click_" xml:space="preserve">
-    <value>You have not entered a unlock key.
-Some devices might not require it.
-Continue?</value>
-  </data>
-  <data name="Home_btnLockBootloader_Click_Relocking_bootloader___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_" xml:space="preserve">
-    <value>Relocking bootloader: (make sure device is plugged, otherwise it will not output anything)</value>
-  </data>
-  <data name="Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_" xml:space="preserve">
-    <value>Installing app on the device(make sure device is plugged in, otherwise it will not output anything)</value>
-  </data>
-  <data name="Home_btnFlashUnbr_Click_Rebooting_to_fastboot" xml:space="preserve">
-    <value>Rebooting to fastboot</value>
-  </data>
-  <data name="Home_DownloadFileAsync_File_already_exists" xml:space="preserve">
-    <value> already exists.</value>
-  </data>
-  <data name="Home_DownloadFileAsync_File_does_not_exist__Starting_Download_" xml:space="preserve">
-    <value> does not exist. Starting download.</value>
-  </data>
-  <data name="Home_btnUnlockBootloader_Click_Would_you_like_to_flash_a_custom_recovery_like_TWRP_" xml:space="preserve">
-    <value>Would you like to flash a custom recovery like TWRP?</value>
-  </data>
-  <data name="Home_btnUnlockBootloader_Click_Root_the_device_" xml:space="preserve">
-    <value>Root the device?</value>
-  </data>
 </root>

@@ -228,4 +228,58 @@
   <data name="$this.Text" xml:space="preserve">
     <value>APTV2!</value>
   </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Lagerung</value>
+  </data>
+  <data name="lblStorage.Text" xml:space="preserve">
+    <value>Etikett 1</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="lblRAM.Text" xml:space="preserve">
+    <value>Etikett 1</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Bearbeiter</value>
+  </data>
+  <data name="lblProcessor.Text" xml:space="preserve">
+    <value>Etikett 1</value>
+  </data>
+  <data name="TabPageAdv4.Text" xml:space="preserve">
+    <value>Version-Selektor!</value>
+  </data>
+  <data name="TabPageAdv5.Text" xml:space="preserve">
+    <value>Blitz</value>
+  </data>
+  <data name="TabPageAdv6.Text" xml:space="preserve">
+    <value>....!</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>1. Flash-OpenGAPPS Anwendung (Root erforderlich)!</value>
+  </data>
+  <data name="TabPageAdv7.Text" xml:space="preserve">
+    <value>Version-Selektor!</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>2. Öffnen Sie die OpenGAPPS-Anwendung aus dem Launcher 3. Akzeptieren Sie die Bedingungen und Berechtigungen Sie die 4. Wählen Sie die Version, dass Sie 5 wollen. Presse Download 6. Tippen Sie auf installieren 7. Lassen Sie den Prozess beenden 8. getan (Sie können deinstallieren der Anwendung, wenn du willst)!</value>
+  </data>
+  <data name="TabPageAdv8.Text" xml:space="preserve">
+    <value>Blitz</value>
+  </data>
+  <data name="TabPageAdv9.Text" xml:space="preserve">
+    <value>....!</value>
+  </data>
+  <data name="cmbBoxUnbrick.Text" xml:space="preserve">
+    <value>Wähle eine Version</value>
+  </data>
+  <data name="cmbBoxXMLFile.Text" xml:space="preserve">
+    <value>Wählen Sie die Datei, die Informationen zu laden!</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Bordstein-Datei zu laden</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>Gebrauchsanleitung</value>
+  </data>
 </root>

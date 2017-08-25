@@ -39,30 +39,33 @@ Public Class Home
 
     Private Sub btnUnlockBootloader_Click(sender As Object, e As EventArgs) Handles btnUnlockBootloader.Click
         Dim unlockKey As String = txtBoxUnlockKey.Text
-        Dim proceed As Boolean
-        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-Fr")
+
         If unlockKey = "" Then
             Dim result As DialogResult = MessageBox.Show(Strings.Home_btnUnlockBootloader_Click_,
                                                          Strings.Home_btnUnlockBootloader_Click_Proceed,
                                                          MessageBoxButtons.YesNo,
                                                          MessageBoxIcon.Question)
             If result = DialogResult.Yes Then
-                proceed = True
-            Else
-                proceed = False
+                Dim commands(3, 3) As String
+                commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
+                            {"fastboot", "oem unlock" + unlockKey,
+                             Strings.Home_btnUnlockBootloader_Click_Unlocking_bootloader},
+                            {"fastboot", "reboot", Strings.Home_btnUnlockBootloader_Click_Rebooting_device}
+                           }
+                Task.Run(Sub() RunComands(commands))
+
+                Dim result2 As DialogResult = MessageBox.Show(Strings.Home_btnUnlockBootloader_Click_Would_you_like_to_flash_a_custom_recovery_like_TWRP_,
+                                                              Strings.Home_btnUnlockBootloader_Click_Root_the_device_,
+                                                              MessageBoxButtons.YesNo,
+                                                              MessageBoxIcon.Question)
+                If result2 = DialogResult.Yes Then
+                    tabControlPanel.SelectedTab = pnlRecovery
+                End If
+
             End If
         End If
 
-        If proceed Then
-            Dim commands(3, 3) As String
-            commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
-                        {"fastboot", "oem unlock" + unlockKey,
-                         Strings.Home_btnUnlockBootloader_Click_Unlocking_bootloader},
-                        {"fastboot", "reboot", Strings.Home_btnUnlockBootloader_Click_Rebooting_device}
-                       }
-            LabelToOutput = txtBoxBootloader
-            Task.Run(Sub() RunComands(commands))
-        End If
+
     End Sub
 
     Private Sub btnLockBootloader_Click(sender As Object, e As EventArgs) Handles btnLockBootloader.Click
@@ -110,13 +113,14 @@ Public Class Home
 
         'change the progress bar
         progressBar = progressBarRecovery
+        'run the right adb commands
+        LabelToOutput = txtBoxRecovery
 
         'downloads the file
         'the file is checked it it exists first in the function
         Await DownloadFileAsync(url, fileName)
 
-        'run the right adb commands
-        LabelToOutput = txtBoxRecovery
+
         Dim commands(3, 3) As String
         commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
                     {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img",
@@ -141,8 +145,9 @@ Public Class Home
         'Console.WriteLine(url)
         If url <> "0" Then
             Dim fileName As String = "downloads/magisk-" & chosenRoot & ".zip"
-            'change the progress bar
+            'change the progress bar and right label
             progressBar = progressBarRoot
+            LabelToOutput = txtBoxRoot
 
             'downloads the file
             'the file is checked it it exists first in the function
@@ -150,7 +155,7 @@ Public Class Home
 
             'run the right adb commands
             'todo fix the commands
-            LabelToOutput = txtBoxRoot
+
             Dim commands(3, 3) As String
             commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
                         {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img",
@@ -178,6 +183,7 @@ Public Class Home
             Dim fileName As String = "downloads/gapps-" & chosenGapps & ".apk"
             'change the progress bar
             progressBar = progressBarGApps
+            LabelToOutput = txtBoxGApps
 
             'downloads the file
             'the file is checked it it exists first in the function
@@ -186,7 +192,6 @@ Public Class Home
             'run the right adb commands
 
             'todo fix the commands
-            LabelToOutput = txtBoxGApps
             Dim commands(2, 2) As String
             commands = {{"adb", "devices", "Showing all devices"},
                         {"adb", "install " & fileName,
@@ -215,11 +220,12 @@ Public Class Home
         }
 
             progressBar = progressBarUnbrick
+            LabelToOutput = txtBoxUnbrick
+
             For i = 0 To (info.Length / 2 - 1)
                 Await DownloadFileAsync(info(i, 0), info(i, 1))
             Next
 
-            LabelToOutput = txtBoxUnbrick
             Dim commands(6, 3) As String
             commands = {{"adb", "reboot fastboot", Strings.Home_btnFlashUnbr_Click_Rebooting_to_fastboot},
                         {"fastboot", "flash boot" & info(0, 1), "Flashing boot"},
@@ -243,15 +249,6 @@ Public Class Home
 
 #Region "Download File"
 
-    Private Sub UpdateProgressBar(a As Integer)
-        If Me.InvokeRequired Then
-            Dim args() As String = {a}
-            Me.Invoke(New Action(Of String)(AddressOf UpdateProgressBar), args)
-            Return
-        End If
-        progressBar.Value = CInt(a)
-    End Sub
-
     Private Async Function DownloadFileAsync(urlAddress As String, filename As String) As Task(Of Integer)
         Using webClient = New WebClient()
             'updates the information
@@ -259,10 +256,11 @@ Public Class Home
             AddHandler webClient.DownloadProgressChanged, AddressOf ProgressChanged
 
             Try
-
+                'gets the directory
                 Dim stringSelectedSplit As String() = filename.Split(New Char() {"/"c})
+                Dim chosenString As String = stringSelectedSplit(stringSelectedSplit.Length - 1)
+                Console.WriteLine(chosenString)
                 Array.Resize(stringSelectedSplit, stringSelectedSplit.Length - 1)
-                'Dim chosenString As String = stringSelectedSplit(stringSelectedSplit.Length - 1)
                 Dim directory As String = String.Join("/", stringSelectedSplit)
                 'Console.WriteLine(directory)
 
@@ -271,7 +269,10 @@ Public Class Home
                     If (Not System.IO.Directory.Exists(directory)) Then
                         System.IO.Directory.CreateDirectory(directory)
                     End If
+                    UpdateTextBox(chosenString + Strings.Home_DownloadFileAsync_File_does_not_exist__Starting_Download_)
                     Await webClient.DownloadFileTaskAsync(New Uri(urlAddress), filename)
+                Else
+                    UpdateTextBox(chosenString + Strings.Home_DownloadFileAsync_File_already_exists)
                 End If
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
@@ -280,6 +281,14 @@ Public Class Home
         Return 3
     End Function
 
+    Private Sub UpdateProgressBar(a As Integer)
+        If Me.InvokeRequired Then
+            Dim args() As String = {a}
+            Me.Invoke(New Action(Of String)(AddressOf UpdateProgressBar), args)
+            Return
+        End If
+        progressBar.Value = CInt(a)
+    End Sub
     ' The event that will fire whenever the progress of the WebClient is changed
     Private Sub ProgressChanged(sender As Object, e As DownloadProgressChangedEventArgs)
         ' Update the progressbar percentage
@@ -290,9 +299,11 @@ Public Class Home
     Private Sub Completed(sender As Object, e As AsyncCompletedEventArgs)
 
         If e.Cancelled = True Then
-            MessageBox.Show(Strings.Home_Completed_Download_has_been_canceled_)
+            'MessageBox.Show(Strings.Home_Completed_Download_has_been_canceled_)
+            UpdateTextBox(Strings.Home_Completed_Download_has_been_canceled_)
         Else
-            MessageBox.Show(Strings.Home_Completed_Download_completed_)
+            'MessageBox.Show(Strings.Home_Completed_Download_completed_)
+            UpdateTextBox(Strings.Home_Completed_Download_completed_)
         End If
     End Sub
 

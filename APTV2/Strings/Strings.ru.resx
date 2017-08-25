@@ -157,4 +157,13 @@
   <data name="Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_" xml:space="preserve">
     <value>Установка приложения на устройстве (убедитесь, что устройство подключено, в противном случае он не будет ничего выводить)!</value>
   </data>
+  <data name="Home_btnFlashUnbr_Click_Rebooting_to_fastboot" xml:space="preserve">
+    <value>Перезагрузка в fastboot!</value>
+  </data>
+  <data name="Home_DownloadFileAsync_File_already_exists" xml:space="preserve">
+    <value>уже существует.</value>
+  </data>
+  <data name="Home_DownloadFileAsync_File_does_not_exist__Starting_Download_" xml:space="preserve">
+    <value>не существует. Начиная скачать.!</value>
+  </data>
 </root>

@@ -228,4 +228,58 @@
   <data name="$this.Text" xml:space="preserve">
     <value>APTV2!</value>
   </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Хранилище</value>
+  </data>
+  <data name="lblStorage.Text" xml:space="preserve">
+    <value>Метка1</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>ПАМЯТЬ</value>
+  </data>
+  <data name="lblRAM.Text" xml:space="preserve">
+    <value>Метка1</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Процессор</value>
+  </data>
+  <data name="lblProcessor.Text" xml:space="preserve">
+    <value>Метка1</value>
+  </data>
+  <data name="TabPageAdv4.Text" xml:space="preserve">
+    <value>Селектор версии!</value>
+  </data>
+  <data name="TabPageAdv5.Text" xml:space="preserve">
+    <value>Вспышка</value>
+  </data>
+  <data name="TabPageAdv6.Text" xml:space="preserve">
+    <value>....!</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>1. флэш-приложений OpenGAPPS (корень необходимо)!</value>
+  </data>
+  <data name="TabPageAdv7.Text" xml:space="preserve">
+    <value>Селектор версии!</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>2. Откройте приложение OpenGAPPS из пусковой установки 3. Примите условия и предоставить разрешения 4. Выберите версию, что вы хотите 5. Нажмите скачать 6. Нажмите установить 7. Пусть процесс отделки 8. сделали (вы можете деинсталлировать его приложения, если вы хотите)!</value>
+  </data>
+  <data name="TabPageAdv8.Text" xml:space="preserve">
+    <value>Вспышка</value>
+  </data>
+  <data name="TabPageAdv9.Text" xml:space="preserve">
+    <value>....!</value>
+  </data>
+  <data name="cmbBoxUnbrick.Text" xml:space="preserve">
+    <value>Выберите версию EMUI!</value>
+  </data>
+  <data name="cmbBoxXMLFile.Text" xml:space="preserve">
+    <value>Выберите файл для загрузки информации!</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Файл для загрузки!</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>Инструкции</value>
+  </data>
 </root>
