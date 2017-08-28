@@ -25,26 +25,30 @@ Partial Class Home
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.tabControlPanel = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.pnlPhone = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.lblStorage = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.lblRAM = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.lblProcessor = New System.Windows.Forms.Label()
-        Me.cmbModel = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.lblVariant = New System.Windows.Forms.Label()
-        Me.lblModel = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lblStorage = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.lblManufacturer = New System.Windows.Forms.Label()
+        Me.lblRAM = New System.Windows.Forms.Label()
+        Me.lblModel = New System.Windows.Forms.Label()
+        Me.lblProcessor = New System.Windows.Forms.Label()
+        Me.lblVariant = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmbModel = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.picPhone = New System.Windows.Forms.PictureBox()
         Me.pnlBootloader = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtBoxUnlockKey = New System.Windows.Forms.TextBox()
         Me.btnLockBootloader = New System.Windows.Forms.Button()
-        Me.btnUnlockBootloader = New System.Windows.Forms.Button()
         Me.txtBoxBootloader = New System.Windows.Forms.TextBox()
+        Me.btnUnlockBootloader = New System.Windows.Forms.Button()
         Me.pnlRecovery = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.btnFlashRecovery = New System.Windows.Forms.Button()
         Me.progressBarRecovery = New System.Windows.Forms.ProgressBar()
@@ -64,29 +68,36 @@ Partial Class Home
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cmbGApps = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.btnGappsInstall = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.progressBarGApps = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPageAdv8 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtBoxGApps = New System.Windows.Forms.TextBox()
         Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.txtBoxUnbrick = New System.Windows.Forms.TextBox()
         Me.TabControlUnbrick = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.tabUnb1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.progressBarUnbrick = New System.Windows.Forms.ProgressBar()
-        Me.cmbBoxUnbrick = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
-        Me.btnFlashUnbr = New System.Windows.Forms.Button()
         Me.tabUnb2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.progressBarUnbrick = New System.Windows.Forms.ProgressBar()
+        Me.btnFlashUnbr = New System.Windows.Forms.Button()
+        Me.cmbBoxUnbrick = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.tabUnb3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.txtBoxUnbrick = New System.Windows.Forms.TextBox()
         Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.rdBtnUnbFastboot = New Syncfusion.Windows.Forms.Tools.RadioButtonAdv()
+        Me.rdBtnUnbStockReco = New Syncfusion.Windows.Forms.Tools.RadioButtonAdv()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picPhone, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlBootloader.SuspendLayout()
@@ -106,9 +117,12 @@ Partial Class Home
         CType(Me.TabControlUnbrick, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControlUnbrick.SuspendLayout()
         Me.tabUnb1.SuspendLayout()
+        Me.tabUnb2.SuspendLayout()
         CType(Me.cmbBoxUnbrick, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSettings.SuspendLayout()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rdBtnUnbFastboot, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rdBtnUnbStockReco, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabControlPanel
@@ -129,32 +143,21 @@ Partial Class Home
         Me.tabControlPanel.Controls.Add(Me.pnlGapps)
         Me.tabControlPanel.Controls.Add(Me.pnlUnbrick)
         Me.tabControlPanel.Controls.Add(Me.pnlSettings)
-        Me.tabControlPanel.Controls.Add(Me.pnlAbout)
         Me.tabControlPanel.Controls.Add(Me.pnlBackup)
+        Me.tabControlPanel.Controls.Add(Me.pnlAbout)
         Me.tabControlPanel.FocusOnTabClick = False
         Me.tabControlPanel.InactiveTabColor = System.Drawing.Color.White
         Me.tabControlPanel.InActiveTabForeColor = System.Drawing.Color.Empty
         Me.tabControlPanel.Name = "tabControlPanel"
-        Me.tabControlPanel.SeparatorColor = System.Drawing.SystemColors.ControlDark
+        Me.tabControlPanel.SeparatorColor = System.Drawing.Color.White
         Me.tabControlPanel.ShowSeparator = False
         Me.tabControlPanel.TabPanelBackColor = System.Drawing.Color.White
         Me.tabControlPanel.TabStyle = GetType(Syncfusion.Windows.Forms.Tools.TabRendererMetro)
         '
         'pnlPhone
         '
-        Me.pnlPhone.Controls.Add(Me.Label12)
-        Me.pnlPhone.Controls.Add(Me.lblStorage)
-        Me.pnlPhone.Controls.Add(Me.Label10)
-        Me.pnlPhone.Controls.Add(Me.lblRAM)
-        Me.pnlPhone.Controls.Add(Me.Label8)
-        Me.pnlPhone.Controls.Add(Me.lblProcessor)
+        Me.pnlPhone.Controls.Add(Me.Panel1)
         Me.pnlPhone.Controls.Add(Me.cmbModel)
-        Me.pnlPhone.Controls.Add(Me.Label1)
-        Me.pnlPhone.Controls.Add(Me.Label2)
-        Me.pnlPhone.Controls.Add(Me.Label3)
-        Me.pnlPhone.Controls.Add(Me.lblVariant)
-        Me.pnlPhone.Controls.Add(Me.lblModel)
-        Me.pnlPhone.Controls.Add(Me.lblManufacturer)
         Me.pnlPhone.Controls.Add(Me.picPhone)
         Me.pnlPhone.Image = Nothing
         Me.pnlPhone.ImageSize = New System.Drawing.Size(16, 16)
@@ -163,71 +166,116 @@ Partial Class Home
         Me.pnlPhone.ShowCloseButton = True
         Me.pnlPhone.ThemesEnabled = False
         '
-        'Label12
+        'Panel1
         '
-        resources.ApplyResources(Me.Label12, "Label12")
-        Me.Label12.Name = "Label12"
+        Me.Panel1.Controls.Add(Me.PictureBox4)
+        Me.Panel1.Controls.Add(Me.PictureBox3)
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label12)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.lblStorage)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.lblManufacturer)
+        Me.Panel1.Controls.Add(Me.lblRAM)
+        Me.Panel1.Controls.Add(Me.lblModel)
+        Me.Panel1.Controls.Add(Me.lblProcessor)
+        Me.Panel1.Controls.Add(Me.lblVariant)
+        Me.Panel1.Controls.Add(Me.Label1)
+        resources.ApplyResources(Me.Panel1, "Panel1")
+        Me.Panel1.Name = "Panel1"
         '
-        'lblStorage
+        'PictureBox4
         '
-        resources.ApplyResources(Me.lblStorage, "lblStorage")
-        Me.lblStorage.Name = "lblStorage"
+        Me.PictureBox4.BackgroundImage = Global.APTV2.My.Resources.Resources.CPU_01
+        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.TabStop = False
         '
-        'Label10
+        'PictureBox3
         '
-        resources.ApplyResources(Me.Label10, "Label10")
-        Me.Label10.Name = "Label10"
+        Me.PictureBox3.BackgroundImage = Global.APTV2.My.Resources.Resources.Ram_WF
+        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.TabStop = False
         '
-        'lblRAM
+        'PictureBox2
         '
-        resources.ApplyResources(Me.lblRAM, "lblRAM")
-        Me.lblRAM.Name = "lblRAM"
-        '
-        'Label8
-        '
-        resources.ApplyResources(Me.Label8, "Label8")
-        Me.Label8.Name = "Label8"
-        '
-        'lblProcessor
-        '
-        resources.ApplyResources(Me.lblProcessor, "lblProcessor")
-        Me.lblProcessor.Name = "lblProcessor"
-        '
-        'cmbModel
-        '
-        Me.cmbModel.BeforeTouchSize = New System.Drawing.Size(282, 26)
-        resources.ApplyResources(Me.cmbModel, "cmbModel")
-        Me.cmbModel.Name = "cmbModel"
-        '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Name = "Label1"
-        '
-        'Label2
-        '
-        resources.ApplyResources(Me.Label2, "Label2")
-        Me.Label2.Name = "Label2"
+        Me.PictureBox2.BackgroundImage = Global.APTV2.My.Resources.Resources.Memory_Card_WF
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.TabStop = False
         '
         'Label3
         '
         resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
         '
-        'lblVariant
+        'Label12
         '
-        resources.ApplyResources(Me.lblVariant, "lblVariant")
-        Me.lblVariant.Name = "lblVariant"
+        resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.Name = "Label12"
+        '
+        'Label8
+        '
+        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.Name = "Label8"
+        '
+        'lblStorage
+        '
+        resources.ApplyResources(Me.lblStorage, "lblStorage")
+        Me.lblStorage.Name = "lblStorage"
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.Name = "Label2"
+        '
+        'Label10
+        '
+        resources.ApplyResources(Me.Label10, "Label10")
+        Me.Label10.Name = "Label10"
+        '
+        'lblManufacturer
+        '
+        resources.ApplyResources(Me.lblManufacturer, "lblManufacturer")
+        Me.lblManufacturer.Name = "lblManufacturer"
+        '
+        'lblRAM
+        '
+        resources.ApplyResources(Me.lblRAM, "lblRAM")
+        Me.lblRAM.Name = "lblRAM"
         '
         'lblModel
         '
         resources.ApplyResources(Me.lblModel, "lblModel")
         Me.lblModel.Name = "lblModel"
         '
-        'lblManufacturer
+        'lblProcessor
         '
-        resources.ApplyResources(Me.lblManufacturer, "lblManufacturer")
-        Me.lblManufacturer.Name = "lblManufacturer"
+        resources.ApplyResources(Me.lblProcessor, "lblProcessor")
+        Me.lblProcessor.Name = "lblProcessor"
+        '
+        'lblVariant
+        '
+        resources.ApplyResources(Me.lblVariant, "lblVariant")
+        Me.lblVariant.Name = "lblVariant"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.Name = "Label1"
+        '
+        'cmbModel
+        '
+        Me.cmbModel.BeforeTouchSize = New System.Drawing.Size(272, 26)
+        Me.cmbModel.BorderSides = System.Windows.Forms.Border3DSide.Left
+        Me.cmbModel.FlatBorderColor = System.Drawing.Color.Red
+        Me.cmbModel.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
+        resources.ApplyResources(Me.cmbModel, "cmbModel")
+        Me.cmbModel.MetroBorderColor = System.Drawing.Color.White
+        Me.cmbModel.Name = "cmbModel"
         '
         'picPhone
         '
@@ -265,18 +313,21 @@ Partial Class Home
         Me.btnLockBootloader.Name = "btnLockBootloader"
         Me.btnLockBootloader.UseVisualStyleBackColor = True
         '
-        'btnUnlockBootloader
-        '
-        resources.ApplyResources(Me.btnUnlockBootloader, "btnUnlockBootloader")
-        Me.btnUnlockBootloader.Name = "btnUnlockBootloader"
-        Me.btnUnlockBootloader.UseVisualStyleBackColor = True
-        '
         'txtBoxBootloader
         '
-        Me.txtBoxBootloader.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtBoxBootloader.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.txtBoxBootloader.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBoxBootloader.ForeColor = System.Drawing.Color.White
         resources.ApplyResources(Me.txtBoxBootloader, "txtBoxBootloader")
         Me.txtBoxBootloader.Name = "txtBoxBootloader"
+        '
+        'btnUnlockBootloader
+        '
+        Me.btnUnlockBootloader.BackColor = System.Drawing.Color.White
+        Me.btnUnlockBootloader.Cursor = System.Windows.Forms.Cursors.Default
+        resources.ApplyResources(Me.btnUnlockBootloader, "btnUnlockBootloader")
+        Me.btnUnlockBootloader.Name = "btnUnlockBootloader"
+        Me.btnUnlockBootloader.UseVisualStyleBackColor = False
         '
         'pnlRecovery
         '
@@ -299,6 +350,7 @@ Partial Class Home
         '
         'progressBarRecovery
         '
+        Me.progressBarRecovery.Cursor = System.Windows.Forms.Cursors.Cross
         resources.ApplyResources(Me.progressBarRecovery, "progressBarRecovery")
         Me.progressBarRecovery.Name = "progressBarRecovery"
         Me.progressBarRecovery.Style = System.Windows.Forms.ProgressBarStyle.Continuous
@@ -311,7 +363,8 @@ Partial Class Home
         '
         'txtBoxRecovery
         '
-        Me.txtBoxRecovery.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtBoxRecovery.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.txtBoxRecovery.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBoxRecovery.ForeColor = System.Drawing.Color.White
         resources.ApplyResources(Me.txtBoxRecovery, "txtBoxRecovery")
         Me.txtBoxRecovery.Name = "txtBoxRecovery"
@@ -390,24 +443,29 @@ Partial Class Home
         '
         Me.tabControlPanelGAPPS.ActiveTabForeColor = System.Drawing.Color.Empty
         Me.tabControlPanelGAPPS.BeforeTouchSize = New System.Drawing.Size(345, 364)
+        Me.tabControlPanelGAPPS.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tabControlPanelGAPPS.CloseButtonForeColor = System.Drawing.Color.Empty
         Me.tabControlPanelGAPPS.CloseButtonHoverForeColor = System.Drawing.Color.Empty
         Me.tabControlPanelGAPPS.CloseButtonPressedForeColor = System.Drawing.Color.Empty
         Me.tabControlPanelGAPPS.Controls.Add(Me.TabPageAdv7)
         Me.tabControlPanelGAPPS.Controls.Add(Me.TabPageAdv8)
+        Me.tabControlPanelGAPPS.FocusOnTabClick = False
+        Me.tabControlPanelGAPPS.InactiveTabColor = System.Drawing.Color.White
         Me.tabControlPanelGAPPS.InActiveTabForeColor = System.Drawing.Color.Empty
         resources.ApplyResources(Me.tabControlPanelGAPPS, "tabControlPanelGAPPS")
         Me.tabControlPanelGAPPS.Name = "tabControlPanelGAPPS"
-        Me.tabControlPanelGAPPS.SeparatorColor = System.Drawing.SystemColors.ControlDark
+        Me.tabControlPanelGAPPS.SeparatorColor = System.Drawing.Color.Transparent
         Me.tabControlPanelGAPPS.ShowSeparator = False
+        Me.tabControlPanelGAPPS.TabPanelBackColor = System.Drawing.Color.White
+        Me.tabControlPanelGAPPS.TabStyle = GetType(Syncfusion.Windows.Forms.Tools.TabRendererMetro)
         '
         'TabPageAdv7
         '
         Me.TabPageAdv7.Controls.Add(Me.Label9)
         Me.TabPageAdv7.Controls.Add(Me.cmbGApps)
         Me.TabPageAdv7.Controls.Add(Me.btnGappsInstall)
-        Me.TabPageAdv7.Controls.Add(Me.PictureBox1)
         Me.TabPageAdv7.Controls.Add(Me.progressBarGApps)
+        Me.TabPageAdv7.Controls.Add(Me.PictureBox1)
         Me.TabPageAdv7.Image = Nothing
         Me.TabPageAdv7.ImageSize = New System.Drawing.Size(16, 16)
         resources.ApplyResources(Me.TabPageAdv7, "TabPageAdv7")
@@ -423,6 +481,7 @@ Partial Class Home
         'cmbGApps
         '
         Me.cmbGApps.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        Me.cmbGApps.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
         resources.ApplyResources(Me.cmbGApps, "cmbGApps")
         Me.cmbGApps.Name = "cmbGApps"
         '
@@ -432,18 +491,18 @@ Partial Class Home
         Me.btnGappsInstall.Name = "btnGappsInstall"
         Me.btnGappsInstall.UseVisualStyleBackColor = True
         '
+        'progressBarGApps
+        '
+        resources.ApplyResources(Me.progressBarGApps, "progressBarGApps")
+        Me.progressBarGApps.Name = "progressBarGApps"
+        Me.progressBarGApps.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.APTV2.My.Resources.Resources.opengapps
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
-        '
-        'progressBarGApps
-        '
-        resources.ApplyResources(Me.progressBarGApps, "progressBarGApps")
-        Me.progressBarGApps.Name = "progressBarGApps"
-        Me.progressBarGApps.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         '
         'TabPageAdv8
         '
@@ -468,15 +527,15 @@ Partial Class Home
         '
         'txtBoxGApps
         '
-        Me.txtBoxGApps.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtBoxGApps.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.txtBoxGApps.ForeColor = System.Drawing.Color.White
         resources.ApplyResources(Me.txtBoxGApps, "txtBoxGApps")
         Me.txtBoxGApps.Name = "txtBoxGApps"
         '
         'pnlUnbrick
         '
-        Me.pnlUnbrick.Controls.Add(Me.txtBoxUnbrick)
         Me.pnlUnbrick.Controls.Add(Me.TabControlUnbrick)
+        Me.pnlUnbrick.Controls.Add(Me.txtBoxUnbrick)
         Me.pnlUnbrick.Image = Nothing
         Me.pnlUnbrick.ImageSize = New System.Drawing.Size(16, 16)
         resources.ApplyResources(Me.pnlUnbrick, "pnlUnbrick")
@@ -484,34 +543,32 @@ Partial Class Home
         Me.pnlUnbrick.ShowCloseButton = True
         Me.pnlUnbrick.ThemesEnabled = False
         '
-        'txtBoxUnbrick
-        '
-        Me.txtBoxUnbrick.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.txtBoxUnbrick.ForeColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.txtBoxUnbrick, "txtBoxUnbrick")
-        Me.txtBoxUnbrick.Name = "txtBoxUnbrick"
-        '
         'TabControlUnbrick
         '
         Me.TabControlUnbrick.ActiveTabForeColor = System.Drawing.Color.Empty
         Me.TabControlUnbrick.BeforeTouchSize = New System.Drawing.Size(364, 352)
+        Me.TabControlUnbrick.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TabControlUnbrick.CloseButtonForeColor = System.Drawing.Color.Empty
         Me.TabControlUnbrick.CloseButtonHoverForeColor = System.Drawing.Color.Empty
         Me.TabControlUnbrick.CloseButtonPressedForeColor = System.Drawing.Color.Empty
         Me.TabControlUnbrick.Controls.Add(Me.tabUnb1)
         Me.TabControlUnbrick.Controls.Add(Me.tabUnb2)
         Me.TabControlUnbrick.Controls.Add(Me.tabUnb3)
+        Me.TabControlUnbrick.FocusOnTabClick = False
+        Me.TabControlUnbrick.InactiveTabColor = System.Drawing.Color.White
         Me.TabControlUnbrick.InActiveTabForeColor = System.Drawing.Color.Empty
         resources.ApplyResources(Me.TabControlUnbrick, "TabControlUnbrick")
         Me.TabControlUnbrick.Name = "TabControlUnbrick"
-        Me.TabControlUnbrick.SeparatorColor = System.Drawing.SystemColors.ControlDark
+        Me.TabControlUnbrick.SeparatorColor = System.Drawing.Color.White
         Me.TabControlUnbrick.ShowSeparator = False
+        Me.TabControlUnbrick.TabPanelBackColor = System.Drawing.Color.White
+        Me.TabControlUnbrick.TabStyle = GetType(Syncfusion.Windows.Forms.Tools.TabRendererMetro)
         '
         'tabUnb1
         '
-        Me.tabUnb1.Controls.Add(Me.progressBarUnbrick)
-        Me.tabUnb1.Controls.Add(Me.cmbBoxUnbrick)
-        Me.tabUnb1.Controls.Add(Me.btnFlashUnbr)
+        Me.tabUnb1.Controls.Add(Me.Button1)
+        Me.tabUnb1.Controls.Add(Me.rdBtnUnbStockReco)
+        Me.tabUnb1.Controls.Add(Me.rdBtnUnbFastboot)
         Me.tabUnb1.Image = Nothing
         Me.tabUnb1.ImageSize = New System.Drawing.Size(16, 16)
         resources.ApplyResources(Me.tabUnb1, "tabUnb1")
@@ -519,17 +576,23 @@ Partial Class Home
         Me.tabUnb1.ShowCloseButton = True
         Me.tabUnb1.ThemesEnabled = False
         '
+        'tabUnb2
+        '
+        Me.tabUnb2.Controls.Add(Me.progressBarUnbrick)
+        Me.tabUnb2.Controls.Add(Me.btnFlashUnbr)
+        Me.tabUnb2.Controls.Add(Me.cmbBoxUnbrick)
+        Me.tabUnb2.Image = Nothing
+        Me.tabUnb2.ImageSize = New System.Drawing.Size(16, 16)
+        resources.ApplyResources(Me.tabUnb2, "tabUnb2")
+        Me.tabUnb2.Name = "tabUnb2"
+        Me.tabUnb2.ShowCloseButton = True
+        Me.tabUnb2.ThemesEnabled = False
+        '
         'progressBarUnbrick
         '
         resources.ApplyResources(Me.progressBarUnbrick, "progressBarUnbrick")
         Me.progressBarUnbrick.Name = "progressBarUnbrick"
         Me.progressBarUnbrick.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        '
-        'cmbBoxUnbrick
-        '
-        Me.cmbBoxUnbrick.BeforeTouchSize = New System.Drawing.Size(208, 26)
-        resources.ApplyResources(Me.cmbBoxUnbrick, "cmbBoxUnbrick")
-        Me.cmbBoxUnbrick.Name = "cmbBoxUnbrick"
         '
         'btnFlashUnbr
         '
@@ -537,14 +600,12 @@ Partial Class Home
         Me.btnFlashUnbr.Name = "btnFlashUnbr"
         Me.btnFlashUnbr.UseVisualStyleBackColor = True
         '
-        'tabUnb2
+        'cmbBoxUnbrick
         '
-        Me.tabUnb2.Image = Nothing
-        Me.tabUnb2.ImageSize = New System.Drawing.Size(16, 16)
-        resources.ApplyResources(Me.tabUnb2, "tabUnb2")
-        Me.tabUnb2.Name = "tabUnb2"
-        Me.tabUnb2.ShowCloseButton = True
-        Me.tabUnb2.ThemesEnabled = False
+        Me.cmbBoxUnbrick.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        Me.cmbBoxUnbrick.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
+        resources.ApplyResources(Me.cmbBoxUnbrick, "cmbBoxUnbrick")
+        Me.cmbBoxUnbrick.Name = "cmbBoxUnbrick"
         '
         'tabUnb3
         '
@@ -555,12 +616,19 @@ Partial Class Home
         Me.tabUnb3.ShowCloseButton = True
         Me.tabUnb3.ThemesEnabled = False
         '
+        'txtBoxUnbrick
+        '
+        Me.txtBoxUnbrick.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.txtBoxUnbrick.ForeColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtBoxUnbrick, "txtBoxUnbrick")
+        Me.txtBoxUnbrick.Name = "txtBoxUnbrick"
+        '
         'pnlSettings
         '
         Me.pnlSettings.Controls.Add(Me.cmbBoxXMLFile)
         Me.pnlSettings.Controls.Add(Me.Label7)
-        Me.pnlSettings.Image = Nothing
-        Me.pnlSettings.ImageSize = New System.Drawing.Size(16, 16)
+        Me.pnlSettings.Image = Global.APTV2.My.Resources.Resources.Settings___09
+        Me.pnlSettings.ImageSize = New System.Drawing.Size(25, 25)
         resources.ApplyResources(Me.pnlSettings, "pnlSettings")
         Me.pnlSettings.Name = "pnlSettings"
         Me.pnlSettings.ShowCloseButton = True
@@ -569,22 +637,16 @@ Partial Class Home
         'cmbBoxXMLFile
         '
         Me.cmbBoxXMLFile.BeforeTouchSize = New System.Drawing.Size(237, 26)
+        Me.cmbBoxXMLFile.FlatBorderColor = System.Drawing.Color.White
+        Me.cmbBoxXMLFile.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
         resources.ApplyResources(Me.cmbBoxXMLFile, "cmbBoxXMLFile")
+        Me.cmbBoxXMLFile.MetroBorderColor = System.Drawing.Color.White
         Me.cmbBoxXMLFile.Name = "cmbBoxXMLFile"
         '
         'Label7
         '
         resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.Name = "Label7"
-        '
-        'pnlAbout
-        '
-        Me.pnlAbout.Image = Nothing
-        Me.pnlAbout.ImageSize = New System.Drawing.Size(16, 16)
-        resources.ApplyResources(Me.pnlAbout, "pnlAbout")
-        Me.pnlAbout.Name = "pnlAbout"
-        Me.pnlAbout.ShowCloseButton = True
-        Me.pnlAbout.ThemesEnabled = False
         '
         'pnlBackup
         '
@@ -595,16 +657,61 @@ Partial Class Home
         Me.pnlBackup.ShowCloseButton = True
         Me.pnlBackup.ThemesEnabled = False
         '
+        'pnlAbout
+        '
+        Me.pnlAbout.Image = Nothing
+        Me.pnlAbout.ImageSize = New System.Drawing.Size(16, 16)
+        resources.ApplyResources(Me.pnlAbout, "pnlAbout")
+        Me.pnlAbout.Name = "pnlAbout"
+        Me.pnlAbout.ShowCloseButton = True
+        Me.pnlAbout.ThemesEnabled = False
+        '
+        'rdBtnUnbFastboot
+        '
+        Me.rdBtnUnbFastboot.BeforeTouchSize = New System.Drawing.Size(230, 43)
+        Me.rdBtnUnbFastboot.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat
+        Me.rdBtnUnbFastboot.BorderColor = System.Drawing.SystemColors.MenuHighlight
+        Me.rdBtnUnbFastboot.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dotted
+        resources.ApplyResources(Me.rdBtnUnbFastboot, "rdBtnUnbFastboot")
+        Me.rdBtnUnbFastboot.MetroColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.rdBtnUnbFastboot.Name = "rdBtnUnbFastboot"
+        Me.rdBtnUnbFastboot.Style = Syncfusion.Windows.Forms.Tools.RadioButtonAdvStyle.Metro
+        Me.rdBtnUnbFastboot.TabStop = False
+        Me.rdBtnUnbFastboot.ThemesEnabled = False
+        '
+        'rdBtnUnbStockReco
+        '
+        Me.rdBtnUnbStockReco.BeforeTouchSize = New System.Drawing.Size(230, 21)
+        Me.rdBtnUnbStockReco.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat
+        Me.rdBtnUnbStockReco.BorderColor = System.Drawing.SystemColors.MenuHighlight
+        Me.rdBtnUnbStockReco.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dotted
+        resources.ApplyResources(Me.rdBtnUnbStockReco, "rdBtnUnbStockReco")
+        Me.rdBtnUnbStockReco.MetroColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.rdBtnUnbStockReco.Name = "rdBtnUnbStockReco"
+        Me.rdBtnUnbStockReco.Style = Syncfusion.Windows.Forms.Tools.RadioButtonAdvStyle.Metro
+        Me.rdBtnUnbStockReco.ThemesEnabled = False
+        '
+        'Button1
+        '
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Home
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.tabControlPanel)
+        Me.MetroColor = System.Drawing.Color.Transparent
         Me.Name = "Home"
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabControlPanel.ResumeLayout(False)
         Me.pnlPhone.ResumeLayout(False)
-        Me.pnlPhone.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picPhone, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlBootloader.ResumeLayout(False)
@@ -632,10 +739,13 @@ Partial Class Home
         CType(Me.TabControlUnbrick, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlUnbrick.ResumeLayout(False)
         Me.tabUnb1.ResumeLayout(False)
+        Me.tabUnb2.ResumeLayout(False)
         CType(Me.cmbBoxUnbrick, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlSettings.ResumeLayout(False)
         Me.pnlSettings.PerformLayout()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rdBtnUnbFastboot, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rdBtnUnbStockReco, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -651,10 +761,8 @@ Partial Class Home
     Friend WithEvents pnlBackup As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents picPhone As PictureBox
     Friend WithEvents lblManufacturer As Label
-    Friend WithEvents lblModel As Label
     Friend WithEvents lblVariant As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents cmbModel As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents pnlSettings As Syncfusion.Windows.Forms.Tools.TabPageAdv
@@ -700,4 +808,13 @@ Partial Class Home
     Friend WithEvents TabPageAdv8 As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents Label11 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents lblModel As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents rdBtnUnbStockReco As Syncfusion.Windows.Forms.Tools.RadioButtonAdv
+    Friend WithEvents rdBtnUnbFastboot As Syncfusion.Windows.Forms.Tools.RadioButtonAdv
+    Friend WithEvents Button1 As Button
 End Class

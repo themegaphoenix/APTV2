@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -174,7 +174,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="APTV2_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -201,7 +200,16 @@
   <ItemGroup>
     <Content Include="phones\HuaweiHonor.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
+    <None Include="Resources\Unlock-WF.png" />
+    <None Include="Resources\Settings - 09.png" />
+    <None Include="Resources\Ram-WF.png" />
+    <None Include="Resources\Memory Card-WF.png" />
+    <None Include="Resources\Lock - 06.png" />
+    <None Include="Resources\File.png" />
+    <None Include="Resources\CPU-01.png" />
+    <None Include="Resources\Android.png" />
     <None Include="Resources\opengapps.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

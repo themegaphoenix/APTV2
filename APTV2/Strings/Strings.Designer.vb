@@ -216,6 +216,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to File does not contains invalid information..
+        '''</summary>
+        Friend Shared ReadOnly Property Home_ReloadInfo_File_does_not_contains_invalid_information() As String
+            Get
+                Return ResourceManager.GetString("Home_ReloadInfo_File_does_not_contains_invalid_information", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Rebooting to bootloader.
         '''</summary>
         Friend Shared ReadOnly Property Rebooting_to_bootloader() As String

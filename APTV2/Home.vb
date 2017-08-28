@@ -188,10 +188,8 @@ Public Class Home
             'downloads the file
             'the file is checked it it exists first in the function
             Await DownloadFileAsync(url, fileName)
-
             'run the right adb commands
 
-            'todo fix the commands
             Dim commands(2, 2) As String
             commands = {{"adb", "devices", "Showing all devices"},
                         {"adb", "install " & fileName,
@@ -207,7 +205,7 @@ Public Class Home
 
 #Region "Unbrick"
 
-    'todo finish the tasks
+
     Private Async Sub btnFlashUnbr_Click(sender As Object, e As EventArgs) Handles btnFlashUnbr.Click
         Try
             'gets the chosenRecovery Value
@@ -226,9 +224,10 @@ Public Class Home
                 Await DownloadFileAsync(info(i, 0), info(i, 1))
             Next
 
-            Dim commands(6, 3) As String
-            commands = {{"adb", "reboot fastboot", Strings.Home_btnFlashUnbr_Click_Rebooting_to_fastboot},
-                        {"fastboot", "flash boot" & info(0, 1), "Flashing boot"},
+
+
+            Dim commands(5, 3) As String
+            commands = {{"fastboot", "flash boot" & info(0, 1), "Flashing boot"},
                         {"fastboot", "flash cust " & info(1, 1), "Flashing cust"},
                         {"fastboot", "flash system " & info(2, 1), "Flashing system"},
                         {"fastboot", "flash recovery " & info(3, 1), "Flashing recovery"},
@@ -270,7 +269,9 @@ Public Class Home
                         System.IO.Directory.CreateDirectory(directory)
                     End If
                     UpdateTextBox(chosenString + Strings.Home_DownloadFileAsync_File_does_not_exist__Starting_Download_)
+                    progressBar.Visible = True
                     Await webClient.DownloadFileTaskAsync(New Uri(urlAddress), filename)
+                    progressBar.Visible = False
                 Else
                     UpdateTextBox(chosenString + Strings.Home_DownloadFileAsync_File_already_exists)
                 End If
@@ -575,7 +576,7 @@ Public Class Home
 
                     End Try
                 Catch ex As Exception
-                    MessageBox.Show(ex.ToString)
+                    MessageBox.Show(Strings.Home_ReloadInfo_File_does_not_contains_invalid_information)
                 End Try
 
             End If
@@ -585,6 +586,23 @@ Public Class Home
         AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
         AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
     End Sub
+
+
+
+
+
+    Private Sub rdBtnUnbFastboot_Click(sender As Object, e As EventArgs)
+        If rdBtnUnbFastboot.Checked = True Then
+            rdBtnUnbStockReco.Checked = False
+        End If
+    End Sub
+
+    Private Sub rdBtnUnbStockReco_MouseClick(sender As Object, e As MouseEventArgs)
+        If rdBtnUnbStockReco.Checked = True Then
+            rdBtnUnbFastboot.Checked = False
+        End If
+    End Sub
+
 
 #End Region
 
