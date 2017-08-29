@@ -77,10 +77,13 @@ Partial Class Home
         Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.TabControlUnbrick = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.tabUnb1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.btnUnbrickGoto = New System.Windows.Forms.Button()
+        Me.rdBtnUnbStockReco = New Syncfusion.Windows.Forms.Tools.RadioButtonAdv()
+        Me.rdBtnUnbFastboot = New Syncfusion.Windows.Forms.Tools.RadioButtonAdv()
         Me.tabUnb2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.progressBarUnbrick = New System.Windows.Forms.ProgressBar()
-        Me.btnFlashUnbr = New System.Windows.Forms.Button()
-        Me.cmbBoxUnbrick = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.progressBarUnbrickFastboot = New System.Windows.Forms.ProgressBar()
+        Me.btnFlashUnbrFastboot = New System.Windows.Forms.Button()
+        Me.cmbBoxUnbrickFastboot = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.tabUnb3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.txtBoxUnbrick = New System.Windows.Forms.TextBox()
         Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
@@ -88,9 +91,9 @@ Partial Class Home
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlBackup = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.rdBtnUnbFastboot = New Syncfusion.Windows.Forms.Tools.RadioButtonAdv()
-        Me.rdBtnUnbStockReco = New Syncfusion.Windows.Forms.Tools.RadioButtonAdv()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.progressBarUnbrickStock = New System.Windows.Forms.ProgressBar()
+        Me.btnFlashUnbrRecovery = New System.Windows.Forms.Button()
+        Me.cmbBoxUnbrickStock = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -117,12 +120,14 @@ Partial Class Home
         CType(Me.TabControlUnbrick, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControlUnbrick.SuspendLayout()
         Me.tabUnb1.SuspendLayout()
+        CType(Me.rdBtnUnbStockReco, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rdBtnUnbFastboot, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabUnb2.SuspendLayout()
-        CType(Me.cmbBoxUnbrick, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbBoxUnbrickFastboot, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabUnb3.SuspendLayout()
         Me.pnlSettings.SuspendLayout()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.rdBtnUnbFastboot, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.rdBtnUnbStockReco, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbBoxUnbrickStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabControlPanel
@@ -358,6 +363,7 @@ Partial Class Home
         'cmbRecovery
         '
         Me.cmbRecovery.BeforeTouchSize = New System.Drawing.Size(172, 26)
+        Me.cmbRecovery.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
         resources.ApplyResources(Me.cmbRecovery, "cmbRecovery")
         Me.cmbRecovery.Name = "cmbRecovery"
         '
@@ -397,6 +403,7 @@ Partial Class Home
         'cmbRoot
         '
         Me.cmbRoot.BeforeTouchSize = New System.Drawing.Size(172, 26)
+        Me.cmbRoot.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
         resources.ApplyResources(Me.cmbRoot, "cmbRoot")
         Me.cmbRoot.Name = "cmbRoot"
         '
@@ -546,7 +553,7 @@ Partial Class Home
         'TabControlUnbrick
         '
         Me.TabControlUnbrick.ActiveTabForeColor = System.Drawing.Color.Empty
-        Me.TabControlUnbrick.BeforeTouchSize = New System.Drawing.Size(364, 352)
+        Me.TabControlUnbrick.BeforeTouchSize = New System.Drawing.Size(364, 364)
         Me.TabControlUnbrick.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TabControlUnbrick.CloseButtonForeColor = System.Drawing.Color.Empty
         Me.TabControlUnbrick.CloseButtonHoverForeColor = System.Drawing.Color.Empty
@@ -566,7 +573,7 @@ Partial Class Home
         '
         'tabUnb1
         '
-        Me.tabUnb1.Controls.Add(Me.Button1)
+        Me.tabUnb1.Controls.Add(Me.btnUnbrickGoto)
         Me.tabUnb1.Controls.Add(Me.rdBtnUnbStockReco)
         Me.tabUnb1.Controls.Add(Me.rdBtnUnbFastboot)
         Me.tabUnb1.Image = Nothing
@@ -576,11 +583,42 @@ Partial Class Home
         Me.tabUnb1.ShowCloseButton = True
         Me.tabUnb1.ThemesEnabled = False
         '
+        'btnUnbrickGoto
+        '
+        resources.ApplyResources(Me.btnUnbrickGoto, "btnUnbrickGoto")
+        Me.btnUnbrickGoto.Name = "btnUnbrickGoto"
+        Me.btnUnbrickGoto.UseVisualStyleBackColor = True
+        '
+        'rdBtnUnbStockReco
+        '
+        Me.rdBtnUnbStockReco.BeforeTouchSize = New System.Drawing.Size(230, 21)
+        Me.rdBtnUnbStockReco.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat
+        Me.rdBtnUnbStockReco.BorderColor = System.Drawing.SystemColors.MenuHighlight
+        Me.rdBtnUnbStockReco.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dotted
+        resources.ApplyResources(Me.rdBtnUnbStockReco, "rdBtnUnbStockReco")
+        Me.rdBtnUnbStockReco.MetroColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.rdBtnUnbStockReco.Name = "rdBtnUnbStockReco"
+        Me.rdBtnUnbStockReco.Style = Syncfusion.Windows.Forms.Tools.RadioButtonAdvStyle.Metro
+        Me.rdBtnUnbStockReco.ThemesEnabled = False
+        '
+        'rdBtnUnbFastboot
+        '
+        Me.rdBtnUnbFastboot.BeforeTouchSize = New System.Drawing.Size(230, 43)
+        Me.rdBtnUnbFastboot.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat
+        Me.rdBtnUnbFastboot.BorderColor = System.Drawing.SystemColors.MenuHighlight
+        Me.rdBtnUnbFastboot.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dotted
+        resources.ApplyResources(Me.rdBtnUnbFastboot, "rdBtnUnbFastboot")
+        Me.rdBtnUnbFastboot.MetroColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.rdBtnUnbFastboot.Name = "rdBtnUnbFastboot"
+        Me.rdBtnUnbFastboot.Style = Syncfusion.Windows.Forms.Tools.RadioButtonAdvStyle.Metro
+        Me.rdBtnUnbFastboot.TabStop = False
+        Me.rdBtnUnbFastboot.ThemesEnabled = False
+        '
         'tabUnb2
         '
-        Me.tabUnb2.Controls.Add(Me.progressBarUnbrick)
-        Me.tabUnb2.Controls.Add(Me.btnFlashUnbr)
-        Me.tabUnb2.Controls.Add(Me.cmbBoxUnbrick)
+        Me.tabUnb2.Controls.Add(Me.progressBarUnbrickFastboot)
+        Me.tabUnb2.Controls.Add(Me.btnFlashUnbrFastboot)
+        Me.tabUnb2.Controls.Add(Me.cmbBoxUnbrickFastboot)
         Me.tabUnb2.Image = Nothing
         Me.tabUnb2.ImageSize = New System.Drawing.Size(16, 16)
         resources.ApplyResources(Me.tabUnb2, "tabUnb2")
@@ -588,27 +626,30 @@ Partial Class Home
         Me.tabUnb2.ShowCloseButton = True
         Me.tabUnb2.ThemesEnabled = False
         '
-        'progressBarUnbrick
+        'progressBarUnbrickFastboot
         '
-        resources.ApplyResources(Me.progressBarUnbrick, "progressBarUnbrick")
-        Me.progressBarUnbrick.Name = "progressBarUnbrick"
-        Me.progressBarUnbrick.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        resources.ApplyResources(Me.progressBarUnbrickFastboot, "progressBarUnbrickFastboot")
+        Me.progressBarUnbrickFastboot.Name = "progressBarUnbrickFastboot"
+        Me.progressBarUnbrickFastboot.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         '
-        'btnFlashUnbr
+        'btnFlashUnbrFastboot
         '
-        resources.ApplyResources(Me.btnFlashUnbr, "btnFlashUnbr")
-        Me.btnFlashUnbr.Name = "btnFlashUnbr"
-        Me.btnFlashUnbr.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.btnFlashUnbrFastboot, "btnFlashUnbrFastboot")
+        Me.btnFlashUnbrFastboot.Name = "btnFlashUnbrFastboot"
+        Me.btnFlashUnbrFastboot.UseVisualStyleBackColor = True
         '
-        'cmbBoxUnbrick
+        'cmbBoxUnbrickFastboot
         '
-        Me.cmbBoxUnbrick.BeforeTouchSize = New System.Drawing.Size(208, 26)
-        Me.cmbBoxUnbrick.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
-        resources.ApplyResources(Me.cmbBoxUnbrick, "cmbBoxUnbrick")
-        Me.cmbBoxUnbrick.Name = "cmbBoxUnbrick"
+        Me.cmbBoxUnbrickFastboot.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        Me.cmbBoxUnbrickFastboot.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
+        resources.ApplyResources(Me.cmbBoxUnbrickFastboot, "cmbBoxUnbrickFastboot")
+        Me.cmbBoxUnbrickFastboot.Name = "cmbBoxUnbrickFastboot"
         '
         'tabUnb3
         '
+        Me.tabUnb3.Controls.Add(Me.progressBarUnbrickStock)
+        Me.tabUnb3.Controls.Add(Me.btnFlashUnbrRecovery)
+        Me.tabUnb3.Controls.Add(Me.cmbBoxUnbrickStock)
         Me.tabUnb3.Image = Nothing
         Me.tabUnb3.ImageSize = New System.Drawing.Size(16, 16)
         resources.ApplyResources(Me.tabUnb3, "tabUnb3")
@@ -666,36 +707,24 @@ Partial Class Home
         Me.pnlAbout.ShowCloseButton = True
         Me.pnlAbout.ThemesEnabled = False
         '
-        'rdBtnUnbFastboot
+        'progressBarUnbrickStock
         '
-        Me.rdBtnUnbFastboot.BeforeTouchSize = New System.Drawing.Size(230, 43)
-        Me.rdBtnUnbFastboot.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat
-        Me.rdBtnUnbFastboot.BorderColor = System.Drawing.SystemColors.MenuHighlight
-        Me.rdBtnUnbFastboot.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dotted
-        resources.ApplyResources(Me.rdBtnUnbFastboot, "rdBtnUnbFastboot")
-        Me.rdBtnUnbFastboot.MetroColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
-        Me.rdBtnUnbFastboot.Name = "rdBtnUnbFastboot"
-        Me.rdBtnUnbFastboot.Style = Syncfusion.Windows.Forms.Tools.RadioButtonAdvStyle.Metro
-        Me.rdBtnUnbFastboot.TabStop = False
-        Me.rdBtnUnbFastboot.ThemesEnabled = False
+        resources.ApplyResources(Me.progressBarUnbrickStock, "progressBarUnbrickStock")
+        Me.progressBarUnbrickStock.Name = "progressBarUnbrickStock"
+        Me.progressBarUnbrickStock.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         '
-        'rdBtnUnbStockReco
+        'btnFlashUnbrRecovery
         '
-        Me.rdBtnUnbStockReco.BeforeTouchSize = New System.Drawing.Size(230, 21)
-        Me.rdBtnUnbStockReco.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat
-        Me.rdBtnUnbStockReco.BorderColor = System.Drawing.SystemColors.MenuHighlight
-        Me.rdBtnUnbStockReco.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Dotted
-        resources.ApplyResources(Me.rdBtnUnbStockReco, "rdBtnUnbStockReco")
-        Me.rdBtnUnbStockReco.MetroColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
-        Me.rdBtnUnbStockReco.Name = "rdBtnUnbStockReco"
-        Me.rdBtnUnbStockReco.Style = Syncfusion.Windows.Forms.Tools.RadioButtonAdvStyle.Metro
-        Me.rdBtnUnbStockReco.ThemesEnabled = False
+        resources.ApplyResources(Me.btnFlashUnbrRecovery, "btnFlashUnbrRecovery")
+        Me.btnFlashUnbrRecovery.Name = "btnFlashUnbrRecovery"
+        Me.btnFlashUnbrRecovery.UseVisualStyleBackColor = True
         '
-        'Button1
+        'cmbBoxUnbrickStock
         '
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmbBoxUnbrickStock.BeforeTouchSize = New System.Drawing.Size(208, 26)
+        Me.cmbBoxUnbrickStock.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
+        resources.ApplyResources(Me.cmbBoxUnbrickStock, "cmbBoxUnbrickStock")
+        Me.cmbBoxUnbrickStock.Name = "cmbBoxUnbrickStock"
         '
         'Home
         '
@@ -739,13 +768,15 @@ Partial Class Home
         CType(Me.TabControlUnbrick, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlUnbrick.ResumeLayout(False)
         Me.tabUnb1.ResumeLayout(False)
+        CType(Me.rdBtnUnbStockReco, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rdBtnUnbFastboot, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabUnb2.ResumeLayout(False)
-        CType(Me.cmbBoxUnbrick, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbBoxUnbrickFastboot, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabUnb3.ResumeLayout(False)
         Me.pnlSettings.ResumeLayout(False)
         Me.pnlSettings.PerformLayout()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.rdBtnUnbFastboot, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.rdBtnUnbStockReco, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbBoxUnbrickStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -785,15 +816,15 @@ Partial Class Home
     Friend WithEvents txtBoxUnbrick As TextBox
     Friend WithEvents TabControlUnbrick As Syncfusion.Windows.Forms.Tools.TabControlAdv
     Friend WithEvents tabUnb1 As Syncfusion.Windows.Forms.Tools.TabPageAdv
-    Friend WithEvents cmbBoxUnbrick As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
-    Friend WithEvents btnFlashUnbr As Button
+    Friend WithEvents cmbBoxUnbrickFastboot As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
+    Friend WithEvents btnFlashUnbrFastboot As Button
     Friend WithEvents tabUnb2 As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents tabUnb3 As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents Label4 As Label
     Friend WithEvents txtBoxUnlockKey As TextBox
     Friend WithEvents btnLockBootloader As Button
     Friend WithEvents btnUnlockBootloader As Button
-    Friend WithEvents progressBarUnbrick As ProgressBar
+    Friend WithEvents progressBarUnbrickFastboot As ProgressBar
     Friend WithEvents Label7 As Label
     Friend WithEvents cmbBoxXMLFile As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents Label12 As Label
@@ -816,5 +847,8 @@ Partial Class Home
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents rdBtnUnbStockReco As Syncfusion.Windows.Forms.Tools.RadioButtonAdv
     Friend WithEvents rdBtnUnbFastboot As Syncfusion.Windows.Forms.Tools.RadioButtonAdv
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnUnbrickGoto As Button
+    Friend WithEvents progressBarUnbrickStock As ProgressBar
+    Friend WithEvents btnFlashUnbrRecovery As Button
+    Friend WithEvents cmbBoxUnbrickStock As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
 End Class

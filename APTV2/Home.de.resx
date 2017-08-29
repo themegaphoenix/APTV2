@@ -282,4 +282,16 @@
   <data name="Label13.Text" xml:space="preserve">
     <value>Gebrauchsanleitung</value>
   </data>
+  <data name="Label8.ImageKey" xml:space="preserve">
+    <value>CPU-01.png!</value>
+  </data>
+  <data name="rdBtnUnbStockReco.Text" xml:space="preserve">
+    <value>Erholung der Bestände (full-Update-Datei) verwenden!</value>
+  </data>
+  <data name="rdBtnUnbFastboot.Text" xml:space="preserve">
+    <value>Mit Fastboot (backup Datei oder extrahiert aus der Update-Datei)!</value>
+  </data>
+  <data name="btnUnbrickGoto.Text" xml:space="preserve">
+    <value>Blitz</value>
+  </data>
 </root>

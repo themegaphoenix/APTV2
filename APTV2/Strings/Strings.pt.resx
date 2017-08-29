@@ -166,4 +166,19 @@ Continuar?</value>
   <data name="Home_DownloadFileAsync_File_does_not_exist__Starting_Download_" xml:space="preserve">
     <value>Não existe. Iniciando o download.!</value>
   </data>
+  <data name="Home_btnUnlockBootloader_Click_Would_you_like_to_flash_a_custom_recovery_like_TWRP_" xml:space="preserve">
+    <value>Gostaria de</value>
+  </data>
+  <data name="Home_btnUnlockBootloader_Click_Root_the_device_" xml:space="preserve">
+    <value>dispositivo.</value>
+  </data>
+  <data name="Home_ReloadInfo_File_does_not_contains_invalid_information" xml:space="preserve">
+    <value>Arquivo não contém informações inválidas.!</value>
+  </data>
+  <data name="Home_btnFlashUnbr_Click_Reboot_into_fastboot_mode" xml:space="preserve">
+    <value>Reinicie em modo fastboot!</value>
+  </data>
+  <data name="Home_btnFlashUnbr_Click_Please_boot_the_phone_into_fastboot_mode" xml:space="preserve">
+    <value>É o telefone no modo fastboot? Se não por favor, boot nele primeiro e em seguida, pressione Sim.!</value>
+  </data>
 </root>

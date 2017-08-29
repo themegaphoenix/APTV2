@@ -65,6 +65,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Is the phone in fastboot mode? If not please boot into it first and then press yes..
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashUnbr_Click_Please_boot_the_phone_into_fastboot_mode() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashUnbr_Click_Please_boot_the_phone_into_fastboot_mode", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Reboot into fastboot mode.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashUnbr_Click_Reboot_into_fastboot_mode() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashUnbr_Click_Reboot_into_fastboot_mode", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Rebooting to fastboot.
         '''</summary>
         Friend Shared ReadOnly Property Home_btnFlashUnbr_Click_Rebooting_to_fastboot() As String
@@ -216,7 +234,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to File does not contains invalid information..
+        '''  Looks up a localized string similar to File does not contains valid information..
         '''</summary>
         Friend Shared ReadOnly Property Home_ReloadInfo_File_does_not_contains_invalid_information() As String
             Get

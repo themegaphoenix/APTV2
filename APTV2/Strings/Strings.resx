@@ -178,6 +178,12 @@ Continue?</value>
     <value>Root the device?</value>
   </data>
   <data name="Home_ReloadInfo_File_does_not_contains_invalid_information" xml:space="preserve">
-    <value>File does not contains invalid information.</value>
+    <value>File does not contains valid information.</value>
+  </data>
+  <data name="Home_btnFlashUnbr_Click_Please_boot_the_phone_into_fastboot_mode" xml:space="preserve">
+    <value>Is the phone in fastboot mode? If not please boot into it first and then press yes.</value>
+  </data>
+  <data name="Home_btnFlashUnbr_Click_Reboot_into_fastboot_mode" xml:space="preserve">
+    <value>Reboot into fastboot mode</value>
   </data>
 </root>

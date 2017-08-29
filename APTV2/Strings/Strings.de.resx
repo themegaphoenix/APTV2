@@ -166,4 +166,19 @@ Weiter?!</value>
   <data name="Home_DownloadFileAsync_File_does_not_exist__Starting_Download_" xml:space="preserve">
     <value>ist nicht vorhanden. Download starten.!</value>
   </data>
+  <data name="Home_btnUnlockBootloader_Click_Would_you_like_to_flash_a_custom_recovery_like_TWRP_" xml:space="preserve">
+    <value>Möchten Sie eine benutzerdefinierte Wiederherstellung wie TWRP flash?!</value>
+  </data>
+  <data name="Home_btnUnlockBootloader_Click_Root_the_device_" xml:space="preserve">
+    <value>das gerät</value>
+  </data>
+  <data name="Home_ReloadInfo_File_does_not_contains_invalid_information" xml:space="preserve">
+    <value>Datei nicht enthält ungültige Informationen.!</value>
+  </data>
+  <data name="Home_btnFlashUnbr_Click_Please_boot_the_phone_into_fastboot_mode" xml:space="preserve">
+    <value>Ist das Handy im Fastboot-Modus? Wenn nicht bitte starten Sie es zuerst und dann drücken Sie ja.!</value>
+  </data>
+  <data name="Home_btnFlashUnbr_Click_Reboot_into_fastboot_mode" xml:space="preserve">
+    <value>Starten Sie in den Fastboot Modus!</value>
+  </data>
 </root>

@@ -1,8 +1,7 @@
 ﻿Imports System.ComponentModel
-Imports System.Globalization
 Imports System.IO
+Imports System.IO.Compression
 Imports System.Net
-Imports System.Threading
 Imports System.Xml
 Imports APTV2.My.Resources
 Imports Syncfusion.Windows.Forms
@@ -65,7 +64,6 @@ Public Class Home
             End If
         End If
 
-
     End Sub
 
     Private Sub btnLockBootloader_Click(sender As Object, e As EventArgs) Handles btnLockBootloader.Click
@@ -119,7 +117,6 @@ Public Class Home
         'downloads the file
         'the file is checked it it exists first in the function
         Await DownloadFileAsync(url, fileName)
-
 
         Dim commands(3, 3) As String
         commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
@@ -205,39 +202,77 @@ Public Class Home
 
 #Region "Unbrick"
 
+    Private Sub btnUnbrickGoto_Click(sender As Object, e As EventArgs) Handles btnUnbrickGoto.Click
+        If rdBtnUnbFastboot.Checked Then
+            TabControlUnbrick.SelectedIndex = 1
+        Else
+            TabControlUnbrick.SelectedIndex = 2
+        End If
+    End Sub
 
-    Private Async Sub btnFlashUnbr_Click(sender As Object, e As EventArgs) Handles btnFlashUnbr.Click
+    Private Async Sub btnFlashUnbr_Click(sender As Object, e As EventArgs) Handles btnFlashUnbrFastboot.Click
+
         Try
             'gets the chosenRecovery Value
-            Dim chosenFlash As String = GetInfoCombox(cmbBoxUnbrick, 1)
+            Dim chosenFlash As String = GetInfoCombox(cmbBoxUnbrickStock, 1)
             Dim info(4, 2) As String
-            info = {{GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "boot"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/boot-" + chosenFlash + ".img"},
-                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "cust"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/cust-" + chosenFlash + ".img"},
-                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "system"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/system-" + chosenFlash + ".img"},
-                {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrick/version", "recovery"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/recovery-" + chosenFlash + ".img"}
-        }
+            info = {{GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrickFastboot/version", "boot"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/boot-" + chosenFlash + ".img"},
+                    {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrickFastboot/version", "cust"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/cust-" + chosenFlash + ".img"},
+                    {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrickFastboot/version", "system"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/system-" + chosenFlash + ".img"},
+                    {GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrickFastboot/version", "recovery"), "downloads/Unbrick/" + My.Settings.phoneVariant + "/recovery-" + chosenFlash + ".img"}
+                   }
 
-            progressBar = progressBarUnbrick
+            progressBar = progressBarUnbrickFastboot
             LabelToOutput = txtBoxUnbrick
 
             For i = 0 To (info.Length / 2 - 1)
                 Await DownloadFileAsync(info(i, 0), info(i, 1))
             Next
-
-
-
-            Dim commands(5, 3) As String
-            commands = {{"fastboot", "flash boot" & info(0, 1), "Flashing boot"},
-                        {"fastboot", "flash cust " & info(1, 1), "Flashing cust"},
-                        {"fastboot", "flash system " & info(2, 1), "Flashing system"},
-                        {"fastboot", "flash recovery " & info(3, 1), "Flashing recovery"},
-                        {"fastboot", "reboot", "Rebooting"}
-                       }
-            Await Task.Run(Sub() RunComands(commands))
+            Dim result As DialogResult = MessageBox.Show(Strings.Home_btnFlashUnbr_Click_Please_boot_the_phone_into_fastboot_mode,
+                                                         Strings.Home_btnFlashUnbr_Click_Reboot_into_fastboot_mode,
+                                                         MessageBoxButtons.YesNo,
+                                                         MessageBoxIcon.Question)
+            If result = DialogResult.Yes Then
+                Dim commands(5, 3) As String
+                commands = {{"fastboot", "flash boot" & info(0, 1), "Flashing boot"},
+                            {"fastboot", "flash cust " & info(1, 1), "Flashing cust"},
+                            {"fastboot", "flash system " & info(2, 1), "Flashing system"},
+                            {"fastboot", "flash recovery " & info(3, 1), "Flashing recovery"},
+                            {"fastboot", "reboot", "Rebooting"}
+                           }
+                Await Task.Run(Sub() RunComands(commands))
+            End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString)
         End Try
+    End Sub
 
+    Private Async Sub btnFlashUnbrRecovery_Click(sender As Object, e As EventArgs) Handles btnFlashUnbrRecovery.Click
+        'todo fix this
+        Try
+            'gets the chosenRecovery Value
+            Dim chosenFlash As String = GetInfoCombox(cmbBoxUnbrickStock, 1)
+            Dim url As String = GetInfoXmlInner("/root/phone", chosenFlash, True, "unbrickStock/version", "")
+            Dim filename As String = "downloads/Unbrick/" + My.Settings.phoneVariant + "/" + chosenFlash + ".zip"
+            progressBar = progressBarUnbrickStock
+            LabelToOutput = txtBoxUnbrick
+
+            Dim stringSelectedSplit As String() = filename.Split(New Char() {"/"c})
+            Dim chosenString As String = stringSelectedSplit(stringSelectedSplit.Length - 1)
+            Console.WriteLine(chosenString)
+            Array.Resize(stringSelectedSplit, stringSelectedSplit.Length - 1)
+            Dim directory As String = String.Join("/", stringSelectedSplit)
+
+
+            Await DownloadFileAsync(url, filename)
+            ZipFile.ExtractToDirectory(filename, directory)
+            'Dim commands(5, 3) As String
+            'commands = {{"cmd" + "7z x " + filename, "extracting"}
+            '           }
+            'Await Task.Run(Sub() RunComands(commands))
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
     End Sub
 
 #End Region
@@ -290,6 +325,7 @@ Public Class Home
         End If
         progressBar.Value = CInt(a)
     End Sub
+
     ' The event that will fire whenever the progress of the WebClient is changed
     Private Sub ProgressChanged(sender As Object, e As DownloadProgressChangedEventArgs)
         ' Update the progressbar percentage
@@ -543,7 +579,6 @@ Public Class Home
                     lblRAM.Text = node.SelectSingleNode("RAM").InnerText
                     lblStorage.Text = node.SelectSingleNode("storage").InnerText
 
-
                     'update Picture
                     Dim strPicture As String = "phones/pictures/" & node.SelectSingleNode("picture").InnerText
                     picPhone.BackgroundImage = Image.FromFile(strPicture)
@@ -562,18 +597,30 @@ Public Class Home
 
                     End Try
 
-                    cmbBoxUnbrick.Items.Clear()
-                    For Each noda As XmlNode In node.SelectNodes("unbrick/version")
+                    cmbBoxUnbrickFastboot.Items.Clear()
+                    For Each noda As XmlNode In node.SelectNodes("unbrickFastboot/version")
                         'Console.WriteLine(noda.ToString)
                         Dim emuiVersion As String = noda.Attributes("id").Value
-                        If _cmbBoxUnbrick.Items.Contains("EMUI " & emuiVersion) = False Then
-                            cmbBoxUnbrick.Items.Add("EMUI " & emuiVersion)
+                        If cmbBoxUnbrickFastboot.Items.Contains("EMUI " & emuiVersion) = False Then
+                            cmbBoxUnbrickFastboot.Items.Add("EMUI " & emuiVersion)
                         End If
                     Next
                     Try
-                        cmbBoxUnbrick.SelectedIndex = 0
+                        cmbBoxUnbrickFastboot.SelectedIndex = 0
                     Catch ex As Exception
+                    End Try
 
+                    cmbBoxUnbrickStock.Items.Clear()
+                    For Each noda As XmlNode In node.SelectNodes("unbrickStock/version")
+                        'Console.WriteLine(noda.ToString)
+                        Dim emuiVersion As String = noda.Attributes("id").Value
+                        If cmbBoxUnbrickStock.Items.Contains("EMUI " & emuiVersion) = False Then
+                            cmbBoxUnbrickStock.Items.Add("EMUI " & emuiVersion)
+                        End If
+                    Next
+                    Try
+                        cmbBoxUnbrickStock.SelectedIndex = 0
+                    Catch ex As Exception
                     End Try
                 Catch ex As Exception
                     MessageBox.Show(Strings.Home_ReloadInfo_File_does_not_contains_invalid_information)
@@ -586,23 +633,6 @@ Public Class Home
         AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
         AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
     End Sub
-
-
-
-
-
-    Private Sub rdBtnUnbFastboot_Click(sender As Object, e As EventArgs)
-        If rdBtnUnbFastboot.Checked = True Then
-            rdBtnUnbStockReco.Checked = False
-        End If
-    End Sub
-
-    Private Sub rdBtnUnbStockReco_MouseClick(sender As Object, e As MouseEventArgs)
-        If rdBtnUnbStockReco.Checked = True Then
-            rdBtnUnbFastboot.Checked = False
-        End If
-    End Sub
-
 
 #End Region
 

@@ -282,4 +282,16 @@
   <data name="Label13.Text" xml:space="preserve">
     <value>Инструкции</value>
   </data>
+  <data name="Label8.ImageKey" xml:space="preserve">
+    <value>Процессор 01.png!</value>
+  </data>
+  <data name="rdBtnUnbStockReco.Text" xml:space="preserve">
+    <value>С помощью восстановление запасов (полное обновление файла)!</value>
+  </data>
+  <data name="rdBtnUnbFastboot.Text" xml:space="preserve">
+    <value>С помощью fastboot (файл резервной копии или извлечены из файла обновления)!</value>
+  </data>
+  <data name="btnUnbrickGoto.Text" xml:space="preserve">
+    <value>Вспышка</value>
+  </data>
 </root>

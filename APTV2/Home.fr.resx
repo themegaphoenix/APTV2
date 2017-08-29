@@ -282,4 +282,16 @@
   <data name="Label13.Text" xml:space="preserve">
     <value>Mode d’emploi</value>
   </data>
+  <data name="Label8.ImageKey" xml:space="preserve">
+    <value>CPU-01.png !</value>
+  </data>
+  <data name="rdBtnUnbStockReco.Text" xml:space="preserve">
+    <value>À l’aide de reconstitution des stocks (mise à jour complète, fichier) !</value>
+  </data>
+  <data name="rdBtnUnbFastboot.Text" xml:space="preserve">
+    <value>Puis les options spécifiées sont extraites de la structure d&amp;apos;informations désignée par le numéro du descripteur de fichier de l&amp;apos;appel "socket".</value>
+  </data>
+  <data name="btnUnbrickGoto.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
 </root>

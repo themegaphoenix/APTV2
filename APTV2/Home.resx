@@ -1521,34 +1521,34 @@
   <data name="&gt;&gt;pnlGapps.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="Button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnUnbrickGoto.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnUnbrickGoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnUnbrickGoto.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 179</value>
   </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnUnbrickGoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 95</value>
   </data>
-  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnUnbrickGoto.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="Button1.Text" xml:space="preserve">
+  <data name="btnUnbrickGoto.Text" xml:space="preserve">
     <value>Flash</value>
   </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
+  <data name="&gt;&gt;btnUnbrickGoto.Name" xml:space="preserve">
+    <value>btnUnbrickGoto</value>
   </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnUnbrickGoto.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnUnbrickGoto.Parent" xml:space="preserve">
     <value>tabUnb1</value>
   </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnUnbrickGoto.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="rdBtnUnbStockReco.Location" type="System.Drawing.Point, System.Drawing">
@@ -1603,7 +1603,7 @@
     <value>0, 26</value>
   </data>
   <data name="tabUnb1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 326</value>
+    <value>364, 338</value>
   </data>
   <data name="tabUnb1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1623,92 +1623,92 @@
   <data name="&gt;&gt;tabUnb1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="progressBarUnbrick.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="progressBarUnbrickFastboot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="progressBarUnbrick.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="progressBarUnbrickFastboot.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 115</value>
   </data>
-  <data name="progressBarUnbrick.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="progressBarUnbrickFastboot.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="progressBarUnbrick.TabIndex" type="System.Int32, mscorlib">
+  <data name="progressBarUnbrickFastboot.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="progressBarUnbrick.Visible" type="System.Boolean, mscorlib">
+  <data name="progressBarUnbrickFastboot.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;progressBarUnbrick.Name" xml:space="preserve">
-    <value>progressBarUnbrick</value>
+  <data name="&gt;&gt;progressBarUnbrickFastboot.Name" xml:space="preserve">
+    <value>progressBarUnbrickFastboot</value>
   </data>
-  <data name="&gt;&gt;progressBarUnbrick.Type" xml:space="preserve">
+  <data name="&gt;&gt;progressBarUnbrickFastboot.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;progressBarUnbrick.Parent" xml:space="preserve">
+  <data name="&gt;&gt;progressBarUnbrickFastboot.Parent" xml:space="preserve">
     <value>tabUnb2</value>
   </data>
-  <data name="&gt;&gt;progressBarUnbrick.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;progressBarUnbrickFastboot.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnFlashUnbr.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnFlashUnbrFastboot.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnFlashUnbr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnFlashUnbrFastboot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnFlashUnbr.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnFlashUnbrFastboot.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 169</value>
   </data>
-  <data name="btnFlashUnbr.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnFlashUnbrFastboot.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 95</value>
   </data>
-  <data name="btnFlashUnbr.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnFlashUnbrFastboot.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="btnFlashUnbr.Text" xml:space="preserve">
+  <data name="btnFlashUnbrFastboot.Text" xml:space="preserve">
     <value>Flash</value>
   </data>
-  <data name="&gt;&gt;btnFlashUnbr.Name" xml:space="preserve">
-    <value>btnFlashUnbr</value>
+  <data name="&gt;&gt;btnFlashUnbrFastboot.Name" xml:space="preserve">
+    <value>btnFlashUnbrFastboot</value>
   </data>
-  <data name="&gt;&gt;btnFlashUnbr.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnFlashUnbrFastboot.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnFlashUnbr.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnFlashUnbrFastboot.Parent" xml:space="preserve">
     <value>tabUnb2</value>
   </data>
-  <data name="&gt;&gt;btnFlashUnbr.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnFlashUnbrFastboot.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="cmbBoxUnbrick.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="cmbBoxUnbrickFastboot.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Condensed, 9.75pt</value>
   </data>
-  <data name="cmbBoxUnbrick.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="cmbBoxUnbrickFastboot.Location" type="System.Drawing.Point, System.Drawing">
     <value>44, 59</value>
   </data>
-  <data name="cmbBoxUnbrick.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="cmbBoxUnbrickFastboot.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 26</value>
   </data>
-  <data name="cmbBoxUnbrick.TabIndex" type="System.Int32, mscorlib">
+  <data name="cmbBoxUnbrickFastboot.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="&gt;&gt;cmbBoxUnbrick.Name" xml:space="preserve">
-    <value>cmbBoxUnbrick</value>
+  <data name="&gt;&gt;cmbBoxUnbrickFastboot.Name" xml:space="preserve">
+    <value>cmbBoxUnbrickFastboot</value>
   </data>
-  <data name="&gt;&gt;cmbBoxUnbrick.Type" xml:space="preserve">
+  <data name="&gt;&gt;cmbBoxUnbrickFastboot.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
-  <data name="&gt;&gt;cmbBoxUnbrick.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cmbBoxUnbrickFastboot.Parent" xml:space="preserve">
     <value>tabUnb2</value>
   </data>
-  <data name="&gt;&gt;cmbBoxUnbrick.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;cmbBoxUnbrickFastboot.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="tabUnb2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>
   </data>
   <data name="tabUnb2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 326</value>
+    <value>364, 338</value>
   </data>
   <data name="tabUnb2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1728,11 +1728,92 @@
   <data name="&gt;&gt;tabUnb2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="progressBarUnbrickStock.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="progressBarUnbrickStock.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 104</value>
+  </data>
+  <data name="progressBarUnbrickStock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 23</value>
+  </data>
+  <data name="progressBarUnbrickStock.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="progressBarUnbrickStock.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;progressBarUnbrickStock.Name" xml:space="preserve">
+    <value>progressBarUnbrickStock</value>
+  </data>
+  <data name="&gt;&gt;progressBarUnbrickStock.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressBarUnbrickStock.Parent" xml:space="preserve">
+    <value>tabUnb3</value>
+  </data>
+  <data name="&gt;&gt;progressBarUnbrickStock.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnFlashUnbrRecovery.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnFlashUnbrRecovery.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnFlashUnbrRecovery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 157</value>
+  </data>
+  <data name="btnFlashUnbrRecovery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 95</value>
+  </data>
+  <data name="btnFlashUnbrRecovery.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="btnFlashUnbrRecovery.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrRecovery.Name" xml:space="preserve">
+    <value>btnFlashUnbrRecovery</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrRecovery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrRecovery.Parent" xml:space="preserve">
+    <value>tabUnb3</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrRecovery.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbBoxUnbrickStock.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9.75pt</value>
+  </data>
+  <data name="cmbBoxUnbrickStock.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 47</value>
+  </data>
+  <data name="cmbBoxUnbrickStock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 26</value>
+  </data>
+  <data name="cmbBoxUnbrickStock.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickStock.Name" xml:space="preserve">
+    <value>cmbBoxUnbrickStock</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickStock.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickStock.Parent" xml:space="preserve">
+    <value>tabUnb3</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickStock.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="tabUnb3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>
   </data>
   <data name="tabUnb3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 326</value>
+    <value>364, 338</value>
   </data>
   <data name="tabUnb3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1753,10 +1834,10 @@
     <value>3</value>
   </data>
   <data name="TabControlUnbrick.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 29</value>
+    <value>12, 17</value>
   </data>
   <data name="TabControlUnbrick.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 352</value>
+    <value>364, 364</value>
   </data>
   <data name="TabControlUnbrick.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
