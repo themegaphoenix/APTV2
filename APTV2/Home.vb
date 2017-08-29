@@ -257,19 +257,20 @@ Public Class Home
             progressBar = progressBarUnbrickStock
             LabelToOutput = txtBoxUnbrick
 
-            Dim stringSelectedSplit As String() = filename.Split(New Char() {"/"c})
-            Dim chosenString As String = stringSelectedSplit(stringSelectedSplit.Length - 1)
-            Console.WriteLine(chosenString)
-            Array.Resize(stringSelectedSplit, stringSelectedSplit.Length - 1)
-            Dim directory As String = String.Join("/", stringSelectedSplit)
+
+            Dim directory As String = "downloads/Unbrick/" + My.Settings.phoneVariant + "/" + chosenFlash
 
 
             Await DownloadFileAsync(url, filename)
-            ZipFile.ExtractToDirectory(filename, directory)
-            'Dim commands(5, 3) As String
-            'commands = {{"cmd" + "7z x " + filename, "extracting"}
-            '           }
-            'Await Task.Run(Sub() RunComands(commands))
+            UpdateTextBox("Extracting the file")
+            'ZipFile.ExtractToDirectory(filename, directory)
+            UpdateTextBox("Extraction complete")
+
+            Dim file As String = directory + "/UPDATE.APP"
+            Dim commands(1, 3) As String
+            commands = {{"adb", "push " + file + " /sdcard/dload/UPDATE.APP", "Copying file"}
+                       }
+            Await Task.Run(Sub() RunComands(commands))
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
