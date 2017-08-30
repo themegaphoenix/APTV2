@@ -36,48 +36,48 @@ Public Class Home
 
 #Region "Bootloader"
 
-    Private Sub btnUnlockBootloader_Click(sender As Object, e As EventArgs) Handles btnUnlockBootloader.Click
+    Private Async Sub btnUnlockBootloader_Click(sender As Object, e As EventArgs) Handles btnUnlockBootloader.Click
         Dim unlockKey As String = txtBoxUnlockKey.Text
-
+        Dim proceed As Boolean = True
         If unlockKey = "" Then
             Dim result As DialogResult = MessageBox.Show(Strings.Home_btnUnlockBootloader_Click_,
                                                          Strings.Home_btnUnlockBootloader_Click_Proceed,
                                                          MessageBoxButtons.YesNo,
                                                          MessageBoxIcon.Question)
-            If result = DialogResult.Yes Then
-                Dim commands(3, 3) As String
-                commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
-                            {"fastboot", "oem unlock" + unlockKey,
-                             Strings.Home_btnUnlockBootloader_Click_Unlocking_bootloader},
-                            {"fastboot", "reboot", Strings.Home_btnUnlockBootloader_Click_Rebooting_device}
-                           }
-                Task.Run(Sub() RunComands(commands))
-
-                Dim result2 As DialogResult = MessageBox.Show(Strings.Home_btnUnlockBootloader_Click_Would_you_like_to_flash_a_custom_recovery_like_TWRP_,
-                                                              Strings.Home_btnUnlockBootloader_Click_Root_the_device_,
-                                                              MessageBoxButtons.YesNo,
-                                                              MessageBoxIcon.Question)
-                If result2 = DialogResult.Yes Then
-                    tabControlPanel.SelectedTab = pnlRecovery
-                End If
-
+            If result = DialogResult.No Then
+                proceed = False
             End If
         End If
+        If proceed Then
+            Dim commands(3, 3) As String
+            commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
+                        {"fastboot", "oem unlock" + unlockKey,
+                         Strings.Home_btnUnlockBootloader_Click_Unlocking_bootloader},
+                        {"fastboot", "reboot", Strings.Home_btnUnlockBootloader_Click_Rebooting_device}
+                       }
+            LabelToOutput = txtBoxBootloader
+            Await Task.Run(Sub() RunComands(commands))
 
+            Dim result2 As DialogResult = MessageBox.Show(Strings.Home_btnUnlockBootloader_Click_Would_you_like_to_flash_a_custom_recovery_like_TWRP_,
+                                                          Strings.Home_btnUnlockBootloader_Click_Root_the_device_,
+                                                          MessageBoxButtons.YesNo,
+                                                          MessageBoxIcon.Question)
+            If result2 = DialogResult.Yes Then
+                tabControlPanel.SelectedTab = pnlRecovery
+            End If
+        End If
     End Sub
 
-    Private Sub btnLockBootloader_Click(sender As Object, e As EventArgs) Handles btnLockBootloader.Click
+    Private Async Sub btnLockBootloader_Click(sender As Object, e As EventArgs) Handles btnLockBootloader.Click
         Dim unlockKey As String = txtBoxUnlockKey.Text
-        Dim proceed As Boolean
+        Dim proceed As Boolean = True
 
         If unlockKey = "" Then
             Dim result As DialogResult = MessageBox.Show(Strings.Home_btnLockBootloader_Click_,
                                                          Strings.Home_btnUnlockBootloader_Click_Proceed,
                                                          MessageBoxButtons.YesNo,
                                                          MessageBoxIcon.Question)
-            If result = DialogResult.Yes Then
-                proceed = True
-            Else
+            If result = DialogResult.No Then
                 proceed = False
             End If
         End If
@@ -91,7 +91,7 @@ Public Class Home
                         {"fastboot", "reboot", "Rebooting device"}
                        }
             LabelToOutput = txtBoxBootloader
-            Task.Run(Sub() RunComands(commands))
+            Await Task.Run(Sub() RunComands(commands))
         End If
     End Sub
 
@@ -257,20 +257,21 @@ Public Class Home
             progressBar = progressBarUnbrickStock
             LabelToOutput = txtBoxUnbrick
 
-
             Dim directory As String = "downloads/Unbrick/" + My.Settings.phoneVariant + "/" + chosenFlash
-
 
             Await DownloadFileAsync(url, filename)
             UpdateTextBox("Extracting the file")
-            'ZipFile.ExtractToDirectory(filename, directory)
+            ZipFile.ExtractToDirectory(filename, directory)
             UpdateTextBox("Extraction complete")
 
             Dim file As String = directory + "/UPDATE.APP"
             Dim commands(1, 3) As String
-            commands = {{"adb", "push " + file + " /sdcard/dload/UPDATE.APP", "Copying file"}
+            commands = {{"adb", "push " + file + " /sdcard/dload/UPDATE.APP", "Copying the file. The program will output when it is done, and no progress will be shown! Might take a while."},
+                {"adb", "shell reboot -p", "Turning phone off"}
                        }
             Await Task.Run(Sub() RunComands(commands))
+
+            MessageBox.Show("Power on your Honor 7 Holding all three buttons (VOL+, VOL- and Power) and it will begin flashing")
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
@@ -633,6 +634,10 @@ Public Class Home
         'populate dropdown stuff
         AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
         AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
+    End Sub
+
+    Private Sub pnlBootloader_Click(sender As Object, e As EventArgs) Handles pnlBootloader.Click
+
     End Sub
 
 #End Region
