@@ -763,7 +763,7 @@
     <value>2</value>
   </data>
   <data name="txtBoxBootloader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>370, 20</value>
+    <value>367, 7</value>
   </data>
   <data name="txtBoxBootloader.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -898,7 +898,7 @@
     <value>2</value>
   </data>
   <data name="txtBoxRecovery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 14</value>
+    <value>367, 7</value>
   </data>
   <data name="txtBoxRecovery.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1507,7 +1507,7 @@
     <value>4</value>
   </data>
   <data name="txtBoxRoot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 17</value>
+    <value>367, 7</value>
   </data>
   <data name="txtBoxRoot.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1756,10 +1756,10 @@
     <value>4</value>
   </data>
   <data name="TabPageAdv7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="TabPageAdv7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 365</value>
+    <value>345, 338</value>
   </data>
   <data name="TabPageAdv7.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1849,10 +1849,10 @@
     <value>1</value>
   </data>
   <data name="TabPageAdv8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="TabPageAdv8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 365</value>
+    <value>345, 338</value>
   </data>
   <data name="TabPageAdv8.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1894,7 +1894,7 @@
     <value>0</value>
   </data>
   <data name="txtBoxGApps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 19</value>
+    <value>367, 7</value>
   </data>
   <data name="txtBoxGApps.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2023,10 +2023,10 @@
     <value>2</value>
   </data>
   <data name="tabUnb1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="tabUnb1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 365</value>
+    <value>364, 338</value>
   </data>
   <data name="tabUnb1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2128,10 +2128,10 @@
     <value>2</value>
   </data>
   <data name="tabUnb2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="tabUnb2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 365</value>
+    <value>364, 338</value>
   </data>
   <data name="tabUnb2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2233,10 +2233,10 @@
     <value>2</value>
   </data>
   <data name="tabUnb3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="tabUnb3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 365</value>
+    <value>364, 338</value>
   </data>
   <data name="tabUnb3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2278,7 +2278,7 @@
     <value>0</value>
   </data>
   <data name="txtBoxUnbrick.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 17</value>
+    <value>367, 7</value>
   </data>
   <data name="txtBoxUnbrick.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
