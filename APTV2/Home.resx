@@ -121,7 +121,98 @@
   <data name="tabControlPanel.ActiveTabFont" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblVersion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblVersion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 105</value>
+  </data>
+  <data name="lblVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 18</value>
+  </data>
+  <data name="lblVersion.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lblVersion.Text" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;lblVersion.Name" xml:space="preserve">
+    <value>lblVersion</value>
+  </data>
+  <data name="&gt;&gt;lblVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblVersion.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;lblVersion.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 143</value>
+  </data>
+  <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 18</value>
+  </data>
+  <data name="lblDate.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lblDate.Text" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;lblDate.Name" xml:space="preserve">
+    <value>lblDate</value>
+  </data>
+  <data name="&gt;&gt;lblDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDate.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;lblDate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblCreator.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCreator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblCreator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 63</value>
+  </data>
+  <data name="lblCreator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 18</value>
+  </data>
+  <data name="lblCreator.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblCreator.Text" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;lblCreator.Name" xml:space="preserve">
+    <value>lblCreator</value>
+  </data>
+  <data name="&gt;&gt;lblCreator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCreator.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;lblCreator.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="PictureBox4.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
@@ -129,12 +220,11 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 128</value>
+    <value>22, 63</value>
   </data>
   <data name="PictureBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 33</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PictureBox4.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
@@ -148,7 +238,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;PictureBox4.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="PictureBox3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -157,7 +247,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 167</value>
+    <value>22, 102</value>
   </data>
   <data name="PictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 33</value>
@@ -175,7 +265,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;PictureBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="PictureBox2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -184,7 +274,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 203</value>
+    <value>22, 138</value>
   </data>
   <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 33</value>
@@ -202,102 +292,6 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 19</value>
-  </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 18</value>
-  </data>
-  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Manufacturer</value>
-  </data>
-  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
-    <value>Label3</value>
-  </data>
-  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 214</value>
-  </data>
-  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 18</value>
-  </data>
-  <data name="Label12.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="Label12.Text" xml:space="preserve">
-    <value>Storage</value>
-  </data>
-  <data name="&gt;&gt;Label12.Name" xml:space="preserve">
-    <value>Label12</value>
-  </data>
-  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label8.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="Label8.ImageKey" xml:space="preserve">
-    <value>CPU-01.png</value>
-  </data>
-  <data name="Label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 134</value>
-  </data>
-  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 18</value>
-  </data>
-  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="Label8.Text" xml:space="preserve">
-    <value>Processor</value>
-  </data>
-  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
-    <value>Label8</value>
-  </data>
-  <data name="&gt;&gt;Label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="lblStorage.AutoSize" type="System.Boolean, mscorlib">
@@ -307,7 +301,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblStorage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 214</value>
+    <value>61, 143</value>
   </data>
   <data name="lblStorage.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 18</value>
@@ -330,80 +324,20 @@
   <data name="&gt;&gt;lblStorage.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 58</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Model</value>
-  </data>
-  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
-    <value>Label2</value>
-  </data>
-  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 176</value>
-  </data>
-  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 18</value>
-  </data>
-  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="Label10.Text" xml:space="preserve">
-    <value>RAM</value>
-  </data>
-  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
-    <value>Label10</value>
-  </data>
-  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="lblManufacturer.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="lblManufacturer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 25pt</value>
   </data>
   <data name="lblManufacturer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblManufacturer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 19</value>
+    <value>14, 15</value>
   </data>
   <data name="lblManufacturer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 18</value>
+    <value>110, 45</value>
   </data>
   <data name="lblManufacturer.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -421,7 +355,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;lblManufacturer.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="lblRAM.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -430,7 +364,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblRAM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 176</value>
+    <value>61, 105</value>
   </data>
   <data name="lblRAM.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 18</value>
@@ -451,37 +385,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;lblRAM.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="lblModel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblModel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 58</value>
-  </data>
-  <data name="lblModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="lblModel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="lblModel.Text" xml:space="preserve">
-    <value>Model</value>
-  </data>
-  <data name="&gt;&gt;lblModel.Name" xml:space="preserve">
-    <value>lblModel</value>
-  </data>
-  <data name="&gt;&gt;lblModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblModel.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;lblModel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>8</value>
   </data>
   <data name="lblProcessor.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -490,7 +394,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblProcessor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 134</value>
+    <value>61, 63</value>
   </data>
   <data name="lblProcessor.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 18</value>
@@ -511,73 +415,13 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;lblProcessor.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="lblVariant.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblVariant.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblVariant.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 97</value>
-  </data>
-  <data name="lblVariant.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 18</value>
-  </data>
-  <data name="lblVariant.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lblVariant.Text" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="&gt;&gt;lblVariant.Name" xml:space="preserve">
-    <value>lblVariant</value>
-  </data>
-  <data name="&gt;&gt;lblVariant.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblVariant.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;lblVariant.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 97</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 18</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Variant</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>9</value>
   </data>
   <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 76</value>
+    <value>220, 53</value>
   </data>
   <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>394, 308</value>
+    <value>460, 308</value>
   </data>
   <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -598,7 +442,7 @@
     <value>Roboto Condensed, 9.75pt</value>
   </data>
   <data name="cmbModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 33</value>
+    <value>220, 21</value>
   </data>
   <data name="cmbModel.Size" type="System.Drawing.Size, System.Drawing">
     <value>272, 26</value>
@@ -628,7 +472,7 @@
     <value>NoControl</value>
   </data>
   <data name="picPhone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 21</value>
+    <value>29, 21</value>
   </data>
   <data name="picPhone.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 330</value>
@@ -652,7 +496,7 @@
     <value>0, 37</value>
   </data>
   <data name="pnlPhone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 396</value>
+    <value>715, 383</value>
   </data>
   <data name="pnlPhone.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -949,7 +793,7 @@
     <value>0, 37</value>
   </data>
   <data name="pnlBootloader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 396</value>
+    <value>715, 383</value>
   </data>
   <data name="pnlBootloader.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1084,7 +928,7 @@
     <value>0, 37</value>
   </data>
   <data name="pnlRecovery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 396</value>
+    <value>715, 383</value>
   </data>
   <data name="pnlRecovery.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1693,7 +1537,7 @@
     <value>0, 37</value>
   </data>
   <data name="pnlRoot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 396</value>
+    <value>715, 383</value>
   </data>
   <data name="pnlRoot.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1750,7 +1594,7 @@
     <value>0, 37</value>
   </data>
   <data name="pnlXposed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 396</value>
+    <value>715, 383</value>
   </data>
   <data name="pnlXposed.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1912,10 +1756,10 @@
     <value>4</value>
   </data>
   <data name="TabPageAdv7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="TabPageAdv7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 338</value>
+    <value>345, 365</value>
   </data>
   <data name="TabPageAdv7.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2005,10 +1849,10 @@
     <value>1</value>
   </data>
   <data name="TabPageAdv8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="TabPageAdv8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 338</value>
+    <value>345, 365</value>
   </data>
   <data name="TabPageAdv8.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2080,7 +1924,7 @@
     <value>0, 37</value>
   </data>
   <data name="pnlGapps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 396</value>
+    <value>715, 383</value>
   </data>
   <data name="pnlGapps.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2179,10 +2023,10 @@
     <value>2</value>
   </data>
   <data name="tabUnb1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="tabUnb1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 338</value>
+    <value>364, 365</value>
   </data>
   <data name="tabUnb1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2284,10 +2128,10 @@
     <value>2</value>
   </data>
   <data name="tabUnb2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="tabUnb2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 338</value>
+    <value>364, 365</value>
   </data>
   <data name="tabUnb2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2389,10 +2233,10 @@
     <value>2</value>
   </data>
   <data name="tabUnb3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="tabUnb3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 338</value>
+    <value>364, 365</value>
   </data>
   <data name="tabUnb3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2464,7 +2308,7 @@
     <value>0, 37</value>
   </data>
   <data name="pnlUnbrick.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 396</value>
+    <value>715, 383</value>
   </data>
   <data name="pnlUnbrick.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -2545,7 +2389,7 @@
     <value>0, 37</value>
   </data>
   <data name="pnlSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 396</value>
+    <value>715, 383</value>
   </data>
   <data name="pnlSettings.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -2569,7 +2413,7 @@
     <value>0, 37</value>
   </data>
   <data name="pnlAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 396</value>
+    <value>715, 383</value>
   </data>
   <data name="pnlAbout.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -2608,7 +2452,7 @@
     <value>10, 5</value>
   </data>
   <data name="tabControlPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>740, 433</value>
+    <value>715, 420</value>
   </data>
   <data name="tabControlPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2632,7 +2476,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>740, 433</value>
+    <value>715, 420</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

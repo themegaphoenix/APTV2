@@ -29,32 +29,30 @@ Partial Class Home
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.lblStorage = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.lblManufacturer = New System.Windows.Forms.Label()
         Me.lblRAM = New System.Windows.Forms.Label()
-        Me.lblModel = New System.Windows.Forms.Label()
         Me.lblProcessor = New System.Windows.Forms.Label()
-        Me.lblVariant = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbModel = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.picPhone = New System.Windows.Forms.PictureBox()
         Me.pnlBootloader = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.txtBoxUnlockKey = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.btnLockBootloader = New System.Windows.Forms.Button()
-        Me.txtBoxBootloader = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.btnUnlockBootloader = New System.Windows.Forms.Button()
+        Me.txtBoxBootloader = New System.Windows.Forms.TextBox()
         Me.pnlRecovery = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.btnFlashRecovery = New System.Windows.Forms.Button()
         Me.progressBarRecovery = New System.Windows.Forms.ProgressBar()
         Me.cmbRecovery = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.txtBoxRecovery = New System.Windows.Forms.TextBox()
         Me.pnlRoot = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.progressBarRoot = New System.Windows.Forms.ProgressBar()
         Me.cmbRoot = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
@@ -93,12 +91,9 @@ Partial Class Home
         Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.lblCreator = New System.Windows.Forms.Label()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.lblVersion = New System.Windows.Forms.Label()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -109,9 +104,15 @@ Partial Class Home
         CType(Me.cmbModel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picPhone, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlBootloader.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlRecovery.SuspendLayout()
         CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlRoot.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbRoot, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlXposed.SuspendLayout()
         Me.pnlGapps.SuspendLayout()
@@ -133,12 +134,6 @@ Partial Class Home
         CType(Me.cmbBoxUnbrickStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSettings.SuspendLayout()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel4.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabControlPanel
@@ -146,7 +141,7 @@ Partial Class Home
         resources.ApplyResources(Me.tabControlPanel, "tabControlPanel")
         Me.tabControlPanel.ActiveTabForeColor = System.Drawing.Color.Empty
         Me.tabControlPanel.BackColor = System.Drawing.Color.White
-        Me.tabControlPanel.BeforeTouchSize = New System.Drawing.Size(740, 433)
+        Me.tabControlPanel.BeforeTouchSize = New System.Drawing.Size(715, 420)
         Me.tabControlPanel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tabControlPanel.CloseButtonForeColor = System.Drawing.Color.Empty
         Me.tabControlPanel.CloseButtonHoverForeColor = System.Drawing.Color.Empty
@@ -183,21 +178,16 @@ Partial Class Home
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.lblVersion)
+        Me.Panel1.Controls.Add(Me.lblDate)
+        Me.Panel1.Controls.Add(Me.lblCreator)
         Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.lblStorage)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.lblManufacturer)
         Me.Panel1.Controls.Add(Me.lblRAM)
-        Me.Panel1.Controls.Add(Me.lblModel)
         Me.Panel1.Controls.Add(Me.lblProcessor)
-        Me.Panel1.Controls.Add(Me.lblVariant)
-        Me.Panel1.Controls.Add(Me.Label1)
         resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
@@ -222,35 +212,10 @@ Partial Class Home
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
-        'Label3
-        '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.Name = "Label3"
-        '
-        'Label12
-        '
-        resources.ApplyResources(Me.Label12, "Label12")
-        Me.Label12.Name = "Label12"
-        '
-        'Label8
-        '
-        resources.ApplyResources(Me.Label8, "Label8")
-        Me.Label8.Name = "Label8"
-        '
         'lblStorage
         '
         resources.ApplyResources(Me.lblStorage, "lblStorage")
         Me.lblStorage.Name = "lblStorage"
-        '
-        'Label2
-        '
-        resources.ApplyResources(Me.Label2, "Label2")
-        Me.Label2.Name = "Label2"
-        '
-        'Label10
-        '
-        resources.ApplyResources(Me.Label10, "Label10")
-        Me.Label10.Name = "Label10"
         '
         'lblManufacturer
         '
@@ -262,25 +227,10 @@ Partial Class Home
         resources.ApplyResources(Me.lblRAM, "lblRAM")
         Me.lblRAM.Name = "lblRAM"
         '
-        'lblModel
-        '
-        resources.ApplyResources(Me.lblModel, "lblModel")
-        Me.lblModel.Name = "lblModel"
-        '
         'lblProcessor
         '
         resources.ApplyResources(Me.lblProcessor, "lblProcessor")
         Me.lblProcessor.Name = "lblProcessor"
-        '
-        'lblVariant
-        '
-        resources.ApplyResources(Me.lblVariant, "lblVariant")
-        Me.lblVariant.Name = "lblVariant"
-        '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Name = "Label1"
         '
         'cmbModel
         '
@@ -311,15 +261,37 @@ Partial Class Home
         Me.pnlBootloader.ShowCloseButton = True
         Me.pnlBootloader.ThemesEnabled = False
         '
-        'Label4
+        'Panel4
         '
-        resources.ApplyResources(Me.Label4, "Label4")
-        Me.Label4.Name = "Label4"
+        Me.Panel4.Controls.Add(Me.txtBoxUnlockKey)
+        Me.Panel4.Controls.Add(Me.Label4)
+        resources.ApplyResources(Me.Panel4, "Panel4")
+        Me.Panel4.Name = "Panel4"
         '
         'txtBoxUnlockKey
         '
         resources.ApplyResources(Me.txtBoxUnlockKey, "txtBoxUnlockKey")
         Me.txtBoxUnlockKey.Name = "txtBoxUnlockKey"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.Name = "Label4"
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.PictureBox6)
+        Me.Panel3.Controls.Add(Me.btnLockBootloader)
+        resources.ApplyResources(Me.Panel3, "Panel3")
+        Me.Panel3.Name = "Panel3"
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.BackgroundImage = Global.APTV2.My.Resources.Resources.Lock___06
+        resources.ApplyResources(Me.PictureBox6, "PictureBox6")
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.TabStop = False
         '
         'btnLockBootloader
         '
@@ -327,13 +299,20 @@ Partial Class Home
         Me.btnLockBootloader.Name = "btnLockBootloader"
         Me.btnLockBootloader.UseVisualStyleBackColor = True
         '
-        'txtBoxBootloader
+        'Panel2
         '
-        Me.txtBoxBootloader.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
-        Me.txtBoxBootloader.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBoxBootloader.ForeColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.txtBoxBootloader, "txtBoxBootloader")
-        Me.txtBoxBootloader.Name = "txtBoxBootloader"
+        Me.Panel2.Controls.Add(Me.PictureBox5)
+        Me.Panel2.Controls.Add(Me.btnUnlockBootloader)
+        resources.ApplyResources(Me.Panel2, "Panel2")
+        Me.Panel2.Name = "Panel2"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.BackgroundImage = Global.APTV2.My.Resources.Resources.Unlock_WF
+        resources.ApplyResources(Me.PictureBox5, "PictureBox5")
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.TabStop = False
         '
         'btnUnlockBootloader
         '
@@ -342,6 +321,14 @@ Partial Class Home
         Me.btnUnlockBootloader.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnUnlockBootloader.Name = "btnUnlockBootloader"
         Me.btnUnlockBootloader.UseVisualStyleBackColor = False
+        '
+        'txtBoxBootloader
+        '
+        Me.txtBoxBootloader.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.txtBoxBootloader.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBoxBootloader.ForeColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtBoxBootloader, "txtBoxBootloader")
+        Me.txtBoxBootloader.Name = "txtBoxBootloader"
         '
         'pnlRecovery
         '
@@ -398,6 +385,12 @@ Partial Class Home
         Me.pnlRoot.Name = "pnlRoot"
         Me.pnlRoot.ShowCloseButton = True
         Me.pnlRoot.ThemesEnabled = False
+        '
+        'PictureBox7
+        '
+        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.TabStop = False
         '
         'Label5
         '
@@ -727,48 +720,20 @@ Partial Class Home
         Me.pnlAbout.ShowCloseButton = True
         Me.pnlAbout.ThemesEnabled = False
         '
-        'PictureBox5
+        'lblCreator
         '
-        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox5.BackgroundImage = Global.APTV2.My.Resources.Resources.Unlock_WF
-        resources.ApplyResources(Me.PictureBox5, "PictureBox5")
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.TabStop = False
+        resources.ApplyResources(Me.lblCreator, "lblCreator")
+        Me.lblCreator.Name = "lblCreator"
         '
-        'Panel2
+        'lblDate
         '
-        Me.Panel2.Controls.Add(Me.PictureBox5)
-        Me.Panel2.Controls.Add(Me.btnUnlockBootloader)
-        resources.ApplyResources(Me.Panel2, "Panel2")
-        Me.Panel2.Name = "Panel2"
+        resources.ApplyResources(Me.lblDate, "lblDate")
+        Me.lblDate.Name = "lblDate"
         '
-        'Panel3
+        'lblVersion
         '
-        Me.Panel3.Controls.Add(Me.PictureBox6)
-        Me.Panel3.Controls.Add(Me.btnLockBootloader)
-        resources.ApplyResources(Me.Panel3, "Panel3")
-        Me.Panel3.Name = "Panel3"
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox6.BackgroundImage = Global.APTV2.My.Resources.Resources.Lock___06
-        resources.ApplyResources(Me.PictureBox6, "PictureBox6")
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.TabStop = False
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.txtBoxUnlockKey)
-        Me.Panel4.Controls.Add(Me.Label4)
-        resources.ApplyResources(Me.Panel4, "Panel4")
-        Me.Panel4.Name = "Panel4"
-        '
-        'PictureBox7
-        '
-        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.TabStop = False
+        resources.ApplyResources(Me.lblVersion, "lblVersion")
+        Me.lblVersion.Name = "lblVersion"
         '
         'Home
         '
@@ -789,11 +754,18 @@ Partial Class Home
         CType(Me.picPhone, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlBootloader.ResumeLayout(False)
         Me.pnlBootloader.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlRecovery.ResumeLayout(False)
         Me.pnlRecovery.PerformLayout()
         CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlRoot.ResumeLayout(False)
         Me.pnlRoot.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbRoot, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlXposed.ResumeLayout(False)
         Me.pnlXposed.PerformLayout()
@@ -821,13 +793,6 @@ Partial Class Home
         Me.pnlSettings.ResumeLayout(False)
         Me.pnlSettings.PerformLayout()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -842,9 +807,6 @@ Partial Class Home
     Friend WithEvents pnlAbout As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents picPhone As PictureBox
     Friend WithEvents lblManufacturer As Label
-    Friend WithEvents lblVariant As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents cmbModel As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents pnlSettings As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents txtBoxBootloader As TextBox
@@ -877,11 +839,8 @@ Partial Class Home
     Friend WithEvents progressBarUnbrickFastboot As ProgressBar
     Friend WithEvents Label7 As Label
     Friend WithEvents cmbBoxXMLFile As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
-    Friend WithEvents Label12 As Label
     Friend WithEvents lblStorage As Label
-    Friend WithEvents Label10 As Label
     Friend WithEvents lblRAM As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents lblProcessor As Label
     Friend WithEvents tabControlPanelGAPPS As Syncfusion.Windows.Forms.Tools.TabControlAdv
     Friend WithEvents TabPageAdv7 As Syncfusion.Windows.Forms.Tools.TabPageAdv
@@ -889,8 +848,6 @@ Partial Class Home
     Friend WithEvents TabPageAdv8 As Syncfusion.Windows.Forms.Tools.TabPageAdv
     Friend WithEvents Label11 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents lblModel As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
@@ -907,4 +864,7 @@ Partial Class Home
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents lblCreator As Label
+    Friend WithEvents lblVersion As Label
+    Friend WithEvents lblDate As Label
 End Class

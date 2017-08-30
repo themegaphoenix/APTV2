@@ -568,15 +568,18 @@ Public Class Home
 
         'load the correct information into the labels
         xmlDoc.Load(My.Settings.xmlDocumentName)
+        'get file details
+        lblCreator.Text = xmlDoc.SelectSingleNode("/root/creator").InnerText
+        lblDate.Text = xmlDoc.SelectSingleNode("/root/date").InnerText
+        lblVersion.Text = xmlDoc.SelectSingleNode("/root/version").InnerText
+        'loops throught all the phones to find the right one and gets the information fromm them
         Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
         For Each node As XmlNode In nodes
             If My.Settings.phoneVariant = node.SelectSingleNode("variant").InnerText Then
 
                 Try
                     'update Labels in the homepage
-                    lblManufacturer.Text = node.SelectSingleNode("manufacturer").InnerText
-                    lblModel.Text = node.SelectSingleNode("model").InnerText
-                    lblVariant.Text = node.SelectSingleNode("variant").InnerText
+                    lblManufacturer.Text = cmbModel.SelectedItem.ToString
                     lblProcessor.Text = node.SelectSingleNode("processor").InnerText
                     lblRAM.Text = node.SelectSingleNode("RAM").InnerText
                     lblStorage.Text = node.SelectSingleNode("storage").InnerText
@@ -631,14 +634,15 @@ Public Class Home
             End If
         Next
 
+
+
+
         'populate dropdown stuff
         AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
         AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
     End Sub
 
-    Private Sub pnlBootloader_Click(sender As Object, e As EventArgs) Handles pnlBootloader.Click
 
-    End Sub
 
 #End Region
 
