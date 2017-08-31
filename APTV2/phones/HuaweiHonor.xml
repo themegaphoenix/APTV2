@@ -25,13 +25,17 @@
     </unbrickFastboot>
     <unbrickStock>
       <version id="b390-Full">http://update.hicloud.com:8180/TDS/data/files/p3/s15/G939/g104/v80927/f1/full/update.zip</version>
-      <version id="b2">http://tinyurl.com/yd6lubzc</version>
     </unbrickStock>
   </phone>
   <Gapps>
     <version id="v16">https://www.dropbox.com/s/r561jeeorgfie35/opengapps-app-v16.apk?dl=1</version>
   </Gapps>
-  <magiskInstaller>
-    <version id="13.3">https://www.dropbox.com/s/lhc06kmlbhmcrce/Magisk-v13.3.zip?dl=1</version>
-  </magiskInstaller>
+  <magisk>
+    <magiskInstaller>
+      <version id="13.3">https://www.dropbox.com/s/lhc06kmlbhmcrce/Magisk-v13.3.zip?dl=1</version>
+    </magiskInstaller>
+    <magiskManager>
+      <version id="5.5.2.0">https://www.dropbox.com/s/dsz98ixdk8s9vmm/magiskManager5.2.0.apk?dl=1</version>
+    </magiskManager>
+  </magisk>
 </root>

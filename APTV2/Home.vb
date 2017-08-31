@@ -135,35 +135,80 @@ Public Class Home
 #Region "Root"
 
     Private Async Sub btnFlashMagisk_Click(sender As Object, e As EventArgs) Handles btnFlashMagisk.Click
-        'gets the chosenRecovery Value
-        'Dim strRoot As String = cmbRoot.SelectedItem
-        'Dim strRootSplit As String() = strRoot.Split(New Char() {" "c})
-        'Console.WriteLine(strRootSplit(1))
-        Dim chosenRoot As String = GetInfoCombox(cmbRoot, 1)
+        Try
 
-        Dim url As String = GetInfoXmlInner("/root/magiskInstaller/version", chosenRoot, False, "", "")
-        'Console.WriteLine(url)
-        If url <> "0" Then
-            Dim fileName As String = "downloads/magisk-" & chosenRoot & ".zip"
-            'change the progress bar and right label
-            progressBar = progressBarRoot
-            LabelToOutput = txtBoxRoot
 
-            'downloads the file
-            'the file is checked it it exists first in the function
-            Await DownloadFileAsync(url, fileName)
+            'gets the chosenRecovery Value
+            Dim chosenRoot As String = GetInfoCombox(cmbRoot, 1)
 
-            'run the right adb commands
-            'todo fix the commands
+            Dim url As String = GetInfoXmlInner("/root/magisk/magiskInstaller/version", chosenRoot, False, "", "")
 
-            Dim commands(3, 3) As String
-            commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
-                        {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img",
-                         "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
-                        {"fastboot", "reboot", "Rebooting device"}}
+            If url <> "0" Then
+                Dim fileName As String = "downloads/magisk-" & chosenRoot & ".zip"
+                'change the progress bar and right label
+                progressBar = progressBarRoot
+                LabelToOutput = txtBoxRoot
 
-            Await Task.Run(Sub() RunComands(commands))
+                'downloads the file
+                'the file is checked it it exists first in the function
+                Await DownloadFileAsync(url, fileName)
+
+                'run the right adb commands
+                Dim commands(3, 3) As String
+                commands = {{"adb", "devices", "Showing all devices"},
+                            {"adb", "push " + fileName + " /sdcard/magisk.zip", "Copying " + fileName + " to the sd card"},
+                            {"adb", "reboot recovery", "Rebooting device to recovery"}}
+
+                Await Task.Run(Sub() RunComands(commands))
+                tabControlPanelMagisk.SelectedIndex = 1
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Sub
+
+
+    Private Sub checkBoxRoot_CheckedChanged(sender As Object, e As EventArgs) Handles checkBoxRoot.CheckedChanged
+        If checkBoxRoot.Checked = True Then
+            'it will enable the button
+            btnRootContinue.Enabled = True
+        Else
+            btnRootContinue.Enabled = False
         End If
+    End Sub
+
+    Private Sub btnRootContinue_Click(sender As Object, e As EventArgs) Handles btnRootContinue.Click
+        tabControlPanelMagisk.SelectedIndex = 2
+    End Sub
+
+    Private Async Sub btnFlashMagiskManager_Click(sender As Object, e As EventArgs) Handles btnFlashMagiskManager.Click
+        Try
+            'gets the chosenRootManager Value
+            Dim chosenRootManager As String = GetInfoCombox(cmbRootManager, 2)
+
+            Dim url As String = GetInfoXmlInner("/root/magisk/magiskManager/version", chosenRootManager, False, "", "")
+            'Console.WriteLine(url)
+            If url <> "0" Then
+                Dim fileName As String = "downloads/magiskManager-" & chosenRootManager & ".apk"
+                'change the progress bar
+                progressBar = progressBarRootManager
+                LabelToOutput = txtBoxRoot
+
+                'downloads the file
+                'the file is checked it it exists first in the function
+                Await DownloadFileAsync(url, fileName)
+                'run the right adb commands
+
+                Dim commands(2, 2) As String
+                commands = {{"adb", "devices", "Showing all devices"},
+                            {"adb", "install " & fileName, Strings.Home_btnFlashMagiskManager_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
+                           }
+                Await Task.Run(Sub() RunComands(commands))
+                MessageBox.Show(Strings.Home_btnFlashMagiskManager_Click_Open_the_Magisk_Manager_Application)
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
     End Sub
 
 #End Region
@@ -171,34 +216,35 @@ Public Class Home
 #Region "Gapps"
 
     Private Async Sub btnGappsInstall_Click(sender As Object, e As EventArgs) Handles btnGappsInstall.Click
-        'gets the chosenRecovery Value
-        'Dim strGapps As String = cmbGApps.SelectedItem
-        'Dim strGappsSplit As String() = strGapps.Split(New Char() {" "c})
-        'Console.WriteLine(strGappsSplit(2))
-        Dim chosenGapps As String = GetInfoCombox(cmbGApps, 2)
+        Try
+            'gets the chosenRecovery Value
+            Dim chosenGapps As String = GetInfoCombox(cmbGApps, 2)
 
-        Dim url As String = GetInfoXmlInner("/root/Gapps/version", chosenGapps, False, "", "")
-        'Console.WriteLine(url)
-        If url <> "0" Then
-            Dim fileName As String = "downloads/gapps-" & chosenGapps & ".apk"
-            'change the progress bar
-            progressBar = progressBarGApps
-            LabelToOutput = txtBoxGApps
+            Dim url As String = GetInfoXmlInner("/root/Gapps/version", chosenGapps, False, "", "")
+            'Console.WriteLine(url)
+            If url <> "0" Then
+                Dim fileName As String = "downloads/gapps-" & chosenGapps & ".apk"
+                'change the progress bar
+                progressBar = progressBarGApps
+                LabelToOutput = txtBoxGApps
 
-            'downloads the file
-            'the file is checked it it exists first in the function
-            Await DownloadFileAsync(url, fileName)
-            'run the right adb commands
+                'downloads the file
+                'the file is checked it it exists first in the function
+                Await DownloadFileAsync(url, fileName)
+                'run the right adb commands
 
-            Dim commands(2, 2) As String
-            commands = {{"adb", "devices", "Showing all devices"},
-                        {"adb", "install " & fileName,
-                         Strings.Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
-                       }
-            Await Task.Run(Sub() RunComands(commands))
+                Dim commands(2, 2) As String
+                commands = {{"adb", "devices", "Showing all devices"},
+                            {"adb", "install " & fileName,
+                             Strings.Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
+                           }
+                Await Task.Run(Sub() RunComands(commands))
 
-            tabControlPanelGAPPS.SelectedIndex = 1
-        End If
+                tabControlPanelGAPPS.SelectedIndex = 1
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
     End Sub
 
 #End Region
@@ -641,7 +687,9 @@ Public Class Home
 
             'populate dropdown stuff
             AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
-            AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
+            AddToComboBoxesXml("/root/magisk/magiskInstaller/version", "Magisk ", cmbRoot)
+            AddToComboBoxesXml("/root/magisk/magiskManager/version", "Magisk Manager ", cmbRootManager)
+
         Catch ex As Exception
             MessageBox.Show(Strings.Home_ReloadInfo_File_does_not_contains_invalid_information)
         End Try
@@ -727,6 +775,10 @@ Public Class Home
         'checks for updates
         CheckXMLUpdates()
     End Sub
+
+
+
+
 
 #End Region
 

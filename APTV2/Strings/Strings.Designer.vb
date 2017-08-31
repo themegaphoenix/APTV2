@@ -65,6 +65,25 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Installing app on the device(make sure device is plugged in, otherwise it will not output anything).
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashMagiskManager_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashMagiskManager_Click_Installing_app_on_the_device_make_sure_device_is"& _ 
+                        "_plugged_in__otherwise_it_will_not_output_anything_", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Open the Magisk Manager Application.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashMagiskManager_Click_Open_the_Magisk_Manager_Application() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashMagiskManager_Click_Open_the_Magisk_Manager_Application", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Is the phone in fastboot mode? If not please boot into it first and then press yes..
         '''</summary>
         Friend Shared ReadOnly Property Home_btnFlashUnbr_Click_Please_boot_the_phone_into_fastboot_mode() As String
