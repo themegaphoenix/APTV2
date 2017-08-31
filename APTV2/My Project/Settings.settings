@@ -11,5 +11,8 @@
     <Setting Name="phoneVariant" Type="System.String" Scope="User">
       <Value Profile="(Default)">PLK-L01</Value>
     </Setting>
+    <Setting Name="checkForUpdates" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -26,6 +26,8 @@ Partial Class Home
         Me.tabControlPanel = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.pnlPhone = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCreator = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -91,9 +93,8 @@ Partial Class Home
         Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.lblCreator = New System.Windows.Forms.Label()
-        Me.lblDate = New System.Windows.Forms.Label()
-        Me.lblVersion = New System.Windows.Forms.Label()
+        Me.btnXMLFileUpdates = New System.Windows.Forms.Button()
+        Me.checkBoxUpdatesStart = New System.Windows.Forms.CheckBox()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -178,8 +179,7 @@ Partial Class Home
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.lblVersion)
-        Me.Panel1.Controls.Add(Me.lblDate)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.lblCreator)
         Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.PictureBox3)
@@ -190,6 +190,16 @@ Partial Class Home
         Me.Panel1.Controls.Add(Me.lblProcessor)
         resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.Name = "Label1"
+        '
+        'lblCreator
+        '
+        resources.ApplyResources(Me.lblCreator, "lblCreator")
+        Me.lblCreator.Name = "lblCreator"
         '
         'PictureBox4
         '
@@ -688,6 +698,8 @@ Partial Class Home
         '
         'pnlSettings
         '
+        Me.pnlSettings.Controls.Add(Me.checkBoxUpdatesStart)
+        Me.pnlSettings.Controls.Add(Me.btnXMLFileUpdates)
         Me.pnlSettings.Controls.Add(Me.cmbBoxXMLFile)
         Me.pnlSettings.Controls.Add(Me.Label7)
         Me.pnlSettings.Image = Global.APTV2.My.Resources.Resources.Settings___09
@@ -720,20 +732,19 @@ Partial Class Home
         Me.pnlAbout.ShowCloseButton = True
         Me.pnlAbout.ThemesEnabled = False
         '
-        'lblCreator
+        'btnXMLFileUpdates
         '
-        resources.ApplyResources(Me.lblCreator, "lblCreator")
-        Me.lblCreator.Name = "lblCreator"
+        Me.btnXMLFileUpdates.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.btnXMLFileUpdates, "btnXMLFileUpdates")
+        Me.btnXMLFileUpdates.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnXMLFileUpdates.Name = "btnXMLFileUpdates"
+        Me.btnXMLFileUpdates.UseVisualStyleBackColor = False
         '
-        'lblDate
+        'checkBoxUpdatesStart
         '
-        resources.ApplyResources(Me.lblDate, "lblDate")
-        Me.lblDate.Name = "lblDate"
-        '
-        'lblVersion
-        '
-        resources.ApplyResources(Me.lblVersion, "lblVersion")
-        Me.lblVersion.Name = "lblVersion"
+        resources.ApplyResources(Me.checkBoxUpdatesStart, "checkBoxUpdatesStart")
+        Me.checkBoxUpdatesStart.Name = "checkBoxUpdatesStart"
+        Me.checkBoxUpdatesStart.UseVisualStyleBackColor = True
         '
         'Home
         '
@@ -865,6 +876,7 @@ Partial Class Home
     Friend WithEvents Panel4 As Panel
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents lblCreator As Label
-    Friend WithEvents lblVersion As Label
-    Friend WithEvents lblDate As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents checkBoxUpdatesStart As CheckBox
+    Friend WithEvents btnXMLFileUpdates As Button
 End Class

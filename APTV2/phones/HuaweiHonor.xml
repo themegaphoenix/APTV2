@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <root>
   <creator>TheMegaPhoenix</creator>
   <date>30/08/2017</date>
-  <version>v1</version>
+  <version>1.0</version>
+  <updateURL>https://www.dropbox.com/s/t5p7miwsk05ep6u/updateXML.txt?dl=1</updateURL>
   <phone>
     <manufacturer>Huawei</manufacturer>
     <model>Honor7</model>

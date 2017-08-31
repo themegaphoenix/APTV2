@@ -29,6 +29,9 @@ Public Class Home
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'read xml file and load in to the dropbox
         FindTheFiles()
+        If My.Settings.checkForUpdates Then
+            CheckXMLUpdates()
+        End If
 
     End Sub
 
@@ -569,10 +572,12 @@ Public Class Home
         'load the correct information into the labels
         xmlDoc.Load(My.Settings.xmlDocumentName)
         'get file details
-        lblCreator.Text = xmlDoc.SelectSingleNode("/root/creator").InnerText
-        lblDate.Text = xmlDoc.SelectSingleNode("/root/date").InnerText
-        lblVersion.Text = xmlDoc.SelectSingleNode("/root/version").InnerText
-        'loops throught all the phones to find the right one and gets the information fromm them
+        lblCreator.Text = String.Format("{0} {1} {2}",
+                                        xmlDoc.SelectSingleNode("/root/creator").InnerText,
+                                        xmlDoc.SelectSingleNode("/root/date").InnerText,
+                                        xmlDoc.SelectSingleNode("/root/version").InnerText)
+
+        'loops through all the phones to find the right one and gets the information fromm them
         Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
         For Each node As XmlNode In nodes
             If My.Settings.phoneVariant = node.SelectSingleNode("variant").InnerText Then
@@ -634,15 +639,87 @@ Public Class Home
             End If
         Next
 
-
-
-
         'populate dropdown stuff
         AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
         AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
     End Sub
 
+#End Region
 
+#Region "Update"
+
+    Private Async Sub CheckXMLUpdates()
+
+        'IMPORTANT
+        'the download file information is not used as it needs a progress bar
+        'and textbox to update the status so we are better of using it standalone
+        '
+        Try
+            xmlDoc.Load(My.Settings.xmlDocumentName)
+            'get file details
+            Dim currentVersion As String = xmlDoc.SelectSingleNode("/root/version").InnerText
+            Dim updateURL As String = xmlDoc.SelectSingleNode("/root/updateURL").InnerText
+            Dim filename = "downloads/updateXML.txt"
+
+            'downloads a .txt file to check if there is a new version
+            Using webClient = New WebClient()
+                Await webClient.DownloadFileTaskAsync(New Uri(updateURL), filename)
+            End Using
+
+            'now we try to read the file
+            Using reader As StreamReader = New StreamReader(filename)
+                ' Read one line from file - the first value will be the new version numbers
+                Dim latestVersion As String = reader.ReadLine
+
+                'if the new version number is bigger than the current version it will prompt the user
+                If Decimal.Parse(latestVersion) > Decimal.Parse(currentVersion) Then
+                    Console.WriteLine("Update Found")
+
+                    'asks the user if they want to download a new version
+                    Dim result As DialogResult = MessageBox.Show("New version of the XML (data) file found. Download now?",
+                                                             "Update",
+                                                             MessageBoxButtons.YesNo,
+                                                             MessageBoxIcon.Question)
+                    'if they say yes
+                    If result = DialogResult.Yes Then
+                        'it will create a new webclinet
+                        Using webClient = New WebClient()
+                            'gets the url from the next line
+                            Dim UpdateXMLFile As String = reader.ReadLine
+                            Console.WriteLine(UpdateXMLFile)
+                            'the filename for the update
+                            Dim xmlFileName As String = My.Settings.xmlDocumentName
+                            'downloads and replaces the current file
+                            Await webClient.DownloadFileTaskAsync(New Uri(UpdateXMLFile), xmlFileName)
+                            'reads the new file information and reloads the data
+                            ReadXml()
+                        End Using
+                    End If
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
+    End Sub
+
+    Private Sub checkBoxUpdatesStart_CheckedChanged(sender As Object, e As EventArgs) Handles checkBoxUpdatesStart.CheckedChanged
+        'if the box is checked for updates
+        If checkBoxUpdatesStart.Checked = True Then
+            'it will change the settings
+            My.Settings.checkForUpdates = True
+        Else
+            My.Settings.checkForUpdates = False
+
+        End If
+        'save the settings
+        My.Settings.Save()
+
+    End Sub
+
+    Private Sub btnXMLFileUpdates_Click(sender As Object, e As EventArgs) Handles btnXMLFileUpdates.Click
+        'checks for updates
+        CheckXMLUpdates()
+    End Sub
 
 #End Region
 
