@@ -294,4 +294,37 @@
   <data name="btnUnbrickGoto.Text" xml:space="preserve">
     <value>Flash</value>
   </data>
+  <data name="lblCreator.Text" xml:space="preserve">
+    <value>Détails de créateur !</value>
+  </data>
+  <data name="btnFlashUnbrFastboot.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="btnFlashUnbrRecovery.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="btnXMLFileUpdates.Text" xml:space="preserve">
+    <value>Vérifier les mises à jour</value>
+  </data>
+  <data name="checkBoxUpdatesStart.Text" xml:space="preserve">
+    <value>Recherchez les mises à jour sur le démarrage de l’application !</value>
+  </data>
+  <data name="cmbRootManager.Text" xml:space="preserve">
+    <value>Sélectionnez une Version de gestionnaire de Magisk !</value>
+  </data>
+  <data name="btnFlashMagiskManager.Text" xml:space="preserve">
+    <value>Flash Magisk !</value>
+  </data>
+  <data name="btnRootContinue.Text" xml:space="preserve">
+    <value>Continuez !</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>Sélectionnez une version !</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>Sélectionnez une version !</value>
+  </data>
+  <data name="checkBoxRoot.Text" xml:space="preserve">
+    <value>commissions dont je vous ai parlé supra.</value>
+  </data>
 </root>

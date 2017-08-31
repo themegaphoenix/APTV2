@@ -294,4 +294,37 @@
   <data name="btnUnbrickGoto.Text" xml:space="preserve">
     <value>Blitz</value>
   </data>
+  <data name="lblCreator.Text" xml:space="preserve">
+    <value>Schöpfer Einzelheiten!</value>
+  </data>
+  <data name="btnFlashUnbrFastboot.Text" xml:space="preserve">
+    <value>Blitz</value>
+  </data>
+  <data name="btnFlashUnbrRecovery.Text" xml:space="preserve">
+    <value>Blitz</value>
+  </data>
+  <data name="btnXMLFileUpdates.Text" xml:space="preserve">
+    <value>Nach Aktualisierungen suchen</value>
+  </data>
+  <data name="checkBoxUpdatesStart.Text" xml:space="preserve">
+    <value>Auf Updates prüfen</value>
+  </data>
+  <data name="cmbRootManager.Text" xml:space="preserve">
+    <value>Wählen Sie eine Magisk Manager Version!</value>
+  </data>
+  <data name="btnFlashMagiskManager.Text" xml:space="preserve">
+    <value>Aufblitzen</value>
+  </data>
+  <data name="btnRootContinue.Text" xml:space="preserve">
+    <value>Mach weiter!</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>Wähle eine Version</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>Wähle eine Version</value>
+  </data>
+  <data name="checkBoxRoot.Text" xml:space="preserve">
+    <value>Ich habe noch alle SMS.</value>
+  </data>
 </root>

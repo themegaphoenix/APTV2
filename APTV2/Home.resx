@@ -130,16 +130,16 @@
     <value>NoControl</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 280</value>
+    <value>178, 280</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 18</value>
+    <value>101, 18</value>
   </data>
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>Created By</value>
+    <value>Profile Created By:</value>
   </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
@@ -163,13 +163,13 @@
     <value>282, 280</value>
   </data>
   <data name="lblCreator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 18</value>
+    <value>82, 18</value>
   </data>
   <data name="lblCreator.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
   <data name="lblCreator.Text" xml:space="preserve">
-    <value>Label1</value>
+    <value>creator details</value>
   </data>
   <data name="&gt;&gt;lblCreator.Name" xml:space="preserve">
     <value>lblCreator</value>
@@ -445,7 +445,7 @@
     <value>29, 21</value>
   </data>
   <data name="picPhone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 330</value>
+    <value>178, 340</value>
   </data>
   <data name="picPhone.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -783,6 +783,36 @@
   <data name="&gt;&gt;pnlBootloader.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 38</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 18</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Select a recovery version</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>pnlRecovery</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnFlashRecovery.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -790,7 +820,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnFlashRecovery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 194</value>
+    <value>61, 174</value>
   </data>
   <data name="btnFlashRecovery.Size" type="System.Drawing.Size, System.Drawing">
     <value>229, 95</value>
@@ -811,16 +841,16 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;btnFlashRecovery.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="progressBarRecovery.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="progressBarRecovery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 121</value>
+    <value>98, 131</value>
   </data>
   <data name="progressBarRecovery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 23</value>
+    <value>135, 23</value>
   </data>
   <data name="progressBarRecovery.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -838,13 +868,13 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;progressBarRecovery.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="cmbRecovery.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Condensed, 9.75pt</value>
   </data>
   <data name="cmbRecovery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 72</value>
+    <value>61, 82</value>
   </data>
   <data name="cmbRecovery.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 26</value>
@@ -865,7 +895,7 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;cmbRecovery.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="txtBoxRecovery.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 7</value>
@@ -892,7 +922,7 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;txtBoxRecovery.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="pnlRecovery.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 37</value>
@@ -917,6 +947,36 @@
   </data>
   <data name="&gt;&gt;pnlRecovery.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 57</value>
+  </data>
+  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 18</value>
+  </data>
+  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>Select a magisk version</value>
+  </data>
+  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
+    <value>Label10</value>
+  </data>
+  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>TabPageAdv1</value>
+  </data>
+  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -946,7 +1006,7 @@
     <value>TabPageAdv1</value>
   </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="PictureBox7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1390,13 +1450,13 @@
     <value>TabPageAdv1</value>
   </data>
   <data name="&gt;&gt;PictureBox7.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="cmbRoot.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Condensed, 9.75pt</value>
   </data>
   <data name="cmbRoot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 78</value>
+    <value>30, 91</value>
   </data>
   <data name="cmbRoot.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 26</value>
@@ -1417,7 +1477,7 @@
     <value>TabPageAdv1</value>
   </data>
   <data name="&gt;&gt;cmbRoot.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="progressBarRoot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1444,7 +1504,7 @@
     <value>TabPageAdv1</value>
   </data>
   <data name="&gt;&gt;progressBarRoot.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnFlashMagisk.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1462,7 +1522,7 @@
     <value>13</value>
   </data>
   <data name="btnFlashMagisk.Text" xml:space="preserve">
-    <value>Flash Magisk</value>
+    <value>Download and copy Magisk</value>
   </data>
   <data name="&gt;&gt;btnFlashMagisk.Name" xml:space="preserve">
     <value>btnFlashMagisk</value>
@@ -1474,7 +1534,7 @@
     <value>TabPageAdv1</value>
   </data>
   <data name="&gt;&gt;btnFlashMagisk.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="TabPageAdv1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>
@@ -1546,7 +1606,7 @@
     <value>24</value>
   </data>
   <data name="checkBoxRoot.Text" xml:space="preserve">
-    <value>I have done all the things mentioned aboved</value>
+    <value>I have done all the things mentioned above</value>
   </data>
   <data name="&gt;&gt;checkBoxRoot.Name" xml:space="preserve">
     <value>checkBoxRoot</value>
@@ -2220,6 +2280,36 @@ if it is not press the checkbox and select flash
   <data name="&gt;&gt;pnlGapps.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 18</value>
+  </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 18</value>
+  </data>
+  <data name="Label12.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Select a way to recover the device</value>
+  </data>
+  <data name="&gt;&gt;Label12.Name" xml:space="preserve">
+    <value>Label12</value>
+  </data>
+  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
+    <value>tabUnb1</value>
+  </data>
+  <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnUnbrickGoto.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -2227,7 +2317,7 @@ if it is not press the checkbox and select flash
     <value>NoControl</value>
   </data>
   <data name="btnUnbrickGoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 179</value>
+    <value>48, 150</value>
   </data>
   <data name="btnUnbrickGoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 95</value>
@@ -2248,7 +2338,7 @@ if it is not press the checkbox and select flash
     <value>tabUnb1</value>
   </data>
   <data name="&gt;&gt;btnUnbrickGoto.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="rdBtnUnbStockReco.Location" type="System.Drawing.Point, System.Drawing">
     <value>29, 88</value>
@@ -2272,7 +2362,7 @@ if it is not press the checkbox and select flash
     <value>tabUnb1</value>
   </data>
   <data name="&gt;&gt;rdBtnUnbStockReco.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="rdBtnUnbFastboot.Location" type="System.Drawing.Point, System.Drawing">
     <value>29, 39</value>
@@ -2296,7 +2386,7 @@ if it is not press the checkbox and select flash
     <value>tabUnb1</value>
   </data>
   <data name="&gt;&gt;rdBtnUnbFastboot.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabUnb1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>
@@ -2321,6 +2411,36 @@ if it is not press the checkbox and select flash
   </data>
   <data name="&gt;&gt;tabUnb1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 25</value>
+  </data>
+  <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 18</value>
+  </data>
+  <data name="Label14.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>Select a version</value>
+  </data>
+  <data name="&gt;&gt;Label14.Name" xml:space="preserve">
+    <value>Label14</value>
+  </data>
+  <data name="&gt;&gt;Label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label14.Parent" xml:space="preserve">
+    <value>tabUnb2</value>
+  </data>
+  <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="progressBarUnbrickFastboot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2347,7 +2467,7 @@ if it is not press the checkbox and select flash
     <value>tabUnb2</value>
   </data>
   <data name="&gt;&gt;progressBarUnbrickFastboot.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnFlashUnbrFastboot.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2356,7 +2476,7 @@ if it is not press the checkbox and select flash
     <value>NoControl</value>
   </data>
   <data name="btnFlashUnbrFastboot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 169</value>
+    <value>44, 166</value>
   </data>
   <data name="btnFlashUnbrFastboot.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 95</value>
@@ -2377,7 +2497,7 @@ if it is not press the checkbox and select flash
     <value>tabUnb2</value>
   </data>
   <data name="&gt;&gt;btnFlashUnbrFastboot.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="cmbBoxUnbrickFastboot.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Condensed, 9.75pt</value>
@@ -2401,7 +2521,7 @@ if it is not press the checkbox and select flash
     <value>tabUnb2</value>
   </data>
   <data name="&gt;&gt;cmbBoxUnbrickFastboot.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabUnb2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>
@@ -2426,6 +2546,36 @@ if it is not press the checkbox and select flash
   </data>
   <data name="&gt;&gt;tabUnb2.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="Label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 27</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 18</value>
+  </data>
+  <data name="Label15.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>Select a version</value>
+  </data>
+  <data name="&gt;&gt;Label15.Name" xml:space="preserve">
+    <value>Label15</value>
+  </data>
+  <data name="&gt;&gt;Label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label15.Parent" xml:space="preserve">
+    <value>tabUnb3</value>
+  </data>
+  <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="progressBarUnbrickStock.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2452,7 +2602,7 @@ if it is not press the checkbox and select flash
     <value>tabUnb3</value>
   </data>
   <data name="&gt;&gt;progressBarUnbrickStock.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnFlashUnbrRecovery.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2461,7 +2611,7 @@ if it is not press the checkbox and select flash
     <value>NoControl</value>
   </data>
   <data name="btnFlashUnbrRecovery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 157</value>
+    <value>55, 157</value>
   </data>
   <data name="btnFlashUnbrRecovery.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 95</value>
@@ -2482,13 +2632,13 @@ if it is not press the checkbox and select flash
     <value>tabUnb3</value>
   </data>
   <data name="&gt;&gt;btnFlashUnbrRecovery.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="cmbBoxUnbrickStock.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Condensed, 9.75pt</value>
   </data>
   <data name="cmbBoxUnbrickStock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 47</value>
+    <value>55, 59</value>
   </data>
   <data name="cmbBoxUnbrickStock.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 26</value>
@@ -2506,7 +2656,7 @@ if it is not press the checkbox and select flash
     <value>tabUnb3</value>
   </data>
   <data name="&gt;&gt;cmbBoxUnbrickStock.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabUnb3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>

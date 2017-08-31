@@ -12,9 +12,13 @@
     <RAM>3GB</RAM>
     <storage>16GB</storage>
     <picture>HuaweiHonor7.png</picture>
-    <twrp>
-      <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
-    </twrp>
+    <recovery>
+      <twrp>
+        <version id="3.1.1-0">https://www.dropbox.com/s/lk67rkawrbwrqpm/twrp-3.1.1-0-plank.img?dl=1</version>
+      </twrp>
+      <stock>
+      </stock>
+    </recovery>
     <unbrickFastboot>
       <version id="b390-Full">
         <boot>https://www.dropbox.com/s/np604t58nyp7cj8/BOOT.img?dl=1</boot>

@@ -294,4 +294,37 @@
   <data name="btnUnbrickGoto.Text" xml:space="preserve">
     <value>Flash</value>
   </data>
+  <data name="lblCreator.Text" xml:space="preserve">
+    <value>detalhes do criador!</value>
+  </data>
+  <data name="btnFlashUnbrFastboot.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="btnFlashUnbrRecovery.Text" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="btnXMLFileUpdates.Text" xml:space="preserve">
+    <value>Verificar Atualizações</value>
+  </data>
+  <data name="checkBoxUpdatesStart.Text" xml:space="preserve">
+    <value>Verificar se há atualizações no início do aplicativo!</value>
+  </data>
+  <data name="cmbRootManager.Text" xml:space="preserve">
+    <value>Selecionar o gerente do projeto</value>
+  </data>
+  <data name="btnFlashMagiskManager.Text" xml:space="preserve">
+    <value>instantâneo</value>
+  </data>
+  <data name="btnRootContinue.Text" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>Selecione uma versão!</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>Selecione uma versão!</value>
+  </data>
+  <data name="checkBoxRoot.Text" xml:space="preserve">
+    <value>Eu fiz todas as coisas mencionadas acima!</value>
+  </data>
 </root>

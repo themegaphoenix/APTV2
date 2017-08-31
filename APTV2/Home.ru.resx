@@ -294,4 +294,37 @@
   <data name="btnUnbrickGoto.Text" xml:space="preserve">
     <value>Вспышка</value>
   </data>
+  <data name="lblCreator.Text" xml:space="preserve">
+    <value>создатель детали!</value>
+  </data>
+  <data name="btnFlashUnbrFastboot.Text" xml:space="preserve">
+    <value>Вспышка</value>
+  </data>
+  <data name="btnFlashUnbrRecovery.Text" xml:space="preserve">
+    <value>Вспышка</value>
+  </data>
+  <data name="btnXMLFileUpdates.Text" xml:space="preserve">
+    <value>Проверить обновления</value>
+  </data>
+  <data name="checkBoxUpdatesStart.Text" xml:space="preserve">
+    <value>Проверить наличие обновлений при запуске приложения!</value>
+  </data>
+  <data name="cmbRootManager.Text" xml:space="preserve">
+    <value>Выберите версию менеджера Magisk!</value>
+  </data>
+  <data name="btnFlashMagiskManager.Text" xml:space="preserve">
+    <value>Флэш-Magisk!</value>
+  </data>
+  <data name="btnRootContinue.Text" xml:space="preserve">
+    <value>Продолжить!</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>Выберите версию!</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>Выберите</value>
+  </data>
+  <data name="checkBoxRoot.Text" xml:space="preserve">
+    <value>Подписать на все</value>
+  </data>
 </root>

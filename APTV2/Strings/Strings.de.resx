@@ -181,4 +181,28 @@ Weiter?!</value>
   <data name="Home_btnFlashUnbr_Click_Reboot_into_fastboot_mode" xml:space="preserve">
     <value>Starten Sie in den Fastboot Modus!</value>
   </data>
+  <data name="Home_CheckXMLUpdates_Update_Found" xml:space="preserve">
+    <value>Aktualisierung!</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_New_version_of_the_XML__data__file_found__Download_now_" xml:space="preserve">
+    <value>Neue Version der XML (Daten) Datei gefunden. Downloaden Sie jetzt?!</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_Update" xml:space="preserve">
+    <value>Aktualisiert!</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_Update_Complete" xml:space="preserve">
+    <value>Aktualisierung abgeschlossen!</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_You_have_the_latest_version" xml:space="preserve">
+    <value>Sie haben die aktuellste Version.</value>
+  </data>
+  <data name="Home_btnFlashMagiskManager_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_" xml:space="preserve">
+    <value>Installation der app auf dem Gerät (stellen Sie sicher, dass Gerät eingesteckt ist, sonst wird es nicht ausgibt)!</value>
+  </data>
+  <data name="Home_btnFlashMagiskManager_Click_Open_the_Magisk_Manager_Application" xml:space="preserve">
+    <value>Öffnen Sie die Magisk-Manager-Anwendung!</value>
+  </data>
+  <data name="Home_btnFlashUnbrRecovery_Click_Power_on_your_Honor_7_Holding_all_three_buttons__VOL___VOL__and_Power__and_it_will_begin_flashing" xml:space="preserve">
+    <value>Schalten Sie Ihre Ehre 7 halten alle drei Tasten (VOL +, VOL- und macht) und es beginnt zu blinken!</value>
+  </data>
 </root>

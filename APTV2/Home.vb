@@ -10,9 +10,7 @@ Imports Syncfusion.Windows.Forms.Tools
 Public Class Home
     Inherits MetroForm
 
-    'todo better interface
-    'todo add all features
-    'todo add more recoveries
+    'todo enable xposed
 
 #Region "Variables"
 
@@ -110,7 +108,7 @@ Public Class Home
         'which searches for the right version of the recovery and downloads it
 
         Dim fileName As String = "downloads/twrp-" & chosenRecovery & ".img"
-        Dim url As String = GetInfoXmlInner("/root/phone", chosenRecovery, True, "twrp/version", "")
+        Dim url As String = GetInfoXmlInner("/root/phone", chosenRecovery, True, "recovery/twrp/version", "")
 
         'change the progress bar
         progressBar = progressBarRecovery
@@ -136,7 +134,6 @@ Public Class Home
 
     Private Async Sub btnFlashMagisk_Click(sender As Object, e As EventArgs) Handles btnFlashMagisk.Click
         Try
-
 
             'gets the chosenRecovery Value
             Dim chosenRoot As String = GetInfoCombox(cmbRoot, 1)
@@ -166,7 +163,6 @@ Public Class Home
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
-
 
     Private Sub checkBoxRoot_CheckedChanged(sender As Object, e As EventArgs) Handles checkBoxRoot.CheckedChanged
         If checkBoxRoot.Checked = True Then
@@ -297,7 +293,6 @@ Public Class Home
     End Sub
 
     Private Async Sub btnFlashUnbrRecovery_Click(sender As Object, e As EventArgs) Handles btnFlashUnbrRecovery.Click
-        'todo fix this
         Try
             'gets the chosenRecovery Value
             Dim chosenFlash As String = GetInfoCombox(cmbBoxUnbrickStock, 1)
@@ -630,7 +625,6 @@ Public Class Home
             For Each node As XmlNode In nodes
                 If My.Settings.phoneVariant = node.SelectSingleNode("variant").InnerText Then
 
-
                     'update Labels in the homepage
                     lblManufacturer.Text = cmbModel.SelectedItem.ToString
                     lblProcessor.Text = node.SelectSingleNode("processor").InnerText
@@ -643,7 +637,7 @@ Public Class Home
 
                     'get recovery info
                     cmbRecovery.Items.Clear()
-                    For Each nod As XmlNode In node.SelectNodes("twrp/version")
+                    For Each nod As XmlNode In node.SelectNodes("recovery/twrp/version")
                         Dim recoveryTwrp As String = nod.Attributes("id").Value
                         If cmbRecovery.Items.Contains("TWRP " & recoveryTwrp) = False Then
                             cmbRecovery.Items.Add("TWRP " & recoveryTwrp)
@@ -681,7 +675,6 @@ Public Class Home
                     Catch ex As Exception
                     End Try
 
-
                 End If
             Next
 
@@ -689,7 +682,6 @@ Public Class Home
             AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
             AddToComboBoxesXml("/root/magisk/magiskInstaller/version", "Magisk ", cmbRoot)
             AddToComboBoxesXml("/root/magisk/magiskManager/version", "Magisk Manager ", cmbRootManager)
-
         Catch ex As Exception
             MessageBox.Show(Strings.Home_ReloadInfo_File_does_not_contains_invalid_information)
         End Try
@@ -775,10 +767,6 @@ Public Class Home
         'checks for updates
         CheckXMLUpdates()
     End Sub
-
-
-
-
 
 #End Region
 

@@ -54,11 +54,22 @@ Partial Class Home
         Me.cmbRecovery = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.txtBoxRecovery = New System.Windows.Forms.TextBox()
         Me.pnlRoot = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.tabControlPanelMagisk = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
+        Me.TabPageAdv1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.progressBarRoot = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.cmbRoot = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.progressBarRoot = New System.Windows.Forms.ProgressBar()
         Me.btnFlashMagisk = New System.Windows.Forms.Button()
+        Me.TabPageAdv2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.btnRootContinue = New System.Windows.Forms.Button()
+        Me.checkBoxRoot = New System.Windows.Forms.CheckBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TabPageAdv3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.cmbRootManager = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.progressBarRootManager = New System.Windows.Forms.ProgressBar()
+        Me.btnFlashMagiskManager = New System.Windows.Forms.Button()
         Me.txtBoxRoot = New System.Windows.Forms.TextBox()
         Me.pnlXposed = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -95,17 +106,11 @@ Partial Class Home
         Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.tabControlPanelMagisk = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
-        Me.TabPageAdv1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.TabPageAdv2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TabPageAdv3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.cmbRootManager = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
-        Me.progressBarRootManager = New System.Windows.Forms.ProgressBar()
-        Me.btnFlashMagiskManager = New System.Windows.Forms.Button()
-        Me.checkBoxRoot = New System.Windows.Forms.CheckBox()
-        Me.btnRootContinue = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -124,8 +129,14 @@ Partial Class Home
         Me.pnlRecovery.SuspendLayout()
         CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlRoot.SuspendLayout()
+        CType(Me.tabControlPanelMagisk, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabControlPanelMagisk.SuspendLayout()
+        Me.TabPageAdv1.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbRoot, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPageAdv2.SuspendLayout()
+        Me.TabPageAdv3.SuspendLayout()
+        CType(Me.cmbRootManager, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlXposed.SuspendLayout()
         Me.pnlGapps.SuspendLayout()
         CType(Me.tabControlPanelGAPPS, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,12 +157,6 @@ Partial Class Home
         CType(Me.cmbBoxUnbrickStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSettings.SuspendLayout()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.tabControlPanelMagisk, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tabControlPanelMagisk.SuspendLayout()
-        Me.TabPageAdv1.SuspendLayout()
-        Me.TabPageAdv2.SuspendLayout()
-        Me.TabPageAdv3.SuspendLayout()
-        CType(Me.cmbRootManager, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabControlPanel
@@ -359,6 +364,7 @@ Partial Class Home
         '
         'pnlRecovery
         '
+        Me.pnlRecovery.Controls.Add(Me.Label2)
         Me.pnlRecovery.Controls.Add(Me.btnFlashRecovery)
         Me.pnlRecovery.Controls.Add(Me.progressBarRecovery)
         Me.pnlRecovery.Controls.Add(Me.cmbRecovery)
@@ -409,22 +415,52 @@ Partial Class Home
         Me.pnlRoot.ShowCloseButton = True
         Me.pnlRoot.ThemesEnabled = False
         '
-        'PictureBox7
+        'tabControlPanelMagisk
         '
-        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.TabStop = False
+        Me.tabControlPanelMagisk.ActiveTabForeColor = System.Drawing.Color.Empty
+        Me.tabControlPanelMagisk.BeforeTouchSize = New System.Drawing.Size(345, 364)
+        Me.tabControlPanelMagisk.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tabControlPanelMagisk.CloseButtonForeColor = System.Drawing.Color.Empty
+        Me.tabControlPanelMagisk.CloseButtonHoverForeColor = System.Drawing.Color.Empty
+        Me.tabControlPanelMagisk.CloseButtonPressedForeColor = System.Drawing.Color.Empty
+        Me.tabControlPanelMagisk.Controls.Add(Me.TabPageAdv1)
+        Me.tabControlPanelMagisk.Controls.Add(Me.TabPageAdv2)
+        Me.tabControlPanelMagisk.Controls.Add(Me.TabPageAdv3)
+        Me.tabControlPanelMagisk.FocusOnTabClick = False
+        Me.tabControlPanelMagisk.InactiveTabColor = System.Drawing.Color.White
+        Me.tabControlPanelMagisk.InActiveTabForeColor = System.Drawing.Color.Empty
+        resources.ApplyResources(Me.tabControlPanelMagisk, "tabControlPanelMagisk")
+        Me.tabControlPanelMagisk.Name = "tabControlPanelMagisk"
+        Me.tabControlPanelMagisk.SeparatorColor = System.Drawing.Color.Transparent
+        Me.tabControlPanelMagisk.ShowSeparator = False
+        Me.tabControlPanelMagisk.TabPanelBackColor = System.Drawing.Color.White
+        Me.tabControlPanelMagisk.TabStyle = GetType(Syncfusion.Windows.Forms.Tools.TabRendererMetro)
+        '
+        'TabPageAdv1
+        '
+        Me.TabPageAdv1.Controls.Add(Me.Label10)
+        Me.TabPageAdv1.Controls.Add(Me.Label5)
+        Me.TabPageAdv1.Controls.Add(Me.PictureBox7)
+        Me.TabPageAdv1.Controls.Add(Me.cmbRoot)
+        Me.TabPageAdv1.Controls.Add(Me.progressBarRoot)
+        Me.TabPageAdv1.Controls.Add(Me.btnFlashMagisk)
+        Me.TabPageAdv1.Image = Nothing
+        Me.TabPageAdv1.ImageSize = New System.Drawing.Size(16, 16)
+        resources.ApplyResources(Me.TabPageAdv1, "TabPageAdv1")
+        Me.TabPageAdv1.Name = "TabPageAdv1"
+        Me.TabPageAdv1.ShowCloseButton = True
+        Me.TabPageAdv1.ThemesEnabled = False
         '
         'Label5
         '
         resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.Name = "Label5"
         '
-        'progressBarRoot
+        'PictureBox7
         '
-        resources.ApplyResources(Me.progressBarRoot, "progressBarRoot")
-        Me.progressBarRoot.Name = "progressBarRoot"
-        Me.progressBarRoot.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.TabStop = False
         '
         'cmbRoot
         '
@@ -433,11 +469,83 @@ Partial Class Home
         resources.ApplyResources(Me.cmbRoot, "cmbRoot")
         Me.cmbRoot.Name = "cmbRoot"
         '
+        'progressBarRoot
+        '
+        resources.ApplyResources(Me.progressBarRoot, "progressBarRoot")
+        Me.progressBarRoot.Name = "progressBarRoot"
+        Me.progressBarRoot.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        '
         'btnFlashMagisk
         '
         resources.ApplyResources(Me.btnFlashMagisk, "btnFlashMagisk")
         Me.btnFlashMagisk.Name = "btnFlashMagisk"
         Me.btnFlashMagisk.UseVisualStyleBackColor = True
+        '
+        'TabPageAdv2
+        '
+        Me.TabPageAdv2.Controls.Add(Me.btnRootContinue)
+        Me.TabPageAdv2.Controls.Add(Me.checkBoxRoot)
+        Me.TabPageAdv2.Controls.Add(Me.Label3)
+        Me.TabPageAdv2.Controls.Add(Me.Label8)
+        Me.TabPageAdv2.Image = Nothing
+        Me.TabPageAdv2.ImageSize = New System.Drawing.Size(16, 16)
+        resources.ApplyResources(Me.TabPageAdv2, "TabPageAdv2")
+        Me.TabPageAdv2.Name = "TabPageAdv2"
+        Me.TabPageAdv2.ShowCloseButton = True
+        Me.TabPageAdv2.ThemesEnabled = False
+        '
+        'btnRootContinue
+        '
+        resources.ApplyResources(Me.btnRootContinue, "btnRootContinue")
+        Me.btnRootContinue.Name = "btnRootContinue"
+        Me.btnRootContinue.UseVisualStyleBackColor = True
+        '
+        'checkBoxRoot
+        '
+        resources.ApplyResources(Me.checkBoxRoot, "checkBoxRoot")
+        Me.checkBoxRoot.Name = "checkBoxRoot"
+        Me.checkBoxRoot.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Name = "Label3"
+        '
+        'Label8
+        '
+        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.Name = "Label8"
+        '
+        'TabPageAdv3
+        '
+        Me.TabPageAdv3.Controls.Add(Me.cmbRootManager)
+        Me.TabPageAdv3.Controls.Add(Me.progressBarRootManager)
+        Me.TabPageAdv3.Controls.Add(Me.btnFlashMagiskManager)
+        Me.TabPageAdv3.Image = Nothing
+        Me.TabPageAdv3.ImageSize = New System.Drawing.Size(16, 16)
+        resources.ApplyResources(Me.TabPageAdv3, "TabPageAdv3")
+        Me.TabPageAdv3.Name = "TabPageAdv3"
+        Me.TabPageAdv3.ShowCloseButton = True
+        Me.TabPageAdv3.ThemesEnabled = False
+        '
+        'cmbRootManager
+        '
+        Me.cmbRootManager.BeforeTouchSize = New System.Drawing.Size(194, 26)
+        Me.cmbRootManager.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
+        resources.ApplyResources(Me.cmbRootManager, "cmbRootManager")
+        Me.cmbRootManager.Name = "cmbRootManager"
+        '
+        'progressBarRootManager
+        '
+        resources.ApplyResources(Me.progressBarRootManager, "progressBarRootManager")
+        Me.progressBarRootManager.Name = "progressBarRootManager"
+        Me.progressBarRootManager.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        '
+        'btnFlashMagiskManager
+        '
+        resources.ApplyResources(Me.btnFlashMagiskManager, "btnFlashMagiskManager")
+        Me.btnFlashMagiskManager.Name = "btnFlashMagiskManager"
+        Me.btnFlashMagiskManager.UseVisualStyleBackColor = True
         '
         'txtBoxRoot
         '
@@ -599,6 +707,7 @@ Partial Class Home
         '
         'tabUnb1
         '
+        Me.tabUnb1.Controls.Add(Me.Label12)
         Me.tabUnb1.Controls.Add(Me.btnUnbrickGoto)
         Me.tabUnb1.Controls.Add(Me.rdBtnUnbStockReco)
         Me.tabUnb1.Controls.Add(Me.rdBtnUnbFastboot)
@@ -642,6 +751,7 @@ Partial Class Home
         '
         'tabUnb2
         '
+        Me.tabUnb2.Controls.Add(Me.Label14)
         Me.tabUnb2.Controls.Add(Me.progressBarUnbrickFastboot)
         Me.tabUnb2.Controls.Add(Me.btnFlashUnbrFastboot)
         Me.tabUnb2.Controls.Add(Me.cmbBoxUnbrickFastboot)
@@ -673,6 +783,7 @@ Partial Class Home
         '
         'tabUnb3
         '
+        Me.tabUnb3.Controls.Add(Me.Label15)
         Me.tabUnb3.Controls.Add(Me.progressBarUnbrickStock)
         Me.tabUnb3.Controls.Add(Me.btnFlashUnbrRecovery)
         Me.tabUnb3.Controls.Add(Me.cmbBoxUnbrickStock)
@@ -759,106 +870,30 @@ Partial Class Home
         Me.pnlAbout.ShowCloseButton = True
         Me.pnlAbout.ThemesEnabled = False
         '
-        'tabControlPanelMagisk
+        'Label2
         '
-        Me.tabControlPanelMagisk.ActiveTabForeColor = System.Drawing.Color.Empty
-        Me.tabControlPanelMagisk.BeforeTouchSize = New System.Drawing.Size(345, 364)
-        Me.tabControlPanelMagisk.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tabControlPanelMagisk.CloseButtonForeColor = System.Drawing.Color.Empty
-        Me.tabControlPanelMagisk.CloseButtonHoverForeColor = System.Drawing.Color.Empty
-        Me.tabControlPanelMagisk.CloseButtonPressedForeColor = System.Drawing.Color.Empty
-        Me.tabControlPanelMagisk.Controls.Add(Me.TabPageAdv1)
-        Me.tabControlPanelMagisk.Controls.Add(Me.TabPageAdv2)
-        Me.tabControlPanelMagisk.Controls.Add(Me.TabPageAdv3)
-        Me.tabControlPanelMagisk.FocusOnTabClick = False
-        Me.tabControlPanelMagisk.InactiveTabColor = System.Drawing.Color.White
-        Me.tabControlPanelMagisk.InActiveTabForeColor = System.Drawing.Color.Empty
-        resources.ApplyResources(Me.tabControlPanelMagisk, "tabControlPanelMagisk")
-        Me.tabControlPanelMagisk.Name = "tabControlPanelMagisk"
-        Me.tabControlPanelMagisk.SeparatorColor = System.Drawing.Color.Transparent
-        Me.tabControlPanelMagisk.ShowSeparator = False
-        Me.tabControlPanelMagisk.TabPanelBackColor = System.Drawing.Color.White
-        Me.tabControlPanelMagisk.TabStyle = GetType(Syncfusion.Windows.Forms.Tools.TabRendererMetro)
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.Name = "Label2"
         '
-        'TabPageAdv1
+        'Label10
         '
-        Me.TabPageAdv1.Controls.Add(Me.Label5)
-        Me.TabPageAdv1.Controls.Add(Me.PictureBox7)
-        Me.TabPageAdv1.Controls.Add(Me.cmbRoot)
-        Me.TabPageAdv1.Controls.Add(Me.progressBarRoot)
-        Me.TabPageAdv1.Controls.Add(Me.btnFlashMagisk)
-        Me.TabPageAdv1.Image = Nothing
-        Me.TabPageAdv1.ImageSize = New System.Drawing.Size(16, 16)
-        resources.ApplyResources(Me.TabPageAdv1, "TabPageAdv1")
-        Me.TabPageAdv1.Name = "TabPageAdv1"
-        Me.TabPageAdv1.ShowCloseButton = True
-        Me.TabPageAdv1.ThemesEnabled = False
+        resources.ApplyResources(Me.Label10, "Label10")
+        Me.Label10.Name = "Label10"
         '
-        'TabPageAdv2
+        'Label12
         '
-        Me.TabPageAdv2.Controls.Add(Me.btnRootContinue)
-        Me.TabPageAdv2.Controls.Add(Me.checkBoxRoot)
-        Me.TabPageAdv2.Controls.Add(Me.Label3)
-        Me.TabPageAdv2.Controls.Add(Me.Label8)
-        Me.TabPageAdv2.Image = Nothing
-        Me.TabPageAdv2.ImageSize = New System.Drawing.Size(16, 16)
-        resources.ApplyResources(Me.TabPageAdv2, "TabPageAdv2")
-        Me.TabPageAdv2.Name = "TabPageAdv2"
-        Me.TabPageAdv2.ShowCloseButton = True
-        Me.TabPageAdv2.ThemesEnabled = False
+        resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.Name = "Label12"
         '
-        'Label3
+        'Label14
         '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.Name = "Label3"
+        resources.ApplyResources(Me.Label14, "Label14")
+        Me.Label14.Name = "Label14"
         '
-        'Label8
+        'Label15
         '
-        resources.ApplyResources(Me.Label8, "Label8")
-        Me.Label8.Name = "Label8"
-        '
-        'TabPageAdv3
-        '
-        Me.TabPageAdv3.Controls.Add(Me.cmbRootManager)
-        Me.TabPageAdv3.Controls.Add(Me.progressBarRootManager)
-        Me.TabPageAdv3.Controls.Add(Me.btnFlashMagiskManager)
-        Me.TabPageAdv3.Image = Nothing
-        Me.TabPageAdv3.ImageSize = New System.Drawing.Size(16, 16)
-        resources.ApplyResources(Me.TabPageAdv3, "TabPageAdv3")
-        Me.TabPageAdv3.Name = "TabPageAdv3"
-        Me.TabPageAdv3.ShowCloseButton = True
-        Me.TabPageAdv3.ThemesEnabled = False
-        '
-        'cmbRootManager
-        '
-        Me.cmbRootManager.BeforeTouchSize = New System.Drawing.Size(194, 26)
-        Me.cmbRootManager.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
-        resources.ApplyResources(Me.cmbRootManager, "cmbRootManager")
-        Me.cmbRootManager.Name = "cmbRootManager"
-        '
-        'progressBarRootManager
-        '
-        resources.ApplyResources(Me.progressBarRootManager, "progressBarRootManager")
-        Me.progressBarRootManager.Name = "progressBarRootManager"
-        Me.progressBarRootManager.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        '
-        'btnFlashMagiskManager
-        '
-        resources.ApplyResources(Me.btnFlashMagiskManager, "btnFlashMagiskManager")
-        Me.btnFlashMagiskManager.Name = "btnFlashMagiskManager"
-        Me.btnFlashMagiskManager.UseVisualStyleBackColor = True
-        '
-        'checkBoxRoot
-        '
-        resources.ApplyResources(Me.checkBoxRoot, "checkBoxRoot")
-        Me.checkBoxRoot.Name = "checkBoxRoot"
-        Me.checkBoxRoot.UseVisualStyleBackColor = True
-        '
-        'btnRootContinue
-        '
-        resources.ApplyResources(Me.btnRootContinue, "btnRootContinue")
-        Me.btnRootContinue.Name = "btnRootContinue"
-        Me.btnRootContinue.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.Label15, "Label15")
+        Me.Label15.Name = "Label15"
         '
         'Home
         '
@@ -891,8 +926,16 @@ Partial Class Home
         CType(Me.cmbRecovery, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlRoot.ResumeLayout(False)
         Me.pnlRoot.PerformLayout()
+        CType(Me.tabControlPanelMagisk, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabControlPanelMagisk.ResumeLayout(False)
+        Me.TabPageAdv1.ResumeLayout(False)
+        Me.TabPageAdv1.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbRoot, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPageAdv2.ResumeLayout(False)
+        Me.TabPageAdv2.PerformLayout()
+        Me.TabPageAdv3.ResumeLayout(False)
+        CType(Me.cmbRootManager, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlXposed.ResumeLayout(False)
         Me.pnlXposed.PerformLayout()
         Me.pnlGapps.ResumeLayout(False)
@@ -910,23 +953,18 @@ Partial Class Home
         CType(Me.TabControlUnbrick, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlUnbrick.ResumeLayout(False)
         Me.tabUnb1.ResumeLayout(False)
+        Me.tabUnb1.PerformLayout()
         CType(Me.rdBtnUnbStockReco, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.rdBtnUnbFastboot, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabUnb2.ResumeLayout(False)
+        Me.tabUnb2.PerformLayout()
         CType(Me.cmbBoxUnbrickFastboot, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabUnb3.ResumeLayout(False)
+        Me.tabUnb3.PerformLayout()
         CType(Me.cmbBoxUnbrickStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlSettings.ResumeLayout(False)
         Me.pnlSettings.PerformLayout()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tabControlPanelMagisk, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tabControlPanelMagisk.ResumeLayout(False)
-        Me.TabPageAdv1.ResumeLayout(False)
-        Me.TabPageAdv1.PerformLayout()
-        Me.TabPageAdv2.ResumeLayout(False)
-        Me.TabPageAdv2.PerformLayout()
-        Me.TabPageAdv3.ResumeLayout(False)
-        CType(Me.cmbRootManager, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1013,4 +1051,9 @@ Partial Class Home
     Friend WithEvents btnFlashMagiskManager As Button
     Friend WithEvents checkBoxRoot As CheckBox
     Friend WithEvents btnRootContinue As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
 End Class

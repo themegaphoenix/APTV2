@@ -181,4 +181,28 @@
   <data name="Home_btnFlashUnbr_Click_Reboot_into_fastboot_mode" xml:space="preserve">
     <value>Перезагрузитесь в режиме fastboot!</value>
   </data>
+  <data name="Home_CheckXMLUpdates_Update_Found" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_New_version_of_the_XML__data__file_found__Download_now_" xml:space="preserve">
+    <value>Новая версия файла XML (данных). Скачать сейчас?!</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_Update" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_Update_Complete" xml:space="preserve">
+    <value>Полное Обновление</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_You_have_the_latest_version" xml:space="preserve">
+    <value>У вас есть последняя версия</value>
+  </data>
+  <data name="Home_btnFlashUnbrRecovery_Click_Power_on_your_Honor_7_Holding_all_three_buttons__VOL___VOL__and_Power__and_it_will_begin_flashing" xml:space="preserve">
+    <value>Мощность на вашу честь 7 Холдинг все три кнопок (VOL + VOL - и мощности) и он начнет мигать!</value>
+  </data>
+  <data name="Home_btnFlashMagiskManager_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_" xml:space="preserve">
+    <value>Установка приложения на устройстве (убедитесь, что устройство подключено, в противном случае он не будет ничего выводить)!</value>
+  </data>
+  <data name="Home_btnFlashMagiskManager_Click_Open_the_Magisk_Manager_Application" xml:space="preserve">
+    <value>Откройте приложение Диспетчер Magisk!</value>
+  </data>
 </root>
