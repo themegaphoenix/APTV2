@@ -751,6 +751,7 @@ Partial Class Home
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.tabControlPanel)
+        Me.MaximizeBox = False
         Me.MetroColor = System.Drawing.Color.Transparent
         Me.Name = "Home"
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).EndInit()

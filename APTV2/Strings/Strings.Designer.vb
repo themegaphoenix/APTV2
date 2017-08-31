@@ -92,6 +92,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Power on your Honor 7 Holding all three buttons (VOL+, VOL- and Power) and it will begin flashing.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashUnbrRecovery_Click_Power_on_your_Honor_7_Holding_all_three_buttons__VOL___VOL__and_Power__and_it_will_begin_flashing() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashUnbrRecovery_Click_Power_on_your_Honor_7_Holding_all_three_buttons__"& _ 
+                        "VOL___VOL__and_Power__and_it_will_begin_flashing", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Installing app on the device(make sure device is plugged in, otherwise it will not output anything).
         '''</summary>
         Friend Shared ReadOnly Property Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_() As String
@@ -176,6 +186,51 @@ Namespace My.Resources
             Get
                 Return ResourceManager.GetString("Home_btnUnlockBootloader_Click_Would_you_like_to_flash_a_custom_recovery_like_TWR"& _ 
                         "P_", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to New version of the XML (data) file found. Download now?.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_CheckXMLUpdates_New_version_of_the_XML__data__file_found__Download_now_() As String
+            Get
+                Return ResourceManager.GetString("Home_CheckXMLUpdates_New_version_of_the_XML__data__file_found__Download_now_", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Update.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_CheckXMLUpdates_Update() As String
+            Get
+                Return ResourceManager.GetString("Home_CheckXMLUpdates_Update", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Update Complete.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_CheckXMLUpdates_Update_Complete() As String
+            Get
+                Return ResourceManager.GetString("Home_CheckXMLUpdates_Update_Complete", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Update Found.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_CheckXMLUpdates_Update_Found() As String
+            Get
+                Return ResourceManager.GetString("Home_CheckXMLUpdates_Update_Found", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to You have the latest version.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_CheckXMLUpdates_You_have_the_latest_version() As String
+            Get
+                Return ResourceManager.GetString("Home_CheckXMLUpdates_You_have_the_latest_version", resourceCulture)
             End Get
         End Property
         

@@ -274,7 +274,7 @@ Public Class Home
                        }
             Await Task.Run(Sub() RunComands(commands))
 
-            MessageBox.Show("Power on your Honor 7 Holding all three buttons (VOL+, VOL- and Power) and it will begin flashing")
+            MessageBox.Show(Strings.Home_btnFlashUnbrRecovery_Click_Power_on_your_Honor_7_Holding_all_three_buttons__VOL___VOL__and_Power__and_it_will_begin_flashing)
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
@@ -566,23 +566,25 @@ Public Class Home
     End Sub
 
     Private Sub ReloadInfo()
+
         'get the selection information
         My.Settings.phoneVariant = GetInfoCombox(cmbModel, 2)
+        Try
+            'load the correct information into the labels
+            xmlDoc.Load(My.Settings.xmlDocumentName)
+            'get file details
 
-        'load the correct information into the labels
-        xmlDoc.Load(My.Settings.xmlDocumentName)
-        'get file details
-        lblCreator.Text = String.Format("{0} {1} {2}",
+            lblCreator.Text = String.Format("{0} {1} {2}",
                                         xmlDoc.SelectSingleNode("/root/creator").InnerText,
                                         xmlDoc.SelectSingleNode("/root/date").InnerText,
                                         xmlDoc.SelectSingleNode("/root/version").InnerText)
 
-        'loops through all the phones to find the right one and gets the information fromm them
-        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
-        For Each node As XmlNode In nodes
-            If My.Settings.phoneVariant = node.SelectSingleNode("variant").InnerText Then
+            'loops through all the phones to find the right one and gets the information fromm them
+            Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/root/phone")
+            For Each node As XmlNode In nodes
+                If My.Settings.phoneVariant = node.SelectSingleNode("variant").InnerText Then
 
-                Try
+
                     'update Labels in the homepage
                     lblManufacturer.Text = cmbModel.SelectedItem.ToString
                     lblProcessor.Text = node.SelectSingleNode("processor").InnerText
@@ -632,16 +634,17 @@ Public Class Home
                         cmbBoxUnbrickStock.SelectedIndex = 0
                     Catch ex As Exception
                     End Try
-                Catch ex As Exception
-                    MessageBox.Show(Strings.Home_ReloadInfo_File_does_not_contains_invalid_information)
-                End Try
 
-            End If
-        Next
 
-        'populate dropdown stuff
-        AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
-        AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
+                End If
+            Next
+
+            'populate dropdown stuff
+            AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
+            AddToComboBoxesXml("/root/magiskInstaller/version", "Magisk ", cmbRoot)
+        Catch ex As Exception
+            MessageBox.Show(Strings.Home_ReloadInfo_File_does_not_contains_invalid_information)
+        End Try
     End Sub
 
 #End Region
@@ -673,11 +676,11 @@ Public Class Home
 
                 'if the new version number is bigger than the current version it will prompt the user
                 If Decimal.Parse(latestVersion) > Decimal.Parse(currentVersion) Then
-                    Console.WriteLine("Update Found")
+                    Console.WriteLine(Strings.Home_CheckXMLUpdates_Update_Found)
 
                     'asks the user if they want to download a new version
-                    Dim result As DialogResult = MessageBox.Show("New version of the XML (data) file found. Download now?",
-                                                             "Update",
+                    Dim result As DialogResult = MessageBox.Show(Strings.Home_CheckXMLUpdates_New_version_of_the_XML__data__file_found__Download_now_,
+                                                             Strings.Home_CheckXMLUpdates_Update,
                                                              MessageBoxButtons.YesNo,
                                                              MessageBoxIcon.Question)
                     'if they say yes
@@ -693,8 +696,12 @@ Public Class Home
                             Await webClient.DownloadFileTaskAsync(New Uri(UpdateXMLFile), xmlFileName)
                             'reads the new file information and reloads the data
                             ReadXml()
+                            MessageBox.Show(Strings.Home_CheckXMLUpdates_Update_Complete)
+
                         End Using
                     End If
+                ElseIf Decimal.Parse(latestVersion) = Decimal.Parse(currentVersion) Then
+                    MessageBox.Show(Strings.Home_CheckXMLUpdates_You_have_the_latest_version)
                 End If
             End Using
         Catch ex As Exception

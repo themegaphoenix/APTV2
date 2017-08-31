@@ -121,11 +121,704 @@
   <data name="tabControlPanel.ActiveTabFont" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>pnlPhone</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cmbModel.Name" xml:space="preserve">
+    <value>cmbModel</value>
+  </data>
+  <data name="&gt;&gt;cmbModel.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;cmbModel.Parent" xml:space="preserve">
+    <value>pnlPhone</value>
+  </data>
+  <data name="&gt;&gt;cmbModel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;picPhone.Name" xml:space="preserve">
+    <value>picPhone</value>
+  </data>
+  <data name="&gt;&gt;picPhone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picPhone.Parent" xml:space="preserve">
+    <value>pnlPhone</value>
+  </data>
+  <data name="&gt;&gt;picPhone.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlPhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="pnlPhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>715, 383</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlPhone.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="pnlPhone.Text" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="&gt;&gt;pnlPhone.Name" xml:space="preserve">
+    <value>pnlPhone</value>
+  </data>
+  <data name="&gt;&gt;pnlPhone.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlPhone.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlPhone.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Panel4.Name" xml:space="preserve">
+    <value>Panel4</value>
+  </data>
+  <data name="&gt;&gt;Panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel4.Parent" xml:space="preserve">
+    <value>pnlBootloader</value>
+  </data>
+  <data name="&gt;&gt;Panel4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Name" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Parent" xml:space="preserve">
+    <value>pnlBootloader</value>
+  </data>
+  <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
+    <value>pnlBootloader</value>
+  </data>
+  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtBoxBootloader.Name" xml:space="preserve">
+    <value>txtBoxBootloader</value>
+  </data>
+  <data name="&gt;&gt;txtBoxBootloader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBoxBootloader.Parent" xml:space="preserve">
+    <value>pnlBootloader</value>
+  </data>
+  <data name="&gt;&gt;txtBoxBootloader.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pnlBootloader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="pnlBootloader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>715, 383</value>
+  </data>
+  <data name="pnlBootloader.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="pnlBootloader.Text" xml:space="preserve">
+    <value>Bootloader</value>
+  </data>
+  <data name="&gt;&gt;pnlBootloader.Name" xml:space="preserve">
+    <value>pnlBootloader</value>
+  </data>
+  <data name="&gt;&gt;pnlBootloader.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlBootloader.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlBootloader.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnFlashRecovery.Name" xml:space="preserve">
+    <value>btnFlashRecovery</value>
+  </data>
+  <data name="&gt;&gt;btnFlashRecovery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFlashRecovery.Parent" xml:space="preserve">
+    <value>pnlRecovery</value>
+  </data>
+  <data name="&gt;&gt;btnFlashRecovery.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;progressBarRecovery.Name" xml:space="preserve">
+    <value>progressBarRecovery</value>
+  </data>
+  <data name="&gt;&gt;progressBarRecovery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressBarRecovery.Parent" xml:space="preserve">
+    <value>pnlRecovery</value>
+  </data>
+  <data name="&gt;&gt;progressBarRecovery.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbRecovery.Name" xml:space="preserve">
+    <value>cmbRecovery</value>
+  </data>
+  <data name="&gt;&gt;cmbRecovery.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;cmbRecovery.Parent" xml:space="preserve">
+    <value>pnlRecovery</value>
+  </data>
+  <data name="&gt;&gt;cmbRecovery.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtBoxRecovery.Name" xml:space="preserve">
+    <value>txtBoxRecovery</value>
+  </data>
+  <data name="&gt;&gt;txtBoxRecovery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBoxRecovery.Parent" xml:space="preserve">
+    <value>pnlRecovery</value>
+  </data>
+  <data name="&gt;&gt;txtBoxRecovery.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pnlRecovery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="pnlRecovery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>715, 383</value>
+  </data>
+  <data name="pnlRecovery.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="pnlRecovery.Text" xml:space="preserve">
+    <value>Recovery</value>
+  </data>
+  <data name="&gt;&gt;pnlRecovery.Name" xml:space="preserve">
+    <value>pnlRecovery</value>
+  </data>
+  <data name="&gt;&gt;pnlRecovery.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlRecovery.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlRecovery.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PictureBox7.Name" xml:space="preserve">
+    <value>PictureBox7</value>
+  </data>
+  <data name="&gt;&gt;PictureBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox7.Parent" xml:space="preserve">
+    <value>pnlRoot</value>
+  </data>
+  <data name="&gt;&gt;PictureBox7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>pnlRoot</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;progressBarRoot.Name" xml:space="preserve">
+    <value>progressBarRoot</value>
+  </data>
+  <data name="&gt;&gt;progressBarRoot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressBarRoot.Parent" xml:space="preserve">
+    <value>pnlRoot</value>
+  </data>
+  <data name="&gt;&gt;progressBarRoot.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmbRoot.Name" xml:space="preserve">
+    <value>cmbRoot</value>
+  </data>
+  <data name="&gt;&gt;cmbRoot.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;cmbRoot.Parent" xml:space="preserve">
+    <value>pnlRoot</value>
+  </data>
+  <data name="&gt;&gt;cmbRoot.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnFlashMagisk.Name" xml:space="preserve">
+    <value>btnFlashMagisk</value>
+  </data>
+  <data name="&gt;&gt;btnFlashMagisk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFlashMagisk.Parent" xml:space="preserve">
+    <value>pnlRoot</value>
+  </data>
+  <data name="&gt;&gt;btnFlashMagisk.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtBoxRoot.Name" xml:space="preserve">
+    <value>txtBoxRoot</value>
+  </data>
+  <data name="&gt;&gt;txtBoxRoot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBoxRoot.Parent" xml:space="preserve">
+    <value>pnlRoot</value>
+  </data>
+  <data name="&gt;&gt;txtBoxRoot.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlRoot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="pnlRoot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>715, 383</value>
+  </data>
+  <data name="pnlRoot.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="pnlRoot.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="&gt;&gt;pnlRoot.Name" xml:space="preserve">
+    <value>pnlRoot</value>
+  </data>
+  <data name="&gt;&gt;pnlRoot.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlRoot.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlRoot.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>pnlXposed</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlXposed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="pnlXposed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>715, 383</value>
+  </data>
+  <data name="pnlXposed.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="pnlXposed.Text" xml:space="preserve">
+    <value>Xposed</value>
+  </data>
+  <data name="&gt;&gt;pnlXposed.Name" xml:space="preserve">
+    <value>pnlXposed</value>
+  </data>
+  <data name="&gt;&gt;pnlXposed.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlXposed.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlXposed.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanelGAPPS.Name" xml:space="preserve">
+    <value>tabControlPanelGAPPS</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanelGAPPS.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanelGAPPS.Parent" xml:space="preserve">
+    <value>pnlGapps</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanelGAPPS.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtBoxGApps.Name" xml:space="preserve">
+    <value>txtBoxGApps</value>
+  </data>
+  <data name="&gt;&gt;txtBoxGApps.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBoxGApps.Parent" xml:space="preserve">
+    <value>pnlGapps</value>
+  </data>
+  <data name="&gt;&gt;txtBoxGApps.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlGapps.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="pnlGapps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>715, 383</value>
+  </data>
+  <data name="pnlGapps.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="pnlGapps.Text" xml:space="preserve">
+    <value>Gapps</value>
+  </data>
+  <data name="&gt;&gt;pnlGapps.Name" xml:space="preserve">
+    <value>pnlGapps</value>
+  </data>
+  <data name="&gt;&gt;pnlGapps.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlGapps.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlGapps.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;TabControlUnbrick.Name" xml:space="preserve">
+    <value>TabControlUnbrick</value>
+  </data>
+  <data name="&gt;&gt;TabControlUnbrick.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;TabControlUnbrick.Parent" xml:space="preserve">
+    <value>pnlUnbrick</value>
+  </data>
+  <data name="&gt;&gt;TabControlUnbrick.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtBoxUnbrick.Name" xml:space="preserve">
+    <value>txtBoxUnbrick</value>
+  </data>
+  <data name="&gt;&gt;txtBoxUnbrick.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBoxUnbrick.Parent" xml:space="preserve">
+    <value>pnlUnbrick</value>
+  </data>
+  <data name="&gt;&gt;txtBoxUnbrick.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlUnbrick.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="pnlUnbrick.Size" type="System.Drawing.Size, System.Drawing">
+    <value>715, 383</value>
+  </data>
+  <data name="pnlUnbrick.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="pnlUnbrick.Text" xml:space="preserve">
+    <value>Unbrick</value>
+  </data>
+  <data name="&gt;&gt;pnlUnbrick.Name" xml:space="preserve">
+    <value>pnlUnbrick</value>
+  </data>
+  <data name="&gt;&gt;pnlUnbrick.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlUnbrick.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlUnbrick.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;checkBoxUpdatesStart.Name" xml:space="preserve">
+    <value>checkBoxUpdatesStart</value>
+  </data>
+  <data name="&gt;&gt;checkBoxUpdatesStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxUpdatesStart.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;checkBoxUpdatesStart.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnXMLFileUpdates.Name" xml:space="preserve">
+    <value>btnXMLFileUpdates</value>
+  </data>
+  <data name="&gt;&gt;btnXMLFileUpdates.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnXMLFileUpdates.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;btnXMLFileUpdates.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxXMLFile.Name" xml:space="preserve">
+    <value>cmbBoxXMLFile</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxXMLFile.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxXMLFile.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxXMLFile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pnlSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="pnlSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>715, 383</value>
+  </data>
+  <data name="pnlSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="pnlSettings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;pnlSettings.Name" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;pnlSettings.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlSettings.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="pnlAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="pnlAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>715, 383</value>
+  </data>
+  <data name="pnlAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="pnlAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;pnlAbout.Name" xml:space="preserve">
+    <value>pnlAbout</value>
+  </data>
+  <data name="&gt;&gt;pnlAbout.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;pnlAbout.Parent" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlAbout.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabControlPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControlPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Condensed, 9.75pt</value>
+  </data>
+  <data name="tabControlPanel.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>79, 22</value>
+  </data>
+  <data name="tabControlPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControlPanel.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabControlPanel.Padding" type="System.Drawing.Point, System.Drawing">
+    <value>10, 5</value>
+  </data>
+  <data name="tabControlPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>715, 420</value>
+  </data>
+  <data name="tabControlPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel.Name" xml:space="preserve">
+    <value>tabControlPanel</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblCreator.Name" xml:space="preserve">
+    <value>lblCreator</value>
+  </data>
+  <data name="&gt;&gt;lblCreator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCreator.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;lblCreator.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PictureBox4.Name" xml:space="preserve">
+    <value>PictureBox4</value>
+  </data>
+  <data name="&gt;&gt;PictureBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox4.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;PictureBox4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.Name" xml:space="preserve">
+    <value>PictureBox3</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Name" xml:space="preserve">
+    <value>PictureBox2</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblStorage.Name" xml:space="preserve">
+    <value>lblStorage</value>
+  </data>
+  <data name="&gt;&gt;lblStorage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStorage.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;lblStorage.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblManufacturer.Name" xml:space="preserve">
+    <value>lblManufacturer</value>
+  </data>
+  <data name="&gt;&gt;lblManufacturer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblManufacturer.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;lblManufacturer.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblRAM.Name" xml:space="preserve">
+    <value>lblRAM</value>
+  </data>
+  <data name="&gt;&gt;lblRAM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRAM.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;lblRAM.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lblProcessor.Name" xml:space="preserve">
+    <value>lblProcessor</value>
+  </data>
+  <data name="&gt;&gt;lblProcessor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblProcessor.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;lblProcessor.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 53</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 308</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>pnlPhone</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -274,13 +967,13 @@
     <value>61, 143</value>
   </data>
   <data name="lblStorage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 18</value>
+    <value>48, 18</value>
   </data>
   <data name="lblStorage.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="lblStorage.Text" xml:space="preserve">
-    <value>Label1</value>
+    <value>Storage</value>
   </data>
   <data name="&gt;&gt;lblStorage.Name" xml:space="preserve">
     <value>lblStorage</value>
@@ -307,13 +1000,13 @@
     <value>14, 15</value>
   </data>
   <data name="lblManufacturer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 45</value>
+    <value>104, 45</value>
   </data>
   <data name="lblManufacturer.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="lblManufacturer.Text" xml:space="preserve">
-    <value>Label1</value>
+    <value>Phone</value>
   </data>
   <data name="&gt;&gt;lblManufacturer.Name" xml:space="preserve">
     <value>lblManufacturer</value>
@@ -337,13 +1030,13 @@
     <value>61, 105</value>
   </data>
   <data name="lblRAM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 18</value>
+    <value>32, 18</value>
   </data>
   <data name="lblRAM.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="lblRAM.Text" xml:space="preserve">
-    <value>Label1</value>
+    <value>RAM</value>
   </data>
   <data name="&gt;&gt;lblRAM.Name" xml:space="preserve">
     <value>lblRAM</value>
@@ -367,13 +1060,13 @@
     <value>61, 63</value>
   </data>
   <data name="lblProcessor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 18</value>
+    <value>29, 18</value>
   </data>
   <data name="lblProcessor.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="lblProcessor.Text" xml:space="preserve">
-    <value>Label1</value>
+    <value>CPU</value>
   </data>
   <data name="&gt;&gt;lblProcessor.Name" xml:space="preserve">
     <value>lblProcessor</value>
@@ -387,32 +1080,11 @@
   <data name="&gt;&gt;lblProcessor.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 53</value>
-  </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 308</value>
-  </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>pnlPhone</value>
-  </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="cmbModel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Condensed, 9.75pt</value>
   </data>
   <data name="cmbModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 21</value>
+    <value>242, 21</value>
   </data>
   <data name="cmbModel.Size" type="System.Drawing.Size, System.Drawing">
     <value>272, 26</value>
@@ -462,29 +1134,50 @@
   <data name="&gt;&gt;picPhone.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="pnlPhone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
+  <data name="&gt;&gt;txtBoxUnlockKey.Name" xml:space="preserve">
+    <value>txtBoxUnlockKey</value>
   </data>
-  <data name="pnlPhone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 383</value>
+  <data name="&gt;&gt;txtBoxUnlockKey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pnlPhone.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;txtBoxUnlockKey.Parent" xml:space="preserve">
+    <value>Panel4</value>
+  </data>
+  <data name="&gt;&gt;txtBoxUnlockKey.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>Panel4</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pnlPhone.Text" xml:space="preserve">
-    <value>Phone</value>
+  <data name="Panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 42</value>
   </data>
-  <data name="&gt;&gt;pnlPhone.Name" xml:space="preserve">
-    <value>pnlPhone</value>
+  <data name="Panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 85</value>
   </data>
-  <data name="&gt;&gt;pnlPhone.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  <data name="Panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;pnlPhone.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
+  <data name="&gt;&gt;Panel4.Name" xml:space="preserve">
+    <value>Panel4</value>
   </data>
-  <data name="&gt;&gt;pnlPhone.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;Panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel4.Parent" xml:space="preserve">
+    <value>pnlBootloader</value>
+  </data>
+  <data name="&gt;&gt;Panel4.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="txtBoxUnlockKey.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 36</value>
@@ -537,26 +1230,50 @@
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 42</value>
+  <data name="&gt;&gt;PictureBox6.Name" xml:space="preserve">
+    <value>PictureBox6</value>
   </data>
-  <data name="Panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 85</value>
+  <data name="&gt;&gt;PictureBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="&gt;&gt;PictureBox6.Parent" xml:space="preserve">
+    <value>Panel3</value>
   </data>
-  <data name="&gt;&gt;Panel4.Name" xml:space="preserve">
-    <value>Panel4</value>
+  <data name="&gt;&gt;PictureBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;Panel4.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnLockBootloader.Name" xml:space="preserve">
+    <value>btnLockBootloader</value>
+  </data>
+  <data name="&gt;&gt;btnLockBootloader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLockBootloader.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;btnLockBootloader.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 255</value>
+  </data>
+  <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 97</value>
+  </data>
+  <data name="Panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Name" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Panel4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Panel3.Parent" xml:space="preserve">
     <value>pnlBootloader</value>
   </data>
-  <data name="&gt;&gt;Panel4.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="PictureBox6.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -621,26 +1338,50 @@
   <data name="&gt;&gt;btnLockBootloader.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 255</value>
+  <data name="&gt;&gt;PictureBox5.Name" xml:space="preserve">
+    <value>PictureBox5</value>
   </data>
-  <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 97</value>
+  <data name="&gt;&gt;PictureBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="&gt;&gt;PictureBox5.Parent" xml:space="preserve">
+    <value>Panel2</value>
   </data>
-  <data name="&gt;&gt;Panel3.Name" xml:space="preserve">
-    <value>Panel3</value>
+  <data name="&gt;&gt;PictureBox5.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;Panel3.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnUnlockBootloader.Name" xml:space="preserve">
+    <value>btnUnlockBootloader</value>
+  </data>
+  <data name="&gt;&gt;btnUnlockBootloader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnUnlockBootloader.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;btnUnlockBootloader.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 150</value>
+  </data>
+  <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 86</value>
+  </data>
+  <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Panel3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
     <value>pnlBootloader</value>
   </data>
-  <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="PictureBox5.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -711,27 +1452,6 @@
   <data name="&gt;&gt;btnUnlockBootloader.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 150</value>
-  </data>
-  <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 86</value>
-  </data>
-  <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
-    <value>Panel2</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
-    <value>pnlBootloader</value>
-  </data>
-  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="txtBoxBootloader.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 7</value>
   </data>
@@ -758,30 +1478,6 @@
   </data>
   <data name="&gt;&gt;txtBoxBootloader.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="pnlBootloader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
-  </data>
-  <data name="pnlBootloader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 383</value>
-  </data>
-  <data name="pnlBootloader.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="pnlBootloader.Text" xml:space="preserve">
-    <value>Bootloader</value>
-  </data>
-  <data name="&gt;&gt;pnlBootloader.Name" xml:space="preserve">
-    <value>pnlBootloader</value>
-  </data>
-  <data name="&gt;&gt;pnlBootloader.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;pnlBootloader.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
-  </data>
-  <data name="&gt;&gt;pnlBootloader.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="btnFlashRecovery.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -892,30 +1588,6 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;txtBoxRecovery.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pnlRecovery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
-  </data>
-  <data name="pnlRecovery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 383</value>
-  </data>
-  <data name="pnlRecovery.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="pnlRecovery.Text" xml:space="preserve">
-    <value>Recovery</value>
-  </data>
-  <data name="&gt;&gt;pnlRecovery.Name" xml:space="preserve">
-    <value>pnlRecovery</value>
-  </data>
-  <data name="&gt;&gt;pnlRecovery.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;pnlRecovery.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
-  </data>
-  <data name="&gt;&gt;pnlRecovery.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="PictureBox7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1503,30 +2175,6 @@
   <data name="&gt;&gt;txtBoxRoot.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="pnlRoot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
-  </data>
-  <data name="pnlRoot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 383</value>
-  </data>
-  <data name="pnlRoot.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="pnlRoot.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="&gt;&gt;pnlRoot.Name" xml:space="preserve">
-    <value>pnlRoot</value>
-  </data>
-  <data name="&gt;&gt;pnlRoot.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;pnlRoot.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
-  </data>
-  <data name="&gt;&gt;pnlRoot.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1560,29 +2208,134 @@
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pnlXposed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
+  <data name="&gt;&gt;TabPageAdv7.Name" xml:space="preserve">
+    <value>TabPageAdv7</value>
   </data>
-  <data name="pnlXposed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 383</value>
-  </data>
-  <data name="pnlXposed.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="pnlXposed.Text" xml:space="preserve">
-    <value>Xposed</value>
-  </data>
-  <data name="&gt;&gt;pnlXposed.Name" xml:space="preserve">
-    <value>pnlXposed</value>
-  </data>
-  <data name="&gt;&gt;pnlXposed.Type" xml:space="preserve">
+  <data name="&gt;&gt;TabPageAdv7.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
-  <data name="&gt;&gt;pnlXposed.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
+  <data name="&gt;&gt;TabPageAdv7.Parent" xml:space="preserve">
+    <value>tabControlPanelGAPPS</value>
   </data>
-  <data name="&gt;&gt;pnlXposed.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;TabPageAdv7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TabPageAdv8.Name" xml:space="preserve">
+    <value>TabPageAdv8</value>
+  </data>
+  <data name="&gt;&gt;TabPageAdv8.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;TabPageAdv8.Parent" xml:space="preserve">
+    <value>tabControlPanelGAPPS</value>
+  </data>
+  <data name="&gt;&gt;TabPageAdv8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabControlPanelGAPPS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 19</value>
+  </data>
+  <data name="tabControlPanelGAPPS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 364</value>
+  </data>
+  <data name="tabControlPanelGAPPS.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanelGAPPS.Name" xml:space="preserve">
+    <value>tabControlPanelGAPPS</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanelGAPPS.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanelGAPPS.Parent" xml:space="preserve">
+    <value>pnlGapps</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanelGAPPS.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>TabPageAdv7</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cmbGApps.Name" xml:space="preserve">
+    <value>cmbGApps</value>
+  </data>
+  <data name="&gt;&gt;cmbGApps.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;cmbGApps.Parent" xml:space="preserve">
+    <value>TabPageAdv7</value>
+  </data>
+  <data name="&gt;&gt;cmbGApps.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnGappsInstall.Name" xml:space="preserve">
+    <value>btnGappsInstall</value>
+  </data>
+  <data name="&gt;&gt;btnGappsInstall.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGappsInstall.Parent" xml:space="preserve">
+    <value>TabPageAdv7</value>
+  </data>
+  <data name="&gt;&gt;btnGappsInstall.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;progressBarGApps.Name" xml:space="preserve">
+    <value>progressBarGApps</value>
+  </data>
+  <data name="&gt;&gt;progressBarGApps.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressBarGApps.Parent" xml:space="preserve">
+    <value>TabPageAdv7</value>
+  </data>
+  <data name="&gt;&gt;progressBarGApps.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
+    <value>PictureBox1</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
+    <value>TabPageAdv7</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TabPageAdv7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 26</value>
+  </data>
+  <data name="TabPageAdv7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 338</value>
+  </data>
+  <data name="TabPageAdv7.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabPageAdv7.Text" xml:space="preserve">
+    <value>Version Selector</value>
+  </data>
+  <data name="&gt;&gt;TabPageAdv7.Name" xml:space="preserve">
+    <value>TabPageAdv7</value>
+  </data>
+  <data name="&gt;&gt;TabPageAdv7.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;TabPageAdv7.Parent" xml:space="preserve">
+    <value>tabControlPanelGAPPS</value>
+  </data>
+  <data name="&gt;&gt;TabPageAdv7.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1725,29 +2478,53 @@
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="TabPageAdv7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;Label13.Name" xml:space="preserve">
+    <value>Label13</value>
+  </data>
+  <data name="&gt;&gt;Label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
+    <value>TabPageAdv8</value>
+  </data>
+  <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label11.Name" xml:space="preserve">
+    <value>Label11</value>
+  </data>
+  <data name="&gt;&gt;Label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label11.Parent" xml:space="preserve">
+    <value>TabPageAdv8</value>
+  </data>
+  <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TabPageAdv8.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>
   </data>
-  <data name="TabPageAdv7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="TabPageAdv8.Size" type="System.Drawing.Size, System.Drawing">
     <value>345, 338</value>
   </data>
-  <data name="TabPageAdv7.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="TabPageAdv8.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="TabPageAdv7.Text" xml:space="preserve">
-    <value>Version Selector</value>
+  <data name="TabPageAdv8.Text" xml:space="preserve">
+    <value>Flash</value>
   </data>
-  <data name="&gt;&gt;TabPageAdv7.Name" xml:space="preserve">
-    <value>TabPageAdv7</value>
+  <data name="&gt;&gt;TabPageAdv8.Name" xml:space="preserve">
+    <value>TabPageAdv8</value>
   </data>
-  <data name="&gt;&gt;TabPageAdv7.Type" xml:space="preserve">
+  <data name="&gt;&gt;TabPageAdv8.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
-  <data name="&gt;&gt;TabPageAdv7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;TabPageAdv8.Parent" xml:space="preserve">
     <value>tabControlPanelGAPPS</value>
   </data>
-  <data name="&gt;&gt;TabPageAdv7.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;TabPageAdv8.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="Label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1818,51 +2595,6 @@
   <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="TabPageAdv8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
-  </data>
-  <data name="TabPageAdv8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 338</value>
-  </data>
-  <data name="TabPageAdv8.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="TabPageAdv8.Text" xml:space="preserve">
-    <value>Flash</value>
-  </data>
-  <data name="&gt;&gt;TabPageAdv8.Name" xml:space="preserve">
-    <value>TabPageAdv8</value>
-  </data>
-  <data name="&gt;&gt;TabPageAdv8.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;TabPageAdv8.Parent" xml:space="preserve">
-    <value>tabControlPanelGAPPS</value>
-  </data>
-  <data name="&gt;&gt;TabPageAdv8.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabControlPanelGAPPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 19</value>
-  </data>
-  <data name="tabControlPanelGAPPS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 364</value>
-  </data>
-  <data name="tabControlPanelGAPPS.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;tabControlPanelGAPPS.Name" xml:space="preserve">
-    <value>tabControlPanelGAPPS</value>
-  </data>
-  <data name="&gt;&gt;tabControlPanelGAPPS.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;tabControlPanelGAPPS.Parent" xml:space="preserve">
-    <value>pnlGapps</value>
-  </data>
-  <data name="&gt;&gt;tabControlPanelGAPPS.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="txtBoxGApps.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 7</value>
   </data>
@@ -1890,29 +2622,122 @@
   <data name="&gt;&gt;txtBoxGApps.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pnlGapps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
+  <data name="&gt;&gt;tabUnb1.Name" xml:space="preserve">
+    <value>tabUnb1</value>
   </data>
-  <data name="pnlGapps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 383</value>
-  </data>
-  <data name="pnlGapps.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="pnlGapps.Text" xml:space="preserve">
-    <value>Gapps</value>
-  </data>
-  <data name="&gt;&gt;pnlGapps.Name" xml:space="preserve">
-    <value>pnlGapps</value>
-  </data>
-  <data name="&gt;&gt;pnlGapps.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabUnb1.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
-  <data name="&gt;&gt;pnlGapps.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
+  <data name="&gt;&gt;tabUnb1.Parent" xml:space="preserve">
+    <value>TabControlUnbrick</value>
   </data>
-  <data name="&gt;&gt;pnlGapps.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;tabUnb1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabUnb2.Name" xml:space="preserve">
+    <value>tabUnb2</value>
+  </data>
+  <data name="&gt;&gt;tabUnb2.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;tabUnb2.Parent" xml:space="preserve">
+    <value>TabControlUnbrick</value>
+  </data>
+  <data name="&gt;&gt;tabUnb2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabUnb3.Name" xml:space="preserve">
+    <value>tabUnb3</value>
+  </data>
+  <data name="&gt;&gt;tabUnb3.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;tabUnb3.Parent" xml:space="preserve">
+    <value>TabControlUnbrick</value>
+  </data>
+  <data name="&gt;&gt;tabUnb3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TabControlUnbrick.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 7</value>
+  </data>
+  <data name="TabControlUnbrick.Size" type="System.Drawing.Size, System.Drawing">
+    <value>364, 364</value>
+  </data>
+  <data name="TabControlUnbrick.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControlUnbrick.Name" xml:space="preserve">
+    <value>TabControlUnbrick</value>
+  </data>
+  <data name="&gt;&gt;TabControlUnbrick.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;TabControlUnbrick.Parent" xml:space="preserve">
+    <value>pnlUnbrick</value>
+  </data>
+  <data name="&gt;&gt;TabControlUnbrick.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnUnbrickGoto.Name" xml:space="preserve">
+    <value>btnUnbrickGoto</value>
+  </data>
+  <data name="&gt;&gt;btnUnbrickGoto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnUnbrickGoto.Parent" xml:space="preserve">
+    <value>tabUnb1</value>
+  </data>
+  <data name="&gt;&gt;btnUnbrickGoto.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rdBtnUnbStockReco.Name" xml:space="preserve">
+    <value>rdBtnUnbStockReco</value>
+  </data>
+  <data name="&gt;&gt;rdBtnUnbStockReco.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.RadioButtonAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;rdBtnUnbStockReco.Parent" xml:space="preserve">
+    <value>tabUnb1</value>
+  </data>
+  <data name="&gt;&gt;rdBtnUnbStockReco.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;rdBtnUnbFastboot.Name" xml:space="preserve">
+    <value>rdBtnUnbFastboot</value>
+  </data>
+  <data name="&gt;&gt;rdBtnUnbFastboot.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.RadioButtonAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;rdBtnUnbFastboot.Parent" xml:space="preserve">
+    <value>tabUnb1</value>
+  </data>
+  <data name="&gt;&gt;rdBtnUnbFastboot.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabUnb1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 26</value>
+  </data>
+  <data name="tabUnb1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>364, 338</value>
+  </data>
+  <data name="tabUnb1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabUnb1.Text" xml:space="preserve">
+    <value>Method Selector</value>
+  </data>
+  <data name="&gt;&gt;tabUnb1.Name" xml:space="preserve">
+    <value>tabUnb1</value>
+  </data>
+  <data name="&gt;&gt;tabUnb1.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;tabUnb1.Parent" xml:space="preserve">
+    <value>TabControlUnbrick</value>
+  </data>
+  <data name="&gt;&gt;tabUnb1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btnUnbrickGoto.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1992,29 +2817,65 @@
   <data name="&gt;&gt;rdBtnUnbFastboot.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="tabUnb1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;progressBarUnbrickFastboot.Name" xml:space="preserve">
+    <value>progressBarUnbrickFastboot</value>
+  </data>
+  <data name="&gt;&gt;progressBarUnbrickFastboot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressBarUnbrickFastboot.Parent" xml:space="preserve">
+    <value>tabUnb2</value>
+  </data>
+  <data name="&gt;&gt;progressBarUnbrickFastboot.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrFastboot.Name" xml:space="preserve">
+    <value>btnFlashUnbrFastboot</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrFastboot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrFastboot.Parent" xml:space="preserve">
+    <value>tabUnb2</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrFastboot.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickFastboot.Name" xml:space="preserve">
+    <value>cmbBoxUnbrickFastboot</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickFastboot.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickFastboot.Parent" xml:space="preserve">
+    <value>tabUnb2</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickFastboot.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabUnb2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>
   </data>
-  <data name="tabUnb1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabUnb2.Size" type="System.Drawing.Size, System.Drawing">
     <value>364, 338</value>
   </data>
-  <data name="tabUnb1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="tabUnb2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="tabUnb1.Text" xml:space="preserve">
-    <value>Method Selector</value>
+  <data name="tabUnb2.Text" xml:space="preserve">
+    <value>Flash using Fastboot</value>
   </data>
-  <data name="&gt;&gt;tabUnb1.Name" xml:space="preserve">
-    <value>tabUnb1</value>
+  <data name="&gt;&gt;tabUnb2.Name" xml:space="preserve">
+    <value>tabUnb2</value>
   </data>
-  <data name="&gt;&gt;tabUnb1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabUnb2.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
-  <data name="&gt;&gt;tabUnb1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabUnb2.Parent" xml:space="preserve">
     <value>TabControlUnbrick</value>
   </data>
-  <data name="&gt;&gt;tabUnb1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;tabUnb2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="progressBarUnbrickFastboot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2097,29 +2958,65 @@
   <data name="&gt;&gt;cmbBoxUnbrickFastboot.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="tabUnb2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;progressBarUnbrickStock.Name" xml:space="preserve">
+    <value>progressBarUnbrickStock</value>
+  </data>
+  <data name="&gt;&gt;progressBarUnbrickStock.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressBarUnbrickStock.Parent" xml:space="preserve">
+    <value>tabUnb3</value>
+  </data>
+  <data name="&gt;&gt;progressBarUnbrickStock.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrRecovery.Name" xml:space="preserve">
+    <value>btnFlashUnbrRecovery</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrRecovery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrRecovery.Parent" xml:space="preserve">
+    <value>tabUnb3</value>
+  </data>
+  <data name="&gt;&gt;btnFlashUnbrRecovery.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickStock.Name" xml:space="preserve">
+    <value>cmbBoxUnbrickStock</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickStock.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.ComboBoxAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickStock.Parent" xml:space="preserve">
+    <value>tabUnb3</value>
+  </data>
+  <data name="&gt;&gt;cmbBoxUnbrickStock.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabUnb3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>
   </data>
-  <data name="tabUnb2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabUnb3.Size" type="System.Drawing.Size, System.Drawing">
     <value>364, 338</value>
   </data>
-  <data name="tabUnb2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="tabUnb3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="tabUnb2.Text" xml:space="preserve">
-    <value>Flash using Fastboot</value>
+  <data name="tabUnb3.Text" xml:space="preserve">
+    <value>Using Stock Recovery</value>
   </data>
-  <data name="&gt;&gt;tabUnb2.Name" xml:space="preserve">
-    <value>tabUnb2</value>
+  <data name="&gt;&gt;tabUnb3.Name" xml:space="preserve">
+    <value>tabUnb3</value>
   </data>
-  <data name="&gt;&gt;tabUnb2.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabUnb3.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
-  <data name="&gt;&gt;tabUnb2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabUnb3.Parent" xml:space="preserve">
     <value>TabControlUnbrick</value>
   </data>
-  <data name="&gt;&gt;tabUnb2.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;tabUnb3.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="progressBarUnbrickStock.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2202,51 +3099,6 @@
   <data name="&gt;&gt;cmbBoxUnbrickStock.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="tabUnb3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
-  </data>
-  <data name="tabUnb3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 338</value>
-  </data>
-  <data name="tabUnb3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tabUnb3.Text" xml:space="preserve">
-    <value>Using Stock Recovery</value>
-  </data>
-  <data name="&gt;&gt;tabUnb3.Name" xml:space="preserve">
-    <value>tabUnb3</value>
-  </data>
-  <data name="&gt;&gt;tabUnb3.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;tabUnb3.Parent" xml:space="preserve">
-    <value>TabControlUnbrick</value>
-  </data>
-  <data name="&gt;&gt;tabUnb3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TabControlUnbrick.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 7</value>
-  </data>
-  <data name="TabControlUnbrick.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 364</value>
-  </data>
-  <data name="TabControlUnbrick.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabControlUnbrick.Name" xml:space="preserve">
-    <value>TabControlUnbrick</value>
-  </data>
-  <data name="&gt;&gt;TabControlUnbrick.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;TabControlUnbrick.Parent" xml:space="preserve">
-    <value>pnlUnbrick</value>
-  </data>
-  <data name="&gt;&gt;TabControlUnbrick.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="txtBoxUnbrick.Location" type="System.Drawing.Point, System.Drawing">
     <value>376, 7</value>
   </data>
@@ -2272,96 +3124,6 @@
     <value>pnlUnbrick</value>
   </data>
   <data name="&gt;&gt;txtBoxUnbrick.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pnlUnbrick.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
-  </data>
-  <data name="pnlUnbrick.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 383</value>
-  </data>
-  <data name="pnlUnbrick.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="pnlUnbrick.Text" xml:space="preserve">
-    <value>Unbrick</value>
-  </data>
-  <data name="&gt;&gt;pnlUnbrick.Name" xml:space="preserve">
-    <value>pnlUnbrick</value>
-  </data>
-  <data name="&gt;&gt;pnlUnbrick.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;pnlUnbrick.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
-  </data>
-  <data name="&gt;&gt;pnlUnbrick.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="checkBoxUpdatesStart.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxUpdatesStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 113</value>
-  </data>
-  <data name="checkBoxUpdatesStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
-  </data>
-  <data name="checkBoxUpdatesStart.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="checkBoxUpdatesStart.Text" xml:space="preserve">
-    <value>Check for updates on application start</value>
-  </data>
-  <data name="&gt;&gt;checkBoxUpdatesStart.Name" xml:space="preserve">
-    <value>checkBoxUpdatesStart</value>
-  </data>
-  <data name="&gt;&gt;checkBoxUpdatesStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxUpdatesStart.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
-  </data>
-  <data name="&gt;&gt;checkBoxUpdatesStart.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnXMLFileUpdates.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="btnXMLFileUpdates.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnXMLFileUpdates.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnXMLFileUpdates.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnXMLFileUpdates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 174</value>
-  </data>
-  <data name="btnXMLFileUpdates.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 67</value>
-  </data>
-  <data name="btnXMLFileUpdates.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="btnXMLFileUpdates.Text" xml:space="preserve">
-    <value>Check for XML File updates</value>
-  </data>
-  <data name="btnXMLFileUpdates.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;btnXMLFileUpdates.Name" xml:space="preserve">
-    <value>btnXMLFileUpdates</value>
-  </data>
-  <data name="&gt;&gt;btnXMLFileUpdates.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnXMLFileUpdates.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
-  </data>
-  <data name="&gt;&gt;btnXMLFileUpdates.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="cmbBoxXMLFile.Font" type="System.Drawing.Font, System.Drawing">
@@ -2421,88 +3183,70 @@
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="pnlSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
+  <data name="btnXMLFileUpdates.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
   </data>
-  <data name="pnlSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 383</value>
+  <data name="btnXMLFileUpdates.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="pnlSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="btnXMLFileUpdates.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="pnlSettings.Text" xml:space="preserve">
-    <value>Settings</value>
+  <data name="btnXMLFileUpdates.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;pnlSettings.Name" xml:space="preserve">
+  <data name="btnXMLFileUpdates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 174</value>
+  </data>
+  <data name="btnXMLFileUpdates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 67</value>
+  </data>
+  <data name="btnXMLFileUpdates.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btnXMLFileUpdates.Text" xml:space="preserve">
+    <value>Check for XML File updates</value>
+  </data>
+  <data name="btnXMLFileUpdates.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnXMLFileUpdates.Name" xml:space="preserve">
+    <value>btnXMLFileUpdates</value>
+  </data>
+  <data name="&gt;&gt;btnXMLFileUpdates.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnXMLFileUpdates.Parent" xml:space="preserve">
     <value>pnlSettings</value>
   </data>
-  <data name="&gt;&gt;pnlSettings.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;pnlSettings.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
-  </data>
-  <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="pnlAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
-  </data>
-  <data name="pnlAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 383</value>
-  </data>
-  <data name="pnlAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="pnlAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.Name" xml:space="preserve">
-    <value>pnlAbout</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabPageAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.Parent" xml:space="preserve">
-    <value>tabControlPanel</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="tabControlPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tabControlPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Condensed, 9.75pt</value>
-  </data>
-  <data name="tabControlPanel.ItemSize" type="System.Drawing.Size, System.Drawing">
-    <value>79, 22</value>
-  </data>
-  <data name="tabControlPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tabControlPanel.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tabControlPanel.Padding" type="System.Drawing.Point, System.Drawing">
-    <value>10, 5</value>
-  </data>
-  <data name="tabControlPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>715, 420</value>
-  </data>
-  <data name="tabControlPanel.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;btnXMLFileUpdates.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;tabControlPanel.Name" xml:space="preserve">
-    <value>tabControlPanel</value>
+  <data name="checkBoxUpdatesStart.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;tabControlPanel.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.TabControlAdv, Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  <data name="checkBoxUpdatesStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 113</value>
   </data>
-  <data name="&gt;&gt;tabControlPanel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="checkBoxUpdatesStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 22</value>
   </data>
-  <data name="&gt;&gt;tabControlPanel.ZOrder" xml:space="preserve">
+  <data name="checkBoxUpdatesStart.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="checkBoxUpdatesStart.Text" xml:space="preserve">
+    <value>Check for updates on application start</value>
+  </data>
+  <data name="&gt;&gt;checkBoxUpdatesStart.Name" xml:space="preserve">
+    <value>checkBoxUpdatesStart</value>
+  </data>
+  <data name="&gt;&gt;checkBoxUpdatesStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxUpdatesStart.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;checkBoxUpdatesStart.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -5346,8 +6090,14 @@
         ////////////////////////////////////////////////////////
 </value>
   </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>727, 456</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>727, 456</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>APTV2</value>
+    <value>APT - Beta</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Home</value>

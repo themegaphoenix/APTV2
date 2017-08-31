@@ -186,4 +186,22 @@ Continue?</value>
   <data name="Home_btnFlashUnbr_Click_Reboot_into_fastboot_mode" xml:space="preserve">
     <value>Reboot into fastboot mode</value>
   </data>
+  <data name="Home_CheckXMLUpdates_Update_Found" xml:space="preserve">
+    <value>Update Found</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_New_version_of_the_XML__data__file_found__Download_now_" xml:space="preserve">
+    <value>New version of the XML (data) file found. Download now?</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_Update_Complete" xml:space="preserve">
+    <value>Update Complete</value>
+  </data>
+  <data name="Home_CheckXMLUpdates_You_have_the_latest_version" xml:space="preserve">
+    <value>You have the latest version</value>
+  </data>
+  <data name="Home_btnFlashUnbrRecovery_Click_Power_on_your_Honor_7_Holding_all_three_buttons__VOL___VOL__and_Power__and_it_will_begin_flashing" xml:space="preserve">
+    <value>Power on your Honor 7 Holding all three buttons (VOL+, VOL- and Power) and it will begin flashing</value>
+  </data>
 </root>
