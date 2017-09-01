@@ -10,7 +10,7 @@ Imports Syncfusion.Windows.Forms.Tools
 Public Class Home
     Inherits MetroForm
 
-    'todo enable xposed
+    'todo add xposed
 
 #Region "Variables"
 
@@ -29,6 +29,9 @@ Public Class Home
         FindTheFiles()
         If My.Settings.checkForUpdates Then
             CheckXMLUpdates()
+        End If
+        If My.Settings.showDisclaimer = True Then
+            My.Forms.Disclaimer.Show()
         End If
 
     End Sub
@@ -682,9 +685,14 @@ Public Class Home
             AddToComboBoxesXml("/root/Gapps/version", "Gapps Application ", cmbGApps)
             AddToComboBoxesXml("/root/magisk/magiskInstaller/version", "Magisk ", cmbRoot)
             AddToComboBoxesXml("/root/magisk/magiskManager/version", "Magisk Manager ", cmbRootManager)
+
+
+            checkBoxesReload()
         Catch ex As Exception
             MessageBox.Show(Strings.Home_ReloadInfo_File_does_not_contains_invalid_information)
         End Try
+
+
     End Sub
 
 #End Region
@@ -766,6 +774,32 @@ Public Class Home
     Private Sub btnXMLFileUpdates_Click(sender As Object, e As EventArgs) Handles btnXMLFileUpdates.Click
         'checks for updates
         CheckXMLUpdates()
+    End Sub
+
+    Private Sub checkBoxShowDisclaimer_CheckedChanged(sender As Object, e As EventArgs) Handles checkBoxShowDisclaimer.CheckedChanged
+        'if the box is checked to show the disclaimer
+        If checkBoxShowDisclaimer.Checked = True Then
+            'it will change the settings
+            My.Settings.showDisclaimer = True
+        Else
+            My.Settings.showDisclaimer = False
+
+        End If
+        'save the settings
+        My.Settings.Save()
+    End Sub
+
+    Private Sub checkBoxesReload()
+        If My.Settings.showDisclaimer Then
+            checkBoxShowDisclaimer.Checked = True
+        Else
+            checkBoxShowDisclaimer.Checked = False
+        End If
+        If My.Settings.checkForUpdates Then
+            checkBoxUpdatesStart.Checked = True
+        Else
+            checkBoxUpdatesStart.Checked = False
+        End If
     End Sub
 
 #End Region

@@ -49,6 +49,7 @@ Partial Class Home
         Me.btnUnlockBootloader = New System.Windows.Forms.Button()
         Me.txtBoxBootloader = New System.Windows.Forms.TextBox()
         Me.pnlRecovery = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnFlashRecovery = New System.Windows.Forms.Button()
         Me.progressBarRecovery = New System.Windows.Forms.ProgressBar()
         Me.cmbRecovery = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
@@ -56,6 +57,7 @@ Partial Class Home
         Me.pnlRoot = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.tabControlPanelMagisk = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.TabPageAdv1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.cmbRoot = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
@@ -88,14 +90,17 @@ Partial Class Home
         Me.pnlUnbrick = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
         Me.TabControlUnbrick = New Syncfusion.Windows.Forms.Tools.TabControlAdv()
         Me.tabUnb1 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.btnUnbrickGoto = New System.Windows.Forms.Button()
         Me.rdBtnUnbStockReco = New Syncfusion.Windows.Forms.Tools.RadioButtonAdv()
         Me.rdBtnUnbFastboot = New Syncfusion.Windows.Forms.Tools.RadioButtonAdv()
         Me.tabUnb2 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.progressBarUnbrickFastboot = New System.Windows.Forms.ProgressBar()
         Me.btnFlashUnbrFastboot = New System.Windows.Forms.Button()
         Me.cmbBoxUnbrickFastboot = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.tabUnb3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.progressBarUnbrickStock = New System.Windows.Forms.ProgressBar()
         Me.btnFlashUnbrRecovery = New System.Windows.Forms.Button()
         Me.cmbBoxUnbrickStock = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
@@ -106,11 +111,7 @@ Partial Class Home
         Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.checkBoxShowDisclaimer = New System.Windows.Forms.CheckBox()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -376,6 +377,11 @@ Partial Class Home
         Me.pnlRecovery.ShowCloseButton = True
         Me.pnlRecovery.ThemesEnabled = False
         '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.Name = "Label2"
+        '
         'btnFlashRecovery
         '
         resources.ApplyResources(Me.btnFlashRecovery, "btnFlashRecovery")
@@ -450,6 +456,11 @@ Partial Class Home
         Me.TabPageAdv1.Name = "TabPageAdv1"
         Me.TabPageAdv1.ShowCloseButton = True
         Me.TabPageAdv1.ThemesEnabled = False
+        '
+        'Label10
+        '
+        resources.ApplyResources(Me.Label10, "Label10")
+        Me.Label10.Name = "Label10"
         '
         'Label5
         '
@@ -718,6 +729,11 @@ Partial Class Home
         Me.tabUnb1.ShowCloseButton = True
         Me.tabUnb1.ThemesEnabled = False
         '
+        'Label12
+        '
+        resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.Name = "Label12"
+        '
         'btnUnbrickGoto
         '
         resources.ApplyResources(Me.btnUnbrickGoto, "btnUnbrickGoto")
@@ -762,6 +778,11 @@ Partial Class Home
         Me.tabUnb2.ShowCloseButton = True
         Me.tabUnb2.ThemesEnabled = False
         '
+        'Label14
+        '
+        resources.ApplyResources(Me.Label14, "Label14")
+        Me.Label14.Name = "Label14"
+        '
         'progressBarUnbrickFastboot
         '
         resources.ApplyResources(Me.progressBarUnbrickFastboot, "progressBarUnbrickFastboot")
@@ -794,6 +815,11 @@ Partial Class Home
         Me.tabUnb3.ShowCloseButton = True
         Me.tabUnb3.ThemesEnabled = False
         '
+        'Label15
+        '
+        resources.ApplyResources(Me.Label15, "Label15")
+        Me.Label15.Name = "Label15"
+        '
         'progressBarUnbrickStock
         '
         resources.ApplyResources(Me.progressBarUnbrickStock, "progressBarUnbrickStock")
@@ -822,6 +848,7 @@ Partial Class Home
         '
         'pnlSettings
         '
+        Me.pnlSettings.Controls.Add(Me.checkBoxShowDisclaimer)
         Me.pnlSettings.Controls.Add(Me.checkBoxUpdatesStart)
         Me.pnlSettings.Controls.Add(Me.btnXMLFileUpdates)
         Me.pnlSettings.Controls.Add(Me.cmbBoxXMLFile)
@@ -870,30 +897,11 @@ Partial Class Home
         Me.pnlAbout.ShowCloseButton = True
         Me.pnlAbout.ThemesEnabled = False
         '
-        'Label2
+        'checkBoxShowDisclaimer
         '
-        resources.ApplyResources(Me.Label2, "Label2")
-        Me.Label2.Name = "Label2"
-        '
-        'Label10
-        '
-        resources.ApplyResources(Me.Label10, "Label10")
-        Me.Label10.Name = "Label10"
-        '
-        'Label12
-        '
-        resources.ApplyResources(Me.Label12, "Label12")
-        Me.Label12.Name = "Label12"
-        '
-        'Label14
-        '
-        resources.ApplyResources(Me.Label14, "Label14")
-        Me.Label14.Name = "Label14"
-        '
-        'Label15
-        '
-        resources.ApplyResources(Me.Label15, "Label15")
-        Me.Label15.Name = "Label15"
+        resources.ApplyResources(Me.checkBoxShowDisclaimer, "checkBoxShowDisclaimer")
+        Me.checkBoxShowDisclaimer.Name = "checkBoxShowDisclaimer"
+        Me.checkBoxShowDisclaimer.UseVisualStyleBackColor = True
         '
         'Home
         '
@@ -1056,4 +1064,5 @@ Partial Class Home
     Friend WithEvents Label12 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
+    Friend WithEvents checkBoxShowDisclaimer As CheckBox
 End Class

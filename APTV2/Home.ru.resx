@@ -327,4 +327,7 @@
   <data name="checkBoxRoot.Text" xml:space="preserve">
     <value>Подписать на все</value>
   </data>
+  <data name="checkBoxShowDisclaimer.Text" xml:space="preserve">
+    <value>Покажите отказ на старт!</value>
+  </data>
 </root>

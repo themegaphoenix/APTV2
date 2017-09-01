@@ -111,6 +111,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Disclaimer.Designer.vb">
+      <DependentUpon>Disclaimer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Disclaimer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Home.Designer.vb">
       <DependentUpon>Home.vb</DependentUpon>
     </Compile>
@@ -139,6 +145,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Disclaimer.de.resx">
+      <DependentUpon>Disclaimer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disclaimer.fr.resx">
+      <DependentUpon>Disclaimer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disclaimer.pt.resx">
+      <DependentUpon>Disclaimer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disclaimer.resx">
+      <DependentUpon>Disclaimer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disclaimer.ru.resx">
+      <DependentUpon>Disclaimer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.de.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>

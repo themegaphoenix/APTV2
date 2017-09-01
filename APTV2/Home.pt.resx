@@ -327,4 +327,7 @@
   <data name="checkBoxRoot.Text" xml:space="preserve">
     <value>Eu fiz todas as coisas mencionadas acima!</value>
   </data>
+  <data name="checkBoxShowDisclaimer.Text" xml:space="preserve">
+    <value>Mostre aviso no começo!</value>
+  </data>
 </root>

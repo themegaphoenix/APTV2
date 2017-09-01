@@ -327,4 +327,7 @@
   <data name="checkBoxRoot.Text" xml:space="preserve">
     <value>Ich habe noch alle SMS.</value>
   </data>
+  <data name="checkBoxShowDisclaimer.Text" xml:space="preserve">
+    <value>Disclaimer auf der Startseite anzeigen</value>
+  </data>
 </root>

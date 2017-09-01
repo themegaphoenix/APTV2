@@ -327,4 +327,7 @@
   <data name="checkBoxRoot.Text" xml:space="preserve">
     <value>commissions dont je vous ai parlé supra.</value>
   </data>
+  <data name="checkBoxShowDisclaimer.Text" xml:space="preserve">
+    <value>Voir la clause de non-responsabilité sur Démarrer !</value>
+  </data>
 </root>
