@@ -1,4 +1,8 @@
-﻿Namespace My
+﻿Imports System.Globalization
+Imports System.Threading.Thread
+Imports System.Threading
+
+Namespace My
 
     ' The following events are available for MyApplication:
     ' Startup: Raised when the application starts, before the startup form is created.
@@ -7,6 +11,14 @@
     ' StartupNextInstance: Raised when launching a single-instance application and the application is already active.
     ' NetworkAvailabilityChanged: Raised when the network connection is connected or disconnected.
     Partial Friend Class MyApplication
+        Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
+
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.selectedLanguage)
+            Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.selectedLanguage)
+            CultureInfo.DefaultThreadCurrentCulture = New CultureInfo(My.Settings.selectedLanguage)
+
+        End Sub
+
     End Class
 
 End Namespace

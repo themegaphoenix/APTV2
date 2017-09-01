@@ -113,6 +113,18 @@ Namespace My
                 Me("showDisclaimer") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("en")>  _
+        Public Property selectedLanguage() As String
+            Get
+                Return CType(Me("selectedLanguage"),String)
+            End Get
+            Set
+                Me("selectedLanguage") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

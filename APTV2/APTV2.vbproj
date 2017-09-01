@@ -77,6 +77,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Syncfusion.Grid.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Grid.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -160,7 +163,13 @@
     <EmbeddedResource Include="Disclaimer.ru.resx">
       <DependentUpon>Disclaimer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home.aa.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.de.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.en.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.fr.resx">
@@ -220,6 +229,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\icon.ico" />
     <Content Include="phones\HuaweiHonor.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>

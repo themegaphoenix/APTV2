@@ -330,4 +330,19 @@
   <data name="checkBoxShowDisclaimer.Text" xml:space="preserve">
     <value>Mostre aviso no começo!</value>
   </data>
+  <data name="cmbBoxLanguage.Items2" xml:space="preserve">
+    <value>Russo</value>
+  </data>
+  <data name="cmbBoxLanguage.Items1" xml:space="preserve">
+    <value>Francês</value>
+  </data>
+  <data name="cmbBoxLanguage.Items" xml:space="preserve">
+    <value>Português do Brasil</value>
+  </data>
+  <data name="cmbBoxLanguage.Items3" xml:space="preserve">
+    <value>Português</value>
+  </data>
+  <data name="cmbBoxLanguage.Items4" xml:space="preserve">
+    <value>Alemão</value>
+  </data>
 </root>

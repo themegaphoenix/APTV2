@@ -106,12 +106,14 @@ Partial Class Home
         Me.cmbBoxUnbrickStock = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.txtBoxUnbrick = New System.Windows.Forms.TextBox()
         Me.pnlSettings = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.cmbBoxLanguage = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
+        Me.checkBoxShowDisclaimer = New System.Windows.Forms.CheckBox()
         Me.checkBoxUpdatesStart = New System.Windows.Forms.CheckBox()
         Me.btnXMLFileUpdates = New System.Windows.Forms.Button()
         Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.checkBoxShowDisclaimer = New System.Windows.Forms.CheckBox()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -157,6 +159,7 @@ Partial Class Home
         Me.tabUnb3.SuspendLayout()
         CType(Me.cmbBoxUnbrickStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSettings.SuspendLayout()
+        CType(Me.cmbBoxLanguage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -848,6 +851,8 @@ Partial Class Home
         '
         'pnlSettings
         '
+        Me.pnlSettings.Controls.Add(Me.Label16)
+        Me.pnlSettings.Controls.Add(Me.cmbBoxLanguage)
         Me.pnlSettings.Controls.Add(Me.checkBoxShowDisclaimer)
         Me.pnlSettings.Controls.Add(Me.checkBoxUpdatesStart)
         Me.pnlSettings.Controls.Add(Me.btnXMLFileUpdates)
@@ -859,6 +864,27 @@ Partial Class Home
         Me.pnlSettings.Name = "pnlSettings"
         Me.pnlSettings.ShowCloseButton = True
         Me.pnlSettings.ThemesEnabled = False
+        '
+        'Label16
+        '
+        resources.ApplyResources(Me.Label16, "Label16")
+        Me.Label16.Name = "Label16"
+        '
+        'cmbBoxLanguage
+        '
+        Me.cmbBoxLanguage.BeforeTouchSize = New System.Drawing.Size(237, 26)
+        Me.cmbBoxLanguage.FlatBorderColor = System.Drawing.Color.White
+        Me.cmbBoxLanguage.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.System
+        resources.ApplyResources(Me.cmbBoxLanguage, "cmbBoxLanguage")
+        Me.cmbBoxLanguage.Items.AddRange(New Object() {resources.GetString("cmbBoxLanguage.Items"), resources.GetString("cmbBoxLanguage.Items1"), resources.GetString("cmbBoxLanguage.Items2"), resources.GetString("cmbBoxLanguage.Items3"), resources.GetString("cmbBoxLanguage.Items4")})
+        Me.cmbBoxLanguage.MetroBorderColor = System.Drawing.Color.White
+        Me.cmbBoxLanguage.Name = "cmbBoxLanguage"
+        '
+        'checkBoxShowDisclaimer
+        '
+        resources.ApplyResources(Me.checkBoxShowDisclaimer, "checkBoxShowDisclaimer")
+        Me.checkBoxShowDisclaimer.Name = "checkBoxShowDisclaimer"
+        Me.checkBoxShowDisclaimer.UseVisualStyleBackColor = True
         '
         'checkBoxUpdatesStart
         '
@@ -896,12 +922,6 @@ Partial Class Home
         Me.pnlAbout.Name = "pnlAbout"
         Me.pnlAbout.ShowCloseButton = True
         Me.pnlAbout.ThemesEnabled = False
-        '
-        'checkBoxShowDisclaimer
-        '
-        resources.ApplyResources(Me.checkBoxShowDisclaimer, "checkBoxShowDisclaimer")
-        Me.checkBoxShowDisclaimer.Name = "checkBoxShowDisclaimer"
-        Me.checkBoxShowDisclaimer.UseVisualStyleBackColor = True
         '
         'Home
         '
@@ -972,6 +992,7 @@ Partial Class Home
         CType(Me.cmbBoxUnbrickStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlSettings.ResumeLayout(False)
         Me.pnlSettings.PerformLayout()
+        CType(Me.cmbBoxLanguage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1065,4 +1086,6 @@ Partial Class Home
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents checkBoxShowDisclaimer As CheckBox
+    Friend WithEvents cmbBoxLanguage As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
+    Friend WithEvents Label16 As Label
 End Class

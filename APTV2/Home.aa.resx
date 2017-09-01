@@ -118,43 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="cmbModel.Text" xml:space="preserve">
-    <value>Telefonnummer auswählen</value>
+    <value>Sélectionnez un numéro de téléphone</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>Ausprägung</value>
+    <value>Variante</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>Modell</value>
+    <value>Modèle</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>Hersteller</value>
+    <value>Fabricant</value>
   </data>
   <data name="lblVariant.Text" xml:space="preserve">
-    <value>Etikett 1</value>
+    <value>Étiquette1</value>
   </data>
   <data name="lblModel.Text" xml:space="preserve">
-    <value>Modell</value>
+    <value>Modèle</value>
   </data>
   <data name="lblManufacturer.Text" xml:space="preserve">
-    <value>Etikett 1</value>
+    <value>Étiquette1</value>
   </data>
   <data name="pnlPhone.Text" xml:space="preserve">
-    <value>Telefon</value>
+    <value>Téléphone</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
-    <value>Geben Sie nicht entsperren / Sperrtaste!</value>
+    <value>Entrez clé de verrouillage / déverrouillage !</value>
   </data>
   <data name="btnLockBootloader.Text" xml:space="preserve">
     <value>Bootloader</value>
   </data>
   <data name="btnUnlockBootloader.Text" xml:space="preserve">
-    <value>Bootloader zu entsperren!</value>
+    <value>Déverrouiller le Bootloader !</value>
   </data>
   <data name="TabPageAdv1.Text" xml:space="preserve">
-    <value>Version-Selektor!</value>
+    <value>Sélecteur de version !</value>
   </data>
   <data name="TabPageAdv2.Text" xml:space="preserve">
-    <value>Blitz</value>
+    <value>Flash</value>
   </data>
   <data name="TabPageAdv3.Text" xml:space="preserve">
     <value>....!</value>
@@ -163,186 +163,171 @@
     <value>Bootloader</value>
   </data>
   <data name="cmbRecovery.Text" xml:space="preserve">
-    <value>Wähle eine Version</value>
+    <value>Sélectionnez une Version de récupération !</value>
   </data>
   <data name="btnFlashRecovery.Text" xml:space="preserve">
-    <value>Flash Recovery!</value>
+    <value>Flash Recovery !</value>
   </data>
   <data name="pnlRecovery.Text" xml:space="preserve">
-    <value>Wiederherstellung</value>
+    <value>Recouvrement</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
-    <value>Magisk ist eine Möglichkeit, systemlose Wurzel zu erhalten!</value>
+    <value>Magisk est un moyen d’obtenir la racine systemless !</value>
   </data>
   <data name="cmbRoot.Text" xml:space="preserve">
-    <value>Wähle eine Version</value>
+    <value>Sélectionnez une Version de Magisk !</value>
   </data>
   <data name="btnFlashMagisk.Text" xml:space="preserve">
-    <value>Flash-Magisk!</value>
+    <value>Flash Magisk !</value>
   </data>
   <data name="pnlRoot.Text" xml:space="preserve">
-    <value>Root</value>
+    <value>Racine</value>
   </data>
   <data name="Label6.Text" xml:space="preserve">
-    <value>Folgt in Kürze!</value>
+    <value>Bientôt !</value>
   </data>
   <data name="pnlXposed.Text" xml:space="preserve">
-    <value>Xposed!</value>
+    <value>Xposed !</value>
   </data>
   <data name="cmbGApps.Text" xml:space="preserve">
-    <value>Wählen Sie eine GApps Anwendung Version!</value>
+    <value>Sélectionnez une application de GApps Version !</value>
   </data>
   <data name="btnGappsInstall.Text" xml:space="preserve">
-    <value>Anwendung installieren</value>
+    <value>Installer l'application</value>
   </data>
   <data name="pnlGapps.Text" xml:space="preserve">
-    <value>Gapps!</value>
+    <value>Gapps !</value>
   </data>
   <data name="ComboBoxAdv1.Text" xml:space="preserve">
-    <value>Wähle eine Version</value>
+    <value>Sélectionnez une Version EMUI !</value>
   </data>
   <data name="btnFlashUnbr.Text" xml:space="preserve">
-    <value>Blitz</value>
+    <value>Flash</value>
   </data>
   <data name="tabUnb1.Text" xml:space="preserve">
-    <value>Version-Selektor!</value>
+    <value>Sélecteur de version !</value>
   </data>
   <data name="tabUnb2.Text" xml:space="preserve">
-    <value>Blitz</value>
+    <value>Flash</value>
   </data>
   <data name="tabUnb3.Text" xml:space="preserve">
     <value>....!</value>
   </data>
   <data name="pnlUnbrick.Text" xml:space="preserve">
-    <value>Unbrick!</value>
+    <value>Débriquer !</value>
   </data>
   <data name="pnlAbout.Text" xml:space="preserve">
-    <value>Über</value>
+    <value>À propos de</value>
   </data>
   <data name="pnlBackup.Text" xml:space="preserve">
-    <value>Sicherheitskopie</value>
+    <value>Sauvegarde</value>
   </data>
   <data name="pnlSettings.Text" xml:space="preserve">
-    <value>Einstellungen</value>
+    <value>Paramètres</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>APTV2!</value>
+    <value>APTV2 !</value>
   </data>
   <data name="Label12.Text" xml:space="preserve">
-    <value>Lagerung</value>
+    <value>Stockage</value>
   </data>
   <data name="lblStorage.Text" xml:space="preserve">
-    <value>Etikett 1</value>
+    <value>Étiquette1</value>
   </data>
   <data name="Label10.Text" xml:space="preserve">
-    <value>RAM</value>
+    <value>Mémoire vive</value>
   </data>
   <data name="lblRAM.Text" xml:space="preserve">
-    <value>Etikett 1</value>
+    <value>Étiquette1</value>
   </data>
   <data name="Label8.Text" xml:space="preserve">
-    <value>Bearbeiter</value>
+    <value>Processeur</value>
   </data>
   <data name="lblProcessor.Text" xml:space="preserve">
-    <value>Etikett 1</value>
+    <value>Étiquette1</value>
   </data>
   <data name="TabPageAdv4.Text" xml:space="preserve">
-    <value>Version-Selektor!</value>
+    <value>Sélecteur de version !</value>
   </data>
   <data name="TabPageAdv5.Text" xml:space="preserve">
-    <value>Blitz</value>
+    <value>Flash</value>
   </data>
   <data name="TabPageAdv6.Text" xml:space="preserve">
     <value>....!</value>
   </data>
   <data name="Label9.Text" xml:space="preserve">
-    <value>1. Flash-OpenGAPPS Anwendung (Root erforderlich)!</value>
+    <value>1. l’application de OpenGAPPS (root nécessaire) du flash !</value>
   </data>
   <data name="TabPageAdv7.Text" xml:space="preserve">
-    <value>Version-Selektor!</value>
+    <value>Sélecteur de version !</value>
   </data>
   <data name="Label11.Text" xml:space="preserve">
-    <value>2. Öffnen Sie die OpenGAPPS-Anwendung aus dem Launcher 3. Akzeptieren Sie die Bedingungen und Berechtigungen Sie die 4. Wählen Sie die Version, dass Sie 5 wollen. Presse Download 6. Tippen Sie auf installieren 7. Lassen Sie den Prozess beenden 8. getan (Sie können deinstallieren der Anwendung, wenn du willst)!</value>
+    <value>2. Ouvrez l’application de OpenGAPPS depuis le lanceur 3. Acceptez les termes et accorder les autorisations 4. Sélectionnez la version que vous voulez 5. Appuyez sur Télécharger 6. Appuyez sur Installer 7. Laissez le processus fini 8. fait (vous pouvez désinstaller l’application, si vous voulez) !</value>
   </data>
   <data name="TabPageAdv8.Text" xml:space="preserve">
-    <value>Blitz</value>
+    <value>Flash</value>
   </data>
   <data name="TabPageAdv9.Text" xml:space="preserve">
     <value>....!</value>
   </data>
   <data name="cmbBoxUnbrick.Text" xml:space="preserve">
-    <value>Wähle eine Version</value>
+    <value>Sélectionnez une Version EMUI !</value>
   </data>
   <data name="cmbBoxXMLFile.Text" xml:space="preserve">
-    <value>Wählen Sie die Datei, die Informationen zu laden!</value>
+    <value>Sélectionnez le fichier à charger les informations !</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
-    <value>Bordstein-Datei zu laden</value>
+    <value>Fichier à charger</value>
   </data>
   <data name="Label13.Text" xml:space="preserve">
-    <value>Gebrauchsanleitung</value>
+    <value>Mode d’emploi</value>
   </data>
   <data name="Label8.ImageKey" xml:space="preserve">
-    <value>CPU-01.png!</value>
+    <value>CPU-01.png !</value>
   </data>
   <data name="rdBtnUnbStockReco.Text" xml:space="preserve">
-    <value>Erholung der Bestände (full-Update-Datei) verwenden!</value>
+    <value>À l’aide de reconstitution des stocks (mise à jour complète, fichier) !</value>
   </data>
   <data name="rdBtnUnbFastboot.Text" xml:space="preserve">
-    <value>Mit Fastboot (backup Datei oder extrahiert aus der Update-Datei)!</value>
+    <value>Puis les options spécifiées sont extraites de la structure d&amp;apos;informations désignée par le numéro du descripteur de fichier de l&amp;apos;appel "socket".</value>
   </data>
   <data name="btnUnbrickGoto.Text" xml:space="preserve">
-    <value>Blitz</value>
+    <value>Flash</value>
   </data>
   <data name="lblCreator.Text" xml:space="preserve">
-    <value>Schöpfer Einzelheiten!</value>
+    <value>Détails de créateur !</value>
   </data>
   <data name="btnFlashUnbrFastboot.Text" xml:space="preserve">
-    <value>Blitz</value>
+    <value>Flash</value>
   </data>
   <data name="btnFlashUnbrRecovery.Text" xml:space="preserve">
-    <value>Blitz</value>
+    <value>Flash</value>
   </data>
   <data name="btnXMLFileUpdates.Text" xml:space="preserve">
-    <value>Nach Aktualisierungen suchen</value>
+    <value>Vérifier les mises à jour</value>
   </data>
   <data name="checkBoxUpdatesStart.Text" xml:space="preserve">
-    <value>Auf Updates prüfen</value>
+    <value>Recherchez les mises à jour sur le démarrage de l’application !</value>
   </data>
   <data name="cmbRootManager.Text" xml:space="preserve">
-    <value>Wählen Sie eine Magisk Manager Version!</value>
+    <value>Sélectionnez une Version de gestionnaire de Magisk !</value>
   </data>
   <data name="btnFlashMagiskManager.Text" xml:space="preserve">
-    <value>Aufblitzen</value>
+    <value>Flash Magisk !</value>
   </data>
   <data name="btnRootContinue.Text" xml:space="preserve">
-    <value>Mach weiter!</value>
+    <value>Continuez !</value>
   </data>
   <data name="Label14.Text" xml:space="preserve">
-    <value>Wähle eine Version</value>
+    <value>Sélectionnez une version !</value>
   </data>
   <data name="Label15.Text" xml:space="preserve">
-    <value>Wähle eine Version</value>
+    <value>Sélectionnez une version !</value>
   </data>
   <data name="checkBoxRoot.Text" xml:space="preserve">
-    <value>Ich habe noch alle SMS.</value>
+    <value>commissions dont je vous ai parlé supra.</value>
   </data>
   <data name="checkBoxShowDisclaimer.Text" xml:space="preserve">
-    <value>Disclaimer auf der Startseite anzeigen</value>
-  </data>
-  <data name="cmbBoxLanguage.Items2" xml:space="preserve">
-    <value>Russisch</value>
-  </data>
-  <data name="cmbBoxLanguage.Items1" xml:space="preserve">
-    <value>Französisch</value>
-  </data>
-  <data name="cmbBoxLanguage.Items" xml:space="preserve">
-    <value>Englisch</value>
-  </data>
-  <data name="cmbBoxLanguage.Items3" xml:space="preserve">
-    <value>Portugiesisch</value>
-  </data>
-  <data name="cmbBoxLanguage.Items4" xml:space="preserve">
-    <value>Deutsch</value>
+    <value>Voir la clause de non-responsabilité sur Démarrer !</value>
   </data>
 </root>

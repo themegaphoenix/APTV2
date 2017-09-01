@@ -6,6 +6,9 @@ Imports System.Xml
 Imports APTV2.My.Resources
 Imports Syncfusion.Windows.Forms
 Imports Syncfusion.Windows.Forms.Tools
+Imports System.Threading.Thread
+Imports System.Globalization
+Imports System.Threading
 
 Public Class Home
     Inherits MetroForm
@@ -25,6 +28,10 @@ Public Class Home
 #End Region
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+
+
         'read xml file and load in to the dropbox
         FindTheFiles()
         If My.Settings.checkForUpdates Then
@@ -800,6 +807,33 @@ Public Class Home
         Else
             checkBoxUpdatesStart.Checked = False
         End If
+    End Sub
+
+    Private Sub cmbBoxLanguage_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbBoxLanguage.SelectedValueChanged
+        Dim language As String = cmbBoxLanguage.SelectedItem.ToString()
+        Select Case language
+            Case "English"
+                My.Settings.selectedLanguage = "en"
+            Case "French"
+                My.Settings.selectedLanguage = "fr"
+            Case "German"
+                My.Settings.selectedLanguage = "de"
+            Case "Russian"
+                My.Settings.selectedLanguage = "ru"
+            Case "Portuguese"
+                My.Settings.selectedLanguage = "pt"
+            Case Else
+                My.Settings.selectedLanguage = "en"
+        End Select
+
+        My.Settings.Save()
+
+        Application.Restart()
+
+    End Sub
+
+    Private Sub cmbBoxLanguage_Click(sender As Object, e As EventArgs) Handles cmbBoxLanguage.Click
+
     End Sub
 
 #End Region
