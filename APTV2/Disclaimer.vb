@@ -21,4 +21,5 @@ Public Class Disclaimer
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         My.Forms.Home.Close()
     End Sub
+
 End Class

@@ -93,7 +93,7 @@ Public Class Home
                         {"fastboot", "oem relock" + unlockKey,
                          Strings.
                              Home_btnLockBootloader_Click_Relocking_bootloader___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_},
-                        {"fastboot", "reboot", "Rebooting device"}
+                        {"fastboot", "reboot", Strings.Home_btnFlashRecovery_ClickAsync_Rebooting_device}
                        }
             LabelToOutput = txtBoxBootloader
             Await Task.Run(Sub() RunComands(commands))
@@ -126,10 +126,27 @@ Public Class Home
         Dim commands(3, 3) As String
         commands = {{"adb", "reboot bootloader", Strings.Rebooting_to_bootloader},
                     {"fastboot", "flash recovery" & "downloads/twrp-3.1.1-0.img",
-                     "Flashing recovery: (make sure device is plugged, otherwise it will not output anything)"},
-                    {"fastboot", "reboot", "Rebooting device"}
+                     Strings.Home_btnFlashRecovery_ClickAsync_Flashing_recovery___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_},
+                    {"fastboot", "reboot", Strings.Home_btnFlashRecovery_ClickAsync_Rebooting_device}
                    }
         Await Task.Run(Sub() RunComands(commands))
+
+        Dim result2 As DialogResult = MessageBox.Show(Strings.Home_btnFlashRecovery_ClickAsync_Would_you_like_to_root_your_device_,
+                                                      Strings.Home_btnFlashRecovery_ClickAsync_Root_device_,
+                                                      MessageBoxButtons.YesNo,
+                                                      MessageBoxIcon.Question)
+        If result2 = DialogResult.Yes Then
+            tabControlPanel.SelectedTab = pnlRoot
+        End If
+    End Sub
+
+    Private Sub checkBoxRecovery_CheckedChanged(sender As Object, e As EventArgs) Handles checkBoxRecovery.CheckedChanged
+        If checkBoxRecovery.Checked = True Then
+            'it will enable the button
+            btnFlashRecovery.Enabled = True
+        Else
+            btnFlashRecovery.Enabled = False
+        End If
     End Sub
 
 #End Region
@@ -156,9 +173,9 @@ Public Class Home
 
                 'run the right adb commands
                 Dim commands(3, 3) As String
-                commands = {{"adb", "devices", "Showing all devices"},
+                commands = {{"adb", "devices", Strings.Home_btnFlashMagisk_Click_Showing_all_devices},
                             {"adb", "push " + fileName + " /sdcard/magisk.zip", "Copying " + fileName + " to the sd card"},
-                            {"adb", "reboot recovery", "Rebooting device to recovery"}}
+                            {"adb", "reboot recovery", Strings.Home_btnFlashMagisk_Click_Rebooting_device_to_recovery}}
 
                 Await Task.Run(Sub() RunComands(commands))
                 tabControlPanelMagisk.SelectedIndex = 1
@@ -200,7 +217,7 @@ Public Class Home
                 'run the right adb commands
 
                 Dim commands(2, 2) As String
-                commands = {{"adb", "devices", "Showing all devices"},
+                commands = {{"adb", "devices", Strings.Home_btnFlashMagisk_Click_Showing_all_devices},
                             {"adb", "install " & fileName, Strings.Home_btnFlashMagiskManager_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
                            }
                 Await Task.Run(Sub() RunComands(commands))
@@ -234,7 +251,7 @@ Public Class Home
                 'run the right adb commands
 
                 Dim commands(2, 2) As String
-                commands = {{"adb", "devices", "Showing all devices"},
+                commands = {{"adb", "devices", Strings.Home_btnFlashMagisk_Click_Showing_all_devices},
                             {"adb", "install " & fileName,
                              Strings.Home_btnGappsInstall_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_}
                            }
@@ -760,7 +777,6 @@ Public Class Home
         End Try
     End Sub
 
-
     Private Sub checkBoxUpdatesStart_CheckedChanged(sender As Object, e As EventArgs) Handles checkBoxUpdatesStart.CheckedChanged
         'if the box is checked for updates
         If checkBoxUpdatesStart.Checked = True Then
@@ -781,7 +797,6 @@ Public Class Home
     End Sub
 
 #End Region
-
 
 #Region "disclaimer"
 

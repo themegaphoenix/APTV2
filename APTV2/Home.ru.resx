@@ -3685,4 +3685,16 @@
   <data name="cmbBoxLanguage.Items4" xml:space="preserve">
     <value>Немецкий</value>
   </data>
+  <data name="checkBoxRecovery.Text" xml:space="preserve">
+    <value>У меня есть разблокирован загрузчик!</value>
+  </data>
+  <data name="Label17.Text" xml:space="preserve">
+    <value>Выберите версию Magisk менеджер!</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="cmbBoxLanguage.Text" xml:space="preserve">
+    <value>Ни одного слайда не найдено, пожалуйста, добавьте по крайней мере один слайд шаблона на выбранном языке.</value>
+  </data>
 </root>

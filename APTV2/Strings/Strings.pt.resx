@@ -205,4 +205,22 @@ Continuar?</value>
   <data name="Home_btnFlashUnbrRecovery_Click_Power_on_your_Honor_7_Holding_all_three_buttons__VOL___VOL__and_Power__and_it_will_begin_flashing" xml:space="preserve">
     <value>Poder em sua honra 7 segurando todos os três botões (VOL +, VOL - e poder) e ele começará a piscar!</value>
   </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Would_you_like_to_root_your_device_" xml:space="preserve">
+    <value>Gostaria de seu dispositivo de raiz?!</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Root_device_" xml:space="preserve">
+    <value>Dispositivo raiz?!</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Rebooting_device" xml:space="preserve">
+    <value>Reiniciar o telefone</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Flashing_recovery___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_" xml:space="preserve">
+    <value>Recuperação de piscamento: (certifique-se de dispositivo está conectado, caso contrário não será a saída nada)!</value>
+  </data>
+  <data name="Home_btnFlashMagisk_Click_Rebooting_device_to_recovery" xml:space="preserve">
+    <value>Reiniciar o dispositivo de recuperação!</value>
+  </data>
+  <data name="Home_btnFlashMagisk_Click_Showing_all_devices" xml:space="preserve">
+    <value>Mostrando todos os dispositivos!</value>
+  </data>
 </root>

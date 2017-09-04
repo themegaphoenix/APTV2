@@ -65,6 +65,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Rebooting device to recovery.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashMagisk_Click_Rebooting_device_to_recovery() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashMagisk_Click_Rebooting_device_to_recovery", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Showing all devices.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashMagisk_Click_Showing_all_devices() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashMagisk_Click_Showing_all_devices", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Installing app on the device(make sure device is plugged in, otherwise it will not output anything).
         '''</summary>
         Friend Shared ReadOnly Property Home_btnFlashMagiskManager_Click_Installing_app_on_the_device_make_sure_device_is_plugged_in__otherwise_it_will_not_output_anything_() As String
@@ -80,6 +98,43 @@ Namespace My.Resources
         Friend Shared ReadOnly Property Home_btnFlashMagiskManager_Click_Open_the_Magisk_Manager_Application() As String
             Get
                 Return ResourceManager.GetString("Home_btnFlashMagiskManager_Click_Open_the_Magisk_Manager_Application", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Flashing recovery: (make sure device is plugged, otherwise it will not output anything).
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashRecovery_ClickAsync_Flashing_recovery___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashRecovery_ClickAsync_Flashing_recovery___make_sure_device_is_plugged_"& _ 
+                        "_otherwise_it_will_not_output_anything_", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Rebooting device.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashRecovery_ClickAsync_Rebooting_device() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashRecovery_ClickAsync_Rebooting_device", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Root device?.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashRecovery_ClickAsync_Root_device_() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashRecovery_ClickAsync_Root_device_", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Would you like to root your device?.
+        '''</summary>
+        Friend Shared ReadOnly Property Home_btnFlashRecovery_ClickAsync_Would_you_like_to_root_your_device_() As String
+            Get
+                Return ResourceManager.GetString("Home_btnFlashRecovery_ClickAsync_Would_you_like_to_root_your_device_", resourceCulture)
             End Get
         End Property
         

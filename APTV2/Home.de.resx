@@ -345,4 +345,16 @@
   <data name="cmbBoxLanguage.Items4" xml:space="preserve">
     <value>Deutsch</value>
   </data>
+  <data name="checkBoxRecovery.Text" xml:space="preserve">
+    <value>Ich habe einen unlocked Bootloader!</value>
+  </data>
+  <data name="Label17.Text" xml:space="preserve">
+    <value>Wählen Sie eine Magisk Manager Version!</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>Sprache!</value>
+  </data>
+  <data name="cmbBoxLanguage.Text" xml:space="preserve">
+    <value>Sprache wählen</value>
+  </data>
 </root>

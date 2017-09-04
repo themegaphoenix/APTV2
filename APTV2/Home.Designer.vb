@@ -69,6 +69,7 @@ Partial Class Home
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TabPageAdv3 = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.cmbRootManager = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.progressBarRootManager = New System.Windows.Forms.ProgressBar()
         Me.btnFlashMagiskManager = New System.Windows.Forms.Button()
@@ -114,7 +115,7 @@ Partial Class Home
         Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.checkBoxRecovery = New System.Windows.Forms.CheckBox()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -369,6 +370,7 @@ Partial Class Home
         '
         'pnlRecovery
         '
+        Me.pnlRecovery.Controls.Add(Me.checkBoxRecovery)
         Me.pnlRecovery.Controls.Add(Me.Label2)
         Me.pnlRecovery.Controls.Add(Me.btnFlashRecovery)
         Me.pnlRecovery.Controls.Add(Me.progressBarRecovery)
@@ -543,6 +545,11 @@ Partial Class Home
         Me.TabPageAdv3.Name = "TabPageAdv3"
         Me.TabPageAdv3.ShowCloseButton = True
         Me.TabPageAdv3.ThemesEnabled = False
+        '
+        'Label17
+        '
+        resources.ApplyResources(Me.Label17, "Label17")
+        Me.Label17.Name = "Label17"
         '
         'cmbRootManager
         '
@@ -925,10 +932,11 @@ Partial Class Home
         Me.pnlAbout.ShowCloseButton = True
         Me.pnlAbout.ThemesEnabled = False
         '
-        'Label17
+        'checkBoxRecovery
         '
-        resources.ApplyResources(Me.Label17, "Label17")
-        Me.Label17.Name = "Label17"
+        resources.ApplyResources(Me.checkBoxRecovery, "checkBoxRecovery")
+        Me.checkBoxRecovery.Name = "checkBoxRecovery"
+        Me.checkBoxRecovery.UseVisualStyleBackColor = True
         '
         'Home
         '
@@ -1097,4 +1105,5 @@ Partial Class Home
     Friend WithEvents cmbBoxLanguage As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
+    Friend WithEvents checkBoxRecovery As CheckBox
 End Class

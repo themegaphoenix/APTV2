@@ -783,6 +783,36 @@
   <data name="&gt;&gt;pnlBootloader.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="checkBoxRecovery.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxRecovery.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxRecovery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 197</value>
+  </data>
+  <data name="checkBoxRecovery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 22</value>
+  </data>
+  <data name="checkBoxRecovery.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="checkBoxRecovery.Text" xml:space="preserve">
+    <value>I have a unlocked bootloader</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRecovery.Name" xml:space="preserve">
+    <value>checkBoxRecovery</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRecovery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRecovery.Parent" xml:space="preserve">
+    <value>pnlRecovery</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRecovery.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -811,7 +841,10 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
+  </data>
+  <data name="btnFlashRecovery.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="btnFlashRecovery.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -820,7 +853,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnFlashRecovery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 174</value>
+    <value>61, 244</value>
   </data>
   <data name="btnFlashRecovery.Size" type="System.Drawing.Size, System.Drawing">
     <value>229, 95</value>
@@ -841,13 +874,13 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;btnFlashRecovery.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="progressBarRecovery.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="progressBarRecovery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 131</value>
+    <value>83, 129</value>
   </data>
   <data name="progressBarRecovery.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 23</value>
@@ -868,13 +901,13 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;progressBarRecovery.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="cmbRecovery.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Condensed, 9.75pt</value>
   </data>
   <data name="cmbRecovery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 68</value>
+    <value>61, 84</value>
   </data>
   <data name="cmbRecovery.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 26</value>
@@ -895,7 +928,7 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;cmbRecovery.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txtBoxRecovery.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 7</value>
@@ -922,7 +955,7 @@
     <value>pnlRecovery</value>
   </data>
   <data name="&gt;&gt;txtBoxRecovery.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pnlRecovery.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 37</value>
@@ -2122,10 +2155,10 @@ if it is not press the checkbox and select flash
     <value>4</value>
   </data>
   <data name="TabPageAdv7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="TabPageAdv7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 365</value>
+    <value>345, 338</value>
   </data>
   <data name="TabPageAdv7.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2215,10 +2248,10 @@ if it is not press the checkbox and select flash
     <value>1</value>
   </data>
   <data name="TabPageAdv8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="TabPageAdv8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 365</value>
+    <value>345, 338</value>
   </data>
   <data name="TabPageAdv8.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2419,10 +2452,10 @@ if it is not press the checkbox and select flash
     <value>3</value>
   </data>
   <data name="tabUnb1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="tabUnb1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 365</value>
+    <value>364, 338</value>
   </data>
   <data name="tabUnb1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2554,10 +2587,10 @@ if it is not press the checkbox and select flash
     <value>3</value>
   </data>
   <data name="tabUnb2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="tabUnb2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 365</value>
+    <value>364, 338</value>
   </data>
   <data name="tabUnb2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2689,10 +2722,10 @@ if it is not press the checkbox and select flash
     <value>3</value>
   </data>
   <data name="tabUnb3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="tabUnb3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 365</value>
+    <value>364, 338</value>
   </data>
   <data name="tabUnb3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>

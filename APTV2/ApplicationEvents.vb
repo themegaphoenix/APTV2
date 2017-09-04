@@ -1,5 +1,4 @@
 ﻿Imports System.Globalization
-Imports System.Threading.Thread
 Imports System.Threading
 
 Namespace My
@@ -11,13 +10,13 @@ Namespace My
     ' StartupNextInstance: Raised when launching a single-instance application and the application is already active.
     ' NetworkAvailabilityChanged: Raised when the network connection is connected or disconnected.
     Partial Friend Class MyApplication
+
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
             Dim language = My.Settings.selectedLanguage
 
             Thread.CurrentThread.CurrentUICulture = New CultureInfo(language)
             Thread.CurrentThread.CurrentCulture = New CultureInfo(language)
             CultureInfo.DefaultThreadCurrentCulture = New CultureInfo(language)
-
 
             'this code does not work as it just keeps restarting the application,
             'as the the selected value changes

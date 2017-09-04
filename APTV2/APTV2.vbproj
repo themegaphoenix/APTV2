@@ -186,12 +186,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.de.resx" />
     <EmbeddedResource Include="My Project\Resources.fr.resx" />
+    <EmbeddedResource Include="My Project\Resources.pt.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.ru.resx" />
     <EmbeddedResource Include="Strings\Strings.de.resx" />
     <EmbeddedResource Include="Strings\Strings.fr.resx" />
     <EmbeddedResource Include="Strings\Strings.pt.resx" />

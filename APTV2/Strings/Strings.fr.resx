@@ -205,4 +205,22 @@ Continuer ? !</value>
   <data name="Home_btnFlashUnbrRecovery_Click_Power_on_your_Honor_7_Holding_all_three_buttons__VOL___VOL__and_Power__and_it_will_begin_flashing" xml:space="preserve">
     <value>Allumez votre honneur 7 tenir tous les trois boutons (VOL +, VOL - et puissance) et il se met à clignoter !</value>
   </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Would_you_like_to_root_your_device_" xml:space="preserve">
+    <value>Vous souhaitez à la racine de votre appareil ? !</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Root_device_" xml:space="preserve">
+    <value>Périphérique de racine ? !</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Rebooting_device" xml:space="preserve">
+    <value>Dispositif de redémarrage !</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Flashing_recovery___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_" xml:space="preserve">
+    <value>Clignotant de récupération : (Assurez-vous que périphérique est connecté, sinon il ne va pas afficher quoi que ce soit) !</value>
+  </data>
+  <data name="Home_btnFlashMagisk_Click_Rebooting_device_to_recovery" xml:space="preserve">
+    <value>Dispositif de redémarrage à la récupération !</value>
+  </data>
+  <data name="Home_btnFlashMagisk_Click_Showing_all_devices" xml:space="preserve">
+    <value>Affichage de tous les appareils !</value>
+  </data>
 </root>

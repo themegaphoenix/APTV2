@@ -205,4 +205,22 @@
   <data name="Home_btnFlashMagiskManager_Click_Open_the_Magisk_Manager_Application" xml:space="preserve">
     <value>Откройте приложение Диспетчер Magisk!</value>
   </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Would_you_like_to_root_your_device_" xml:space="preserve">
+    <value>Вы хотите искоренить устройство?</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Root_device_" xml:space="preserve">
+    <value>Устройство</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Rebooting_device" xml:space="preserve">
+    <value>Перезагрузка устройства!</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Flashing_recovery___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_" xml:space="preserve">
+    <value>Мигает восстановления: (убедитесь, что устройство подключено, в противном случае он не будет ничего выводить)!</value>
+  </data>
+  <data name="Home_btnFlashMagisk_Click_Rebooting_device_to_recovery" xml:space="preserve">
+    <value>Перезагрузка устройства для восстановления!</value>
+  </data>
+  <data name="Home_btnFlashMagisk_Click_Showing_all_devices" xml:space="preserve">
+    <value>Показаны все устройства!</value>
+  </data>
 </root>

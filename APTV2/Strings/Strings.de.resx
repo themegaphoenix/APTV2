@@ -205,4 +205,22 @@ Weiter?!</value>
   <data name="Home_btnFlashUnbrRecovery_Click_Power_on_your_Honor_7_Holding_all_three_buttons__VOL___VOL__and_Power__and_it_will_begin_flashing" xml:space="preserve">
     <value>Schalten Sie Ihre Ehre 7 halten alle drei Tasten (VOL +, VOL- und macht) und es beginnt zu blinken!</value>
   </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Would_you_like_to_root_your_device_" xml:space="preserve">
+    <value>Möchten Sie Ihr Gerät root?!</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Root_device_" xml:space="preserve">
+    <value>Root-Gerät?!</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Rebooting_device" xml:space="preserve">
+    <value>Neu startenden Gerät!</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Flashing_recovery___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_" xml:space="preserve">
+    <value>Blinkende Erholung: (stellen Sie sicher, dass Gerät angeschlossen ist, sonst wird es nicht ausgibt)!</value>
+  </data>
+  <data name="Home_btnFlashMagisk_Click_Rebooting_device_to_recovery" xml:space="preserve">
+    <value>Neu startenden Gerät zur Erholung!</value>
+  </data>
+  <data name="Home_btnFlashMagisk_Click_Showing_all_devices" xml:space="preserve">
+    <value>Zeigt alle Geräte!</value>
+  </data>
 </root>

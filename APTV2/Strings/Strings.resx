@@ -210,4 +210,22 @@ Continue?</value>
   <data name="Home_btnFlashMagiskManager_Click_Open_the_Magisk_Manager_Application" xml:space="preserve">
     <value>Open the Magisk Manager Application</value>
   </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Would_you_like_to_root_your_device_" xml:space="preserve">
+    <value>Would you like to root your device?</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Root_device_" xml:space="preserve">
+    <value>Root device?</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Rebooting_device" xml:space="preserve">
+    <value>Rebooting device</value>
+  </data>
+  <data name="Home_btnFlashRecovery_ClickAsync_Flashing_recovery___make_sure_device_is_plugged__otherwise_it_will_not_output_anything_" xml:space="preserve">
+    <value>Flashing recovery: (make sure device is plugged, otherwise it will not output anything)</value>
+  </data>
+  <data name="Home_btnFlashMagisk_Click_Rebooting_device_to_recovery" xml:space="preserve">
+    <value>Rebooting device to recovery</value>
+  </data>
+  <data name="Home_btnFlashMagisk_Click_Showing_all_devices" xml:space="preserve">
+    <value>Showing all devices</value>
+  </data>
 </root>
