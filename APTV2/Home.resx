@@ -964,7 +964,7 @@
     <value>22</value>
   </data>
   <data name="Label10.Text" xml:space="preserve">
-    <value>Select a magisk version</value>
+    <value>Select a Magisk version</value>
   </data>
   <data name="&gt;&gt;Label10.Name" xml:space="preserve">
     <value>Label10</value>
@@ -1537,10 +1537,10 @@
     <value>5</value>
   </data>
   <data name="TabPageAdv1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="TabPageAdv1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 365</value>
+    <value>345, 338</value>
   </data>
   <data name="TabPageAdv1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1690,10 +1690,10 @@ if it is not press the checkbox and select flash
     <value>3</value>
   </data>
   <data name="TabPageAdv2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="TabPageAdv2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 365</value>
+    <value>345, 338</value>
   </data>
   <data name="TabPageAdv2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1713,11 +1713,41 @@ if it is not press the checkbox and select flash
   <data name="&gt;&gt;TabPageAdv2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="Label17.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>47, 57</value>
+  </data>
+  <data name="Label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 18</value>
+  </data>
+  <data name="Label17.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="Label17.Text" xml:space="preserve">
+    <value>Select a Magisk Manager version</value>
+  </data>
+  <data name="&gt;&gt;Label17.Name" xml:space="preserve">
+    <value>Label17</value>
+  </data>
+  <data name="&gt;&gt;Label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label17.Parent" xml:space="preserve">
+    <value>TabPageAdv3</value>
+  </data>
+  <data name="&gt;&gt;Label17.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="cmbRootManager.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Condensed, 9.75pt</value>
   </data>
   <data name="cmbRootManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 46</value>
+    <value>50, 87</value>
   </data>
   <data name="cmbRootManager.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 26</value>
@@ -1738,13 +1768,13 @@ if it is not press the checkbox and select flash
     <value>TabPageAdv3</value>
   </data>
   <data name="&gt;&gt;cmbRootManager.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="progressBarRootManager.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="progressBarRootManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 100</value>
+    <value>81, 128</value>
   </data>
   <data name="progressBarRootManager.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -1765,7 +1795,7 @@ if it is not press the checkbox and select flash
     <value>TabPageAdv3</value>
   </data>
   <data name="&gt;&gt;progressBarRootManager.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnFlashMagiskManager.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1774,7 +1804,7 @@ if it is not press the checkbox and select flash
     <value>NoControl</value>
   </data>
   <data name="btnFlashMagiskManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 142</value>
+    <value>50, 176</value>
   </data>
   <data name="btnFlashMagiskManager.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 70</value>
@@ -1795,13 +1825,13 @@ if it is not press the checkbox and select flash
     <value>TabPageAdv3</value>
   </data>
   <data name="&gt;&gt;btnFlashMagiskManager.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="TabPageAdv3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
+    <value>0, 26</value>
   </data>
   <data name="TabPageAdv3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 365</value>
+    <value>345, 338</value>
   </data>
   <data name="TabPageAdv3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>

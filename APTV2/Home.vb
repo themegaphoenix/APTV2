@@ -6,9 +6,6 @@ Imports System.Xml
 Imports APTV2.My.Resources
 Imports Syncfusion.Windows.Forms
 Imports Syncfusion.Windows.Forms.Tools
-Imports System.Threading.Thread
-Imports System.Globalization
-Imports System.Threading
 
 Public Class Home
     Inherits MetroForm
@@ -28,9 +25,6 @@ Public Class Home
 #End Region
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-
 
         'read xml file and load in to the dropbox
         FindTheFiles()
@@ -693,12 +687,10 @@ Public Class Home
             AddToComboBoxesXml("/root/magisk/magiskInstaller/version", "Magisk ", cmbRoot)
             AddToComboBoxesXml("/root/magisk/magiskManager/version", "Magisk Manager ", cmbRootManager)
 
-
             checkBoxesReload()
         Catch ex As Exception
             MessageBox.Show(Strings.Home_ReloadInfo_File_does_not_contains_invalid_information)
         End Try
-
 
     End Sub
 
@@ -708,10 +700,11 @@ Public Class Home
 
     Private Async Sub CheckXMLUpdates()
 
-        'IMPORTANT
+        'IMPORTANT=---------------------------------------------------------------
         'the download file information is not used as it needs a progress bar
         'and textbox to update the status so we are better of using it standalone
         '
+        '---------------------------------------------------------------------------
         Try
             xmlDoc.Load(My.Settings.xmlDocumentName)
             'get file details
@@ -719,8 +712,11 @@ Public Class Home
             Dim updateURL As String = xmlDoc.SelectSingleNode("/root/updateURL").InnerText
             Dim filename = "downloads/updateXML.txt"
 
-            'downloads a .txt file to check if there is a new version
+            '
             Using webClient = New WebClient()
+                If (Not Directory.Exists("downloads")) Then
+                    Directory.CreateDirectory("downloads")
+                End If
                 Await webClient.DownloadFileTaskAsync(New Uri(updateURL), filename)
             End Using
 
@@ -731,7 +727,7 @@ Public Class Home
 
                 'if the new version number is bigger than the current version it will prompt the user
                 If Decimal.Parse(latestVersion) > Decimal.Parse(currentVersion) Then
-                    Console.WriteLine(Strings.Home_CheckXMLUpdates_Update_Found)
+                    'Console.WriteLine(Strings.Home_CheckXMLUpdates_Update_Found)
 
                     'asks the user if they want to download a new version
                     Dim result As DialogResult = MessageBox.Show(Strings.Home_CheckXMLUpdates_New_version_of_the_XML__data__file_found__Download_now_,
@@ -764,6 +760,7 @@ Public Class Home
         End Try
     End Sub
 
+
     Private Sub checkBoxUpdatesStart_CheckedChanged(sender As Object, e As EventArgs) Handles checkBoxUpdatesStart.CheckedChanged
         'if the box is checked for updates
         If checkBoxUpdatesStart.Checked = True Then
@@ -782,6 +779,11 @@ Public Class Home
         'checks for updates
         CheckXMLUpdates()
     End Sub
+
+#End Region
+
+
+#Region "disclaimer"
 
     Private Sub checkBoxShowDisclaimer_CheckedChanged(sender As Object, e As EventArgs) Handles checkBoxShowDisclaimer.CheckedChanged
         'if the box is checked to show the disclaimer
@@ -809,8 +811,14 @@ Public Class Home
         End If
     End Sub
 
-    Private Sub cmbBoxLanguage_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbBoxLanguage.SelectedValueChanged
+#End Region
+
+#Region "Language"
+
+    Private Sub cmbBoxLanguage_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbBoxLanguage.SelectedValueChanged
         Dim language As String = cmbBoxLanguage.SelectedItem.ToString()
+
+        'selects the right letters
         Select Case language
             Case "English"
                 My.Settings.selectedLanguage = "en"
@@ -826,13 +834,10 @@ Public Class Home
                 My.Settings.selectedLanguage = "en"
         End Select
 
+        'save settings
         My.Settings.Save()
-
+        'restart the application
         Application.Restart()
-
-    End Sub
-
-    Private Sub cmbBoxLanguage_Click(sender As Object, e As EventArgs) Handles cmbBoxLanguage.Click
 
     End Sub
 

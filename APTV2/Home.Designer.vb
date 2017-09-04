@@ -114,6 +114,7 @@ Partial Class Home
         Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.Label17 = New System.Windows.Forms.Label()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -532,6 +533,7 @@ Partial Class Home
         '
         'TabPageAdv3
         '
+        Me.TabPageAdv3.Controls.Add(Me.Label17)
         Me.TabPageAdv3.Controls.Add(Me.cmbRootManager)
         Me.TabPageAdv3.Controls.Add(Me.progressBarRootManager)
         Me.TabPageAdv3.Controls.Add(Me.btnFlashMagiskManager)
@@ -923,6 +925,11 @@ Partial Class Home
         Me.pnlAbout.ShowCloseButton = True
         Me.pnlAbout.ThemesEnabled = False
         '
+        'Label17
+        '
+        resources.ApplyResources(Me.Label17, "Label17")
+        Me.Label17.Name = "Label17"
+        '
         'Home
         '
         resources.ApplyResources(Me, "$this")
@@ -963,6 +970,7 @@ Partial Class Home
         Me.TabPageAdv2.ResumeLayout(False)
         Me.TabPageAdv2.PerformLayout()
         Me.TabPageAdv3.ResumeLayout(False)
+        Me.TabPageAdv3.PerformLayout()
         CType(Me.cmbRootManager, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlXposed.ResumeLayout(False)
         Me.pnlXposed.PerformLayout()
@@ -1088,4 +1096,5 @@ Partial Class Home
     Friend WithEvents checkBoxShowDisclaimer As CheckBox
     Friend WithEvents cmbBoxLanguage As Syncfusion.Windows.Forms.Tools.ComboBoxAdv
     Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
 End Class
