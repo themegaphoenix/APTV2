@@ -49,6 +49,7 @@ Partial Class Home
         Me.btnUnlockBootloader = New System.Windows.Forms.Button()
         Me.txtBoxBootloader = New System.Windows.Forms.TextBox()
         Me.pnlRecovery = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
+        Me.checkBoxRecovery = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnFlashRecovery = New System.Windows.Forms.Button()
         Me.progressBarRecovery = New System.Windows.Forms.ProgressBar()
@@ -115,7 +116,14 @@ Partial Class Home
         Me.cmbBoxXMLFile = New Syncfusion.Windows.Forms.Tools.ComboBoxAdv()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlAbout = New Syncfusion.Windows.Forms.Tools.TabPageAdv()
-        Me.checkBoxRecovery = New System.Windows.Forms.CheckBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.btnDonate = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.btnXDA = New System.Windows.Forms.Button()
+        Me.btnGitHub = New System.Windows.Forms.Button()
         CType(Me.tabControlPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControlPanel.SuspendLayout()
         Me.pnlPhone.SuspendLayout()
@@ -163,6 +171,7 @@ Partial Class Home
         Me.pnlSettings.SuspendLayout()
         CType(Me.cmbBoxLanguage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlAbout.SuspendLayout()
         Me.SuspendLayout()
         '
         'tabControlPanel
@@ -382,6 +391,12 @@ Partial Class Home
         Me.pnlRecovery.Name = "pnlRecovery"
         Me.pnlRecovery.ShowCloseButton = True
         Me.pnlRecovery.ThemesEnabled = False
+        '
+        'checkBoxRecovery
+        '
+        resources.ApplyResources(Me.checkBoxRecovery, "checkBoxRecovery")
+        Me.checkBoxRecovery.Name = "checkBoxRecovery"
+        Me.checkBoxRecovery.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -925,6 +940,14 @@ Partial Class Home
         '
         'pnlAbout
         '
+        Me.pnlAbout.Controls.Add(Me.btnGitHub)
+        Me.pnlAbout.Controls.Add(Me.btnXDA)
+        Me.pnlAbout.Controls.Add(Me.Label21)
+        Me.pnlAbout.Controls.Add(Me.Label20)
+        Me.pnlAbout.Controls.Add(Me.Label19)
+        Me.pnlAbout.Controls.Add(Me.TextBox1)
+        Me.pnlAbout.Controls.Add(Me.btnDonate)
+        Me.pnlAbout.Controls.Add(Me.Label18)
         Me.pnlAbout.Image = Nothing
         Me.pnlAbout.ImageSize = New System.Drawing.Size(16, 16)
         resources.ApplyResources(Me.pnlAbout, "pnlAbout")
@@ -932,11 +955,49 @@ Partial Class Home
         Me.pnlAbout.ShowCloseButton = True
         Me.pnlAbout.ThemesEnabled = False
         '
-        'checkBoxRecovery
+        'Label18
         '
-        resources.ApplyResources(Me.checkBoxRecovery, "checkBoxRecovery")
-        Me.checkBoxRecovery.Name = "checkBoxRecovery"
-        Me.checkBoxRecovery.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.Label18, "Label18")
+        Me.Label18.Name = "Label18"
+        '
+        'btnDonate
+        '
+        resources.ApplyResources(Me.btnDonate, "btnDonate")
+        Me.btnDonate.Name = "btnDonate"
+        Me.btnDonate.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        resources.ApplyResources(Me.TextBox1, "TextBox1")
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        '
+        'Label19
+        '
+        resources.ApplyResources(Me.Label19, "Label19")
+        Me.Label19.Name = "Label19"
+        '
+        'Label20
+        '
+        resources.ApplyResources(Me.Label20, "Label20")
+        Me.Label20.Name = "Label20"
+        '
+        'Label21
+        '
+        resources.ApplyResources(Me.Label21, "Label21")
+        Me.Label21.Name = "Label21"
+        '
+        'btnXDA
+        '
+        resources.ApplyResources(Me.btnXDA, "btnXDA")
+        Me.btnXDA.Name = "btnXDA"
+        Me.btnXDA.UseVisualStyleBackColor = True
+        '
+        'btnGitHub
+        '
+        resources.ApplyResources(Me.btnGitHub, "btnGitHub")
+        Me.btnGitHub.Name = "btnGitHub"
+        Me.btnGitHub.UseVisualStyleBackColor = True
         '
         'Home
         '
@@ -1010,6 +1071,8 @@ Partial Class Home
         Me.pnlSettings.PerformLayout()
         CType(Me.cmbBoxLanguage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbBoxXMLFile, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlAbout.ResumeLayout(False)
+        Me.pnlAbout.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1106,4 +1169,12 @@ Partial Class Home
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents checkBoxRecovery As CheckBox
+    Friend WithEvents btnDonate As Button
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnGitHub As Button
+    Friend WithEvents btnXDA As Button
 End Class

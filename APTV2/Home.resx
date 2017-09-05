@@ -1570,10 +1570,10 @@
     <value>5</value>
   </data>
   <data name="TabPageAdv1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="TabPageAdv1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 338</value>
+    <value>345, 365</value>
   </data>
   <data name="TabPageAdv1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1723,10 +1723,10 @@ if it is not press the checkbox and select flash
     <value>3</value>
   </data>
   <data name="TabPageAdv2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="TabPageAdv2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 338</value>
+    <value>345, 365</value>
   </data>
   <data name="TabPageAdv2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1861,10 +1861,10 @@ if it is not press the checkbox and select flash
     <value>3</value>
   </data>
   <data name="TabPageAdv3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="TabPageAdv3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 338</value>
+    <value>345, 365</value>
   </data>
   <data name="TabPageAdv3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2155,10 +2155,10 @@ if it is not press the checkbox and select flash
     <value>4</value>
   </data>
   <data name="TabPageAdv7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="TabPageAdv7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 338</value>
+    <value>345, 365</value>
   </data>
   <data name="TabPageAdv7.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2248,10 +2248,10 @@ if it is not press the checkbox and select flash
     <value>1</value>
   </data>
   <data name="TabPageAdv8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="TabPageAdv8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 338</value>
+    <value>345, 365</value>
   </data>
   <data name="TabPageAdv8.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2452,10 +2452,10 @@ if it is not press the checkbox and select flash
     <value>3</value>
   </data>
   <data name="tabUnb1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="tabUnb1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 338</value>
+    <value>364, 365</value>
   </data>
   <data name="tabUnb1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2587,10 +2587,10 @@ if it is not press the checkbox and select flash
     <value>3</value>
   </data>
   <data name="tabUnb2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="tabUnb2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 338</value>
+    <value>364, 365</value>
   </data>
   <data name="tabUnb2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2722,10 +2722,10 @@ if it is not press the checkbox and select flash
     <value>3</value>
   </data>
   <data name="tabUnb3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
+    <value>0, -1</value>
   </data>
   <data name="tabUnb3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 338</value>
+    <value>364, 365</value>
   </data>
   <data name="tabUnb3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3059,6 +3059,233 @@ if it is not press the checkbox and select flash
   </data>
   <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="btnGitHub.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnGitHub.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnGitHub.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 152</value>
+  </data>
+  <data name="btnGitHub.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 55</value>
+  </data>
+  <data name="btnGitHub.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnGitHub.Text" xml:space="preserve">
+    <value>Go to the Github page</value>
+  </data>
+  <data name="&gt;&gt;btnGitHub.Name" xml:space="preserve">
+    <value>btnGitHub</value>
+  </data>
+  <data name="&gt;&gt;btnGitHub.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGitHub.Parent" xml:space="preserve">
+    <value>pnlAbout</value>
+  </data>
+  <data name="&gt;&gt;btnGitHub.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnXDA.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnXDA.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnXDA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 152</value>
+  </data>
+  <data name="btnXDA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 55</value>
+  </data>
+  <data name="btnXDA.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnXDA.Text" xml:space="preserve">
+    <value>Go to the XDA Thread</value>
+  </data>
+  <data name="&gt;&gt;btnXDA.Name" xml:space="preserve">
+    <value>btnXDA</value>
+  </data>
+  <data name="&gt;&gt;btnXDA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnXDA.Parent" xml:space="preserve">
+    <value>pnlAbout</value>
+  </data>
+  <data name="&gt;&gt;btnXDA.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label21.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 286</value>
+  </data>
+  <data name="Label21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 18</value>
+  </data>
+  <data name="Label21.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Label21.Text" xml:space="preserve">
+    <value>Bitcoin</value>
+  </data>
+  <data name="&gt;&gt;Label21.Name" xml:space="preserve">
+    <value>Label21</value>
+  </data>
+  <data name="&gt;&gt;Label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label21.Parent" xml:space="preserve">
+    <value>pnlAbout</value>
+  </data>
+  <data name="&gt;&gt;Label21.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label20.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 270</value>
+  </data>
+  <data name="Label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 18</value>
+  </data>
+  <data name="Label20.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="Label20.Text" xml:space="preserve">
+    <value>Paypal</value>
+  </data>
+  <data name="&gt;&gt;Label20.Name" xml:space="preserve">
+    <value>Label20</value>
+  </data>
+  <data name="&gt;&gt;Label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label20.Parent" xml:space="preserve">
+    <value>pnlAbout</value>
+  </data>
+  <data name="&gt;&gt;Label20.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 252</value>
+  </data>
+  <data name="Label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 18</value>
+  </data>
+  <data name="Label19.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Label19.Text" xml:space="preserve">
+    <value>Feel free to donate!</value>
+  </data>
+  <data name="&gt;&gt;Label19.Name" xml:space="preserve">
+    <value>Label19</value>
+  </data>
+  <data name="&gt;&gt;Label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label19.Parent" xml:space="preserve">
+    <value>pnlAbout</value>
+  </data>
+  <data name="&gt;&gt;Label19.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 317</value>
+  </data>
+  <data name="TextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 25</value>
+  </data>
+  <data name="TextBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>1AWwDmSGQnUTEFA1kpVn8hc2MCCHraR2Pc</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
+    <value>TextBox1</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
+    <value>pnlAbout</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnDonate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnDonate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnDonate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 302</value>
+  </data>
+  <data name="btnDonate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 55</value>
+  </data>
+  <data name="btnDonate.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnDonate.Text" xml:space="preserve">
+    <value>Donate Paypal</value>
+  </data>
+  <data name="&gt;&gt;btnDonate.Name" xml:space="preserve">
+    <value>btnDonate</value>
+  </data>
+  <data name="&gt;&gt;btnDonate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDonate.Parent" xml:space="preserve">
+    <value>pnlAbout</value>
+  </data>
+  <data name="&gt;&gt;btnDonate.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 58</value>
+  </data>
+  <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 36</value>
+  </data>
+  <data name="Label18.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label18.Text" xml:space="preserve">
+    <value>This program is created by TheMegaPhoenix.
+This is given as seen and it should be used as its own risk
+</value>
+  </data>
+  <data name="&gt;&gt;Label18.Name" xml:space="preserve">
+    <value>Label18</value>
+  </data>
+  <data name="&gt;&gt;Label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label18.Parent" xml:space="preserve">
+    <value>pnlAbout</value>
+  </data>
+  <data name="&gt;&gt;Label18.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="pnlAbout.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 37</value>

@@ -858,6 +858,22 @@ Public Class Home
 
 #End Region
 
+#Region "Donations and Webpages"
+
+    Private Sub btnDonate_Click(sender As Object, e As EventArgs) Handles btnDonate.Click
+        Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X649DE36JJ5HG")
+    End Sub
+
+    Private Sub btnGitHub_Click(sender As Object, e As EventArgs) Handles btnGitHub.Click
+        Process.Start("https://github.com/themegaphoenix/APTV2")
+    End Sub
+
+    Private Sub btnXDA_Click(sender As Object, e As EventArgs) Handles btnXDA.Click
+        Process.Start("")
+    End Sub
+
+#End Region
+
 #End Region
 
 End Class
