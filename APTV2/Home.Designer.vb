@@ -907,12 +907,16 @@ Partial Class Home
         'checkBoxShowDisclaimer
         '
         resources.ApplyResources(Me.checkBoxShowDisclaimer, "checkBoxShowDisclaimer")
+        Me.checkBoxShowDisclaimer.Checked = True
+        Me.checkBoxShowDisclaimer.CheckState = System.Windows.Forms.CheckState.Checked
         Me.checkBoxShowDisclaimer.Name = "checkBoxShowDisclaimer"
         Me.checkBoxShowDisclaimer.UseVisualStyleBackColor = True
         '
         'checkBoxUpdatesStart
         '
         resources.ApplyResources(Me.checkBoxUpdatesStart, "checkBoxUpdatesStart")
+        Me.checkBoxUpdatesStart.Checked = True
+        Me.checkBoxUpdatesStart.CheckState = System.Windows.Forms.CheckState.Checked
         Me.checkBoxUpdatesStart.Name = "checkBoxUpdatesStart"
         Me.checkBoxUpdatesStart.UseVisualStyleBackColor = True
         '

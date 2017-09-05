@@ -861,7 +861,7 @@ Public Class Home
 #Region "Donations and Webpages"
 
     Private Sub btnDonate_Click(sender As Object, e As EventArgs) Handles btnDonate.Click
-        Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X649DE36JJ5HG")
+        Process.Start("paypal.me/APTDonation")
     End Sub
 
     Private Sub btnGitHub_Click(sender As Object, e As EventArgs) Handles btnGitHub.Click
@@ -869,7 +869,7 @@ Public Class Home
     End Sub
 
     Private Sub btnXDA_Click(sender As Object, e As EventArgs) Handles btnXDA.Click
-        Process.Start("")
+        Process.Start("https://forum.xda-developers.com/honor-7/general/android-phone-tool-honor-t3668378")
     End Sub
 
 #End Region
